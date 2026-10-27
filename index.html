@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f4ef">
+  <meta name="description" content="按日期浏览 arXiv 和 Preprints.org 的数据集相关预印本。">
+  <title>DailyDataset — 数据集论文日历</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <script defer src="assets/app.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="./" aria-label="DailyDataset 首页"><span class="brand-mark" aria-hidden="true">D<span>.</span></span><span>DailyDataset<small>DATASET RESEARCH, DAILY</small></span></a>
+      <div class="header-right"><span class="live-dot" aria-hidden="true"></span><span>每日更新</span><a href="https://github.com/lartpang/DailyDataset" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a></div>
+    </div>
+  </header>
+
+  <main class="shell">
+    <section class="intro" aria-labelledby="page-title">
+      <div class="intro-copy">
+        <p class="eyebrow"><span></span> THE DATASET PAPER INDEX</p>
+        <h1 id="page-title">发现值得关注的<br><em>数据集论文。</em></h1>
+        <p class="intro-description">从 arXiv 与 Preprints.org 汇集每日预印本。<br class="desktop-only">选一个日期，探索那一天的新数据集与基准。</p>
+      </div>
+      <div class="intro-stats" aria-label="归档统计">
+        <div><strong id="total-count">—</strong><span>收录论文 <small>PAPERS</small></span></div>
+        <div><strong id="date-span">—</strong><span>归档范围 <small>ARCHIVE</small></span></div>
+      </div>
+      <div class="intro-decoration" aria-hidden="true"><span>01</span><span>02</span><span>03</span><span>04</span><span>05</span><span>06</span><span>07</span><span>08</span><span>09</span><span>10</span><span>11</span><span>12</span><b>DATA<br>SETS<br>↗</b></div>
+    </section>
+
+    <section class="workspace" aria-labelledby="archive-title">
+      <div class="workspace-heading"><div><p class="eyebrow"><span></span> THE DAILY ARCHIVE</p><h2 id="archive-title">按日期浏览 <span>Daily archive</span></h2></div><div class="timezone"><span class="live-dot"></span> 所有日期均为 UTC</div></div>
+      <section class="heatmap" aria-labelledby="heatmap-title">
+        <div class="heatmap-heading">
+          <div><span class="result-kicker">PUBLICATION ACTIVITY</span><h3 id="heatmap-title">论文发布热力图</h3><p id="heatmap-context">正在读取日期索引…</p></div>
+          <div class="heatmap-views" role="group" aria-label="热力图时间粒度">
+            <button id="view-year" type="button" aria-pressed="false">年</button><button id="view-month" type="button" aria-pressed="false">月</button><button id="view-day" type="button" aria-pressed="true">日</button>
+          </div>
+        </div>
+        <div class="heatmap-meta"><strong id="heatmap-period">—</strong><span id="heatmap-hint">选择日期查看论文</span></div>
+        <div id="heatmap-weekdays" class="heatmap-weekdays" aria-hidden="true"><span>一</span><span>二</span><span>三</span><span>四</span><span>五</span><span>六</span><span>日</span></div>
+        <div id="heatmap-grid" class="heatmap-grid day-grid" aria-label="论文发布数量"></div>
+        <div class="heatmap-footer"><span>颜色表示当前视图内论文数量</span><div class="heatmap-legend" aria-label="颜色由浅到深表示论文数量由少到多"><span>少</span><i class="level-0"></i><i class="level-1"></i><i class="level-2"></i><i class="level-3"></i><i class="level-4"></i><span>多</span></div></div>
+      </section>
+      <div class="controls filter-bar">
+        <div class="filters"><label class="search-field"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="搜索当日标题或作者" aria-label="搜索当日标题或作者"></label><label class="source-field"><span class="sr-only">论文来源</span><select id="source"><option value="all">全部来源</option><option value="arXiv">arXiv</option><option value="Preprints.org">Preprints.org</option></select></label></div>
+      </div>
+      <div class="results-heading"><div><span class="result-kicker">SELECTED DATE</span><h3 id="selected-date">正在加载…</h3></div><div class="result-count"><strong id="result-count">—</strong> 篇论文 <span>/ PAPERS</span></div></div>
+      <div class="results" id="results" aria-live="polite"><div class="message">正在读取日期索引…</div></div>
+      <div class="archive-note"><span>✳</span><p>论文按首次发布日期归档。标题关键词用于筛选，可能存在遗漏或误收；摘要及元数据由各来源提供。</p></div>
+    </section>
+  </main>
+  <footer class="shell footer"><div><strong>DailyDataset<span>.</span></strong><p>为数据集研究，留一份每日记录。</p></div><div class="footer-links"><a href="https://arxiv.org" target="_blank" rel="noopener noreferrer">arXiv ↗</a><a href="https://www.preprints.org" target="_blank" rel="noopener noreferrer">Preprints.org ↗</a><a href="https://github.com/lartpang/DailyDataset" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div><span class="footer-end">OPEN RESEARCH, EVERY DAY.</span></footer>
+  <noscript>此网站需要启用 JavaScript 才能按日期加载论文。</noscript>
+</body>
+</html>

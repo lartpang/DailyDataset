@@ -1,0 +1,61 @@
+name: Update dataset preprints
+
+on:
+  schedule:
+    - cron: '17 6 * * *'
+  workflow_dispatch:
+    inputs:
+      start:
+        description: 'Optional backfill start date (YYYY-MM-DD)'
+        required: false
+      end:
+        description: 'Optional end date (YYYY-MM-DD)'
+        required: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-dataset-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Collect, update and push
+        env:
+          START_DATE: ${{ inputs.start }}
+          END_DATE: ${{ inputs.end }}
+          CROSSREF_MAILTO: ${{ vars.CROSSREF_MAILTO }}
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+        run: |
+          args=()
+          if [[ -n "$START_DATE" ]]; then args+=(--start "$START_DATE"); fi
+          if [[ -n "$END_DATE" ]]; then args+=(--end "$END_DATE"); fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          for attempt in 1 2 3; do
+            git fetch origin "+refs/heads/$DEFAULT_BRANCH:refs/remotes/origin/$DEFAULT_BRANCH"
+            worktree="$RUNNER_TEMP/daily-dataset-$attempt"
+            git worktree add --detach "$worktree" "refs/remotes/origin/$DEFAULT_BRANCH"
+            (
+              cd "$worktree"
+              python daily_dataset.py "${args[@]}"
+              git add -A data/
+              if ! git diff --cached --quiet; then
+                git commit -m 'Update dataset preprints'
+              fi
+            )
+            if git -C "$worktree" push origin "HEAD:refs/heads/$DEFAULT_BRANCH"; then
+              exit 0
+            fi
+            echo "Push failed; retrying from the latest $DEFAULT_BRANCH (attempt $attempt/3)." >&2
+          done
+          echo 'Could not push the update after three attempts.' >&2
+          exit 1
