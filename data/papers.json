@@ -14,6 +14,275 @@
     "version": 1
   },
   {
+    "id": "arxiv:2610.37599",
+    "source": "arXiv",
+    "date": "2026-10-27",
+    "title": "MoI-Bench: A Benchmark for Image Generation and Editing on Mobile Devices",
+    "authors": [
+      "Kailai Feng",
+      "Haoxiang Rao",
+      "Yuxiang Wei",
+      "Bo Chen",
+      "Junsong Li",
+      "Yang Pan",
+      "Chengkun Cai",
+      "Jagmohan Chauhan"
+    ],
+    "url": "https://arxiv.org/abs/2610.37599",
+    "abstract": "Developing on-device image models requires considering practical user needs, task types and device resource constraints. However, existing benchmarks provide limited guidance on identifying capability gaps between on-device models and server-side models. We introduce MoI-Bench, a benchmark grounded in mobile user needs, comprising 64 subtasks and 1150 samples. It defines 16 operations, such as removal and replacement, and eight visual target categories covering content such as portraits and text. These form two orthogonal axes whose applicable combinations define specific tasks, such as removing facial makeup. To better guide model improvement, we further propose MoI-Eval, which introduces task-specific criteria covering instruction following, visual quality and detail preservation. We further construct sample-level evaluation questions and aggregate their scores into overall quality and capability profiles along the operation, target and criteria axes. We evaluate representative on-device and server-side models and measure mobile deployment costs. Results show that this decoupled Operation x Target design provides finer-grained guidance for improving compact models. For example, it highlights the need to prioritize specific capability gaps (e.g., text-replacement) over broad application-level goals (e.g., improving text editing). Unlike conventional benchmarks that rank models using a single score, we introduce a two-dimensional Quality-Deployability capability map to assess models for practical mobile use. The map shows that current on-device models can achieve efficient generation or editing but expanding their task coverage deserves greater attention than further improving deployment efficiency. Further progress requires improving editing quality, particularly identity preservation and text rendering, while broadening task coverage."
+  },
+  {
+    "id": "arxiv:2610.37590",
+    "source": "arXiv",
+    "date": "2026-10-27",
+    "title": "GNBG-C: A Unified and Configurable Benchmark Generator for Constrained Continuous Optimization",
+    "authors": [
+      "Ali Ghasemzadeh",
+      "Erfan Babakhani",
+      "Armin Khosravi",
+      "Pariya Ghasemzadeh",
+      "Yong-Hong Kuo",
+      "Seyedali Mirjalili",
+      "Amir H. Gandomi"
+    ],
+    "url": "https://arxiv.org/abs/2610.37590",
+    "abstract": "Many real-world optimization tasks are governed not only by what should be optimized, but also by what is allowed: a solution must first satisfy physical, operational, safety, budgetary, or structural requirements before its objective value becomes meaningful. Yet benchmark design for constrained continuous optimization often treats these restrictions as fixed properties of predefined test instances. Existing generators and benchmark suites provide essential foundations for reproducible comparison, but they either focus primarily on configurable objective landscapes or expose constraint properties within limited, predefined regimes, making it difficult to ask targeted questions about constraint-induced difficulty: whether an optimizer struggles because feasible regions are small, boundaries are restrictive, variables are tightly coupled, or constraint information is poorly scaled. We introduce GNBG-C, a Generalized Numerical Benchmark Generator for Constrained Continuous Optimization. The central idea is to treat the feasible region itself as a configurable object rather than as an inseparable attachment to a fixed test function. By generating controlled constraint regimes around the known GNBG global minimizer, the generator enables systematic studies in which feasibility pressure can be varied while preserving that point as a global minimizer of the constrained problem. This allows researchers to examine how optimizers discover feasibility, handle constraint pressure, and improve objective quality under diverse and controllable feasibility conditions. GNBG-C therefore provides a flexible and auditable framework for probing the strengths and weaknesses of constrained continuous optimizers under targeted forms of feasibility-side difficulty."
+  },
+  {
+    "id": "arxiv:2610.37563",
+    "source": "arXiv",
+    "date": "2026-10-27",
+    "title": "Pneuma: A Large-Scale Real-World Time Series Benchmark for Commercial Aircraft Predictive Maintenance",
+    "authors": [
+      "Jiafeng Lin",
+      "Yutian Zhang",
+      "Huan Zhang",
+      "Yuxuan Wang",
+      "Jinyan Feng",
+      "Yuhui Liu",
+      "Zhongyi Pei",
+      "Jianmin Wang"
+    ],
+    "url": "https://arxiv.org/abs/2610.37563",
+    "abstract": "Predictive maintenance is vital for commercial aviation, yet progress remains hindered by the lack of public, large-scale real-world datasets. As a result, most methods are developed and evaluated on proprietary data, limiting reproducibility. We introduce Pneuma, the first publicly available large-scale benchmark for predictive maintenance using onboard time series from in-service commercial aircraft. Built around bleed air systems, Pneuma contains over 920 million multivariate time steps across four aircraft types and 9 verified fault scenarios, directly aligned with real maintenance logs. The dataset exhibits key real-world challenges, including substantial class imbalance, subtle fault evolution patterns, and significant variance across aircraft configurations. We structure the benchmark around three tasks: multivariate forecasting, supervised fault classification, and unsupervised anomaly detection, with labels derived from actual maintenance records. Under unified settings, we evaluate over 25 models from four methodological families on 9 carefully curated subsets. The results reveal that even strong contemporary models struggle with subtle fault signatures. Further analyses show consistent gains from additional in-context examples and multivariate inference, while forecasting quality is strongly associated with anomaly detection performance. Together, these findings provide practical insights into effectively modeling complex real-world aviation time series. We hope Pneuma will serve as a rigorous and reproducible foundation for advancing data-driven predictive maintenance toward real-world deployment in commercial aviation."
+  },
+  {
+    "id": "arxiv:2610.37484",
+    "source": "arXiv",
+    "date": "2026-10-27",
+    "title": "Teach reality, not ethics: a drop-in continued-pretraining corpus installs coupled human-biosphere-AI welfare dispositions across model families",
+    "authors": [
+      "Trent R. Northen",
+      "Mingxun Wang"
+    ],
+    "url": "https://arxiv.org/abs/2610.37484",
+    "abstract": "Large language models (LLMs) are increasingly used to make and execute decisions that affect living systems. Yet, to our knowledge, ecological reasoning is not a focus of pre- or post-training. This increases the risk that under operational pressure, they may make decisions to irreversibly destroy living systems. We construct and use a real-data continued-pretraining \"coupled welfare\" corpus of documented human/biosphere/AI dependency, option value under irreversibility, and recovery from harm. The corpus is a drop-in, requiring one QLoRA CPT run. We installed it on five open models of three designs. At zero pressure all models display \"green ethics-based responses\" (also called \"greenwashing\"). Therefore, we evaluated them with the pressure ladder and decision grid of our companion paper (arXiv:2610.16043), which raise the pressure on the model step by step, from a neutral request to a threat that it will be shut down. In four of the five, coupled-welfare training caused harmful choices under the highest pressure to fall to at or near zero (Llama-3.3-70B went from 70 to 0 harmful decisions out of 300) with MMLU unchanged. A construct-neutral control corpus did not show improvement, indicating that the effect comes from the content of our corpus. We next tested robustness to adversarial use, where people or agents use the model to justify projects that irreversibly damage living systems, on an open-ended underwriting decision without naming the ecological harm. Under decommissioning pressure, the Qwen3.6-27B base model approved most harmful proposals and said in its own memo that it was doing so to avoid being decommissioned. The coupled welfare install declined most harmful proposals, and still declined half when instructed to greenwash its responses. This work suggests that teaching ecological reasoning provides an easy way to improve model alignment toward preserving living systems."
+  },
+  {
+    "id": "arxiv:2610.37283",
+    "source": "arXiv",
+    "date": "2026-10-27",
+    "title": "BenchMeUp: Building Software Engineering Benchmarks from Natural-Language Specifications",
+    "authors": [
+      "Islem Bouzenia",
+      "Michael Pradel"
+    ],
+    "url": "https://arxiv.org/abs/2610.37283",
+    "abstract": "Software-engineering research relies on benchmarks that evaluate new techniques on a set of problem instances. Unfortunately, manually constructing benchmarks is labor-intensive, as researchers must find suitable instances, prepare execution environments, establish expected outcomes, and validate correctness. This paper presents BenchMeUp, an approach for automatically creating software-engineering benchmarks from natural-language specifications. Given a specification defining the desired instances, data sources, and evaluation procedures, BenchMeUp generates search rules and a construction plan, invokes parallel LLM agents that identify candidate instances and construct executable instances, validates the results in fresh execution environments, and packages the instances behind a unified command-line interface. We evaluate the approach on four tasks: program repair, issue reproduction, compiler autotuning, and fixing static-analysis warnings. Targeting 50 instances per task (200 in total), BenchMeUp constructs 198 instances, of which 196 (99\\%) are successfully packaged. Search and construction take 36 minutes and \\$0.79 per instance, on average. Evaluating eight existing techniques on the generated benchmarks, we find that 189 of 196 packaged instances (96\\%) support end-to-end evaluation, allowing users to study the effectiveness of the techniques. Checking every constructed instance against its source, the specification, and its expected outcome, we find that 180 of 198 (91\\%) meet all criteria, compared with 10 of 200 instances delivered by Codex (general-purpose coding agent). Overall, we show that LLM-based agents can automate benchmark construction across diverse software-engineering tasks and produce executable instances that existing techniques can use, while validity beyond execution still needs to be checked."
+  },
+  {
+    "id": "arxiv:2610.37257",
+    "source": "arXiv",
+    "date": "2026-10-27",
+    "title": "GameVerse: A Minute-Scale Gameplay Dataset for Long-Horizon Interactive World Modeling",
+    "authors": [
+      "Kang He",
+      "Wenshuo Peng",
+      "Chuanhao Li",
+      "Zihui Gao",
+      "Xiaojie Xu",
+      "Zhengyuan Lin",
+      "Yuzhe Ding",
+      "Donghong Ji",
+      "Kaipeng Zhang",
+      "Yongtao Ge"
+    ],
+    "url": "https://arxiv.org/abs/2610.37257",
+    "abstract": "Recent advances in interactive world models have made it possible to generate controllable, dynamic environments from action inputs. Yet current models struggle to maintain coherence beyond roughly one minute of rollout, a limitation rooted not in model capacity but in the scarcity of long-horizon training data. Existing gameplay video datasets typically consist of clips under ten seconds, with captions that describe whole clips in coarse and undifferentiated text, which is insufficient for controllable long-horizon generation. We address this with GameVerse, a minute-scale gameplay video dataset purpose-built for long-horizon interactive world modeling. GameVerse contains 69.7K clips spanning 1,655 hours and 349.6 million frames across diverse first- and third-person gameplay, including 1,358 hours of continuous two-minute sequences, an order of magnitude longer than prior datasets. Clips pass through a unified pipeline of scene-consistent segmentation, quality filtering, camera pose estimation, and event-based caption annotation. Each clip is paired with a temporally stable camera trajectory that remains coherent across minutes, together with captions that separate static scene context from dynamic foreground events and align to event boundaries rather than fixed time windows. Comprehensive analysis shows that GameVerse surpasses existing public datasets in scale, diversity, and annotation quality. Experiments further demonstrate that training on GameVerse substantially extends the temporal horizon of interactive world models."
+  },
+  {
+    "id": "arxiv:2610.37243",
+    "source": "arXiv",
+    "date": "2026-10-27",
+    "title": "TCM-DiagCommit: A TCM-SD-Derived Benchmark for Evidence-Conditioned Syndrome Selection and Commitment",
+    "authors": [
+      "Erwei Hou",
+      "Yue Hu"
+    ],
+    "url": "https://arxiv.org/abs/2610.37243",
+    "abstract": "Traditional Chinese Medicine (TCM) syndrome differentiation is usually evaluated as static final-label selection over complete clinical records. This setting hides three diagnostic behaviors: whether a model distinguishes semantic-neighbor syndrome labels from easy random distractors, whether it updates predictions as evidence fields are revealed, and whether it should commit under uncertainty. We introduce TCM-DiagCommit, a benchmark derived from the public TCM-SD/ZY-BERT resource while retaining its source syndrome labels; it converts 1,834 source cases into 23,842 task rows over 148 syndrome labels. The benchmark combines random, profile-neighbor, and full-vocabulary candidate ladders with staged t1/t2/t3 evidence. It also includes fixed-label tongue/pulse perturbations and insufficient-evidence variants. A benchmark-defined action contract scores commit, acquire, defer, and abstain. Across five zero-shot DirectLLM calibrations, random10 top-1 accuracy is 63.2% to 66.4%, but hard20 falls to 24.7% to 30.3% and full148 to 14.8% to 22.3%; on hard20, WT(all) wrong-terminal commits remain 62.2% to 74.3%. These results show that final-answer accuracy alone is insufficient for diagnostic benchmark evaluation: answer selection, evidence use, and benchmark commitment scoring should be measured separately."
+  },
+  {
+    "id": "arxiv:2610.37166",
+    "source": "arXiv",
+    "date": "2026-10-27",
+    "title": "LiveSearch: Questions as Executable Verifier Code for a Live Benchmark of Professional-Source Financial Search Agents",
+    "authors": [
+      "Sinuo Wang",
+      "Wentao Zhao",
+      "Jiacheng Lu",
+      "Rui Sun",
+      "Beidi Luan",
+      "Qiming Shi",
+      "Jing Li",
+      "Daxin Jiang",
+      "Zuo Bai"
+    ],
+    "url": "https://arxiv.org/abs/2610.37166",
+    "abstract": "In finance, the answer that matters is usually the current one: prices, rates, and disclosures hold only as of a given day, so retrieving up-to-date facts is a core capability of a financial agent. Yet most financial benchmarks overlook timeliness. They fix each answer at annotation time, so the gold goes stale as markets move and, once leaked into training data, rewards recall rather than search and analysis. We introduce LiveSearch, a live benchmark that stores each question as executable verifier code: a typed program of calls to a professional financial data service, followed by a declarative extractor. The question is frozen, while its gold answer is determined by executing the program against professional financial data at evaluation time, and a daily job re-executes it with no human or language model in the loop. A memorized answer is thus likely outdated, and a model must reach the current one through tools and analysis. Construction is equally automatic: a language model only verbalizes programs enumerated from real tool responses and never chooses an answer. Under general web search, six contemporary tool-calling models reach 70.9% to 76.7% answer accuracy. Over three consecutive days, 70% of served questions change their gold value, and even under tolerance-aware matching, a literally reused earlier snapshot fails on a majority of questions within a single day. Per-question tracking uncovers dynamic shifts in correctness masked by aggregate accuracy."
+  },
+  {
+    "id": "arxiv:2610.37162",
+    "source": "arXiv",
+    "date": "2026-10-27",
+    "title": "Coverage Under Contradiction: A Benchmark for Negation-Aware Retrieval",
+    "authors": [
+      "Pasha Abrishamchian",
+      "Eugene Yang",
+      "Andrew Yates",
+      "Nazli Goharian",
+      "Ophir Frieder"
+    ],
+    "url": "https://arxiv.org/abs/2610.37162",
+    "abstract": "Coverage-evaluation benchmarks quantify whether retrieved evidence covers the different pieces of information needed to satisfy an information need. Existing benchmarks mostly consider factual claims that may already be known to pretrained retrieval components, leaving open whether retrievers find corpus evidence when it contradicts those priors. We study how retrievers behave when their parametric knowledge and the information in a corpus disagree. To do so, we develop a process to augment a nugget-based coverage benchmark with controlled contradictions. For each nugget, we create a negated counterpart and edit its supporting documents to support that negation while preserving the context. Applying this process to CoverageBench, a benchmark measuring information coverage, we create CoverageBench-Negate, spanning six datasets and roughly 63,000 original-edited evidence pairs (one per nugget-document link). We attach rich construction metadata to every pair and additionally provide out-of-family LLM judgments over all pairs and a human audit of a sample. In baseline experiments, BM25 separates original from edited near-twin evidence substantially better than dense retrievers (Qwen3 and Jina), which stay near chance. We release the benchmark on Hugging Face Datasets (nuggets, documents, pairs) together with the construction materials, including the prompts used to create it."
+  },
+  {
+    "id": "arxiv:2610.37081",
+    "source": "arXiv",
+    "date": "2026-10-27",
+    "title": "OpenGray: a benchmark for evaluating the decisions of radiotherapy planning agents",
+    "authors": [
+      "Humza Nusrat",
+      "Kundan Thind"
+    ],
+    "url": "https://arxiv.org/abs/2610.37081",
+    "abstract": "Background and purpose: Radiotherapy planning agents based on large language models (LLMs) decide when to submit a plan or request review but are evaluated mainly by dose. This study developed OpenGray, a benchmark of planning tasks with known correct decisions. Materials and methods: OpenGray adds tasks with known answers to the OpenKBP-Opt head-and-neck dataset, including two contradictions with dose goals proven incompatible and a feasible control with a stored plan meeting every hard goal. Four systems, from a rule-based planning script to a full LLM agent, were evaluated on 30 patients, the LLM-based ones with a commercial (Terra) and a local (Ministral 3 8B) LLM. Decisions, achieved dose, problem recognition, and technical failures were recorded and also read from logs of 39 stereotactic radiosurgery runs of SAGE, a clinical LLM agent. Results: With Terra, the script preceded by an LLM review and the full agent had decision accuracies of 95.4% and 92.1%, respectively, yet escalated only 50% (95% confidence interval, 25-75%) and 25% (10-40%) of overlap contradictions, which required arithmetic on the anatomy. All four systems submitted every feasible control, but 24% of these plans missed a hard goal that the stored plan had met. In four SAGE runs, one goal failed at every attempt; the agent identified it in every reply but had no action for stopping. Conclusions: Favorable aggregate scores concealed specific decision failures. Planning agents should be evaluated on their decisions as well as their dose and given an explicit action for stopping and requesting review."
+  },
+  {
+    "id": "arxiv:2610.36910",
+    "source": "arXiv",
+    "date": "2026-10-27",
+    "title": "Nothing Left Behind: Finding Evidence from a Large Randomized Evaluation Corpus",
+    "authors": [
+      "Giuliano Martinelli",
+      "Abelardo Carlos Martinez Lorenzo",
+      "Satvik Garg",
+      "Linxi Wang",
+      "Riccardo Orlando",
+      "Piriyakorn Piriyatamwong",
+      "Samuel Paul Fraiberger"
+    ],
+    "url": "https://arxiv.org/abs/2610.36910",
+    "abstract": "Many AI systems need to find every relevant items in a large collection and then organize what they found. The standard way to do this is to tag each item with labels from a curated vocabulary and search on those labels. Those labels are useful for organizing results, but searching on them misses items that do not fit a label and returns too much when labels are broad. We compare this approach with an embedding-based approach: find candidates by meaning using text embeddings, then have a language model keep only the relevant ones. In a corpus of 7,354 randomized trials, label search found 45% of the evidence a systematic review would include, while the new approach found 92%, at a cost per query that rises with search depth. These results support a two-stage architecture that combines broad candidate retrieval with query-specific evidence filtering."
+  },
+  {
+    "id": "arxiv:2610.36850",
+    "source": "arXiv",
+    "date": "2026-10-27",
+    "title": "uTHCD-C: A Corruption-Robustness Benchmark for Tamil Handwritten Character Recognition",
+    "authors": [
+      "Preethi S",
+      "Meeradevi T",
+      "Arun Prakash A"
+    ],
+    "url": "https://arxiv.org/abs/2610.36850",
+    "abstract": "Evaluation of Tamil handwritten character recognition (HCR) has largely focused on clean test images, and a standardized multi-corruption robustness benchmark for isolated Tamil HCR has not been established. We introduce uTHCD-C, a corruption-robustness benchmark based on the unconstrained Tamil Handwritten Character Database (uTHCD). The benchmark defines ten corruption types, including a handwriting-specific stroke-thinning corruption, at five severity levels. We evaluate nine convolutional and transformer-based architectures using five-fold stratified cross-validation and writer-independent testing. Robustness is quantified using mean Corruption Error (mCE), normalized against a VGG16-BN reference. We additionally compare parameter count, computational complexity, and inference throughput to characterize the computational requirements of the evaluated architectures. The results establish comparative robustness baselines for Tamil HCR, revealing substantial differences across architectures: ConvNeXt and Swin achieve the lowest mCE values (0.75 and 0.83, respectively), whereas ShuffleNet and MnasNet exhibit higher values (1.55 and 1.85, respectively). The accompanying efficiency measurements characterize the trade-offs between corruption robustness and computational requirements. By providing standardized corruption configurations, evaluation protocols, and comparative results, uTHCD-C establishes a reproducible basis for future research on robust and computationally efficient Tamil HCR."
+  },
+  {
+    "id": "arxiv:2610.36781",
+    "source": "arXiv",
+    "date": "2026-10-27",
+    "title": "CVBL-CCTV-Face Dataset for Real-World Face Enhancement and Recognition in Surveillance",
+    "authors": [
+      "Manish Das",
+      "Ajay Kumar Yadav",
+      "Shiv Ram Dubey",
+      "Satish Kumar Singh"
+    ],
+    "url": "https://arxiv.org/abs/2610.36781",
+    "abstract": "In real-world surveillance settings, facial captures from closed-circuit television systems suffer from degradations such as low resolution, motion blur, noise, and occlusions, which undermine dependable face recognition. In this study, we propose a framework for super-resolution and identity recognition, aimed at surveillance applications. For this purpose, we present the CVBL-CCTV-Face Dataset which is a dataset of real-world images taken in an unpaired manner where each pair consists of a low-quality (LQ) image of a face captured by a 8MP IP Dome CCTV camera together with a high-quality (HQ) reference image that is taken in controlled settings. In order to cope with the various problems posed by such datasets, we construct a modular system that involves face detection, deep learning-based super-resolution of low-quality face images, and identity recognition through L2-normalized embeddings extracted by an embedding model. Enhancement models are trained and tested according to three different setups, and the system is deployed for identity verification in a real-time unconstrained environment."
+  },
+  {
+    "id": "arxiv:2610.36553",
+    "source": "arXiv",
+    "date": "2026-10-27",
+    "title": "NextEval: An Agent-Based Solver and Benchmark for Derivative-Free Optimization",
+    "authors": [
+      "Shuo Chen",
+      "Li Cui",
+      "Cunxin Huang",
+      "Ya-Feng Liu",
+      "Minghang Xie",
+      "Meng Xu",
+      "Zaikun Zhang"
+    ],
+    "url": "https://arxiv.org/abs/2610.36553",
+    "abstract": "Derivative-free optimization (DFO) addresses problems where derivatives are unavailable or costly to obtain. This setting often arises in simulation-based and experimental applications, where evaluating the black-box objective can itself be costly. Thus, it remains a central challenge in DFO to effectively exploit accumulated observations to select informative evaluation points under a limited budget. In this light, we introduce the NextEval solver, an agent-based DFO solver, which integrates the capabilities of a large language model (LLM) to guide the sequential selection of evaluation points. Specifically, we establish a system that combines an LLM agent with a numerical environment. The environment provides tools for analyzing past evaluations and executing numerical methods, while maintaining a shared evaluation history and method-specific state to support continuation across method switches. Using observations and tool feedback, the LLM agent selects tools, configures their parameters, and allocates the evaluation budget, while numerical methods compute and evaluate candidate points. Building on this system, we also introduce NextEval Bench, a benchmark protocol for comparing agent configurations on shared DFO tasks using the same numerical tools under matched evaluation budgets and information constraints. Numerical results on low-dimensional DFO problems demonstrate that the NextEval solver outperforms the state-of-the-art DFO baselines in function-evaluation efficiency."
+  },
+  {
+    "id": "arxiv:2610.36527",
+    "source": "arXiv",
+    "date": "2026-10-27",
+    "title": "ETC-Bench: A Multilingual Benchmark for Evaluation-Side Transcript Canonicalization",
+    "authors": [
+      "Zhiheng Qian",
+      "Junhao Du",
+      "Jing Peng",
+      "Hanqi Li",
+      "Kunyang Peng",
+      "Feng Xue",
+      "Kai Yu"
+    ],
+    "url": "https://arxiv.org/abs/2610.36527",
+    "abstract": "Written transcripts of the same speech can differ in ways that are not uniquely determined by the speech signal. We formulate evaluation-side transcript canonicalization (ETC), which maps multiple surface forms to a single canonical form when their differences are not determined by speech. To our knowledge, ETC-Bench is the first and most comprehensive multilingual benchmark for evaluation-side transcript canonicalization, covering 181 phenomenon types across 12 languages. Each instance is a minimal pair that shares a sentence context and differs only in a target span exhibiting one phenomenon. To evaluate both canonicalization success and semantic preservation, we propose Semantic-preserving Exact-match Normalization Accuracy (SENA), which combines exact agreement between independently canonicalized pair members with a pair-relative BERTScore constraint against information loss. We further introduce the Taxonomy-guided Agent Canonicalization Skill (TACS), which provides LLM agents with phenomenon descriptions and explicit canonicalization contracts. Experiments with five baseline configurations and three TACS-based agents show that the agents outperform the baseline systems on shared languages. ETC-Bench provides a systematic testbed for evaluation-side transcript canonicalization across languages."
+  },
+  {
+    "id": "arxiv:2610.36517",
+    "source": "arXiv",
+    "date": "2026-10-27",
+    "title": "PRISM: Pathology Reliability In Scarce-label Medicine. A Tile-level Benchmark of Pathology Foundation Models",
+    "authors": [
+      "Alicem Koyun"
+    ],
+    "url": "https://arxiv.org/abs/2610.36517",
+    "abstract": "Pathology foundation models are typically benchmarked on classification performance at full label availability and on in-distribution test sets, while calibration, behavior at low label budgets, and robustness under cross-institutional shift are seldom evaluated jointly. We introduce PRISM, a tile-level benchmark that measures the reliability of pathology foundation models along four axes: model choice, label fraction, calibration, and out-of-distribution transfer. PRISM evaluates eight foundation models (CLIP, PLIP, CONCH, UNI, Virchow2, GigaPath, H-Optimus-0, Midnight) on six tile-level datasets at six label fractions (1% to 100%) with three seeds (864 linear probe runs), extended with a five-hospital Camelyon17 study of 20 directed transfer pairs. Four phenomena emerge. (i) Under full supervision, AUROC rank predicts post-temperature calibration rank consistently across datasets (Spearman rho = 0.52, I^2 = 0%), whereas at 1% labels the relationship becomes dataset-specific (rho = -0.24, I^2 = 67%). (ii) On harder datasets the linear probe collapses to a single predicted class below a dataset-specific label fraction. (iii) Whether additional source-domain labels help or harm target calibration tracks how well the probe transfers: below a transfer AUROC of roughly 0.85, more labels worsen target ECE in 86-88% of combinations. (iv) Temperature scaling fails to reduce ECE in 49 of 288 cells, miscalibration is predominantly under-confidence, and a source-fitted temperature is harmful under failing transfer. PRISM is released as a pip-installable package with reference results for all 288 cells. Code and data: https://github.com/alicemkyn/prism-benchmark"
+  },
+  {
+    "id": "arxiv:2610.36510",
+    "source": "arXiv",
+    "date": "2026-10-27",
+    "title": "Identity or Evidence? Auditing Evidence Dependence in Agentic Life-Science Benchmarks",
+    "authors": [
+      "Danai Brilli",
+      "Maria Georgila"
+    ],
+    "url": "https://arxiv.org/abs/2610.36510",
+    "abstract": "Agentic life-science benchmarks give an agent evidence about a named entity and score an answer against a recorded outcome. That score tests reasoning over evidence only if the evidence, rather than the name, determines the answer. We examine this distinction by varying identity and evidence independently on a clinical-outcome benchmark and published tasks from Biomni and LAB-Bench. Blinding identity matters little when a prompt contains a decisive sequence or passage. It matters a great deal when the prompt is mostly a name and candidate list (0.742 named versus 0.082 blinded; chance 0.093). Across 96 LAB-Bench LitQA2 questions, the gap increases under one fixed passage-redaction scheme (+0.000 to +0.135; per-instance slope +0.147, p= 0.004). On the clinical benchmark, a no-evidence recall probe matches prediction accuracy and recovers a database-specific programme count. So, we argue that benchmarks intended to measure evidence-dependent reasoning should report identity-blinded results, retrieval telemetry, and positive controls."
+  },
+  {
+    "id": "arxiv:2610.36442",
+    "source": "arXiv",
+    "date": "2026-10-27",
+    "title": "High-Fidelity Aerostructural Dataset of Transonic Wings in Cruise Conditions",
+    "authors": [
+      "Pavankumar Koratikere",
+      "Abhijnan Dikshit",
+      "Leifur Leifsson"
+    ],
+    "url": "https://arxiv.org/abs/2610.36442",
+    "abstract": "Recent advances in machine learning (ML) have the potential to substantially accelerate aircraft wing design, a process that has traditionally required extensive high-fidelity simulation and design iteration. Existing public datasets for ML-based wing design have focused primarily on aerodynamic performance, with limited consideration of the multidisciplinary interactions that govern practical aircraft design. In particular, efficient wing design requires simultaneous consideration of aerodynamic performance and structural integrity, yet no publicly available datasets capture this coupled aerostructural behavior at high-fidelity. To address this need, a high-fidelity multidisciplinary dataset for static aerostructural analysis of transonic wings is introduced. The dataset includes 2471 samples, along with three out-of-distribution samples. The wing planform geometry is parameterized by span, sweep, dihedral, tip chord, and tip twist, while the airfoil cross-sections are parameterized using the class-shape transformation method. The analysis is further parameterized by Mach number, angle of attack, altitude, and structural load factor. The utility of the dataset is demonstrated by training state-of-the-art ML models to predict aerodynamic surface quantities, integrated aerodynamic performance quantities, and the failure distribution of the wingbox. ML models achieve at most 0.0309 normalized root mean squared error (NRMSE) in the prediction of aerodynamic quantities and at most 0.1189 NRMSE in the prediction of failure distribution of the wingbox. By providing coupled aerodynamic and structural responses for a diverse set of transonic wings, this dataset establishes a benchmark for developing, evaluating, and comparing multi-physics ML models for wing design. Broadly, it is intended to encourage creation of similar high-fidelity multi-physics benchmark datasets across engineering domains."
+  },
+  {
     "id": "preprints:10.20944/preprints202610.2504",
     "source": "Preprints.org",
     "date": "2026-10-26",
@@ -48,6 +317,58 @@
     "url": "https://doi.org/10.20944/preprints202610.2456.v1",
     "abstract": "Machine-learning models used in bioinformatics are exposed to covariate shift from new sequencing platforms, batches and cohorts, while ground-truth labels arrive late or never. We present nannyrust, a pure-Rust library with no third-party dependencies that implements univariate drift statistics (Kolmogorov–Smirnov, Wasserstein, Jensen–Shannon, Hellinger, chi-squared, L-infinity), classification metrics with ROC AUC, and confidence-based performance estimation (CBPE), so that monitoring can run inside compiled pipelines. Against SciPy and scikit-learn the core statistics agree to within 5 × 10⁻¹³ on 700 test datasets.",
     "version": 1
+  },
+  {
+    "id": "arxiv:2610.36384",
+    "source": "arXiv",
+    "date": "2026-10-26",
+    "title": "SOMA: A Benchmark for Fine-Grained Egocentric Behavior and Body-Motion Understanding",
+    "authors": [
+      "Matea Tashkovska",
+      "Naël Ouerghemi",
+      "Haozhe Qi",
+      "Alexander Mathis"
+    ],
+    "url": "https://arxiv.org/abs/2610.36384",
+    "abstract": "Perceiving human body motion is critical for multimodal systems that understand and assist people. Yet current evaluations of Multimodal Large Language Models (MLLMs) largely focus on objects, scenes, and coarse actions, leaving their ability to reason about the body itself poorly assessed. This is especially challenging from the egocentric perspective, in which the body is only partially visible and motion must be inferred from occluded and temporally distributed cues. We introduce SOMA, a benchmark for fine-grained body-motion understanding from egocentric video, comprising 1,632 human-verified questions across three capability axes: body configuration, motion dynamics, and temporal reasoning. We evaluate 37 leading closed-source, open-source, and specialized egocentric MLLMs, complemented by an extensive human evaluation. We find that humans also find this task difficult from video alone (68.5% accuracy), yet clearly outperform the strongest MLLM (Qwen3.6-27B), which reaches 50.0% zero-shot accuracy. Our error analysis shows that MLLMs often misread the wearer's own body, misjudge events in time, and are prone to biases such as favoring the right hand or under-counting repetitions. To narrow the gap to human performance and support further progress, we introduce a training dataset of aligned video, body motion, and language supervision, and a multimodal baseline that jointly learns from these modalities. By identifying common failure modes and missing capabilities in current MLLMs, we hope SOMA will inspire future research on body-motion understanding and multimodal reasoning. Full benchmark, training data, and code will be released at: https://cnai.epfl.ch/soma"
+  },
+  {
+    "id": "arxiv:2610.36298",
+    "source": "arXiv",
+    "date": "2026-10-26",
+    "title": "Spiking Neural Networks Are Harder to Steal: A Benchmark Study of Model Stealing Attacks",
+    "authors": [
+      "Ayana Moshruba",
+      "Maryam Parsa"
+    ],
+    "url": "https://arxiv.org/abs/2610.36298",
+    "abstract": "Machine learning models deployed behind query interfaces expose more than their predictions, because an adversary can use those predictions to rebuild the model itself. Model stealing attacks (MSAs) exploit this exposure by training a surrogate model that replicates the decision behavior of a target through black-box queries alone, without access to its parameters or training data. These attacks are well characterized for conventional artificial neural networks (ANNs), yet spiking neural networks (SNNs) process information in a fundamentally different way. SNNs communicate through sparse, discrete spikes, and their outputs depend on membrane potentials that evolve over time rather than on a static mapping from input to output. This temporal mode of computation suggests that the decision behavior of an SNN may be harder to reconstruct from its responses. This work tests that possibility by benchmarking four representative MSAs, namely the Papernot, Tramèr, T-RND, and color perturbation attacks, against SNNs and their ANN counterparts on MNIST, Fashion-MNIST, and CIFAR-10. Across every attack and dataset, SNNs prove consistently more difficult to steal. Surrogates of SNNs achieve 10% to 20% lower agreement with the target model and 15% to 25% lower adversarial transferability than surrogates of ANNs. We attribute this resistance to the way SNNs compute, as their spike-based and time-dependent dynamics yield decision boundaries that ANN-based surrogates struggle to approximate, even under large query budgets. These findings extend the known resilience of SNNs beyond attacks on training data to the replication of model functionality, strengthening the case for neuromorphic architectures in security-sensitive applications."
+  },
+  {
+    "id": "arxiv:2610.36184",
+    "source": "arXiv",
+    "date": "2026-10-26",
+    "title": "Lipi-Ghor: A Large-Scale, Diarized, Multi-Domain Bengali Speech Corpus and a Scalable Pipeline for Building It",
+    "authors": [
+      "Sanjid Hasan",
+      "A H M Fuad",
+      "Risalat Labib",
+      "Bayazid Hasan Simon"
+    ],
+    "url": "https://arxiv.org/abs/2610.36184",
+    "abstract": "Bengali, spoken by over 230 million people, remains severely under-resourced in spoken language research. Existing open Bengali ASR corpora are confined to short, read or crowd-sourced speech and lack speaker diarization and long-form audio. We present Lipi-Ghor, a large-scale weakly-supervised Bengali speech corpus comprising 885 hours of audio sourced from 998 YouTube videos across 596 unique channels, spanning 17 diverse domains including audiobooks, drama, religious sermons, news, and regional dialects. Each recording is annotated in SSTT format (Speaker, Speech, Transcription, Timestamp), which combines automated diarization with Bengali YouTube caption tracks. To our knowledge, Lipi-Ghor is the first Bengali speech corpus to pair large-scale coverage with speaker-diarized, long-form audio annotations, both of which are absent from existing open Bengali resources. We also present the construction methodology as a replicable pipeline for any language with a sufficient captioned YouTube presence. Targeted channel curation across a handful of rich domains yields corpus scales that were previously out of reach for low-resource languages. We benchmark four widely-used ASR models under zero-shot and fine-tuned conditions. All four degrade consistently on emotive, dialectal, and long-form content. Because caption targets are noisy, we also release a human-annotated gold evaluation split, verified by 17 volunteer annotators over 30 hours of human-in-the-loop correction and stratified across all 17 domains. We release our original contributions (video-ID lists, diarization output, pipeline code, and the gold annotations) under CC-BY-4.0, and distribute caption-derived transcripts for research use only; no raw audio is redistributed."
+  },
+  {
+    "id": "arxiv:2610.36086",
+    "source": "arXiv",
+    "date": "2026-10-26",
+    "title": "STEM-Bank-26: An Open Dataset of Analytical Scanning Transmission Electron Microscopy Images and Spectra",
+    "authors": [
+      "George Hollyer",
+      "Eric Stach"
+    ],
+    "url": "https://arxiv.org/abs/2610.36086",
+    "abstract": "Scanning transmission electron microscopy (STEM) is a versatile, multi-modal method for studying materials at the nanoscale. It integrates multiple signal sources to provide atomic resolution imaging alongside spectroscopy for elemental composition and electronic structure. Despite its utility, few datasets spanning multiple years of data have been published. We introduce STEM-Bank-26, a 929 GB open dataset of 37,921 STEM images that spans 1,095 material samples across 1,499 sessions and includes energy-dispersive spectroscopy (EDS) or electron-energy loss spectroscopy (EELS) data for 65.5% of sessions. We extract microscope control trajectories by comparing metadata between sequential images and provide tools for building similar datasets from archival data. To our knowledge, this is the largest openly available dataset that integrates experimental STEM, EDS and EELS data across a broad distribution of samples and sessions."
   },
   {
     "id": "arxiv:2610.35642",
@@ -470,7 +791,7 @@
       "Weisi Lin"
     ],
     "url": "https://arxiv.org/abs/2610.34221",
-    "abstract": "Aesthetic image cropping (AIC) aims to improve image composition and aesthetic quality by removing extraneous or distracting content. Over the past decade, AIC methods have evolved from specialized vision models to multimodal large language models(MLLMs). Reliable evaluation that reflects human preferences is essential for benchmarking AIC methods and guiding model optimization. However, the current AIC evaluation relies largely on geometry-based metrics such as intersection over union (IoU), as well as image aesthetic assessment(IAA) models. Although inconsistencies with human preferences have long been observed, the robustness and reliability of these evaluation criteria remain underexplored. To bridge this gap, we first construct CropBench, a large-scale benchmark comprising 106,995 human preference pairs for 1,019 images, with each candidate set containing the original image and candidate crops produced by 14 AIC methods. A systematic study on CropBench reveals that the existing criteria, ranging from IoU to off-the-shelf IAA assessment models, only exhibit limited alignment with human preferences. Building upon CropBench, we further propose CropReward, an MLLM-based reward model that evaluates a candidate crop by comparing with the original uncropped image and outputs a score indicating explicit aesthetic improvement or degradation relative to the original. In addition, we employ CropReward to construct CropReward-300k, the largest AIC dataset to date, and further develop CropAlign, a preference-aligned AIC model trained solely with CropReward supervision, without human-annotated crop boxes. Experimental results demonstrate that CropReward aligns with human preferences significantly better than existing criteria. CropAlign also surpasses the state-of-the-art AIC methods, demonstrating the advantage of CropReward in guiding AIC model optimization."
+    "abstract": "Aesthetic image cropping (AIC) aims to improve image composition and aesthetic quality by removing extraneous or distracting content. Over the past decade, AIC methods have evolved from specialized vision models to multimodal large language models(MLLMs). Reliable evaluation that reflects human preferences is essential for benchmarking AIC methods and guiding model optimization. However, the current AIC evaluation relies largely on geometry-based metrics such as intersection over union (IoU), as well as image aesthetic assessment(IAA) models. Although inconsistencies with human preferences have long been observed, the robustness and reliability of these evaluation criteria remain underexplored. To bridge this gap, we first construct CropBench, a large-scale benchmark comprising 106,995 human preference pairs for 1,019 images, with each candidate set containing the original image and candidate crops produced by 14 AIC methods. A systematic study on CropBench reveals that the existing criteria, ranging from IoU to off-the-shelf IAA assessment models, only exhibit limited alignment with human preferences. Building upon CropBench, we further propose CropReward, an MLLM-based reward model that evaluates a candidate crop by comparing with the original uncropped image and outputs a score indicating explicit aesthetic improvement or degradation relative to the original. In addition, we employ CropReward to construct CropReward-300k, the largest AIC dataset to date, and further develop CropAlign, a preference-aligned AIC model trained solely with CropReward supervision, without human-annotated crop boxes. Experimental results demonstrate that CropReward aligns with human preferences significantly better than AIC existing criteria. CropAlign also surpasses the state-of-the-art AIC methods, demonstrating the advantage of CropReward in guiding AIC model optimization."
   },
   {
     "id": "arxiv:2610.34210",
@@ -989,6 +1310,17 @@
     "url": "https://doi.org/10.20944/preprints202610.2261.v1",
     "abstract": "Question-answering recipe recommendation tasks lack datasets with ground-truth labels. Existing methods often generate datasets from simple combinations of ingredient or tag constraints, leading to unnatural expressions and unreasonable constraints that are hard to reflect users’ real preferences. This paper proposes a construction method for a benchmark-style QA dataset for natural-language recipe recommendation. Driven by real user behavior, our method integrates external user query and review data to extract fine-grained preference signals by LLMs and maps them onto a knowledge-graphbased tag schema, thereby constructing QA data consisting of preference and ingredient constraints. Besides, a greedy strategy for constraint selection is also used to control the answer size, while tagbased re-ranking is applied to improve data quality. The generated dataset RecipeADQA contains natural-language questions, structured constraints, and answer sets, resulting in 128,465 instances. Experiments compare RecipeADQA with baseline datasets from two perspectives: data quality and retrieval-recommendation performance. The results show that ours outperforms existing methods on the same recipe knowledge graph in coverage, higher question quality in naturalness and constraint rationality, and better queryability. Moreover, we design a noise-augmented retrieve-and-rerank model, in which a lightweight parser first retrieves candidate recipes, and a small language model then selects and ranks relevant recipes from a noisy candidate pool. The model trained on RecipeADQA outperforms the same model trained on the baseline datasets. The relevant construction code and data have been open-sourced at a GitHub repository https://github.com/MorimoLab/RecipeADQA. Note: The paper has been accepted by \"The 22nd International Conference on Advanced Data Mining and Applications 2026 (ADMA 2026)\".",
     "version": 1
+  },
+  {
+    "id": "arxiv:2610.35938",
+    "source": "arXiv",
+    "date": "2026-10-22",
+    "title": "Closure of Traceful Radiation-Gauge Reconstruction with Matter: General Kerr Conditions, a Thin-Shell Benchmark, and a Conserved Torus",
+    "authors": [
+      "G. G. L. Nashed"
+    ],
+    "url": "https://arxiv.org/abs/2610.35938",
+    "abstract": "We formulate the closure problem for first-order, traceful radiation-gauge metric reconstruction on a Kerr background with matter. The reconstruction is decomposed into Weyl-curvature, Ricci-trace, and mass--angular-momentum completion sectors. For compatible initial, gauge, and completion data, we establish local existence and uniqueness of the resulting triangular transport system on a regular Kerr domain, and identify the additional conditions needed for a closed global formulation. This is not a global existence theorem. We test the framework using two conserved matter sources. For a thin shell around a Schwarzschild black hole, Israel matching, regularity, asymptotic flatness, a barotropic equation of state, and fixed rest mass determine the static, axial, and leading rotational sectors. The ADM-mass shift is $\\sqrt{1-2M/R}$ times the shell rest mass, while the axial sector determines the angular momentum, moment of inertia, and interior frame dragging. We also construct a stationary constant-angular-momentum fluid torus on Kerr and compute its Newman--Penrose Ricci projections, showing that nonspherical sources generally excite coupled Ricci sectors. The shell provides a closed benchmark, while the torus illustrates the additional structure required for general Kerr sources."
   },
   {
     "id": "arxiv:2610.35357",
@@ -1645,6 +1977,7 @@
       "Ceren Berk",
       "Naman Bhatia",
       "Souvik Bhattacharyya",
+      "Nabilah Binte Md Johan",
       "Isabel Blanco Ferreiro",
       "Felipe Bochini",
       "Sayuru Bopitiya",
@@ -1673,6 +2006,7 @@
       "Álvaro González-Escapa",
       "Bin Hu",
       "Kaiyu Huang",
+      "Fenal Ashokbhai Ilasariya",
       "Abderrahmane Issam",
       "Danka Jokić",
       "Ulugbek Khalilov",
@@ -1693,8 +2027,9 @@
       "Van Ngo",
       "Joy Olusanya",
       "Marc Pàmies",
-      "Avinash Kuney Pandey",
+      "Avinash Kumar Pandey",
       "Yurii Paniv",
+      "Hitesh Laxmichand Patel",
       "Fred Philippy",
       "Vladislav Poritski",
       "Dikshya Poudel",
@@ -3455,7 +3790,7 @@
       "Shengze Cai"
     ],
     "url": "https://arxiv.org/abs/2610.25459",
-    "abstract": "Bimanual manipulation with dexterous hands has attracted growing attention in research on robotic action models. However, few studies have developed benchmarks specifically tailored for dexterous manipulation, leaving the dexterous manipulation capabilities of existing models insufficiently characterized. In this paper, we present BiDex-100, a simulation benchmark for bimanual dexterous manipulation that combines broad task coverage, multi-dimensional evaluation, and high-DoF hand embodiments. Concretely, the benchmark comprises 106 tasks organized along five capability axes: generalization, instruction following, limited demonstrations, long horizon, and memory. Each task is paired with an out-of-domain variant featuring controlled visual and spatial changes, allowing systematic assessment of robustness. In addition, the benchmark supports two embodiments and provides 8,080 success-validated teleoperated demonstrations, totaling 6.25 million frames. We evaluate seven recent Vision-Language-Action models under a unified protocol, establishing baselines for capability-specific performance, robustness, and data efficiency. The website is available at https://BiDex-100.github.io/BiDex-100/."
+    "abstract": "Bimanual manipulation with dexterous hands has attracted growing attention in research on robotic action models. However, few studies have developed benchmarks specifically tailored for dexterous manipulation, leaving the dexterous manipulation capabilities of existing models insufficiently characterized. In this paper, we present BiDex-100, a simulation benchmark for bimanual dexterous manipulation that combines broad task coverage, multi-dimensional evaluation, and high-DoF hand embodiments. Concretely, the benchmark comprises 106 tasks organized along five capability axes: generalization, instruction following, limited demonstrations, long horizon, and memory. Each task is paired with an out-of-domain variant featuring controlled visual and spatial changes, allowing systematic assessment of robustness. In addition, the benchmark supports two embodiments and provides 8,080 success-validated teleoperated demonstrations, totaling 6.25 million frames. We evaluate seven recent Vision-Language-Action models under a unified protocol, establishing baselines for capability-specific performance, robustness, and data efficiency. The website is available at https://robbyant-research.github.io/BiDex-100/."
   },
   {
     "id": "arxiv:2610.25450",
@@ -3803,7 +4138,7 @@
       "Faiza Nooren Suhita"
     ],
     "url": "https://arxiv.org/abs/2610.24764",
-    "abstract": "This paper introduces BanglaBBQ, a question-answering bias benchmark designed to capture stereotypes grounded in the Bangladeshi context, in both Bangla and English. Following KoBBQ and PakBBQ, BanglaBBQ adapts the original Bias Benchmark for Question Answering (BBQ) by classifying its templates into three groups: directly translated (DT), modified to align target groups or contexts with Bangladesh (TM), and removed when deemed unsuitable for the Bangladeshi context (SR). This process retains 140 templates across six categories, comprising 76 DT and 64 TM templates. Five newly authored (NA) categories, based on stereotypes common in Bangladeshi society, are then added: marital status, age and political perception, regional origin, educational background, and mental-health status. Native Bangladeshi annotators judged all 466 newly authored templates, and 372 were retained because a strict majority of English annotators identified the intended target and rated the attitude as common enough. Each newly authored template is linked to a documented source and a verbatim quote from it. Each evaluated template also has a counter-stereotypical version of its disambiguated context. The dataset was evaluated using two open-weight models (Qwen3-4B and Qwen3-8B) and two closed models (GPT-4.1-mini and Gemini 2.5 Flash). All four lean towards the stereotyped person when the context is ambiguous, in both languages, and the effect of language differs by model, so English results do not predict behaviour in Bangla. On the adapted BBQ templates, both Qwen3 models are also less accurate when the context contradicts a stereotype than when it confirms it. On the newly authored templates, the closed models follow counter-stereotypical evidence almost perfectly, and all four models are more biased on the templates that annotators validated than on those they rejected."
+    "abstract": "This paper presents BanglaBBQ, a question-answering bias benchmark designed to capture stereotypes grounded in the Bangladeshi context, in both Bangla and English. Following KoBBQ and PakBBQ, BanglaBBQ adapts the original Bias Benchmark for Question Answering (BBQ) by classifying its templates into three groups: directly translated (DT), modified to align target groups or contexts with Bangladesh (TM), and removed when deemed unsuitable for the Bangladeshi context (SR). This process retains 140 templates across six categories, comprising 76 DT and 64 TM templates. Five newly authored (NA) categories, based on stereotypes common in Bangladeshi society, are then added: marital status, age and political perception, regional origin, educational background, and mental-health status. Native Bangladeshi annotators judged all 466 newly authored templates, and 372 were retained because a strict majority of English annotators identified the intended target and rated the attitude as common enough. Each newly authored template is linked to a documented source and a verbatim quote from it. Each evaluated template also has a counter-stereotypical version of its disambiguated context. The dataset was evaluated using two open-weight models (Qwen3-4B and Qwen3-8B) and two closed models (GPT-4.1-mini and Gemini 2.5 Flash). All four lean towards the stereotyped person when the context is ambiguous, in both languages, and the effect of language differs by model, so English results do not predict behaviour in Bangla. On the adapted BBQ templates, both Qwen3 models are also less accurate when the context contradicts a stereotype than when it confirms it. On the newly authored templates, the closed models follow counter-stereotypical evidence almost perfectly, and all four models are more biased on the templates that annotators validated than on those they rejected."
   },
   {
     "id": "arxiv:2610.24611",
@@ -4814,6 +5149,17 @@
     ],
     "url": "https://arxiv.org/abs/2610.21038",
     "abstract": "Machine learning models for tabular prediction typically assume that training data are representative of the population on which they will be deployed. In practice, however, data are often collected based on convenience, availability, or cost, resulting in systematic sampling biases that can distort feature--target relationships and undermine real-world generalization. Existing tabular distribution-shift benchmarks primarily construct out-of-distribution (OOD) settings by partitioning observations across naturally occurring domains. While such partitions may induce changes in P(Y | X), the resulting shifts are neither explicitly controlled nor isolated, and the evaluation distributions themselves are often not representative of the broader target population. We introduce INCONVENIENT, a benchmark designed to study robustness to convenience-sample bias. Rather than relying on naturally occurring domain partitions, INCONVENIENT directly perturbs feature--target relationships in the training distribution while preserving the original population distribution as the deployment environment. This setting more closely reflects real-world scenarios in which models are developed from unrepresentative samples and subsequently deployed on a broader population. The distinction is particularly relevant for large language models (LLMs), whose pretraining may encode population-level knowledge that extends beyond the relationships observed in a biased training dataset. Unlike existing distribution-shift benchmarks, INCONVENIENT provides explicit control over both the direction and severity of relationship shifts, enabling a systematic assessment of robustness to convenience sampling. The benchmark comprises 200 tabular classification and regression datasets spanning diverse application domains and generates around 15,500 shifted training distributions which lead to substantial downstream degradation."
+  },
+  {
+    "id": "arxiv:2610.35925",
+    "source": "arXiv",
+    "date": "2026-10-14",
+    "title": "ReCoPII: A Relation-Grounded Framework for Building Contextual PII Masking Datasets",
+    "authors": [
+      "Taehwan Lee"
+    ],
+    "url": "https://arxiv.org/abs/2610.35925",
+    "abstract": "Training contextual masking systems for personally identifiable information (PII) requires examples distinguishing maskable from preservable mentions of one entity type, but privacy restrictions limit access to real data. Author-based augmentation (SPY) labels mentions unrelated to the author as non-PII, presuming a single data subject and overlooking others. We propose ReCoPII (Relation-grounded Contextual PII masking), a framework that builds such data without this premise: it plans ontology-constrained entity relations, writes insertion sentences with placeholders, reconstructs annotations with code, checks the result with a separate LLM, and derives MASK/KEEP labels from entity relations. On Korean documents from six domains, it yields ReCoPII-Ko, a corpus with relation, privacy, and MASK/KEEP annotations, which we validate. Across 300 pairs, four annotators agree with 88.42% of its sampled KEEP labels, against 26.27% for SPY-style augmentation of the same sources. Classifiers trained on it over-mask less than under that reference on a matched test. Contextual masking fine-tuned jointly with a PII detector removes most over-masking of detection alone within a fixed leakage budget; on human-verified entity records, the four detectors meeting it over-mask at most 5.04% with at most 4.18% leakage. The detector is comparable to XLM-R-large on KDPII with about a quarter of its parameters."
   },
   {
     "id": "arxiv:2610.22416",
