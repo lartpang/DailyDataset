@@ -1,5 +1,31 @@
 [
   {
+    "id": "preprints:10.20944/preprints202611.0043",
+    "source": "Preprints.org",
+    "date": "2026-11-02",
+    "title": "Training Machine Learning Prediction of Antibody Thermostability Utilizing PROPERMAB Features and the GDPa4 Dataset",
+    "authors": [
+      "Hannah Ke",
+      "Jenna Ke",
+      "Jianghai Liu"
+    ],
+    "url": "https://doi.org/10.20944/preprints202611.0043.v1",
+    "abstract": "Antibody drug development is a years-long, costly process. Antibody thermostability is one of the key developability features of an antibody drug that influences its chances of success in development. But, experimental testing such as nanoDSF for large libraries of candidates requires substantial resources. Instead, we evaluated an open-source feature-based machine learning workflow to train a model for antibody stability (Tm1) predictions from sequence and structure-based features. We used PROPERMAB to extract features from a selection of 231 different monoclonal and bispecific antibodies from the GDPa4 nanoDSF dataset. We benchmarked regression and classification models that predict the median first thermal transition temperature (Tm1) from PTS-IF in degrees Celsius for antibodies in the GDPa4 data set from Gingko Datapoints. We trained the models on 184 antibodies and evaluated model performance on 47 held-out antibodies. The three different regression models were ElasticNet, RandomForest, and GradientBoosting. RandomForest achieved the highest reported correlations among the regressors (Pearson r = 0.750, R2 = 0.562). Performance was also evaluated relative to 66.29 degrees Celsius as the threshold for thermostability. The classifier models were LogisticRegression, RandomForest, SupportVector, and GradientBoosting, and classification was defined relative to the training set median of 66.29 degrees Celsius. Thus, above-threshold and below-threshold describe position in this data set, not developability. The best performing model, RandomForest, improved on recall but reduced its precision by recovering two above-threshold antibodies in return for two more false positives. False positives are preferred to false negatives and classification models tended to reduce false negative counts. Most test antibodies also share a parent with a training antibody, so the models predict well for new combinations of known parents but generalization to unknown parents remain unseen However, due to the limited data set used, independent dataset validation is needed before drawing concrete conclusions.",
+    "version": 1
+  },
+  {
+    "id": "preprints:10.20944/preprints202610.3128",
+    "source": "Preprints.org",
+    "date": "2026-10-30",
+    "title": "Constraint-Aware Coding-Sequence Design for <em>Nicotiana benthamiana</em>: A 49,257-Record Benchmark and Codon-Reference Sensitivity Analysis",
+    "authors": [
+      "Mun-Kyu Kim"
+    ],
+    "url": "https://doi.org/10.20944/preprints202610.3128.v1",
+    "abstract": "Synonymous coding DNA sequence (CDS) design for plant expression constructs must balance host codon adaptation against guanine–cytosine (GC) composition, restriction-site avoidance, and sequence-integrity constraints, yet benchmark outcomes can depend strongly on the chosen codon- usage reference. Using FactorForge v3.2.0, an open-source CDS design and sequence-review workflow, we evaluated four rule-based design presets (Balanced, High-CAI, GC-target, and Assembly-friendly) on 49,257 reference-derived Nicotiana benthamiana CDS/protein records from the Sol Genomics Network (SGN) QLD183 resource (seed 320), scoring sequence integrity, a historical 55–65% GC window, and absence of BsaI/BpiI/BsmBI sites. With the legacy packaged codon reference, Assembly-friendly passed all three criteria for 63.37% of records; with three genome-derived references its combined pass rate was 0.00% after rounding, whereas GC-target attained 22.68% in each derived condition. A separate v3.3.0 dynamic-programming (DP) execution maximizing the codon adaptation index (CAI) within the same GC window found a GC-compliant sequence for 99.83% of records (mean CAI 0.9989), but 28.21% passed all criteria because Type IIS sites are outside the DP objective. These in-silico results characterize candidate generation under a historical policy. Evaluation with the v3.3.0 default settings, against external tools, and in the laboratory remains to be done.",
+    "version": 1
+  },
+  {
     "id": "preprints:10.20944/preprints202610.3071",
     "source": "Preprints.org",
     "date": "2026-10-30",
@@ -55,6 +81,259 @@
     "version": 1
   },
   {
+    "id": "arxiv:2610.42004",
+    "source": "arXiv",
+    "date": "2026-10-30",
+    "title": "TradeWar: A Benchmark for Execution-Grounded Trade Negotiation with Adaptive LLM Agents",
+    "authors": [
+      "Xiangyu Kong",
+      "Ruirui Yang",
+      "Xia Hou"
+    ],
+    "url": "https://arxiv.org/abs/2610.42004",
+    "abstract": "Multi-turn negotiation remains a challenging problem for large language model (LLM) agents. While LLMs can conduct natural-language dialogue, existing benchmarks predominantly assess only agreement rates, overlooking whether negotiated commitments actually create value once executed. To address this gap, we introduce TradeWar, a multi-country simulation benchmark that translates negotiation dialogues into concrete tariff and trade-share policies, enforces capacity and network constraints during settlement, and evaluates outcomes via an Economic Health Index (EHI). To solve this execution-grounded task, we propose TACTIC (Trade-aware Adaptive Consolidation and Theory-of-mind for International Commerce), an agent that iteratively refines its negotiation strategy across episodes-without updating base LLM weights-by leveraging prior experience, opponent behavior, and past settlement outcomes. Despite using zero-shot chain-of-thought (CoT) prompting, PromptLLM attains a 75% agreement rate but only 57.1 final EHI (*100), whereas TACTIC reaches 68.8. Across 20 sequential episodes and three seeds, TACTIC's final EHI improves from 58.2 to 73.2, compared with 65.2 for an ablation without cross-episode updates. Under technology-controls and energy-crisis shocks, TACTIC also exhibits smaller performance degradation than PromptLLM and MemoryLLM. These results indicate that CoT deliberation and interaction memory alone do not fully address delayed execution feedback, whereas settlement-grounded adaptation improves long-horizon negotiation in TradeWar."
+  },
+  {
+    "id": "arxiv:2610.41918",
+    "source": "arXiv",
+    "date": "2026-10-30",
+    "title": "A Multimodal Type 2 Diabetes Registry on DHIS2: A Design and Feasibility Study with the AI-READI Dataset",
+    "authors": [
+      "Saptarshi Purkayastha",
+      "Aiswarya Nandan Perumbilly",
+      "Zhenan Yin",
+      "Sherri L. Bucher"
+    ],
+    "url": "https://arxiv.org/abs/2610.41918",
+    "abstract": "Care for type 2 diabetes increasingly draws on continuous glucose monitors, wearable devices, home sensors, clinical records and retinal images, yet few open platforms have been shown to hold all of these for the same person. We asked three questions of DHIS2, the open-source health information system that ministries of health in about 80 countries run nationally: whether an unmodified Tracker program can represent these modalities together (RQ1), which design choices its row-per-event data model forces for dense sensor streams (RQ2), and what a bulk loader must do to load such data correctly (RQ3). We designed a registry of 27 program stages and 445 data elements, loaded the AI-READI dataset of 2,280 participants into it, and verified the result field by field against the source files. The program held every loaded modality in 8.09 million events. Dense streams were stored as hourly summaries aligned across modalities; electrocardiograms, diagnoses and 118,480 retinal images were stored as one event per record. The event model ruled out storing raw readings, and hourly summaries reduced the wearable and glucose volume about 26-fold. An audit of the loader found defects that shared one pattern: a failure that looked like success. We state five lessons for DHIS2 Tracker clients that address this pattern. Verification of all 64.9 million stored values found four defects, all missing, duplicated or artifactual records rather than wrong values, and none after their repair; an independent recomputation of the glucose summaries agreed on all 464,210 values compared. The paper offers implementation guidance for DHIS2 implementers and for users of AI-READI; it does not evaluate clinical use. Analytics at this scale, use by clinicians and live device feeds remain to be shown."
+  },
+  {
+    "id": "arxiv:2610.41857",
+    "source": "arXiv",
+    "date": "2026-10-30",
+    "title": "When the Simulator Fails, Not the Policy: Auditing Contact Artifacts in Simulated Robot Benchmarks",
+    "authors": [
+      "Alex Zhou",
+      "Junhao Wu",
+      "Xueyang Zhou",
+      "Yixiao Huo",
+      "Hongcheng Gao",
+      "Di Zhu",
+      "Zhenghao Zhang",
+      "Yongchao Chen"
+    ],
+    "url": "https://arxiv.org/abs/2610.41857",
+    "abstract": "Simulation benchmarks score robot policies by success rate, and every failed episode counts against the policy. Many of these failures are the simulator's fault, not the policy's; we find the cause and fix it. Testing a vision language action model and a world action model in simulation, we find that the policy often places the object and the simulator then ejects it, and that the benchmark's own scripted demonstrations fail the same way. We present SimuGuard, an auditing plugin for LIBERO, RoboTwin, RoboCasa and RoboDojo. It leaves the evaluation unchanged. At every physics step, it records the state and flags an object that starts moving at a contact faster than the robot's contact or gravity account for. It replays a recorded episode bit for bit, and it reruns the episode with one simulation parameter changed. With it we trace these episodes on RoboTwin to the collision detection of the physics engine: for geometry one to two centimeters apart, the engine reports a penetration of about two centimeters, and the solver throws the object out at several meters per second. The cause is one constant: the distance algorithm discards triangles below a fixed area threshold, which valid triangles fall below at the centimeter scale. With that constant changed and nothing else, episodes with an artifact fall from 12 in 100 to none, and the success rate on five container tasks rises from 89% to 98%. Success rates in simulation thus count failures that the simulator causes. Benchmarks on PhysX 5.3.1 or earlier should rerun in a repaired engine. Where the engine cannot change, they should report the success rate together with the range it spans when every flagged episode fails or passes: 75.8% to 98.5% around a reported 83.1% for LingBot-VA."
+  },
+  {
+    "id": "arxiv:2610.41803",
+    "source": "arXiv",
+    "date": "2026-10-30",
+    "title": "What Standard Evaluations Hide About Detectors of Hijacked LLM Agents: Rare Attacks, Unseen Tools and Benchmark Transfer",
+    "authors": [
+      "Mahmoud Abbasi",
+      "Juan M. Núñez V.",
+      "Amin Shahraki"
+    ],
+    "url": "https://arxiv.org/abs/2610.41803",
+    "abstract": "Detectors can flag hijacked large language model (LLM) agents from the traces of the tools they call. In the eleven evaluations we audited, attacks or anomalies make up 16% to 86% of the test samples, no evaluation varies that share, and six report no test on data from a second benchmark or source. We ask what such evaluations hide. On the AgentDrift and AgentDojo benchmarks we test trained detectors that read tool identities, behavior, call sequences, step embeddings or text, and a released LLM action monitor, AlignmentCheck, with thresholds fixed on training data or set by the monitor's released decision rule. First, at a 2% attack rate a detector with an area under the receiver operating characteristic curve (AUROC) of 0.879 reaches a precision of 0.076, and the mix of negatives alone moves that precision between 0.039 and 0.117. Second, as tool coverage, the share of test tool calls whose tool was seen in training, falls, detector rankings cross near 50% coverage and reverse below it, because unseen tools map to inputs that training never reached. Dropout on tool inputs largely removes the reversal. Third, no detector trained on AgentDrift ranks AgentDojo traces better than chance (AUROC 0.47 to 0.52), including one that reaches 0.996 within AgentDojo. The monitor, trained on neither, reaches 0.930, but with its open backbone its released decision rule would still mostly raise false alerts at a 2% attack rate (precision 0.096). We turn these findings into a checklist for evaluating trace detectors."
+  },
+  {
+    "id": "arxiv:2610.41772",
+    "source": "arXiv",
+    "date": "2026-10-30",
+    "title": "WorkIng: A Real-World and Synthetic Highway Work-Zone Benchmark Dataset for Autonomous Navigation",
+    "authors": [
+      "Xujun Xie",
+      "Dominik Rößle",
+      "Adithya Mohan",
+      "Daniel Cremers",
+      "Torsten Schön"
+    ],
+    "url": "https://arxiv.org/abs/2610.41772",
+    "abstract": "Highway work zones are critical edge cases for autonomous vehicles (AVs), combining atypical geometries and jurisdiction-specific regulations that existing benchmarks fail to capture: real-world datasets lack 360° multi-modal, full-scene 3D work zone annotation, and no single recorded site can span the layouts and regulatory variants needed for generalizable models. We present WorkIng, a dual-domain benchmark and training resource. WorkIng-Highway provides a 360° multi-modal work zone benchmark with synchronized 128-channel LiDAR, six RGB cameras, and RTK-GPS across 32 km, yielding 12,000+ annotated frames and 227,399 tracked 3D bounding boxes. WorkIng-CARLA complements this with procedural simulation spanning 24 regulation-aware scenarios across six canonical topologies and six international traffic standards, populated by 100+ custom 3D assets. Benchmarking representative 3D detection and end-to-end planning architectures shows that real-world data remains the primary performance driver, and that scenario-stratified synthetic augmentation improves architectures across 2D recognition, 3D detection, and trajectory planning. Resources: https://github.com/cvims/WorkIng"
+  },
+  {
+    "id": "arxiv:2610.41705",
+    "source": "arXiv",
+    "date": "2026-10-30",
+    "title": "Nereus: A Large-Scale Underwater Dataset for Fine-Grained Attribute Understanding and Grounded Counting Perception",
+    "authors": [
+      "Jingtao Deng",
+      "Zihao Jin",
+      "Yuehe Chen",
+      "Feixiang He",
+      "Shuiwang Li",
+      "Dan Zeng"
+    ],
+    "url": "https://arxiv.org/abs/2610.41705",
+    "abstract": "Underwater imagery records rich ecological information and supports applications such as science communication, fishery monitoring, ecological conservation, and oceanographic research. Beyond general scene understanding, these applications require models to recognize fine-grained biological traits and reason over spatially grounded evidence. However, existing underwater datasets often provide coarse category labels, generic captions, or total-count supervision, which limits their use for organism-level analysis and ecological reasoning. We introduce Nereus, a large-scale dataset for Underwater Fine-grained Perception that jointly supports Fine-Grained Object Attribute Understanding and Grounded Counting Perception. Nereus contains 88K images and 2.68M question-answer pairs, including annotations for 136K marine organism objects across 2,690 species and 1,515 genera, as well as 65K point annotations and 67K grounded counting QA pairs. Experiments with representative multimodal models show that Nereus improves downstream adaptation over existing underwater-domain data and provides a foundation for future research on fine-grained marine perception."
+  },
+  {
+    "id": "arxiv:2610.41704",
+    "source": "arXiv",
+    "date": "2026-10-30",
+    "title": "GraphNIAH: A Benchmark for Long-Context Reasoning over Real-World Graphs",
+    "authors": [
+      "Minh-Nam Tran",
+      "Abulhair Saparov"
+    ],
+    "url": "https://arxiv.org/abs/2610.41704",
+    "abstract": "The needle-in-a-haystack (NIAH) benchmark was introduced as a test for measuring a model's ability to find small relevant facts within a very large body of input text. However, existing NIAH benchmarks each suffer from one or more of the following limitations: (1) reliance on synthetic data, so their evaluations may not generalize to real-world settings; (2) reuse of previously published datasets, leading to the risk of benchmark contamination; (3) dependence on manual annotation, which requires human effort to create and update data and is prone to future benchmark contamination; and (4) unrealistic simplification of long-context multi-hop reasoning where each next step is trivial given previous steps, while real-world reasoning often requires planning over multiple possible proof paths. To address these limitations, we introduce \\Benchmark, a dynamic benchmark built from real citation relationships among scientific papers published after the evaluated models' knowledge cutoff date, which utilizes real-world information while ensuring no benchmark contamination. The fully automated benchmark construction pipeline samples representative subgraphs of the citation graph formed by these papers and converts each subgraph into a long-context QA example with a verifiable answer. We use GraphNIAH to evaluate eight LLMs from the GPT-5.6, Gemini-3, and Qwen3.5 families. We find that accuracy falls as questions require longer reasoning paths: at question depths of 16 and 32, the GPT-5.6 and Qwen3.5 models answer YES/NO questions no better than random guessing, mostly by answering NO; four of the eight models answer no counting example correctly, and the others model get worse as the subgraph size increases. These findings suggest that current LLMs often stop searching the citation relationships in their context before they reach the answer, even though every fact they need is in the context."
+  },
+  {
+    "id": "arxiv:2610.41543",
+    "source": "arXiv",
+    "date": "2026-10-30",
+    "title": "ARPEGE: Dataset and Methods to Estimate Acoustic and Geometric Parameters of Rooms from Sound",
+    "authors": [
+      "Jean-Daniel Pascal Prieto",
+      "Prerak Srivastava",
+      "Cédric Foy",
+      "Antoine Deleforge"
+    ],
+    "url": "https://arxiv.org/abs/2610.41543",
+    "abstract": "Can one hear the walls of a room? To foster audio signal processing research around this question we release ARPEGE, a dataset containing hundreds of ambisonic spherical-array room impulse responses recorded in 6 empty rooms, annotated by the relative positions of sources, microphones and all acoustic reflectors. The dataset includes multiple room sizes, surface materials, orientations and distances, as well as recordings of human speakers and handclaps. Two state-of-the-art methods on image source localization and blind room parameter estimation are demonstrated on the data. Initial code for re-simulating the measured room impulse responses is provided, a longer term goal being to digitally twin the dataset."
+  },
+  {
+    "id": "arxiv:2610.41518",
+    "source": "arXiv",
+    "date": "2026-10-30",
+    "title": "Enhancing Sentiment Classification on Small Datasets through Data Augmentation and Transfer Learning",
+    "authors": [
+      "Mahmoud S. Mayaleh",
+      "Samer A. Mayaleh"
+    ],
+    "url": "https://arxiv.org/abs/2610.41518",
+    "abstract": "Small-scale sentiment classification often suffers from data scarcity, which limits the generalization ability of the models. This study evaluates and compares the effectiveness of three data augmentation strategies: Easy Data Augmentation (EDA), back-translation, and contextual token substitution (nlpaug-style), with both traditional machine learning classifiers (Logistic Regression, Random Forest) and transformer-based models (BERT). We perform a comprehensive empirical comparison with low-resource sentiment datasets by summarizing the results of recent studies and performing targeted head-to-head experiments. Our findings indicate that all augmentation methods improve performance. Contextual augmentation yields the most consistent gains for BERT models, while EDA and back-translation provide greater benefits for traditional classifiers. These insights help guide the selection of data augmentation techniques tailored to model type and dataset size, filling a critical gap in research on data augmentation for sentiment classification on small datasets."
+  },
+  {
+    "id": "arxiv:2610.41411",
+    "source": "arXiv",
+    "date": "2026-10-30",
+    "title": "CryoAtlas: A Large Curated Dataset and Unified Benchmark for Cryo-EM Atomic Model Building",
+    "authors": [
+      "Mingrui Li",
+      "Minzhang Li",
+      "Weichen Qin",
+      "Yufan Xie",
+      "Zhangzhi Xiong",
+      "Sixian Shen",
+      "Jiakai Zhang",
+      "Yuan Pei",
+      "Jingyi Yu"
+    ],
+    "url": "https://arxiv.org/abs/2610.41411",
+    "abstract": "Deep learning has accelerated automated atomic model building from cryo-EM maps, yet progress remains limited by the lack of large, high-quality datasets and standardized evaluation benchmarks. We address this gap by introducing CryoAtlas, a rigorously curated dataset and unified benchmark for density-guided atomic model building of protein chains. By integrating and filtering EMDB and PDB entries (up to March 2026), CryoAtlas provides 17,809 map-model-sequence entries, including a curated 16,657-entry training split. From this resource, we construct a 618-target benchmark with a shared evaluation protocol that jointly assesses structural accuracy, model-to-map fit, and stereochemical validity. Using this framework, we benchmark state-of-the-art learning-based methods against Phenix and AlphaFold3, comprehensively analyzing the impact of map resolution, sequence length, protein category and sequence identity on modeling accuracy. As a case study, retraining the ModelAngelo CNN component on CryoAtlas improves performance on the benchmark. CryoAtlas provides an open, reproducible foundation for future cryo-EM atomic model building research. Project details and resource release updates are available at https://oulling.github.io/cryoatlas/."
+  },
+  {
+    "id": "arxiv:2610.41360",
+    "source": "arXiv",
+    "date": "2026-10-30",
+    "title": "Defining Page-Centric Visual Document Retrieval and Evaluating Existing Benchmarks",
+    "authors": [
+      "Chongzhi Zhang",
+      "Yuqi Zuo",
+      "Aixin Sun"
+    ],
+    "url": "https://arxiv.org/abs/2610.41360",
+    "abstract": "In modern information retrieval (IR), documents are increasingly encountered as structured sequences of visually rich, paginated units, rather than as flat text. Example documents encountered in our daily life include Word files, PDFs, and slide decks. Free text-centric retrieval systems either ignore this structure entirely or destroy it through arbitrary passage chunking. In this paper, we formulate page-centric Visual Document Retrieval (VDR) with pages as the fundamental indexing units and document context available for assessing page relevance. The formulation distinguishes two retrieval granularities, page and document, and three retrieval paradigms: independent-item, evidence-set, and iterative retrieval. We then assess 42 benchmarks using eight criteria covering corpus characteristics, query construction, relevance annotation, and ranking support. Our analysis shows two main findings on current VDR research. First, evaluation remains concentrated on page-level independent-item retrieval, with fewer resources supporting document-level, evidence-set, and iterative settings. Second, queries originating from real user information needs independently of target corpus content and graded relevance judgments are uncommon, while the coverage and verification of relevance judgments vary substantially. Both findings reveal gaps between the capabilities applications require and those existing evaluation protocols can establish. We provide benchmark selection guidance and identify priorities for future benchmark design, emphasizing alignment between task requirements, relevance semantics, and evaluation protocols."
+  },
+  {
+    "id": "arxiv:2610.41333",
+    "source": "arXiv",
+    "date": "2026-10-30",
+    "title": "StrictPRMBench: A Replayable Evaluation Benchmark for Auditing Fixed-Score PRM Aggregation",
+    "authors": [
+      "Pengfei Zheng"
+    ],
+    "url": "https://arxiv.org/abs/2610.41333",
+    "abstract": "Process reward models (PRMs) score reasoning steps, but best-of-N selection also requires a rule that aggregates those scores. We study that rule as a separate evaluation object. StrictPRMBench fixes mathematical reasoning pools, scorer evidence, and the source trace of a deletion intervention, so that different reducers face the same recorded selection problem. Across seven scoring checkpoints and two benchmarks, the stored N=32 outcomes give higher deletion-induced selection instability for product than geometric mean (GM) in all 14 cells. The equal-cell difference is +0.0965; a shared-problem bootstrap, conditional on these checkpoints and frozen pools, gives a 95% interval of [0.0846,0.1086]. A pre-injection-defined sensitivity excludes replacement slots that are either reducer's clean winner and retains 4,459 of 4,622 cell-problem records. The retained difference is +0.0986 [0.0875,0.1098]. Effects are heterogeneous: the two Qwen cells have positive percentile-bootstrap intervals on retained support but two-sided exact paired p-values of 0.0625 and 0.0703. Clean-pool Qwen accuracy does not detect a product advantage, but this is not an equivalence result. We provide versioned outcome records, CPU reanalysis, and an explicit evidence-availability contract. The contribution is a diagnostic evaluation protocol and a reproducible audit of recorded selector behavior, not a new PRM, a universally optimal reducer, or evidence of deployment-wide harm. Raw-score replay and outcome-record reanalysis are distinguished: missing primary edited-score vectors limit independent evaluation of new reducers under the same stress."
+  },
+  {
+    "id": "arxiv:2610.41267",
+    "source": "arXiv",
+    "date": "2026-10-30",
+    "title": "From 1D Benchmarks to Complex 3D Geometries: Can Agents Reliably Specify Problems for Automated PDE Simulation?",
+    "authors": [
+      "Akshat Jani",
+      "Sakhinana Sagar Srinivas",
+      "Venkataramana Runkana"
+    ],
+    "url": "https://arxiv.org/abs/2610.41267",
+    "abstract": "Turning an engineering request into a simulation requires consistent geometry, physics, boundary conditions, and numerical settings. Recent agent-assisted systems automate simulation setup, but successful execution alone does not establish whether the specification preserves the intended problem or correctly handles missing information. We study whether agents can reliably construct complete executable JSON specifications for automated geometry creation, meshing, PDE solving, and result export. Our workflow combines model extraction with deterministic scientific and capability checks, explicit clarification, and validated local patches that preserve unrelated accepted fields. We evaluate specification correctness, execution completion, and numerical verification separately. On 120 template-related requests, the full workflow achieves 98.3% correct first-turn specification and decision outcomes, compared with 92.5% for schema-assisted single shot and 82.5% for model-only: gains of 5.8 and 15.8 percentage points, respectively. It makes no false-ready decisions among the 42 requests requiring clarification or rejection. Component ablations identify contributions from scientific checks and conditional repair. Separate downstream studies cover 1D, 2D, and 3D steady and unsteady, linear and nonlinear problems, including flow and elasticity with complex three-dimensional wing geometries. A 30-case gallery demonstrates automated execution from retained JSON specifications, while 9 of 12 selected live user-to-results tests achieve joint specification, execution, export, and numerical-reference success (75.0%). These results support traceable, engineer-reviewed simulation assistance within the tested scope, while fresh-response regressions identify consistency as a priority for further improvement."
+  },
+  {
+    "id": "arxiv:2610.41263",
+    "source": "arXiv",
+    "date": "2026-10-30",
+    "title": "Yesterday's Code, Today's Dependencies: How Dependency Selection Shapes PHP Migration Benchmarks",
+    "authors": [
+      "Afridi Mahmud",
+      "Md. As-Aid Rahman",
+      "Rifat Shahriyar"
+    ],
+    "url": "https://arxiv.org/abs/2610.41263",
+    "abstract": "Migration benchmarks need projects whose tests pass before migration begins. Yet an old project can behave differently without any change to its code. Reinstalling it today may introduce newer libraries, changing both its initial test results and the failures observed during migration. We investigate this effect in PHP 7.4-to-8.3 migration. Using unchanged project source and saved package records, we compare two dependency policies. Modern selection allows all versions in the snapshot, while release-date selection allows only versions published by the project's release date. With Composer 2 fixed, release-date selection improves the PHP 7.4 pass rate by 7.1 pp across 3,660 releases. A separate comparison against committed locks shows that it also recovers recorded dependency versions more closely than modern selection. The choice matters after migration as well. Among projects that pass on PHP 7.4 under both policies, PHP 8.3 test outcomes differ in 15.0% of eligible pairs. We use a shared test runner and bypass Composer's platform check to isolate test behavior. The resulting candidate migration task sets overlap by only 58.5%. Most differences arise in Laravel projects, where older dependencies trigger deprecations that newer versions avoid. Targeted interventions show that removing these initial failures can restore passing tests or expose further incompatibilities. Thus, dependency selection changes not just whether an old project passes, but also which migration failures a benchmark can observe. Preserved locks provide the strongest available version reference; without them, release-date selection offers a historically grounded alternative. Migration benchmarks should make this choice explicit and report its effect on their results."
+  },
+  {
+    "id": "arxiv:2610.41232",
+    "source": "arXiv",
+    "date": "2026-10-30",
+    "title": "TRIDENT and SHAKTI: A Framework and Benchmark for Hindi AI-Text Detection",
+    "authors": [
+      "Shifali Agrahari",
+      "Sujit Kumar",
+      "Sanasam Ranbir Singh"
+    ],
+    "url": "https://arxiv.org/abs/2610.41232",
+    "abstract": "As Large Language Models (LLMs) become increasingly multilingual, distinguishing human-written from AI-generated text is essential for maintaining information integrity. However, research remains English-centric, with limited benchmarks for low-resource languages such as Hindi. To address this gap, we introduce SHAKTI, a large-scale Hindi benchmark covering four genres, eight LLM families, multiple prompting strategies, and adversarial transformations. We evaluate its quality through human annotation and analyze linguistic, grammatical, and sentiment-based differences between human- and AI-generated texts. Building on these findings, we propose TRIDENT, a round-trip translation-based detection framework with three variants: TRIDENT-S (static threshold), TRIDENT-D (dynamic threshold), and TRIDENT-C (logistic regression using multi-distance RTT features). TRIDENT leverages semantic consistency between original and round-trip translated texts to identify AI-generated content. Extensive experiments show that TRIDENT outperforms conventional and supervised baselines, with TRIDENT-S achieving the best overall performance. Further evaluations across seven languages, adversarial settings, and unseen LLMs demonstrate its multilingual applicability and robustness, while highlighting sensitivity to the translation model."
+  },
+  {
+    "id": "arxiv:2610.41127",
+    "source": "arXiv",
+    "date": "2026-10-30",
+    "title": "MotorSense: A Video-EMG Dataset of Motoric Representations for Action Understanding",
+    "authors": [
+      "Eadom Dessalene",
+      "Michael Maynord",
+      "Amir-Hossein Shahidzadeh",
+      "Botao He",
+      "Yasamin Tabatabaee",
+      "Ruoshi Liu",
+      "Ruohan Gao",
+      "Paul Pu Liang",
+      "Yiannis Aloimonos"
+    ],
+    "url": "https://arxiv.org/abs/2610.41127",
+    "abstract": "Computer vision models learn hand action only from its visual consequences, without access to the underlying embodied motor signals. We address this absence with MotorSense, the first large-scale paired egocentric video and surface electromyography (EMG) dataset. MotorSense pairs bimanual EMG bands with egocentric video and yields synchronized video, bimanual EMG and IMU, and audio across 100 hours of unscripted manipulation. EMG offers a powerful scalable alternative to manual annotation: it captures finger movement, hand configuration, and the forces exerted between hand and environment as a dense signal free of occlusion and labeler bias, whereas manual annotation is costly, subjective, and unreliable under occlusion. We use MotorSense to learn sensorimotor alignment, producing an organization of action that is shared across the visual and motoric spaces, through cross-modal pre-training between video and EMG. The resultant vision models are then transferred to downstream tasks that benefit from sensorimotor alignment: in this case, action recognition, 3D hand reconstruction, and 3D contact reconstruction. We further demonstrate a generative application in which EMG motor signals are used to condition a video diffusion model, yielding videos of fine-grained hand manipulation. Across four action-centric computer vision tasks and eight popular video datasets, we demonstrate that sensorimotor alignment provides a stronger foundation for visual representation learning than conventional self-supervised learning methods over video, outperforming every baseline across all tasks and datasets evaluated."
+  },
+  {
+    "id": "arxiv:2610.41118",
+    "source": "arXiv",
+    "date": "2026-10-30",
+    "title": "CompoSET: A Controlled Single-Edit Benchmark for Vision-Language Compositionality",
+    "authors": [
+      "Laure Delisle",
+      "Pietro Perona"
+    ],
+    "url": "https://arxiv.org/abs/2610.41118",
+    "abstract": "Vision-language compositionality is the ability to identify which properties, relations, quantities, and states bind to which entities in both an image and a caption, and to match those bindings across modalities. Existing benchmarks evaluate this ability through image-text matching: a model ranks candidate image-caption match similarities and succeeds when the correct match comes on top. In such datasets, paired images differ by more than a single binding: scene, layout, and content all differ, with 97% of pixels changing on average. Such pairs do not isolate compositionality: results are confounded by global image differences. We introduce Compositional Single-EdiT (CompoSET), a benchmark dataset in which each base image-caption pair has an edited counterpart, or foil, that preserves the scene but differs by a single controlled edit, such as color, count, spatial relation, or object state. Base and foil images preserve naturalistic scene complexity yet are visually near-identical: only 8% of pixels change on average. Our dataset has many foils per base scene (~22) in order to separate scene difficulty from edit difficulty, a distinction one-foil-per-base benchmarks cannot make. CompoSET contains 1,776 instances across 80 naturalistic scenes, spanning 16 edit types in 4 semantic categories, with captions at 3 verbosity levels. We test 22 dual-encoder VLMs and find that all models perform at or below chance level on CompoSET, despite scoring well on prior benchmarks. This suggests that apparent progress under prior image-text matching protocols may be an artifact arising from confounds in benchmark design, and that compositional understanding in dual-encoder VLMs is far from solved. CompoSET addresses the confounds and offers a better controlled benchmark to measure future progress."
+  },
+  {
+    "id": "arxiv:2610.41094",
+    "source": "arXiv",
+    "date": "2026-10-30",
+    "title": "AIFaultBench: A Reproducible Benchmark of Real-World Faults in AI Software Systems",
+    "authors": [
+      "Mehil B Shah",
+      "Mohammad Masudur Rahman",
+      "Foutse Khomh"
+    ],
+    "url": "https://arxiv.org/abs/2610.41094",
+    "abstract": "AI-based software systems remain difficult to debug because their failures can involve interactions among code, models, data, dependencies, hardware, and execution environments. Existing benchmarks cover specific classes of AI systems, while concerns about fault realism and reproducibility highlight the need for documented execution conditions and evidence. We present AIFaultBench, a benchmark of 770 real-world bugs from 105 AI-based software repositories across 76 organizations. It covers six classes of AI systems: machine learning, deep learning, reinforcement learning, systems based on large language models, agentic AI, and AI tooling and infrastructure. Each bug record connects the original report and affected codebase to structured metadata, environment setup scripts, a reproduction trigger, and investigation evidence. We reproduced 652 bugs (84.7%) under the recorded execution conditions and documented the outcomes of the remaining 118 attempts. Through its broad coverage, documented reproduction evidence, and common structure, AIFaultBench supports empirical studies of AI faults, debugging tool evaluation, practical failure investigation, and teaching with real-world examples."
+  },
+  {
     "id": "preprints:10.20944/preprints202610.2964",
     "source": "Preprints.org",
     "date": "2026-10-29",
@@ -68,6 +347,19 @@
     "url": "https://doi.org/10.20944/preprints202610.2964.v1",
     "abstract": "Concurrent faults in gears, bearings and shafts remain among the hardest cases for vibration-based condition monitoring of industrial gearboxes, because their signatures overlap, modulate one another and shift with speed and load. The 2009 PHM Society gearbox has become the standard public benchmark for this multi-component problem, yet published results on it are scattered across input types, network designs and validation schemes, which makes headline accuracies hard to compare. This article presents a critical review of deep-learning diagnosis on this benchmark and the wider gearbox literature, organised around three design choices: signal representation, model family and evaluation protocol. To ground the discussion, we re-analyse a controlled experiment in which three convolutional architectures were trained on 10,240 images per representation (continuous wavelet transform scalograms, short-time Fourier transform spectrograms and wavelet synchrosqueezed images) covering eight spur-gearbox health states. A compact five-stage batch-normalised network reached 99.90%, 99.85% and 99.66% test accuracy with wavelet, Synchrosqueezed and spectrogram inputs, respectively, but the margins among the best models correspond to only a few of the 2,048 test images. On a separate held-out validation subset, accuracy fell to 94.53%, 92.03% and 77.34%, making the representation effect far more visible. Comparison with published capsule-attention, architecture-search and transformer studies shows that reported accuracies on the same benchmark range from below 80% to above 99.5%, mainly because of differences in splitting protocol. We conclude with a reporting checklist and research agenda for leakage-aware, physics-informed and deployable gearbox diagnosis.",
     "version": 1
+  },
+  {
+    "id": "arxiv:2610.40949",
+    "source": "arXiv",
+    "date": "2026-10-29",
+    "title": "AVID: A Weakly Aligned RGB-Infrared Dataset and Perturbation Benchmark for Tiny Aerial Targets",
+    "authors": [
+      "Dharini Raghavan",
+      "Vishnu Rao",
+      "Sethu Selvi S"
+    ],
+    "url": "https://arxiv.org/abs/2610.40949",
+    "abstract": "Long-range detection of small drones is complicated by their visual similarity to birds and by the limited detail available from ground-based cameras. Combining visible and infrared observations offers complementary information, but their usefulness depends on target size, cross-modal alignment, and image quality. We present AVID, a benchmark for studying these factors using real RGB-infrared bird-drone surveillance footage originating from the Drone Detection Dataset and curated for the IEEE ICIP 2025 Video and Image Processing Cup. AVID comprises 32,040 corresponding frame pairs from 115 videos, with 35,952 existing bird and drone annotations at $320\\times256$ resolution. Targets occupy an unusually narrow size range: 68.1\\% have a geometric-mean bounding-box side of 8--16 pixels, and 99.0\\% meet the COCO small-object criterion. To characterize the geometric difficulty of combining the modalities, we introduce an object-relative alignment ratio and an alignment burden curve. In a sample of 300 frame pairs, 32.3\\% have estimated global translations greater than 5 pixels; among the 264 pairs with matching annotations, 16.3\\% exceed one median target side. We further introduce AVID-C, which simulates seven families of image degradation at five severity levels independently in RGB, infrared, or both. A fixed-feature analysis examines how scale, degradation, and added cross-modal shifts affect fitted bird-drone class overlap. At 12--16 pixels, the Bhattacharyya error bounds are 0.148 for RGB, 0.198 for infrared, and 0.046 for their combined features. These values describe separation in the specified feature and density models, not detector accuracy. Together, AVID and AVID-C support scale-aware, alignment-aware, and sensor-specific studies of tiny aerial targets."
   },
   {
     "id": "arxiv:2610.40518",
@@ -1315,7 +1607,7 @@
       "Ruijun Wang"
     ],
     "url": "https://arxiv.org/abs/2610.35025",
-    "abstract": "We determine the Borel-reducibility comparison of each pair of $\\mathbfΠ^0_3$ benchmark equivalence relations in Gao's monograph. The additional comparisons we prove are $E_\\infty\\leq_B c_0$, $E_\\infty\\nleq_B\\ell_p$ for $2<p<\\infty$, $\\ell_p\\nleq_B{\\equiv_m}$ for $2<p<\\infty$, $c_0\\nleq_B{\\equiv_m}$, $c_0\\nleq_B\\ell_\\infty^+$ and $\\equiv_m\\nleq_B\\ell_\\infty^+$. Together with the previous positive direction, these give $\\ell_p\\leq_B{\\equiv_m}$ if and only if $p\\leq2$. These answer several questions in Gao's monograph and Kanovei' monograph. We also prove that unitary equivalence of all bounded linear operators is not Borel reducible to $\\equiv_m$. This answers a question of Ding and Gao. Equivalently, unitary equivalence of arbitrary representations of $F_\\infty$ is strictly more complicated than that of arbitrary representations of $\\mathbb Z$. This answers a question of Thomas."
+    "abstract": "We determine all Borel-reducibility comparisons within the family of benchmark equivalence relations in Gao's monograph, enlarged by the universal treeable relation $E_{\\infty T}$ and its countable power $E_{\\infty T}^ω$. We prove $E_\\infty^ω\\leq_B c_0$, $E_\\infty\\nleq_B\\ell_p$ for $2<p<\\infty$, $\\ell_p\\nleq_B{\\equiv_m}$ for $2<p<\\infty$, $c_0\\nleq_B{\\equiv_m}$, $c_0\\nleq_B\\ell_\\infty^+$, and $\\equiv_m\\nleq_B\\ell_\\infty^+$. Together with the classical result, these give $\\ell_p\\leq_B{\\equiv_m}$ exactly when $p\\leq2$. The same methods show that $E_{\\infty T}$ is incomparable with every $\\ell_p$, $1\\leq p<\\infty$. The comparisons answer questions recorded in Gao's monograph and Kanovei's monograph. We also prove that unitary equivalence of all bounded linear operators is not Borel reducible to $\\equiv_m$, answering a question of Ding and Gao. Equivalently, unitary equivalence of arbitrary representations of $F_\\infty$ is strictly more complicated than that of arbitrary representations of $\\mathbb Z$, answering a question of Thomas."
   },
   {
     "id": "arxiv:2610.34963",
@@ -1746,7 +2038,6 @@
     "title": "Satellite-derived bathymetry of Arabian Gulf ports under leakage-free validation: a multi-site benchmark of empirical, machine-learning and deep-learning models against 285,000 multibeam soundings, with an outlook for UAE waters",
     "authors": [
       "Muhammad Saeed",
-      "Fatema Al Hajri",
       "Mohamed H. Alhosani",
       "Dmitry Mikhaylov",
       "Yasser F. Al Wahedi"
