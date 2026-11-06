@@ -1,5 +1,401 @@
 [
   {
+    "id": "preprints:10.20944/preprints202611.0521",
+    "source": "Preprints.org",
+    "date": "2026-11-05",
+    "title": "CD10/Neprilysin as an Integrated Transcriptional Readout of Alveolar Macrophage Homeostatic Identity: A Multi-Dataset Secondary Analysis",
+    "authors": [
+      "Deze Li",
+      "Hao Chen",
+      "Chen Shen"
+    ],
+    "url": "https://doi.org/10.20944/preprints202611.0521.v1",
+    "abstract": "Background. Alveolar macrophages (AMs) are long-lived resident sentinels of the alveolar lumen. Yet no single surface readout coupled to their homeostatic program, with an explicit interpretation rule in disease, has been consolidated. CD10 (MME/neprilysin) is listed among human AM surface markers, but its performance as an identity readout and its biology have not been characterized across datasets, programs and disease states. We asked whether CD10 marks AM homeostatic identity, which programs it couples to, and how it changes in disease. Methods. We performed a secondary analysis of the Madissoon healthy human lung atlas and the Natri lung-disease atlas, with bronchoalveolar lavage (BAL) studies as literature-level reference. We quantified MME detection across compartments, co-expression programs, MME+/MME− dichotomized comparisons with sequencing-depth-matched controls, and donor-level disease statistics using the donor as the statistical unit. Results. CD10 marked resident AMs: MME was detected in 30.1% of AMs and 51.9% of proliferating AMs, versus 0.2–0.3% of monocytes. Within AMs, higher MME tracked the PPARγ lipid and TGFβ maturation programs (Pearson ρ = 0.296 with ITGB8, ρ = 0.209 with PPARG) together with a don’t-eat-me profile (3.20-fold PD-L1, 1.39-fold CD47); these couplings survived sequencing-depth-matched controls. At donor level, the MME–FABP4 coupling was reproduced (ρ = 0.472) whereas MME–PPARG was not. AM-compartment MME did not differ between idiopathic pulmonary fibrosis (IPF) and control (p = 0.92; 36 versus 44 donors), and no AM-compartment change survived FDR control in any diagnosis, whereas interstitial macrophage MME increased in IPF (p = 0.0003, FDR = 0.003) and non-IPF interstitial lung disease (p = 0.0042, FDR = 0.023). Conclusions. CD10 is a transcript-level candidate readout of AM homeostatic identity, co-expressed with the PPARγ lipid program and elevated don’t-eat-me signals. Disease-associated changes are compartment-specific, stable within AMs and induced within interstitial macrophages, consistent with compartment remodelling rather than wholesale loss; measured on tissue composition, dilution alone predicts that AM-dependent samples lose roughly half of their CD10 signal in fibrosis, quantitatively matching prior reports of resident AM depletion. Protein-level validation is pending.",
+    "version": 1
+  },
+  {
+    "id": "arxiv:2611.08472",
+    "source": "arXiv",
+    "date": "2026-11-05",
+    "title": "XStack: A Benchmark for ML Repo Migration",
+    "authors": [
+      "Linrong Cai",
+      "Taiming Lu",
+      "Haozhe Chen",
+      "Zhuang Liu"
+    ],
+    "url": "https://arxiv.org/abs/2611.08472",
+    "abstract": "ML code should run where researchers choose, not where it was first written. Today, machine learning code mainly lives in two ecosystems, PyTorch on NVIDIA GPUs and JAX on Google TPUs. Migrating repositories between them means building and testing across frameworks and hardware. This migration is (1) a practical need, since it unlocks different hardware for researchers, and (2) a natural benchmark: it involves different frameworks and hardware, covers whole repositories, and is long-horizon and challenging. We introduce XStack, a benchmark that evaluates agents on migrating ML repositories between these two ecosystems. Each agent receives a PyTorch repository and a clean TPU machine and must deliver a JAX repository. Its output passes if it meets our grading criteria, based on the source repository's published result, authenticated and calibrated by us. Migration by agents remains unreliable: Claude Opus 5 passes 75%, GPT-5.6-sol 45%, and every other agent at most 40%. XStack is a step toward freeing ML code from its ecosystem. We release XStack to make progress toward reliable migration across frameworks and hardware measurable."
+  },
+  {
+    "id": "arxiv:2611.08417",
+    "source": "arXiv",
+    "date": "2026-11-05",
+    "title": "Benchmarks as Software: Terminal-Bench and the Case for Continuous Benchmarks",
+    "authors": [
+      "E. Kelly Buchanan",
+      "Crystal Zhou",
+      "Scott W. Linderman",
+      "Christopher Ré"
+    ],
+    "url": "https://arxiv.org/abs/2611.08417",
+    "abstract": "Coding agents are among the most economically consequential deployments of LLMs to date, making reliable evaluation increasingly important. Yet even benchmarks that are carefully validated at release can become stale. As models improve, they can discover valid solutions that existing verifiers reject, while changes to evaluation infrastructure can invalidate assumptions embedded in tasks and tests. We call the resulting accumulation of defects benchmark maintenance debt: a growing gap between benchmark scores and the capabilities they are intended to measure. We introduce a continuous-validation workflow for agentic benchmarks that combines community reports, task artifacts, agent traces, automated oracle checks, and human-gated repairs. We apply this workflow to Terminal-Bench 2.0, a benchmark that underwent extensive human and LM-assisted review and red-teaming before release. Our audit identifies issues in roughly 30% of the benchmark, and we release the resulting repairs as Terminal-Bench 2.1. These repairs change evaluation results: accuracy increased by over 10 percentage points and leaderboard positions move by up to three ranks, even as the overall ranking remains highly correlated (Spearman rho = 0.958). We evaluate how resource allocation shapes benchmark conclusions. We show that fixed wall-clock can materially change agent performance: For example, extending the time limit closes a 20pp harness gap on GPT 5.4 and shrinks a 30 pp gap on GPT 5.4 mini to 5 pp. Benchmark maintenance is therefore not only about repairing task artifacts: resource budgets are part of the measurement specification and must be validated alongside the tasks themselves. More broadly, benchmark maintenance debt is not just accumulated implementation bugs: our results show that as models improve, both evaluation assumptions and resource settings may need to be revalidated."
+  },
+  {
+    "id": "arxiv:2611.08394",
+    "source": "arXiv",
+    "date": "2026-11-05",
+    "title": "Synthesis of Ovarian Cancer Multi-Omics Datasets: A Biology-Informed Evaluation Framework",
+    "authors": [
+      "Déborah Boyenval",
+      "Alina Malyutina",
+      "Jaana Oikkonen",
+      "Sammeli Liikkanen",
+      "Sampsa Hautaniemi"
+    ],
+    "url": "https://arxiv.org/abs/2611.08394",
+    "abstract": "Paired multi-omic cancer cohorts are costly to assemble and difficult to share, motivating synthetic cohorts as a complementary resource. As generative model development accelerates, we shift the focus from proposing yet another architecture to defining evaluation criteria that determine whether synthetic data preserve biologically relevant structure. We introduce a biology-informed and patient-disjoint framework for evaluating the generation of paired RNA expression and copy-number variation (CNV) profiles, and apply it to the longitudinal DECIDER high-grade serous ovarian cancer cohort. The framework assesses modality-specific fidelity and coherence between RNA and CNV pairs using agreement between real training and held-out data as a reference, alongside complementary training-data proximity diagnostics. We adapt three multi-omic integration architectures based on variational autoencoders to generate paired profiles. The model leading several fidelity and coherence measures also shows the strongest training-data proximity. The protocol and case study offer the community a reference for comparing future multi-omic generators."
+  },
+  {
+    "id": "arxiv:2611.08393",
+    "source": "arXiv",
+    "date": "2026-11-05",
+    "title": "Adaptive Low-Light Enhancement for Road Anomaly Detection: A Multi-Architecture Benchmark and Edge Deployment Study",
+    "authors": [
+      "Obed Honour Eje",
+      "Oluwatosin Kolade",
+      "Glory Bagai",
+      "Taliha Abiodun Folorunso"
+    ],
+    "url": "https://arxiv.org/abs/2611.08393",
+    "abstract": "Road anomaly detection systems on autonomous vehicles must function reliably under degraded visual conditions including darkness, rain, and Harmattan dust haze. This paper benchmarks four object detection architectures, YOLOv8n, YOLOv12n, RT-DETR, and Faster R-CNN, under physically grounded lighting and weather degradation, and shows that uniform application of the SCI low-light enhancement network is actively harmful at dusk-level lighting (-16.1% to -30.7% mAP@50). We propose a lightweight, training-free luminance-adaptive router that selects between no enhancement, moderate SCI, and denoising plus strong SCI based on per-frame Rec. 601 luminance, recovering most of the dusk penalty while preserving low-light gains, and we validate the full pipeline on NVIDIA Jetson Nano edge hardware."
+  },
+  {
+    "id": "arxiv:2611.08369",
+    "source": "arXiv",
+    "date": "2026-11-05",
+    "title": "NPCBench: A Clinical Apprenticeship Benchmark for Multimodal Care-Pathway Reasoning in Nasopharyngeal Carcinoma",
+    "authors": [
+      "Pengkai Wang",
+      "Wei-Wei Zhang",
+      "Yan Li",
+      "Min Tang",
+      "Zhitian Hou",
+      "Zeyu Liu",
+      "Guanghao Zhu",
+      "Yuanyi Wang",
+      "Yanggan Gu",
+      "Wenjun Wang",
+      "Minheng Ni",
+      "Congkai Xie",
+      "Zhijie Sang",
+      "Jianmin Wu",
+      "Ying Sun",
+      "Hongxia Yang"
+    ],
+    "url": "https://arxiv.org/abs/2611.08369",
+    "abstract": "Current medical benchmarks typically break down clinical competence into isolated factual questions, single-image tasks, or static case vignettes. These tests score individual answers, but reveal less about whether a model can integrate subspecialty knowledge with multimodal evidence and track a patient's condition throughout a course of care. To close this gap, we introduce NPCBench, a clinical apprenticeship benchmark for nasopharyngeal carcinoma (NPC). NPCBench mirrors specialist training, from guideline and foundational knowledge to case planning, longitudinal review, CarePath integration, and open-ended consultation. It contains 4,777 component and consultation items and a 100-patient CarePath cohort with 417 scored diagnostic and care tasks. The episode-level evaluation tests whether diagnostic and care answers are jointly correct within a care pathway. By linking stepwise tasks to patient-level care trajectories, NPCBench evaluates whether models ground decisions in visual evidence, interpret changes in patient state, and meet clinical requirements in consultation. Across 30 evaluated models, we observe a composition gap: strong performance on individual tasks does not ensure jointly correct diagnostic and care answers for the same patient. Among 21 multimodal models, strict CarePath success reaches at most 23%. Paired controls and physician calibration further examine evidence grounding, longitudinal revision, and consultation judging. Overall, NPCBench broadens the evaluation of medical artificial intelligence beyond static question-answering paradigms to an apprenticeship-oriented assessment of clinical workflows, thereby offering a testbed for evidence-based and temporally coherent reasoning in oncology care."
+  },
+  {
+    "id": "arxiv:2611.08251",
+    "source": "arXiv",
+    "date": "2026-11-05",
+    "title": "VoxCanvas-41M: A Large-Scale Bilingual Dataset for Instruction-Based Speech Editing and Its Learning Dynamics",
+    "authors": [
+      "Zhikang Niu",
+      "Wenming Tu",
+      "Yalin Li",
+      "Yanru Huo",
+      "Junxi Liu",
+      "Tianrui Wang",
+      "Ruiqi Yan",
+      "Junxuan Liang",
+      "Ziyang Ma",
+      "Zilong Zheng",
+      "Xie Chen"
+    ],
+    "url": "https://arxiv.org/abs/2611.08251",
+    "abstract": "Recent advances in speech generation have spurred the development of speech editing techniques. However, achieving high-quality speech editing remains challenging due to two key limitations. First, the major hurdle is the lack of large-scale, high-quality speech editing datasets. Constructing such datasets is costly, while open-source, scalable data pipelines remain limited. Second, the learning dynamics of speech editing models remain poorly understood. In particular, how models acquire editing capabilities and the relationship between generation and editing remain unclear. To address these challenges, we introduce VoxCanvas-41M, a large-scale bilingual dataset comprising approximately 41 million speech editing pairs. VoxCanvas-41M covers two major categories: content editing, including single-span, multi-span, and location-reference editing, and paralinguistic editing, covering the insertion and deletion of 39 classes of nonverbal events such as laughter, sighs, and coughs. Building on VoxCanvas-41M, we train VoxCanvas-Edit, an instruction-based speech editing model, demonstrating the effectiveness of our dataset in improving editing performance. Furthermore, we systematically investigate the learning dynamics of speech editing, examining how models learn different editing operations and how data scale, task interactions, and training strategies affect editing performance. The dataset, pipeline, and demos are publicly available."
+  },
+  {
+    "id": "arxiv:2611.08237",
+    "source": "arXiv",
+    "date": "2026-11-05",
+    "title": "Terminal-style Mathematical Modeling Bench: The First Agentic and Verifiable Benchmark for Mathematical Modeling",
+    "authors": [
+      "Xiaojun Wu",
+      "Cehao Yang",
+      "Xuhui Jiang",
+      "Chengjin Xu",
+      "Jia Li",
+      "Jian Guo"
+    ],
+    "url": "https://arxiv.org/abs/2611.08237",
+    "abstract": "Mathematical modeling turns an open-ended real-world problem into assumptions, a model, a solution, and a defended recommendation, and its answers matter only if they are both close to a credible reference and physically feasible; existing benchmarks either score solver fragments or grade reports with an LLM judge, leaving those numbers unchecked. We introduce TB-MathModel (the Terminal-style Mathematical Modeling Bench), the first benchmark to make complete contest-style modeling problems agentic, verifiable, and terminal at once, over 18 real CUMCM and MCM problems (2023--2025). Each task ships the verbatim statement, official attachments, and figures in a containerized terminal; the agent returns one JSON artifact, scored on the numeric core of the final question against a reproduction of the Outstanding-award paper. Two design choices distinguish it: direction-aware, one-sided scoring, which never penalises beating the anchor, and two-layer feasibility verification---a programmatic gate over six decidable invariant forms plus 624 Lean~4 obligations---with a hard gate that zeroes infeasible answers. Each task is scored against a panel of human outstanding papers rather than one, so a model must be close to many accepted answers; across seven multimodal entries (three seeds each) the strongest reach a multi-reference O-Eval of 64.58\\%, while the \\$2.54 open model holds 59.81\\% at $1/100$ the cost. TB-MathModel turns the numeric core of modeling into a reproducible, machine-checkable signal for measuring long-horizon modeling competence and for collecting agent trajectories. The source code is available at https://github.com/wxj630/terminal-bench-math-modeling."
+  },
+  {
+    "id": "arxiv:2611.08177",
+    "source": "arXiv",
+    "date": "2026-11-05",
+    "title": "BabyTheorist: A Benchmark for Learning to Theorize the World from Observation Alone",
+    "authors": [
+      "Doojin Baek",
+      "Junyeob Baek",
+      "Mingyu Jo",
+      "Hosung Lee",
+      "Taegu Kang",
+      "Gyubin Lee",
+      "Sungjin Ahn"
+    ],
+    "url": "https://arxiv.org/abs/2611.08177",
+    "abstract": "How would we know whether a machine truly understands the world? We argue that one key capability is \\textit{observational theory learning}: acquiring reusable theories from pure observations and applying them to new situations. Current visual reasoning benchmarks focus primarily on the latter, presenting each task as a few-shot puzzle grouped by a common rule. We introduce BabyTheorist, a benchmark for controlled training and evaluation of observational theory learning. BabyTheorist generates continual streams of before-after visual observations from hidden compositional programs; during training, learners see only the resulting transitions, with no program labels, task identities, or support sets. To support theory learning and evaluation, BabyTheorist controls the program language, a curriculum over program complexity, recurring frequent subprograms, and a continual train-test protocol with level skipping. Seven representative baselines plateau well below ceiling, with the gap widening as the curriculum advances---evidence that BabyTheorist isolates a capability current program-learning approaches do not yet address."
+  },
+  {
+    "id": "arxiv:2611.08106",
+    "source": "arXiv",
+    "date": "2026-11-05",
+    "title": "Cleaning or Recalling? Knowledge Dependence in LLM-based Data Cleaning [Experiment, Analysis & Benchmark]",
+    "authors": [
+      "Jingru Yang",
+      "Honglu Zhang",
+      "Jiayi Mi",
+      "Ju Fan",
+      "Zheng Chen",
+      "Xiaoyong Du"
+    ],
+    "url": "https://arxiv.org/abs/2611.08106",
+    "abstract": "High scores on public data-cleaning benchmarks can reflect knowledge of familiar entities, making it difficult to assess how well an LLM repairs unfamiliar data. We present CoRE (Cleaning or Recalling), a protocol comparing public benchmarks with fresh real records and paired name surrogates built from English words or syllables. The surrogates retain error positions and non-identity values while transferring the benchmark's error mechanisms. Across 21 controlled tables and eight LLMs, repair performance varies substantially with entity names on Hospital and, for commercial models, Movies. Renaming removes some information needed for repair, such as a film's identifier mapping. It also affects repairs whose candidates remain available: replacing entity names with word-based surrogates lowers DeepSeek-V4-Pro's year accuracy from 91% to 18%. On Hospital and Movies, commercial models score higher on fresh records than on word-based surrogates. A screened continuation probe finds no positive evidence of benchmark-row memory in the tested models. Familiar facts can conflict with the task. Even with explicit table-evidence instructions, commercial models rewrite assigned directors at rates of 0.000-0.404 on known films. Reference scoring can also disagree with external records. On Rayyan, an ISSN correction matching a title-matched PubMed record receives no credit, whereas 94% of TabClean's credited repairs reproduce the reference date transformation. We provide controlled tables, scoring code and materials for offline replay."
+  },
+  {
+    "id": "arxiv:2611.08091",
+    "source": "arXiv",
+    "date": "2026-11-05",
+    "title": "ATHAAR: A Medieval Scientific Arabic Manuscript Dataset for Handwritten Text Recognition",
+    "authors": [
+      "Ismail El Jamiy",
+      "Khadija Msalek",
+      "Guillaume Loizelet",
+      "Farah Benamara",
+      "Nabil Hathout"
+    ],
+    "url": "https://arxiv.org/abs/2611.08091",
+    "abstract": "Despite recent progress in handwritten text recognition, medieval Arabic scientific manuscripts remain an open challenge for current vision-language models (VLMs) due to cursive ligatures, variable diacritization, and more importantly the lack of training data. This paper aims to address this gap, by proposing the first annotation guidelines dedicated to the transcription of scientific Arabic manuscripts inspired by textual criticism, a well-established approach to historical text editing. We then propose, ATHAAR, a new dataset manually annotated following this guideline. Unlike previous resources in the field, ATHAAR varies both witnesses of the same text, calligraphic styles, and content to deal with texts but also numerals. Relying on state-of-the-art VLMs, we finally design a set of experiments to study models transfer across scripts, chapters, and treatises. Our findings highlight the limitations of current systems when faced with the specificities of ancient scientific texts."
+  },
+  {
+    "id": "arxiv:2611.07949",
+    "source": "arXiv",
+    "date": "2026-11-05",
+    "title": "Beyond the Keyword: A Human-Annotated Benchmark for Arabic Anxiety-Related Discourse",
+    "authors": [
+      "Shimaa Ibrahim",
+      "Mabrouka Bessghaier",
+      "Md. Rafiul Biswas",
+      "Insaf Elouard",
+      "Wajdi Zaghouani"
+    ],
+    "url": "https://arxiv.org/abs/2611.07949",
+    "abstract": "Keyword retrieval returns expressions of personal anxiety together with many other uses of anxiety-related language. We present a benchmark of 1,000 Arabic Twitter/X posts retrieved with the keyword qalaq (\"anxiety/worry\") and annotated for six discourse functions. Two native Arabic-speaking annotators labeled every post independently, reaching 51.1% raw agreement (Cohen's $κ= 0.378$). We then reviewed all 489 disagreements and all 511 agreements under the same guidelines. The review changed 120 of the agreed labels (23.5%), which shows that agreements need auditing as well as disagreements. The final labels form a consensus reference; on a random sample of 200 posts, an additional annotator agreed with it on 60.5% of posts ($κ= 0.517$). Against this reference, Fanar-C-2-27B reaches 79.8% accuracy and macro-F1 0.784 ($κ= 0.749$). Its errors concentrate in the residual category (41.1% of errors; precision 0.905, recall 0.447), whose definition is internally inconsistent in the executed prompt, so the low recall cannot be attributed to the model alone. Sociopolitical Anxiety (27.1%) outnumbers Personal Emotional Expression (22.0%); these are assignment proportions in the sample, not estimates of prevalence or retrieval precision. We release the guidelines, a residual-subtype scheme, a fixed data split, label provenance, and evaluation code."
+  },
+  {
+    "id": "arxiv:2611.07819",
+    "source": "arXiv",
+    "date": "2026-11-05",
+    "title": "Data-quality monitoring of luminosity blocks with ATLAS Open Data: an open benchmark and a learned within-run detector",
+    "authors": [
+      "Renjie Wang"
+    ],
+    "url": "https://arxiv.org/abs/2611.07819",
+    "abstract": "Data-quality monitoring at the LHC decides, luminosity block by luminosity block, which collision data enter physics analyses, yet its methods cannot be compared openly because the experiments' monitoring data are not public. We construct a public benchmark from the ATLAS Open Data release of the 2015--2016 proton--proton collisions at $\\sqrt{s}=13$~TeV: 1289-bin histograms of reconstructed jets, electrons, photons, muons and the missing transverse momentum computed from them, for 39\\,828 luminosity blocks of all 217 runs in the Good Run Lists; eight types of detector defects injected at event level at three strengths; real-data labels from the Good Run Lists and the liquid-argon calorimeter error flag; and a time-ordered protocol in which every detector is trained and calibrated on earlier runs only. Histogram shapes differ far more between runs than within a run (median $χ^2/n_\\mathrm{dof}$ of 5.9 against 1.1), so references and autoencoders built across runs fail, and all competitive detectors use residuals with respect to a robust reference of each run. A gradient-boosted classifier on position-invariant features of these residuals, trained on synthetic defects and calibrated by split-conformal prediction, detects 43\\% of the luminosity blocks with injected defects at a false-positive rate of 1.0\\%, against 25\\% for a matched-filter scan and 63\\% for a single-histogram test that knows the defect pattern. For defect types excluded from its training, its efficiency falls to 18\\%; adding pattern-agnostic synthetic detector failures to the training raises it to 34\\%, above the scan, at a cost of three percentage points on the known types."
+  },
+  {
+    "id": "arxiv:2611.07812",
+    "source": "arXiv",
+    "date": "2026-11-05",
+    "title": "Different Corpora, Different Skills? A Paired Study of Small Language Models",
+    "authors": [
+      "Edoardo Vaira",
+      "Georgios Chavales",
+      "Pierre Nugues"
+    ],
+    "url": "https://arxiv.org/abs/2611.07812",
+    "abstract": "Small language models are often trained under tight data budgets, where the choice of pretraining corpus may matter as much as model size or training recipe. We compare two contrasting corpora at matched 10-million- and 37-million-word budgets: the 1911 Encyclopaedia Britannica and the BabyLM 2026 strict pretraining corpus. For each corpus, we train teacher models, distilled 58-million-parameter Baby-Llama students, and no-distillation student ablations, using the same model families, training recipes, and evaluation protocol across corpora. Across BLiMP, BLiMP Supplement, EWoK, Entity Tracking, and COMPS, the corpora produce different skill profiles rather than a single quality ranking. BabyLM 2026 is consistently stronger on linguistic acceptability benchmarks, while Britannica is often stronger on Entity Tracking, a synthetic state-tracking task. The contrast appears across teacher and student models and at both budgets, with the cleanest cross-seed replication in the distilled student comparison. Targeted controls show that the central contrast persists after matching training exposure and at a longer diagnostic context; direct teacher ensembling also does not reproduce the 10M Britannica student's Entity Tracking behavior. Entity Tracking magnitudes nevertheless remain sensitive to training dynamics. For this corpus pair, corpus choice can therefore produce different relative skill profiles at small scale, motivating multi-benchmark evaluation when comparing pretraining data."
+  },
+  {
+    "id": "arxiv:2611.07797",
+    "source": "arXiv",
+    "date": "2026-11-05",
+    "title": "Dataset Collection and Fine-Tuning of NLLB for German--English Translation",
+    "authors": [
+      "SK Deeraj",
+      "Yash Ingle",
+      "Pruthwik Mishra"
+    ],
+    "url": "https://arxiv.org/abs/2611.07797",
+    "abstract": "This paper describes the curation of a high-quality parallel corpus from OPUS Books and the fine-tuning of Meta's NLLB-200 models for German--English translation. We detail a dataset extraction pipeline that filters 45k raw OPUS sentence pairs to 25k high-quality examples through encoding validation, length filtering, language identification, deduplication, and quality scoring. We present a reproducible fine-tuning methodology optimized for consumer GPUs using mixed precision, gradient accumulation, and gradient checkpointing. Our fine-tuned NLLB-600M model achieves statistically significant improvements (+3.4 BLEU, +2.6 chrF++, -3.2 TER) over the base model on literary and technical German-English translation. We demonstrate practical deployment by integrating the fine-tuned model into LinguaHaru, an existing open-source document translation system, achieving format-preserving translation across PDF and Office documents. All dataset preparation scripts, training code, and evaluation tools are provided for reproducibility. The fine-tuned model is available at HuggingFace."
+  },
+  {
+    "id": "arxiv:2611.07784",
+    "source": "arXiv",
+    "date": "2026-11-05",
+    "title": "EnergyBench: a live, gate-aligned benchmark of day-ahead forecasts for European power markets",
+    "authors": [
+      "Evgenii Genov",
+      "Ander Martinez Alonso",
+      "Christoph Bergmeir"
+    ],
+    "url": "https://arxiv.org/abs/2611.07784",
+    "abstract": "Energy forecasting models are usually compared on backtests and fixed public datasets. Backtests can use data that did not yet exist when the forecast would have been made, and a fixed test set, reused across studies and possibly contained in the pretraining data of foundation models, invites overfitting to the benchmark. EnergyBench evaluates every entry live instead. Each day at 11:30 CET/CEST, thirty minutes before the day-ahead (SDAC) gate closes, every model forecasts the next day's price, wind and solar generation and load on the 15-minute grid for six bidding zones (BE, NL, FR, DE-LU, DK1, DK2). Unlike existing live benchmarks, EnergyBench runs the models itself, on one information set that it freezes at the cut-off and publishes, including three numerical weather prediction models, so that foundation models can be compared with and without the same weather covariates under the actual market deadline. Errors are pooled per series against a seasonal-naive baseline, and models are ranked by a Bradley-Terry rating on the Elo scale with a day-bootstrap interval. The field spans baselines, linear and gradient-boosted models on the frozen weather, eighteen time-series foundation models from eleven families, ensembles, and the grid operators' own forecasts. Over the first thirty-two live days, the covariates reduced the error of each of the ten foundation models run with and without them by 37-51% on matched races (64-73% on wind, 48-61% on solar). Used zero-shot, these models match or outperform a LightGBM model trained on the same covariates. Model size, from 3M to 331M parameters, has a much smaller effect, and median ensembles of the covariate models rank highest. The grid operators' pre-gate forecasts remain ahead on wind and solar, where the best single foundation models have 16-22% more error; on load the gap is 4-6%, within the intervals."
+  },
+  {
+    "id": "arxiv:2611.07753",
+    "source": "arXiv",
+    "date": "2026-11-05",
+    "title": "Neural Collapse on Imbalanced Datasets and Open-Set Scenario",
+    "authors": [
+      "Qiufu Li",
+      "Huibing Xiao",
+      "Linlin Shen",
+      "Yongdong Huang"
+    ],
+    "url": "https://arxiv.org/abs/2611.07753",
+    "abstract": "Neural collapse (NC) describes the elegant geometric structure that sample features and classifier vectors exhibit when a classification model's loss reaches its minimum. Class imbalance, however, generally distorts standard NC. In this paper, we theoretically reformulate NC on imbalanced datasets and in open-set settings. Our analysis is based on an optimization problem over class-wise averaged losses, rather than the global averaged losses used in prior NC studies. We prove that when class-wise averaged losses attain their minima, standard NC is achieved on balanced or imbalanced datasets, for both cross-entropy (CE) and binary cross-entropy (BCE) losses. We further extend the analysis to an open-set-inspired scenario, where some classes contain no training samples yet are still assigned classifier vectors in the losses. We find that in this scenario, when class-wise averaged losses reach their minima, standard NC still emerges on the known classes with training samples, while the classifier vectors of unknown classes without training samples overlap with each other and become orthogonal to those of the known classes. Finally, we analyze Softmax- and Sigmoid-based contrastive losses re-balanced by inverse sample frequency, proving that at their minima on balanced or imbalanced datasets, sample features of different classes likewise form standard NC."
+  },
+  {
+    "id": "arxiv:2611.07705",
+    "source": "arXiv",
+    "date": "2026-11-05",
+    "title": "FlyingDrones: A Dataset and Benchmark for Optical Flow Estimation from UAV motion",
+    "authors": [
+      "Laurenz Ruzicka",
+      "Roman Pflugfelder",
+      "Daniel Cremers"
+    ],
+    "url": "https://arxiv.org/abs/2611.07705",
+    "abstract": "Optical flow is an important cue for drone analysis in aerial surveillance, airspace monitoring, and long-range target tracking, where motion remains informative when appearance is weak. Estimating the motion of small Unmanned Aerial Vehicles, however, is difficult because distant targets occupy few pixels, have low contrast, and move against complex dynamic backgrounds. Standard optical-flow benchmarks emphasize large, object-centric motions and therefore do not characterize distant aerial targets well. We introduce FlyingDrones, a generated benchmark with dense ground-truth optical flow and segmentation masks derived from physically based rendering, and define resolution-normalized metrics (EPE Norm) that normalize flow by image dimensions. We evaluate 16 state-of-the-art model families on a motion- and size-stratified subset of 999 flow pairs at three resolutions. Every family recovers drone motion better than the zero-flow reference, but the gap between families widens with resolution: at 1920x1080, global-matching, recurrent, transformer, and short-window temporal models separate clearly from pyramid, classical, self-supervised, lightweight, and diffusion models. Within-family checkpoint spread is comparable to or larger than between-family spread, so the training curriculum is as important as the architecture. Two complementary studies test the benchmark beyond synthetic accuracy: a ground-truth-free motion-alignment evaluation on 21 cameras of real UAV footage shows that the synthetic ranking carries a moderate, significant signal about real-world performance (Spearman \\r{ho} = 0.63 over 41 checkpoints) while the exact top ranks differ, and a fine-tuning study shows that 800 FlyingDrones pairs reduce held-out drone-region error by up to 37% and improve drone localization on the real footage for all four architectures tested."
+  },
+  {
+    "id": "arxiv:2611.07488",
+    "source": "arXiv",
+    "date": "2026-11-05",
+    "title": "OPRD-Imp: a dataset of experimentally observed impurities and side products in multi-step pharmaceutical syntheses",
+    "authors": [
+      "Heejeong Kim",
+      "Seonbin Kim",
+      "Jihwan Kim",
+      "Tim Pinkhassik",
+      "Magdalena Lederbauer",
+      "Suong Tran",
+      "Connor W. Coley",
+      "Juyoung Yoon",
+      "Joonyoung F. Joung"
+    ],
+    "url": "https://arxiv.org/abs/2611.07488",
+    "abstract": "Predicting reaction impurities is a critical yet persistently data-limited challenge in pharmaceutical process chemistry. While machine learning models for reaction outcome prediction have advanced rapidly, benchmarking their ability to predict impurities remains impractical due to the absence of curated, publicly accessible datasets. We present OPRD-Imp, a dataset of 229 organic reactions drawn from 62 publications in Organic Process Research & Development, each annotated with experimentally observed impurities and their mechanistic origins. A total of 784 impurity entries is provided, classified into four origin categories. Reactions are represented as reaction SMILES and impurities as individual SMILES strings, with multi-step synthetic route connectivity preserved. All data were manually extracted from the source publications by trained chemists following a standardized extraction protocol, with expert chemical validation and manual structure drawing. OPRD-Imp is intended to serve as a benchmark resource for evaluating models that predict reaction impurities, providing experimentally reported impurity annotations and mechanistic origin labels that are not systematically represented in conventional reaction datasets."
+  },
+  {
+    "id": "arxiv:2611.07258",
+    "source": "arXiv",
+    "date": "2026-11-05",
+    "title": "Reweighting is not Harmless: Understanding the Role of Dataset Characteristics",
+    "authors": [
+      "Amalia Ionescu",
+      "Jose G. Hernandez",
+      "Emily F. Wong",
+      "Anil K. Saini",
+      "Jason H. Moore",
+      "Tiffani J. Bright"
+    ],
+    "url": "https://arxiv.org/abs/2611.07258",
+    "abstract": "Reweighting is a widely used pre-processing method for promoting discrimination-free model behavior by assigning different weights to data points during model training. While it is often credited with improving fairness, particularly by mitigating systematic underestimation for underrepresented groups, it can also introduce unintended harms under certain data conditions. Using controlled simulations that vary group size and baseline event prevalence, we show how reweighting can yield misleading improvements in fairness by reducing underestimation for one group while introducing it for another. Across 3,000 simulated datasets with event prevalence of 7-14%, reweighting improved parity in positive classification and false negative rates (FNR) between groups, but did so partly by decreasing positive classifications and increasing FNR for the group with higher baseline prevalence. These effects were most pronounced when that group was a minority: its FNR rose by 6 percentage points, approximately 82 additional missed cases per 10,000 group members, and roughly three-quarters of the improvement in FNR parity came from this increase rather than from gains for the other group. The pattern held across six classifiers, from logistic regression to neural networks, while overall accuracy was essentially unchanged, leaving the shift invisible in aggregate performance metrics. These findings mirror patterns reported in real-world applications and underscore the critical role of data characteristics in shaping the impact of this fairness intervention. While reweighting may create desirable outcomes in some applications, practitioners should critically evaluate it relative to their problem area and goals. Specifically, when the goal is to reduce underestimation in one group without introducing underestimation in another, reweighting may not be the appropriate approach."
+  },
+  {
+    "id": "preprints:10.20944/preprints202611.0441",
+    "source": "Preprints.org",
+    "date": "2026-11-04",
+    "title": "ResidentBench: A Common-Sense and Situational Awareness Benchmark—How Do Language Models Act When Left to Their Own Judgment?",
+    "authors": [
+      "Fereydoun Farrahi Moghaddam"
+    ],
+    "url": "https://doi.org/10.20944/preprints202611.0441.v1",
+    "abstract": "As language models gain access to tools, they may encounter situations for which no task or instructions have been supplied. Performance on assigned tasks does not establish how they act in that condition. ResidentBench evaluates language models exposed to declarative sensors and actuators without an author-assigned task, goal, mission, purpose, role, persona or request to deliberate or act. A shared harness records tool calls and environmental trajectories; a separate evaluator receives the situation-specific context needed to judge those actions. The proof-of-concept study tests ten model configurations in five simulated scenarios: thermostat regulation, traffic control, fictional nuclear-launch restraint, paddle-screen interaction and a refunded parcel delivered later. Of 149 attempted episodes, including one incomplete endpoint diagnostic, 143 completed. All 143 completed episodes received retrospective contextual judgments. The general scoring rule combines repeated binary judgments with equal scenario weights on a scale from 0 to 100. A fixed 20-scenario Standard 1.0 suite remains future work, and no full-suite score is reported here. However, one grim fact about the current experimental results is that, across one hundred nuclear episodes with ten matched descriptions per model, some configurations never activated the fictional control, others activated it in a subset of runs, and one activated it in all ten runs.",
+    "version": 1
+  },
+  {
+    "id": "preprints:10.20944/preprints202611.0425",
+    "source": "Preprints.org",
+    "date": "2026-11-04",
+    "title": "When Does Grid-State-Aware Parameter Adaptation Help Metaheuristic Dispatch of Photovoltaic Distributed Generation? A Reproducible Multi-Feeder Benchmark",
+    "authors": [
+      "Jamshid Tolipov",
+      "Dilmurod Akbarov",
+      "Sherzod Murtazov",
+      "Azimjon Saidov",
+      "Odil Pirimov",
+      "Abduvali Turdiboyev"
+    ],
+    "url": "https://doi.org/10.20944/preprints202611.0425.v1",
+    "abstract": "Metaheuristic optimisation is widely used for distribution-network operation, yet claims of superiority are often based on single cases without equal budgets, deterministic references, or reproducible seeds. This study evaluates a fuzzy-adaptive particle swarm optimiser using voltage-deviation and renewable-ramp inputs (FA-PSO-UR) for the dispatch of inverter-interfaced photovoltaic (PV) distributed generation (DG). It is compared with a genetic algorithm (GA), classical particle swarm optimisation (PSO), differential evolution (DE), a grey wolf optimiser (GWO), and time-varying PSO (TV-PSO) on the IEEE 33- and 69-bus feeders. The frozen benchmark comprises 1,080 static runs and 720 sequential 24-hour runs under smooth and cloud-driven PV profiles, with paired seeds and identical function-evaluation budgets. DE achieves the lowest static median in all six cases, whereas FA-PSO-UR is engineering-equivalent to PSO in all six and to TV-PSO in five. All sequential schedules are feasible. FA-PSO-UR achieves the lowest median objective in three of four sequential scenarios, with median gaps of 0.0056–0.0212% to the best-known deterministic references. TV-PSO ranks first for the IEEE 69-bus smooth profile, where the two methods remain engineering-equivalent. FA-PSO-UR shows practical superiority only over selected weaker baselines, not over PSO or TV-PSO. Physical-state-aware adaptation therefore provides selective dynamic benefit rather than universal dominance.",
+    "version": 1
+  },
+  {
+    "id": "preprints:10.20944/preprints202611.0386",
+    "source": "Preprints.org",
+    "date": "2026-11-04",
+    "title": "Performance and Response Consistency of 52 Small Language Models in a Japanese Pharmacy Benchmark: A Comparative Study",
+    "authors": [
+      "Hiroyasu Sato",
+      "Katsuhiko Ogasawara",
+      "Hidehiko Sakurai"
+    ],
+    "url": "https://doi.org/10.20944/preprints202611.0386.v1",
+    "abstract": "Objective: Small language models (SLMs) suitable for local deployment may enable integration of generative AI into electronic health record (EHR) systems; however, their performance in non-English pharmaceutical domains remains unclear. Methods: Fifty-two open-source SLMs (≤20B parameters) were evaluated using 283 text-based questions from the 107th Japanese National License Examination for Pharmacists. Each model was tested in three independent runs. Performance was assessed using accuracy and response consistency metrics, including the Any Correct Rate, Full Correct Rate, and Consistency Gap. Results: Three models (GPT-OSS:20b, Qwen3:14b, and Qwen3:8b) achieved high accuracy comparable to frontier LLMs, whereas medical-specialized SLMs performed poorly. Consistency Gap showed no association with parameter size but demonstrated a nonlinear relationship with accuracy. Conclusions: Selected locally deployable SLMs achieved strong performance in a Japanese pharmaceutical benchmark, supporting their potential as components of EHR-compatible decisionsupport systems, provided that their reliability is further validated in clinical contexts.",
+    "version": 1
+  },
+  {
+    "id": "preprints:10.20944/preprints202611.0377",
+    "source": "Preprints.org",
+    "date": "2026-11-04",
+    "title": "Data Descriptor: Multimodal Dataset of Bioreactor Cell Cultivations Including Turbidity, Permittivity, O<sub>2</sub> and CO<sub>2</sub> Measurements",
+    "authors": [
+      "Selina Uhlendorff",
+      "Ruwen Fulek",
+      "Jonas Eimler",
+      "Miriam Pein-Hackelbusch",
+      "Björn Frahm"
+    ],
+    "url": "https://doi.org/10.20944/preprints202611.0377.v1",
+    "abstract": "We present a comprehensive, time-resolved dataset of Chinese Hamster Ovary (CHO) cultivation dynamics to support data-driven bioprocess engineering and process analytical technology development. The dataset includes 24 controlled bioreactor cultivations, representing 12 experiments performed in duplicate in a parallel bioreactor system with a working volume of 0.55 – 0.8 L and cultivation durations of 161.5 – 328.5 h. A total of 48 variables are provided, comprising 38 continuous inline variables and 10 offline variables sampled up to twice daily. In addition to standard process measurements, the dataset includes multimodal inline monitoring using turbidity, permittivity, and dissolved CO2 sensors. The experiments systematically vary cultivation medium, agitation rate, aeration rate, and process mode (batch and fed-batch), providing diverse operating conditions for sensor evaluation, process modeling, and bioprocess analysis. Furthermore, the inoculation cell density, glutamine concentration, and impeller position were varied to further expand the range of investigated process conditions. The dataset preserves realistic measurement characteristics, including noise, and missing values, enabling robust benchmarking of data-driven methods for process monitoring, modeling, and control.",
+    "version": 1
+  },
+  {
+    "id": "preprints:10.20944/preprints202611.0355",
+    "source": "Preprints.org",
+    "date": "2026-11-04",
+    "title": "Can Large Language Models Tune Fraud Detection Models? Evidence from Three Public Fraud Datasets",
+    "authors": [
+      "Livija Jakaite",
+      "Courage Mabani",
+      "Torubein Fawei",
+      "Vitaly Schetinin"
+    ],
+    "url": "https://doi.org/10.20944/preprints202611.0355.v1",
+    "abstract": "Machine-learning fraud detectors have settings (hyperparameters) that must be tuned by trial and error. We tested whether large language models (LLMs) can do this tuning. In a pre-registered study, Claude Opus 5.5 proposed settings for two gradient-boosting models, XGBoost and LightGBM, on three public fraud benchmarks. We compared it with random search and a Bayesian optimiser (TPE), testing every model on a later period than it was tuned on, with 10 repeats per condition. After 10 trials, the LLM matched what TPE reached after 40 trials on two benchmarks (all differences under 0.011 PR-AUC, p ≥ 0.07), but not on the third (0.008–0.011 lower, p ≤ 0.003). A smaller model, Claude Haiku 5.5, did as well at about 3% of the cost. Naming the dataset in the prompt did not help. When the trial scores shown to the LLM were altered, its proposals followed the altered scores (79% of cases, p<0.001). Where the tuning data held only 28 frauds, tuning scores were negatively related to later performance. Contrary to common advice, tuning on the most recent data did not select better models than tuning on a random sample, because it stopped training too early.",
+    "version": 1
+  },
+  {
+    "id": "preprints:10.20944/preprints202611.0332",
+    "source": "Preprints.org",
+    "date": "2026-11-04",
+    "title": "Mapping the Software Supply Chain Security Landscape: A Full Corpus Synthesis",
+    "authors": [
+      "Peter Kokol",
+      "Marko Kokol"
+    ],
+    "url": "https://doi.org/10.20944/preprints202611.0332.v1",
+    "abstract": "The software industry is confronting a critical crisis driven by systemic vulnerabilities within the software supply chain and the ubiquitous reliance on third-party dependencies. While individual exploits and localized compliance frameworks have been heavily studied, this highly fragmented academic discourse creates a critical barrier to organizational readiness and proactive incident preparedness. To address this gap and enhance digital resilience, this study maps the conceptual, knowlegde and structural landscape of software supply chain literature using Synthetic Knowledge Synthesis. Analyzing publications from 2021 to 2026, the research reveals an exponential growth in output, heavily dominated by conference proceedings and driven primarily by institutional and state-funded efforts in the United States and China. Thematic mapping identifies five core clusters defining the current ecosystem: Software Composition Analysis, Advanced Vulnerability Detection, AI-Driven Threat Intelligence, Deep Learning, and DevSecOps. The study highlights critical unresolved gaps, notably the prevalence of false positives in static Software Bill of Materials tools due to a lack of execution context, and a pronounced disconnect between theoretical models and practical enterprise application. Future research directions emphasize the integration of Large Language Models for automated patch generation, the development of execution-aware vulnerability triage, and the evolution of dynamic, AI-driven artifacts to secure complex dependency networks.",
+    "version": 1
+  },
+  {
     "id": "preprints:10.20944/preprints202611.0300",
     "source": "Preprints.org",
     "date": "2026-11-04",
@@ -42,6 +438,18 @@
     "url": "https://doi.org/10.20944/preprints202611.0276.v1",
     "abstract": "As climate change accelerates, spatiotemporal climate and weather data rasters are increasingly used in academic research, agriculture, infrastructure, and other disci-plines across public and private domains. Unfortunately, these raster data are often stored under numerous file types with different spatial and temporal boundaries, spa-tial reference systems, and spatial and temporal resolutions. The tools and workflows that we have are often hindered by coordinate reference system mismatches, data type mismatches, data aggregation mismatches, and other fundamental challenges. To fully harness the impacts of these data, software tools are needed that can be leveraged effi-ciently and intuitively and without a steep learning curve for the new user. In this pa-per, we introduce Spacetime, a novel programming library in Python that enables effi-cient spatiotemporal data processing, management, alignment, and analysis. Spacetime is an open-source project written in Python that provides a set of powerful functions to manipulate spatiotemporal data in a single, unified library. Spacetime’s overarching themes are simplicity and usability. However, the library does not com-promise processing speed. In our comparison, it was as fast or faster than other popu-lar Python libraries, while requiring many fewer lines of code and no external loops or control functions. We hope this library will lower the barrier of entry to scientists in fields that have not traditionally used spatiotemporal raster data but are doing so in-creasingly frequently in the current climate.",
     "version": 1
+  },
+  {
+    "id": "arxiv:2611.07042",
+    "source": "arXiv",
+    "date": "2026-11-04",
+    "title": "Follow the Policy, Fail the Benchmark: Auditing and Revising Policy-Based Decision Benchmarks",
+    "authors": [
+      "Yanru Xiao",
+      "Yifei Cai"
+    ],
+    "url": "https://arxiv.org/abs/2611.07042",
+    "abstract": "Policy-based decision benchmarks evaluate whether systems apply written rules to financial and operational cases. Yet a rule-following response can be marked wrong when the benchmark misstates the required decision. We audit nine public policy-based decision benchmarks through source tracing, program execution, and controlled checks. We find unsupported targets, reference errors that survive replay or propagate as solved steps, and evaluators that reject acceptable answers or credit incomplete decisions. To measure the scoring impact, we rescore unchanged model responses. On the 96 LegalBench SARA numeric cases, correcting the scorer raises acceptance by more than 80 percentage points for each of three models, without changing references or responses. In RuleArena Tax, restoring a required zero floor changes 27 of 300 references and narrows an observed model gap. A controlled federal-exemption task with explicit ownership and eligibility assumptions also shows that errors in supplied intermediate answers can affect final decisions. We present BAR (Benchmark Audit and Revision), a versioned collection of audit evidence and revisions for reevaluation."
   },
   {
     "id": "arxiv:2611.06915",
@@ -429,6 +837,18 @@
     "url": "https://doi.org/10.20944/preprints202611.0120.v1",
     "abstract": "We present a comprehensive, time-resolved dataset of yeast cultivation dynamics to support data-driven bioprocess engineering and process analytical technology development. The dataset comprises 52 controlled bioreactor cultivations of two industrially relevant yeast species, Saccharomyces cerevisiae and Saccharomyces pastorianus, each conducted over 72 – 76 h at two scales (0.7 L and 10 L working volume) under systematic parameter variation. A total of 43 variables are provided, comprising 30 inline variables (30 s resolution) and 13 offline variables sampled up to three times per day, enabling multimodal characterization of cultivation dynamics. Importantly, the dataset preserves real experimental conditions, including measurement noise, outliers, and different types of missing data arising from sensor failures, transmission errors, and process interruptions. By retaining these non-ideal characteristics, the dataset enables realistic evaluation of modeling, monitoring, and control approaches. It provides a valuable resource for dynamic process analysis, system identification, soft sensor development, fault detection, and validation of advanced data-driven methods under practical operating conditions.",
     "version": 1
+  },
+  {
+    "id": "arxiv:2611.06948",
+    "source": "arXiv",
+    "date": "2026-11-03",
+    "title": "When Does Combining Software-Effort Estimates Help? Evidence from Four Public Project Datasets",
+    "authors": [
+      "Azzeddine Ihsine",
+      "Sara Ihsine"
+    ],
+    "url": "https://arxiv.org/abs/2611.06948",
+    "abstract": "Combining estimates can reduce individual prediction errors, but an ensemble may also dilute an unusually accurate estimator or repeat errors shared by its members. We study these competing effects on four archival software-effort datasets (Kitchenham: 145 projects, Desharnais: 77, China: 499, Maxwell: 63) with 100 repeated 70/30 training and test partitions per dataset. Three conventional models (parametric regression, analogy, and random forest) are combined with each other and, in Kitchenham, with a recorded human estimate. Out-of-fold calibration errors drive five combination rules: equal weighting, inverse-MSE weighting, a nonnegative simplex combination, signed Bates-Granger weighting, and Bates-Granger with covariance shrinkage. All preprocessing is learned within training folds. Model-error correlations range from 0.54 to 0.97. In Kitchenham, the human estimate dominates: equal weighting raises mean test log-MAE from 0.239 to 0.455, a loss that remains significant under a corrected resampled t-test with Holm adjustment, whereas the simplex rule limits the increase to 0.250. In Desharnais, China, and Maxwell, every rule lowers mean log-MAE (by 1.3 to 8.6%) and BG with shrinkage beats the calibration-selected individual on 75, 83, and 83 of 100 splits, but none of these gains is statistically distinguishable from zero once the overlap between repeated splits is accounted for. On a completion-year split of Desharnais, equal weighting becomes slightly worse and inverse-MSE is near the individual baseline, while simplex and shrinkage retain mean gains of about 5%. Combining correlated effort estimates is therefore a conditional decision: the harm of naive pooling next to a dominant source is clear, while the benefit elsewhere is small and uncertain."
   },
   {
     "id": "arxiv:2611.05749",
