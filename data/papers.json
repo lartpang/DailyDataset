@@ -15,6 +15,313 @@
     "version": 1
   },
   {
+    "id": "arxiv:2611.18460",
+    "source": "arXiv",
+    "date": "2026-11-13",
+    "title": "BladeSEI: A Multi-Channel and Multi-Day Dataset for Robust Specific Emitter Identification of Radars",
+    "authors": [
+      "Ryan White",
+      "Robert Jones",
+      "Hassan Habib",
+      "Matthew A. Ritchie",
+      "Victoria Nockles",
+      "Adam Hosford"
+    ],
+    "url": "https://arxiv.org/abs/2611.18460",
+    "abstract": "This paper introduces \"BladeSEI\", a multi-channel receiver, multi-day dataset of radar pulses recorded over-the-air from 12 Software Defined Radios (SDRs) for the purpose of Specific Emitter Identification (SEI). The aim of this dataset is to enable investigation into robust SEI techniques that are able to generalise across different receiver channels and recording sessions. The dataset consists of two waveform types per emitter, a 50 microsecond chirped pulse of 40 MHz bandwidth and a 10 microsecond unmodulated pulse. Pulses are captured simultaneously on four synchronised analogue-to-digital converter (ADC) channels of a multi-channel receiver over three recording sessions on two days: a baseline session, an identical repeat on the following day, and a session in which the emitters were thermally conditioned to alter their operating temperature. Initial results using Principal Component Analysis (PCA), Inception and ResNet based classifiers, trained and tested on a single ADC channel and recording session, show that the BladeRF emitters can be discriminated at high signal-to-noise ratio (SNR), with ResNet achieving a macro-F1 above 0.98 at 25 dB for both waveforms, and performance degrading towards random guessing at 0 dB."
+  },
+  {
+    "id": "arxiv:2611.18429",
+    "source": "arXiv",
+    "date": "2026-11-13",
+    "title": "Do Underwater Image Quality Metrics Agree with Human Perception? A Benchmark with Human Choices, Simple Edits and Generative Drift",
+    "authors": [
+      "Rishii Kumar Singh",
+      "Abhinav Rajput",
+      "Dinesh Kumar Vishwakarma"
+    ],
+    "url": "https://arxiv.org/abs/2611.18429",
+    "abstract": "Underwater image enhancement is challenging to evaluate due to the lack of clean reference images, so researchers rely on no-reference image quality assessment (NR-IQA) metrics. However, it remains unclear whether these metrics agree with human judgments. We evaluate 73 handcrafted underwater, learned underwater, vision-language and general-purpose metrics against human preferences on five references: four published opinion-score sets and a new paired-comparison study. For each metric, we measure how often it selects the same image as people when comparing versions of the same scene. We further test whether simple image edits and small adversarial perturbations raise metric scores above the enhancement people preferred, and whether scores decrease as repeated generative edits add noise. Our results show that no metric consistently matches human preferences. The best worst-case Cohen's kappa over the five references is only 0.23 (Q-Align), while two raters in our study agree with a median kappa of 0.41. The widely used UCIQE often favors edits that people reject. On a Nano Banana Pro replica chain that should leave the image unchanged, only 22 of 73 scores decrease at every checkpoint, while noise grows by 2.5 times. We also introduce TrustUIQA, a benchmark that combines the human references, our study choices, the edited, attacked and generated images, and the scores of every metric on every image. The code is available at https://github.com/TrustUIQA/TrustUIQA and TrustUIQA at https://huggingface.co/datasets/TrustUIQA/TrustUIQA."
+  },
+  {
+    "id": "arxiv:2611.18348",
+    "source": "arXiv",
+    "date": "2026-11-13",
+    "title": "Quantifying Dependence Effects on $k$-out-of-$n$ Reliability Relative to the Independent Benchmark",
+    "authors": [
+      "Nuria Torrado"
+    ],
+    "url": "https://arxiv.org/abs/2611.18348",
+    "abstract": "Understanding how dependence among component lifetimes affects the reliability of redundant systems is a central problem in reliability engineering. In this paper, we develop a framework for quantifying the impact of multivariate dependence on $k$-out-of-$n$ system reliability relative to the independent benchmark. Using an orthogonal Legendre expansion of the copula density, we derive an exact decomposition that separates the dependence structure from the system architecture. This representation identifies how individual dependence contributions are transmitted to system reliability through explicit structural weights. An application to multivariate Farlie-Gumbel-Morgenstern copulas demonstrates that higher-order dependence can produce distinct reliability effects even when all bivariate copulas remain unchanged. Our findings provide a systematic approach to quantifying and interpreting the effects of multivariate dependence on the reliability of redundant systems."
+  },
+  {
+    "id": "arxiv:2611.18293",
+    "source": "arXiv",
+    "date": "2026-11-13",
+    "title": "PrivacyPR: A Dataset of Real-World Privacy Fixes for Benchmarking Privacy-Aware Code Review",
+    "authors": [
+      "Hua Yang",
+      "Aditya Bhardwaj",
+      "Shidong Pan",
+      "Bowen Xu"
+    ],
+    "url": "https://arxiv.org/abs/2611.18293",
+    "abstract": "Coding agents increasingly review code, yet whether they catch the privacy defects that laws such as the GDPR require software to avoid remains largely untested, partly because few datasets connect real privacy defects to their accepted fixes and review context. We present PrivacyPR, a dataset of 4,131 merged GitHub pull requests (PRs) from 1,469 repositories, created between June 2018 and January 2024. Each PR includes its commits, diffs, review discussion, and LLM-generated labels for privacy relevance, fix type, and GDPR principles. PrivacyPR provides 1,169 high-confidence privacy fixes and 1,643 non-fix PRs, together with Verified, a manually checked split of 250 privacy fixes and 250 non-fix PRs, and Small, a 100 + 100 subset for evaluation. On Verified, both annotators endorsed 72% of the LLM's GDPR-principle assignments. Beyond supporting empirical study of how privacy defects arise and are fixed, PrivacyPR provides a benchmark for privacy-aware code review on real, developer-accepted fixes. Its evaluation harness reverts each fix to reintroduce the defect. On Small, two coding agents detect only 42-51% of defects under a generic review prompt, but 88-91% when explicitly asked to check privacy, while flagging 11-15% of non-fix PRs. These results show that privacy defects can be detected by coding agents, but that detection depends strongly on review intent and comes with false alarms. Data, code, reviews, judge verdicts, and an extensible evaluation harness are publicly available at https://doi.org/10.5281/zenodo.23744765."
+  },
+  {
+    "id": "arxiv:2611.18257",
+    "source": "arXiv",
+    "date": "2026-11-13",
+    "title": "NER-D: A cross-domain benchmark for German NER",
+    "authors": [
+      "Marc Brinner",
+      "Philipp Cimiano",
+      "Karolina Hanna Czok",
+      "Regina Stodden",
+      "Viju Sudhi",
+      "Sina Zarrieß"
+    ],
+    "url": "https://arxiv.org/abs/2611.18257",
+    "abstract": "We present NER-D, a cross-domain benchmark for German NER comprising 13 datasets spanning 9 domains, including General/Politics, Wikipedia, Legal, Medical, Historical, Financial, Agriculture and Archaeology. We examine the performance of both proprietary LLMs and state-of-the-art small open-source models using normal prompting and further examine the performance gains achievable via in-context learning and LoRA fine-tuning. Our results show that without any sort of optimization a proprietary model (GPT-5.4 mini) outperforms the smaller open-source models on 6 out of 13 datasets, but LoRA fine-tuning enables the smaller models to substantially outperform the proprietary baseline. We further analyze the influence of the domain and the tagset used in each task on the performance achieved in the different evaluation settings. Our benchmark will be available as a resource for the development of future German NER methods on both general and specialized domains.\\footnote{We make our code, data, and models publicly available upon acceptance of this paper."
+  },
+  {
+    "id": "arxiv:2611.18190",
+    "source": "arXiv",
+    "date": "2026-11-13",
+    "title": "MarathonTS: a benchmark of long synthetic time series from window assembly and long-series generators",
+    "authors": [
+      "Ilyas Varshavskiy",
+      "Sergey Shulgin",
+      "Shuhrat Khalilbekov",
+      "Bonu Boboeva",
+      "Azizjon Azimi"
+    ],
+    "url": "https://arxiv.org/abs/2611.18190",
+    "abstract": "Many applications of synthetic time series require a series that is much longer than the windows on which a generative model is trained. Such a series can be assembled from a pool of short generated windows, which requires deciding which windows are taken, in what order, and how their seams are processed, or it can be produced directly by a long-series generator. This study presents MarathonTS, to our knowledge the first open benchmark that compares both families under one protocol. Every method produces a series of the same length on 9 open hourly datasets with 10 seeds. The series is evaluated by its fidelity to the real data (83 metrics in 12 groups, against three real references: train, validation and an out-of-time split), by its utility (models are trained on the synthetic series only and tested on real data, TSTR against TRTR, in 14 classification and regression tasks), by its memorisation of the training data and by its computational cost. The statistical analysis is carried out as a separate stage that reads the published tables and gives the rankings of every method in every slice, the answers to the research questions with tests and uncertainty, and the results of a pre-specified confirmatory family. In the main run, the methods differ in both confirmatory cells; the choice of windows matters more than the processing of their seams, which does not improve the series, and no method trains the downstream models as well as the real series. The top tier of the leaderboard is reproduced on other hardware, whereas the exact places within it are not. For the reproducibility of the study, the code, the data hashes and all results are publicly available (links below)."
+  },
+  {
+    "id": "arxiv:2611.18130",
+    "source": "arXiv",
+    "date": "2026-11-13",
+    "title": "JFinBench: A Continuously Refreshable Japanese Financial Benchmark from the Latest Certification Exams",
+    "authors": [
+      "Issa Sugiura",
+      "Taro Makino",
+      "Takashi Ishida"
+    ],
+    "url": "https://arxiv.org/abs/2611.18130",
+    "abstract": "Large language models (LLMs) are increasingly applied to finance, creating a need for benchmarks that evaluate their capabilities across financial systems with different regulations and practices. However, existing financial benchmarks provide limited coverage of country-specific financial systems, and they are difficult to keep up to date as released questions leak into training data. We introduce JFinBench, a Japanese financial benchmark comprising 321 examples from the 2026 editions of six regularly administered certification exams covering accounting, tax, financial planning, and banking. To construct it, we develop a human-in-the-loop agentic pipeline in which a coding agent writes exam-specific conversion code and a review page, while a human verifies every example and feeds corrections back to the agent. This pipeline adapts to heterogeneous exam formats and reduces the effort of incorporating new exam editions, enabling periodic refreshes that mitigate data contamination. Evaluating 12 recent LLMs, we find that Claude Fable 5 and GPT-6 Astra exceed 93% overall, while even the best open-weight model, Kimi K3.1 Pro, trails Claude Fable 5 by 12 percentage points. When models can additionally use a terminal and web access, they retrieve the knowledge they lack and every model improves. The gap narrows but about 4 points remain, and the ranking of models stays largely the same, suggesting that knowledge held in the model itself remains valuable even with tools. We release the dataset, the evaluation code, and the construction pipeline."
+  },
+  {
+    "id": "arxiv:2611.18053",
+    "source": "arXiv",
+    "date": "2026-11-13",
+    "title": "InfiHall-Bench: A Benchmark for Hallucination Evaluation in Autoregressive Text-to-Image Generation",
+    "authors": [
+      "Yuxia Qiao",
+      "Xinhao Zhong",
+      "Junhao Li",
+      "Yi Sun",
+      "Jiaxin Hong",
+      "Shuoyang Sun",
+      "Bin Chen"
+    ],
+    "url": "https://arxiv.org/abs/2611.18053",
+    "abstract": "Hallucination benchmarks for text-to-image generation are predominantly designed around diffusion models, limiting their diagnostic value for visual autoregressive (VAR) models and the development of mitigation methods. We identify two limitations in existing prompt construction paradigms: many prompts are no longer challenging for modern generators, while category-based construction relies on recurring object-attribute-relation templates and rarely tests interactions among multiple visual requirements within a single image. We introduce InfiHall-Bench, a controlled benchmark of 411 prompts constructed by systematically composing five foundational and visually verifiable skills: attribute binding, spatial relation, action relation, part consistency, and scene consistency. Each prompt covers 4.05 annotated skills on average, enabling the evaluation of hallucinations under diverse combinations of visual requirements. Using this benchmark, we find that hallucinations in VAR models exhibit a scale-wise persistence pattern: semantic errors can emerge at different autoregressive scales and are rarely corrected by subsequent fine-scale steps. Motivated by this observation, we propose Confidence-Masked Hallucination Mitigation (CMHM), which estimates the prediction confidence of target visual tokens at each autoregressive scale during teacher-forced fine-tuning. CMHM downweights reliably predicted tokens, allowing optimization to focus on uncertain predictions across scales. Experiments show that InfiHall-Bench distinguishes models that existing compositional benchmarks rate as comparable, while CMHM consistently outperforms uniform LoRA fine-tuning for VAR-based text-to-image generation."
+  },
+  {
+    "id": "arxiv:2611.17966",
+    "source": "arXiv",
+    "date": "2026-11-13",
+    "title": "From Images to Grounded Edits: A Real-World Benchmark for Chinese Grammatical Error Correction in Handwritten Essays",
+    "authors": [
+      "Weiru Zhang",
+      "Yuzhong Hong",
+      "Junwei Bao",
+      "Lemao Liu",
+      "Dejing Dou"
+    ],
+    "url": "https://arxiv.org/abs/2611.17966",
+    "abstract": "Chinese Grammatical Error Correction (CGEC) is typically formulated as a text-to-text problem. While suitable for digital texts, this formulation falls short in real-world K-12 education, where AI-assisted corrections are expected directly on essay images, which are primarily handwritten and exhibit many irregularities. To bridge this gap, we introduce Grounded Chinese Grammatical Error Correction (G-CGEC), an image-to-grounded-edit task requiring systems to predict both corrections and their positions on essay images. We propose G-CGEC-Eval, a benchmark comprising real-world images of K-12 Chinese essays with fine-grained annotations. For evaluation, we adapt IoU-based metrics from object detection and propose a more tolerant alternative based on center-distance matching. Using this benchmark, we evaluate open-source and proprietary vision-language models under a direct single-pass setting, as well as settings with auxiliary components (OCR and character grounding) coordinated via pipelining or agentic harnessing. Results show that even top-tier proprietary models perform surprisingly poorly in the single-pass setting, while pipelining and agentic harnessing yield meaningful improvements. Notably, an error-type-based multi-agent workflow achieves the best performance, establishing it as the strongest baseline for future G-CGEC research. Through ablations and fine-grained analysis, we find the task remains far from solved, with linguistic error discovery and character-level grounding as the primary bottlenecks. This underscores the need for models that better integrate visual perception with linguistic reasoning and visual grounding."
+  },
+  {
+    "id": "arxiv:2611.17955",
+    "source": "arXiv",
+    "date": "2026-11-13",
+    "title": "WebArena-Pro: A Heterogeneous, Multimodal, Reproducible Benchmark for Web Agents",
+    "authors": [
+      "Imene Kerboua",
+      "Fatemeh Pesaran Zadeh",
+      "Xing Han Lù",
+      "Weijian Qi",
+      "Alexander Miller",
+      "Junyi Song",
+      "Yunjia Tian",
+      "Dongjin Kang",
+      "Seyeon Choi",
+      "Marzia Nouri",
+      "Ewen Gueguen",
+      "Matteo Boglioni",
+      "Fengyuan Liu",
+      "Zeyi Liao",
+      "Mengqi Yuan",
+      "Yue Li",
+      "Alexandre Lacoste",
+      "Alexandre Drouin",
+      "Spandana Gella",
+      "Huan Sun",
+      "Gunhee Kim",
+      "Siva Reddy"
+    ],
+    "url": "https://arxiv.org/abs/2611.17955",
+    "abstract": "Web agents powered by large language and vision-language models are increasingly applied to realistic browser work that spans heterogeneous applications, multimodal content, and stateful workflows. However, existing reproducible web-agent benchmarks cover only a small number of web applications drawn from a few software categories, and restrict modality to text and vision. Live benchmarks broaden site coverage but sacrifice reproducibility, since pages and data drift between runs. Moreover, existing benchmarks do not meaningfully evaluate whether agents can understand and use audio and video content embedded within web tasks. To address these gaps, we introduce WebArena-Pro, a benchmark comprising 300 tasks across 20 self-hosted web applications in six domain categories, spanning distinct interface conventions, workflows, and data models. Across the evaluated agents, the best performance is achieved by both Codex with GPT 6.1 Sol and Claude Code with Claude Opus 5.5 at 62.3%, followed by OpenCode with Kimi 3.1 Pro at 60.7%. The strongest GenericAgent configurations, Gemini 3.1 Pro omni and Gemma4 31B, both achieve 30.3%. Among reproducible, human-curated web agent benchmarks, WebArena-Pro provides the broadest application coverage and the most comprehensive multimodal support to date. The benchmark treats audio and video as core observations alongside text and vision, with dedicated actions for extracting information from each. WebArena-Pro runs each task in isolation and supports reproducible, parallel evaluation. Tasks are authored through a dedicated annotator interface, filtered by LLM-assisted triage, and finally validated by humans before release. Project page: https://webarena-pro.github.io"
+  },
+  {
+    "id": "arxiv:2611.17914",
+    "source": "arXiv",
+    "date": "2026-11-13",
+    "title": "DOCKET: A Pluralistic Benchmark for Evaluating AI-Assisted Policy Feedback in U.S. Rulemaking",
+    "authors": [
+      "Alexander Spangher",
+      "Charlotte Peale",
+      "Sílvia Casacuberta",
+      "Victor Y. Wu",
+      "Mirac Suzgun",
+      "Olivia H. Martin",
+      "Dan Bateyko",
+      "Cassandra Handan-Nader",
+      "Diyi Yang",
+      "Sanmi Koyejo",
+      "Daniel E. Ho"
+    ],
+    "url": "https://arxiv.org/abs/2611.17914",
+    "abstract": "As AI models advance and impact deliberative democracies, there is a growing need to assess their support of pluralistic viewpoints. Most pluralism benchmarks are insufficient for this: they are not grounded in diversity (i.e., stakeholders across different frames, skills and needs), quality (i.e., rigorous and technical debates), and impact (i.e., invested deliberators and real-world outcomes). To address this, we first (i) curate DOCKET, the most comprehensive dataset of the U.S. Federal Notice & Comment process to date. DOCKET consists of 42.3M public comments on 22,400 regulations across 44 government agencies between 2016 and 2026 and contains millions of policy debates; we link public comments to particular policy items proposed by regulators to track the public's attention and the responsiveness of regulators to public input. (ii) Next, we demonstrate the pluralistic utility of DOCKET - we show that public commenters have a wide breadth of perspectives with significant depth in policy expertise and that regulators are often responsive. (iii) Finally, we present DOCKETBench, the first systematic evaluation of LLMs' ability to represent human policy perspectives in federal rulemaking. Only 18-30% of LLM-generated feedback aligns with real human comments. LLMs critique proposals broadly but generally, lacking the specific grounding, citations, and lived-experience arguments that humans bring to bear; in addition, most models we test systematically agree with government perspectives (overlapping with up to 68% of their claims) and agree least with labor unions (as little as 26% of their claims), demonstrating a fundamental skew in perspectives that even tools like persona modeling do not solve. Taken together, we reveal fundamental gaps in how language models navigate real policy issues, and DOCKETBench serves as a testbed for closing those gaps in a crucial real-world domain."
+  },
+  {
+    "id": "arxiv:2611.17836",
+    "source": "arXiv",
+    "date": "2026-11-13",
+    "title": "BLiMP-RO: A Benchmark of Linguistic Minimal Pairs for Romanian",
+    "authors": [
+      "Radu-Stefan Popa",
+      "Valentin Feroiu",
+      "Adina Camelia Bleotu",
+      "Sergiu Nisioi"
+    ],
+    "url": "https://arxiv.org/abs/2611.17836",
+    "abstract": "Evaluating grammatical knowledge in language models requires benchmarks that cover diverse linguistic phenomena and are validated against human judgments. We introduce BLiMP-RO, a Romanian minimal-pair benchmark covering 50 grammatical phenomena across ten domains. It comprises 493 linguist-constructed sentence pairs, evaluated by native speakers in five experiments, and 5,942 additional semi-automatically generated, human-validated pairs. We further investigate grammatical generalization under limited linguistic input by training GPT-2 and GPT-BERT models from scratch on Romanian BabyBabelLM data and a newly collected corpus of 10 million words from child-targeted video captions. Increasing caption training data yields approximately 9 percentage points of accuracy improvement per tenfold increase in corpus size. At matched data sizes, BabyBabelLM generally outperforms video captions, while GPT-BERT consistently outperforms GPT-2. Our findings highlight how training data quantity, composition, and model architecture shape grammatical generalization in Romanian."
+  },
+  {
+    "id": "arxiv:2611.17796",
+    "source": "arXiv",
+    "date": "2026-11-13",
+    "title": "Robustness Evaluation of GPU Cloud Pricing Benchmarks under Incomplete Observations: A Controlled Missingness Study",
+    "authors": [
+      "Jooya Wong"
+    ],
+    "url": "https://arxiv.org/abs/2611.17796",
+    "abstract": "Daily GPU rental-price benchmarks can fail when marketplace quotes are missing. This article stress-tests a fixed equal-weight median rule under four imposed masking mechanisms and four benchmark-level recovery methods. Across 5,800 Monte Carlo realisations in 27 scenarios on 190 held-out days, whole-source outages reduce publication coverage to 0.77 while preserving zero conditional error on published dates; composition-changing loss retains 0.86 coverage but produces 7.74 log points of error. A separate past-only stratum-level ablation reduces error by 4.15 to 6.70 log points in five composition-changing cases, using a richer information set. An observable-signal withholding rule improves the primary error-coverage criterion in 0 of 10 cases. Results concern observed asking-price measurements, not transaction prices or identified real-world missingness mechanisms."
+  },
+  {
+    "id": "arxiv:2611.17713",
+    "source": "arXiv",
+    "date": "2026-11-13",
+    "title": "DesignSpecs: A DESIGN.md Dataset of Visual Design Specifications for AI Agents",
+    "authors": [
+      "Jialiang Wei",
+      "Walid Maalej"
+    ],
+    "url": "https://arxiv.org/abs/2611.17713",
+    "abstract": "While AI agents increasingly generate and modify user interfaces, they rarely rely on a visual design specification for a certain project. The DESIGN$.$md format, which originated from Google's AI design tool Stitch and which was open-sourced in April 2026, addresses this gap by describing a visual identity through design tokens (such as named colors, text styles) and Markdown prose. To our knowledge, no large-scale research dataset of such design specification files exists. We present DesignSpecs, a dataset of 36,906 DESIGN$.$md files from 15,794 public, non-fork GitHub repositories, representing 17,240 unique file contents. We collected 613,207 files named DESIGN$.$md in October 2026. Because the same file name also denotes architectural plans and other design documents, we filtered those with YAML front matter, a design-system name, at least one recognized design token, and zero errors under the official linter. Our JSON Lines dataset provides file-level and deduplicated views of the original Markdown, links files to repositories, paths, and commits, and is released with related scripts. We outline research opportunities on visual design knowledge and design-aware AI agents. Dataset is available at: https://huggingface.co/datasets/Jl-wei/DesignSpecs"
+  },
+  {
+    "id": "arxiv:2611.17682",
+    "source": "arXiv",
+    "date": "2026-11-13",
+    "title": "Agent-written heuristics versus commercial solvers on unsolved job-shop benchmark instances",
+    "authors": [
+      "Andre Albrecht",
+      "Enzo Morosini Frazzon",
+      "Leandro C. Coelho",
+      "Bruno Vieira"
+    ],
+    "url": "https://arxiv.org/abs/2611.17682",
+    "abstract": "Commercial solvers are the standard tool for difficult scheduling problems. We study whether a frontier large language model, used as a coding agent with open-source tools only, can match them in quality and speed. We report every run, and independent checkers verify every schedule. On the 100,000-operation job shop tai_100_1000_1, an agent-written solver reached 525,515, below OptalCP, Hexaly, and CP Optimizer. Unchanged, it improved all ten instances of the family and closed two. With equal budgets on the same workstation, it ended 0.0-1.8% above the lower bound, against 2.6-5.8% for CP Optimizer and 2.4-4.4% for Hexaly. On the Behnke-Geiger flexible job shops, an agent-written tabu search improved 11 of 32 open instances. With two transport robots, an agent-written solver improved seven of ten MKT instances. New lower bounds show that four published MKT values cannot be attained on the distributed instance files. Agent-run improvement campaigns closed eight further instances."
+  },
+  {
+    "id": "arxiv:2611.17681",
+    "source": "arXiv",
+    "date": "2026-11-13",
+    "title": "OCTAVE: A Capability-Resolved Benchmark for End-to-End HTML5 Game Generation",
+    "authors": [
+      "Kehang Li",
+      "Xinlan Xu",
+      "Yulin Jin",
+      "Heng Cao",
+      "Xuchen Li",
+      "Houxian Ren",
+      "Zihao Ji",
+      "Qiang Luo",
+      "Yadong Mao",
+      "Qilin He",
+      "Jian Zhang",
+      "Jian Zhao",
+      "Zihao Wang"
+    ],
+    "url": "https://arxiv.org/abs/2611.17681",
+    "abstract": "Complete game generation requires agents to coordinate rules, interactions, states, and presentation over a long development process. A single aggregate score obscures which capabilities are implemented and which requirements remain unmet. We present OCTAVE, a benchmark for complete HTML5 game generation organized around eight Capability Dimensions, with 180 tasks and 1,800 Evaluation Requirements drawn from real player requests, commercial-mechanics reconstruction, and human expert design. It covers PC Web, Mobile Web, 2D, and 3D. Requirements distinguish Completeness, assessing publicly specified core implementation, from Richness, assessing hidden, deeper system relationships. Static source-code judgments provide requirement-level diagnosis across capabilities and task conditions. Evaluation of 11 model-harness combinations yields 33.2% Completeness and 32.5% Richness; 19.9% of generation records are static gate failures or missing artifacts. Excluding same-model self-evaluation, even the best combination remains below 50% on both public and hidden requirements. Richness is not harder than Completeness under every task condition. Systems perform relatively better on Core Rules and Numerical Design, while AI/NPC and Feedback and Game Feel show more prominent gaps. Requirement difficulty offers coarse stratification but is only weakly negatively correlated with pass rates. A limited human cross-check finds that requirements judged satisfied by humans but failed by the automated evaluator are the main direction of disagreement. OCTAVE extends evaluation beyond aggregate scores to diagnosis localized by requirement, capability, and task condition."
+  },
+  {
+    "id": "arxiv:2611.17680",
+    "source": "arXiv",
+    "date": "2026-11-13",
+    "title": "Aligned, Conflicting, or Unspecified? A Diagnostic Benchmark for Multimodal Time Series Forecasting",
+    "authors": [
+      "Xintong Wang",
+      "Haihan Nan",
+      "Ruidong Li"
+    ],
+    "url": "https://arxiv.org/abs/2611.17680",
+    "abstract": "Artificial Intelligence of Things (AIoT) systems increasingly combine sensed time series with external text such as expert reports and news, yet how reliably models use text that agrees or conflicts with the sensed history remains unclear. We introduce the first real-world diagnostic benchmark organized by text-history relationship: 1,762 text-window pairs across sensor telemetry (Weather), web-service traffic (Wikipedia), and market data streams (Finance), each labeled Aligned, Conflicting, or Unspecified by whether the text's direction agrees with the historical trend, opposes it, or is not stated. Across ten pretrained models evaluated zero-shot, we investigate text selection and combination under text-history relationships (RQ1) and error diagnosis and horizon-scaled revision control (RQ2). For RQ1, we compare two types of text on paired Weather windows: one directly forecasts temperature changes, while the other describes related weather conditions, such as winds and fronts. Under Aligned, the first type yields the lowest error for most models. Under Conflicting, it increases most models' error above the no-text baseline; we therefore add only its stated magnitude and timing to the second type. Compared with either type alone, this combination lowers mean absolute scaled error (MASE) for six models and raises directional accuracy (DA) for seven. For RQ2, an error decomposition attributes the error increase to oversized revisions, and a training-free rule that limits them outperforms forecasts both with and without text for the four models with this trade-off, lowering MASE by 4.49%-21.98% and raising DA by 2.99%-9.71%. Our dataset is available at https://github.com/Shelton1202/ACU-Bench."
+  },
+  {
+    "id": "arxiv:2611.17621",
+    "source": "arXiv",
+    "date": "2026-11-13",
+    "title": "AscendGYM: A Cost-Aware Kernel Optimization Benchmark for Real-World Workloads on Ascend NPUs",
+    "authors": [
+      "AI Training Platform Team",
+      "Bingwei Zhang",
+      "Jing Li",
+      "Amir Abdullin",
+      "Sihang Chen",
+      "Xin Chen",
+      "Liangjun Feng",
+      "Yingmeng Gao",
+      "Tao Guo",
+      "Junjie Huang",
+      "Dongfang Li",
+      "Zhanglian Lin",
+      "Jiajun Liu",
+      "Zekun Liu",
+      "Zhengxuan Lu",
+      "Xiaodong Luo",
+      "Jian Meng",
+      "Ivan Nosov",
+      "Linyuan Qiu",
+      "Weijian Sun",
+      "Wanrui Yan",
+      "Binfan Zheng",
+      "Zhicheng Zhou",
+      "Baotian Hu",
+      "Min Zhang",
+      "Haizhou Li",
+      "Zhiquan Luo"
+    ],
+    "url": "https://arxiv.org/abs/2611.17621",
+    "abstract": "Kernel optimization is essential for efficient large language model (LLM) training and inference on Ascend NPUs. Existing Ascend kernel benchmarks primarily focus on kernel generation, with less emphasis on the ability of agents to optimize existing implementations under input configurations drawn from real workloads. To address this requirement, we introduce AscendGYM, a benchmark whose initial suite comprises 48 kernels across three difficulty levels. Each kernel is paired with test cases whose data types and tensor shapes are collected from real-world training and inference tasks. Consequently, performance improvements on AscendGYM map directly to the corresponding workloads. In terms of usability, two evaluation modes are supported in AscendGYM: model evaluation and model-harness evaluation. The kernel optimization capabilities of both trained models and custom agents are allowed to be measured. It provides a complete execution environment that closely reproduces how Ascend kernels are invoked in practical pipelines. For model evaluation, it additionally includes a built-in harness equipped with search orchestration and experience accumulation. Finally, we propose a new metric, the Speedup-Token Score (STS), which quantifies performance gains relative to token cost. By jointly considering speedup and cost, STS enables the assessment of practical kernel optimization capability of a model or harness under an acceptable budget. AscendGYM is available at https://github.com/SLAI-AITP/AscendGYM."
+  },
+  {
     "id": "preprints:10.20944/preprints202611.1249",
     "source": "Preprints.org",
     "date": "2026-11-12",
@@ -30,6 +337,43 @@
     "url": "https://doi.org/10.20944/preprints202611.1249.v1",
     "abstract": "Background/Objectives: Photoplethysmography (PPG) could support unobtrusive respiratory-rate monitoring during breathing-centered rehabilitation. Accuracy measured in one cohort, however, says little about how the same estimator will behave after deployment elsewhere. Confidence estimates may also fail. We tested whether physiology-informed artificial intelligence and a learned error-prediction gate retained their performance across two clinically distinct public datasets. Methods: We conducted a retrospective, subject-separated benchmark using 53 BIDMC intensive-care recordings and 42 CapnoBase anesthesia recordings. From 32 s PPG windows advanced every 8 s, we derived four respiratory modulations and 51 rate, agreement, morphology, and signal-quality features. Six estimators were evaluated by five-fold grouped cross-validation and by bidirectional external transfer. A nested gradient-boosting model predicted each estimate's absolute error to support selective reporting. Performance was summarized with subject-bootstrap confidence intervals, Bland–Altman agreement, and risk–coverage analysis. Results: The analysis included 5262 windows from 95 participants. Within-dataset mean absolute error (MAE) was lowest for random forest on BIDMC (1.65 breaths/min) and Extra Trees on CapnoBase (3.55 breaths/min). The physiology-consensus model achieved 1.70 and 4.02 breaths/min, respectively. Its learned gate reduced MAE at 50% coverage to 0.93 and 2.01 breaths/min. Under external transfer, however, its MAE increased to 6.19 breaths/min for BIDMC→CapnoBase and 4.90 breaths/min for CapnoBase→BIDMC. Uncertainty–error Spearman correlation fell from 0.48 and 0.41 internally to 0.15 and 0.09 externally, and gating yielded only modest improvement. A fixed raw-spectral baseline outperformed the learned model in both transfer directions. Conclusions: Confidence measured within the development cohort did not establish safety after transfer. PPG-derived respiratory rate needs external calibration before it can guide rehabilitation feedback, even when point accuracy appears acceptable internally. Public benchmarks should report bidirectional transfer and risk–coverage behavior alongside random or subject-wise internal splits.",
     "version": 1
+  },
+  {
+    "id": "arxiv:2611.17563",
+    "source": "arXiv",
+    "date": "2026-11-12",
+    "title": "Benchmarks Don't Talk Back: Learning Through Self-Disagreement",
+    "authors": [
+      "Soheil Abbasloo",
+      "Peng Cheng"
+    ],
+    "url": "https://arxiv.org/abs/2611.17563",
+    "abstract": "A benchmark usually measures a language model alone with a question, and deployment rarely looks like that: answers get contested, and models give up correct ones under counter-reasoning that is itself wrong. We show that what fails there is not a shortfall of accuracy but a capability in its own right -- knowing when to hold a position and when to yield to a better one -- which we call dialectical competence. It stands on first-answer accuracy without following from it: a model can be made materially better at answering and no better at this, and training for accuracy alone can drift against it. Nor can it be bought at inference, by self-reflection or by sampling more. Taking a cue from the dialectical tradition in philosophy, in which productive opposition arises within a position rather than being imposed on it from outside, we hypothesize that this capability can be trained from opposition the model supplies itself. It states a position, generates the strongest case against that position -- its antithesis -- rules on whether the case stands, and is trained on that ruling, with no second model at training or at deployment. We call this learning through Self-Disagreement: reinforcement learning from verifiable rewards throughout, where the same check that scores an answer against its reference scores the ruling too, so no reward model, no preference data and no human annotation enter anywhere. The capability is trained rather than elicited: weak in the base model, it arrives with the reward, is not paid for out of first-answer accuracy, and holds against challengers the model never trained against, including ones stronger than itself. The opposition a model needs in order to improve, it turns out, need not come from outside it."
+  },
+  {
+    "id": "arxiv:2611.17556",
+    "source": "arXiv",
+    "date": "2026-11-12",
+    "title": "A Synthetic Benchmark for Target-Centric Causal Discovery in Industrial Processes",
+    "authors": [
+      "Angelo Ziletti"
+    ],
+    "url": "https://arxiv.org/abs/2611.17556",
+    "abstract": "Causal discovery promises to find which recorded variables drive a process target such as product quality, yield or energy use. Process data with known causes are rare, and in existing benchmarks the difficulty of identifying the causes of a target is either fixed by the recorded data or set for the whole graph. We present a synthetic benchmark for target-centric causal discovery in industrial processes. Its generator is a two-level structural causal model inspired by batch production, assembled from components that each model one phenomenon of process data, such as a control loop or a delayed effect. The graph is built around the target: without sensor error, every non-cause can be distinguished from the direct causes by conditioning on them or by time order. Each component is set independently, so the difficulty can be varied one condition at a time. We evaluate eight methods, from association measures to effect estimation, with an error analysis by the role of the selected candidate; all degrade as the difficulties combine, each in a way consistent with its assumptions."
+  },
+  {
+    "id": "arxiv:2611.17549",
+    "source": "arXiv",
+    "date": "2026-11-12",
+    "title": "Talk to Act: A Synthetic Multi-Turn Dialogue Benchmark for Human Intent Extraction and Action Planning in Robotics",
+    "authors": [
+      "Deepu Krishnareddy",
+      "Mohammad Haziq Khan",
+      "Michael Danner",
+      "Matthias Rätsch"
+    ],
+    "url": "https://arxiv.org/abs/2611.17549",
+    "abstract": "Multi-turn conversational human-robot interaction (HRI) continues to be a challenging problem in robotics, as many existing systems rely on rigid, command-driven interfaces that can be unintuitive for users. Recent advances in Large Language Models (LLMs) provide a promising direction, given their ability to process natural language, generate structured outputs, and support tool-based reasoning, all of which are relevant for interpreting user intent in robotic settings. However, progress in this area is constrained by the limited availability of datasets and benchmarks that capture the nuances of real-world human communication, such as multi-turn dialogue, ambiguity, and context-dependent requests. In this work, we present a synthetically generated multi-turn dialogue dataset for HRI, annotated with action intents, object references, and task plans across a range of scenarios and user personas. Our primary focus is on evaluating the capability of small, open-weight language models for robotic tasks, particularly in settings where local deployment and efficiency are important. To this end, we frame intent extraction as a tool-calling problem where each predicted action corresponds to a structured function call with arguments grounded in the dialogue and benchmark models ranging from 270M to 8B parameters on their ability to perform intent extraction and action planning without task-specific fine-tuning. Our results show that these models can achieve reasonable performance on the task even at relatively small scales and without any task-specific fine-tuning. This suggests that compact, locally deployable models already provide a useful baseline for conversational robotic systems. We expect that task-specific fine-tuning and more realistic training data will enhance performance further and make such models increasingly suitable for real-world robotic applications."
   },
   {
     "id": "arxiv:2611.17318",
@@ -5665,19 +6009,19 @@
       "Xinyi Shi"
     ],
     "url": "https://arxiv.org/abs/2611.00482",
-    "abstract": "The absolute trajectory error (ATE) is the standard measure of camera-motion accuracy, from SLAM to feed-forward 3D reconstruction. On the common Sintel protocol, an image-free constant-velocity line has a lower mean ATE than 10 of 11 recent models re-run with official code and than 85 of 110 published methods. On Lightspeed it beats 5 of 9 models and 10 of 11 published methods, while on TUM, ScanNet, DyCheck and ADT every model beats it. Two properties of ATE's alignment explain this. First, it maps any moving constant-velocity prediction onto the line that best fits the true path, so the line scores the path's regression residual. A residual signal-to-noise ratio (SNR) criterion tells when moving a prediction towards its constant-velocity fit lowers ATE. With the alignment's first-order refit, it accounts for the outcome of all but one of 4010 model-clip evaluations, including all 504 on three benchmarks registered before any model ran. The true path's straightness flags Sintel and Lightspeed. Second, the alignment ignores where cameras look: rotating a trajectory by 30 degrees against its orientations leaves ATE unchanged yet worsens the static-point reprojection of every model on Sintel, TUM and ScanNet, and the line reprojects worst on Sintel by geometric mean. Fitting the alignment's rotation to the predicted orientations gives pose-anchored ATE (PA-ATE), a one-function change at about ATE's cost (37 vs. 34 $μ$s per clip, and 61 vs. 66 $μ$s with the rotation error). It is never below ATE and, as we prove, equals the translational relative pose error over all frame pairs divided by $\\sqrt{2}$ when the orientations agree. It ranks every image-free reference below every model on Sintel, follows the reprojection error where ATE does not, and largely preserves the models' order. Its rotation error also exposes Lightspeed ground-truth orientations that the images contradict."
+    "abstract": "Many vision benchmarks align a prediction to the ground truth before scoring it. If the alignment minimises the error, an input-free template scores the truth's distance from everything the alignment can reach, so the ground truth alone fixes how well a template can score, before any model runs. Camera pose is our central case. The absolute trajectory error (ATE), the standard camera-motion measure, aligns camera positions by a similarity transform. On the common Sintel protocol, an image-free constant-velocity line has a lower mean ATE than 10 of 11 recent models and 85 of 110 published methods, and on Lightspeed than 5 of 9 models and 10 of 11 published methods. The straightness of the true paths separates these two from TUM, ScanNet, DyCheck and ADT, where every model beats the line. A residual signal-to-noise criterion with the alignment's first-order refit predicts when straightening a prediction lowers ATE in all but one of 4010 model-clip evaluations, including all 504 on three benchmarks registered in advance. The alignment also ignores where cameras look: rotating a trajectory by 30 degrees against its orientations leaves ATE unchanged yet worsens the static-point reprojection of every model on Sintel, TUM and ScanNet. Fitting the alignment's rotation to the predicted orientations gives pose-anchored ATE (PA-ATE), a one-function change at about ATE's cost (37 vs. 34 microseconds per clip). It is never below ATE, ranks every image-free reference below every model on Sintel, tracks the reprojection error under controlled rotation and straightening, largely preserves the models' order, and exposes Lightspeed ground-truth orientations that the images contradict. Beyond poses, templates beat some published methods on KITTI video depth, SSP-3D body shape and NoW faces, and in video depth this distance sets KITTI apart from Sintel and Bonn."
   },
   {
     "id": "preprints:10.20944/preprints202610.3128",
     "source": "Preprints.org",
     "date": "2026-10-30",
-    "title": "Constraint-Aware Coding-Sequence Design for <em>Nicotiana benthamiana</em>: A 49,257-Record Benchmark and Codon-Reference Sensitivity Analysis",
+    "title": "Constraint-Aware Coding-Sequence Design for Nicotiana benthamiana: A 49,257-Record Benchmark and Codon-Reference Sensitivity Analysis",
     "authors": [
       "Mun-Kyu Kim"
     ],
-    "url": "https://doi.org/10.20944/preprints202610.3128.v1",
-    "abstract": "Synonymous coding DNA sequence (CDS) design for plant expression constructs must balance host codon adaptation against guanine–cytosine (GC) composition, restriction-site avoidance, and sequence-integrity constraints, yet benchmark outcomes can depend strongly on the chosen codon- usage reference. Using FactorForge v3.2.0, an open-source CDS design and sequence-review workflow, we evaluated four rule-based design presets (Balanced, High-CAI, GC-target, and Assembly-friendly) on 49,257 reference-derived Nicotiana benthamiana CDS/protein records from the Sol Genomics Network (SGN) QLD183 resource (seed 320), scoring sequence integrity, a historical 55–65% GC window, and absence of BsaI/BpiI/BsmBI sites. With the legacy packaged codon reference, Assembly-friendly passed all three criteria for 63.37% of records; with three genome-derived references its combined pass rate was 0.00% after rounding, whereas GC-target attained 22.68% in each derived condition. A separate v3.3.0 dynamic-programming (DP) execution maximizing the codon adaptation index (CAI) within the same GC window found a GC-compliant sequence for 99.83% of records (mean CAI 0.9989), but 28.21% passed all criteria because Type IIS sites are outside the DP objective. These in-silico results characterize candidate generation under a historical policy. Evaluation with the v3.3.0 default settings, against external tools, and in the laboratory remains to be done.",
-    "version": 1
+    "url": "https://doi.org/10.20944/preprints202610.3128.v2",
+    "abstract": "Synonymous coding DNA sequence (CDS) design for plant expression constructs must balance host codon adaptation against guanine-cytosine (GC) composition, restriction-site avoidance, and sequence-integrity constraints, yet benchmark outcomes can depend strongly on the chosen codon-usage reference. Using FactorForge v3.2.0, an open-source CDS design and sequence-review workflow, we evaluated four rule-based design presets (Balanced, High-CAI, GC-target, and Assembly-friendly) on 49,257 reference-derived Nicotiana benthamiana CDS/protein records from the Sol Genomics Network (SGN) QLD183 resource (seed 320), scoring sequence integrity, a historical 55-65% GC window, and absence of BsaI/BpiI/BsmBI sites. With the legacy packaged codon reference, Assembly-friendly passed all three criteria for 63.37% of records (single fixed per-record seed 320; subject to multi-percentage-point variation across independent seed streams); with three genome-derived references its combined pass rate was 0.00% after rounding, whereas GC-target attained 22.68% in each derived condition. A separate v3.3.0 dynamic-programming (DP) execution maximizing the codon adaptation index (CAI) within the same GC window found a GC-compliant sequence for 99.83% of records (49,173/49,257; 84 NO_FEASIBLE_CDS; mean feasible CAI 0.9989), but 28.21% passed all criteria because Type IIS sites are outside the 1DP objective. An independent FactorForge v3.6.4 2x2 factorial evaluation (N = 49,257) crossing codon reference (legacy C1 vs. high-confidence NbeV1.1 C4) and target GC window (55-65% vs. 40-47%) indicates that reference-policy misalignment substantially contributes to the observed zero-pass outcomes, while residual generator limitations remain: switching only the target band to 40-47% under NbeV1.1 increases Assembly-friendly combined pass from 0.00% to 9.39% (11.10% GC-window pass; 81.40% Type IIS-clean) and 1DP to 31.82% (99.998% GC-feasible; mean feasible CAI 0.9412), whereas pairing the legacy reference with 40-47% drops Assembly-friendly to 0.37%. These in-silico results characterize candidate generation on public inputs (UNVERIFIED_PUBLIC_CORPUS); prospective comparison against external tools and laboratory validation remain pending (Biological validation: NOT_AVAILABLE).",
+    "version": 2
   },
   {
     "id": "preprints:10.20944/preprints202610.3071",
@@ -6423,9 +6767,9 @@
     "authors": [
       "Diana Stafford"
     ],
-    "url": "https://doi.org/10.20944/preprints202610.2763.v1",
-    "abstract": "Background. Patients evaluated for illness associated with water-damaged buildings are frequently offered HLA-DR/DQ typing, with results interpreted against a published table that labels certain haplotypes \"mold susceptible\" or \"multisusceptible.\" That table belongs to the chronic inflammatory response syndrome (CIRS) framework, a proposed construct rather than an established diagnostic entity. Materials describing the framework state that approximately 24% of the population carries a susceptible type; no derivation of that figure was identified in the sources examined.Methods. Haplotypes were read from the publicly posted classification table and mapped to HLA-DRB1~DQB1 two-locus definitions. Because the table's DQ notation is internally inconsistent, two explicit readings were constructed. Carrier frequencies were calculated as 1 − (1 − Σp)² using National Marrow Donor Program frequencies, and tested against an independent British cohort, a United States organ-donor cohort, 1000 Genomes genotypes, family-phased haplotypes from the 17th International HLA and Immunogenetics Workshop, and 64 further world populations.Results. Under the broad reading, an estimated 88.4% of European Americans carry at least one listed haplotype; under the strict reading, 59.1%. Across four independent European-ancestry datasets the broad estimates range from 86.5% to 89.5%, while the strict estimates vary more widely, from 53.2% to 63.2%. Of 64 world populations with two-locus data, 28 met pre-specified data-completeness criteria; all 28 exceed 24% under the broad reading. The Hardy-Weinberg step was tested by direct enumeration of 2,690 individuals, where it overestimated carriage of the relevant DRB1 allele groups by 0.56 percentage points.Conclusions. Under both operational definitions, estimated carrier frequencies exceed 50% nationally, though they may overstate carriage of the original classifications where historical serological distinctions impose restrictions that two-locus data cannot resolve. The frequently cited 24% figure could not be reproduced from any dataset analyzed here; the originator attributes it to an unpublished clinical series. The historical literature reviewed describes a 111-person clinic-based comparison group, but its relationship to the population estimate remains uncertain. A positive result is informative only insofar as it is uncommon among people who do not have the condition. Taking the sensitivity values reported for the classification at face value, the carrier frequencies estimated here give positive likelihood ratios of 0.85 to 1.07 under the broad reading — a range containing 1.0, the value at which a positive result carries no information — and 1.3 to 1.6 under the strict reading.",
-    "version": 1
+    "url": "https://doi.org/10.20944/preprints202610.2763.v2",
+    "abstract": "Background. Patients evaluated for illness associated with water-damaged buildings are frequently offered HLA-DR/DQ typing, with results interpreted against a published table that labels certain haplotypes \"mold susceptible\" or \"multisusceptible.\" That table belongs to the chronic inflammatory response syndrome (CIRS) framework, a proposed construct rather than an established diagnostic entity. Materials describing the framework state that approximately 24% of the population carries a susceptible type; no derivation of that figure was identified in the sources examined. Methods. Haplotypes were read from the publicly posted classification table and mapped to HLA-DRB1~DQB1 two-locus definitions. Because the table's DQ notation is internally inconsistent, two explicit readings were constructed. Carrier frequencies were calculated as 1 − (1 − Σp)² using National Marrow Donor Program frequencies, and tested against an independent British cohort, a United States organ-donor cohort, 1000 Genomes genotypes, family-phased haplotypes from the 17th International HLA and Immunogenetics Workshop, and 64 further world populations. Results. Under the broad reading, an estimated 88.4% of European Americans carry at least one listed haplotype; under the strict reading, 59.1%. Across four independent European-ancestry datasets the broad estimates range from 86.5% to 89.5%, while the strict estimates vary more widely, from 53.2% to 63.2%. Of 64 world populations with two-locus data, 28 met pre-specified data-completeness criteria; all 28 exceed 24% under the broad reading. The Hardy-Weinberg step was tested by direct enumeration of 2,690 individuals, where it overestimated carriage of the relevant DRB1 allele groups by 0.56 percentage points. Conclusions. Under both operational definitions, estimated carrier frequencies exceed 50% nationally, though they may overstate carriage of the original classifications where historical serological distinctions impose restrictions that two-locus data cannot resolve. The frequently cited 24% figure could not be reproduced from any dataset analyzed here; the originator attributes it to an unpublished clinical series. The comparison groups described in the literature reviewed, of 111 and 150 attendees, are clinic-based, and no source supplies a derivation connecting either to a national frequency. A positive result is informative only insofar as it is uncommon among people who do not have the condition. Taking the sensitivity values reported for the classification at face value, the carrier frequencies estimated here give positive likelihood ratios of 0.85 to 1.07 under the broad reading — a range containing 1.0, the value at which a positive result carries no information — and 1.3 to 1.6 under the strict reading.",
+    "version": 2
   },
   {
     "id": "preprints:10.20944/preprints202610.2761",
