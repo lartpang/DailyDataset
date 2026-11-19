@@ -1,5 +1,398 @@
 [
   {
+    "id": "arxiv:2611.24904",
+    "source": "arXiv",
+    "date": "2026-11-18",
+    "title": "ShadowTransfer: A Geographic Transfer Benchmark for Overhead Shadow Detection",
+    "authors": [
+      "Shagun Mittal",
+      "Raymond A. Yeh",
+      "Satish Ukkusuri"
+    ],
+    "url": "https://arxiv.org/abs/2611.24904",
+    "abstract": "Overhead aerial imagery feeds dense-prediction pipelines that are routinely trained in one geographic region and deployed in another, yet no benchmark measures how shadow detection models transfer across regions. Existing overhead shadow datasets either lack a geographic transfer protocol or rely on automatically generated labels. We introduce ShadowTransfer, a benchmark of 4,500 human-verified shadow masks across three U.S. cities at two native resolutions, paired with a leave-one-city-out evaluation protocol. Under vanilla training, holding out the test city costs 3.5 to 7.8 mIoU across four architectures, the gap remains significant when the training set grows from 225 to 900 images, and six of eight adaptation methods degrade more than vanilla training on average. We propose a three-probe framework that diagnoses where and how the transfer breaks: the failure operates in feature space, beyond the reach of pixel-histogram matching, shows up as a confidence collapse on shadow pixels while background confidence stays intact, and is recoverable by retraining different architectural components depending on the model: encoder for some, decoder for others. These findings replicate on INRIA building footprints, suggesting they describe geographic transfer beyond shadows. Guided by the diagnosis, we build Spectral Information Bottleneck (SIB), a plug-in module with one component per finding. Across the 9 (architecture, held-out city) cells, SIB has the smallest mean gap to the within-city upper bound of the ten methods we evaluate (6.42 mIoU), level with FDA. The benchmark, LOCO protocol, code, and trained models are released to support reproducible evaluation of geographic transfer in overhead dense prediction."
+  },
+  {
+    "id": "arxiv:2611.24837",
+    "source": "arXiv",
+    "date": "2026-11-18",
+    "title": "What Survival Benchmarks Don't Tell You: Impact of Model Selection and Dataset Regimes",
+    "authors": [
+      "Sandra Dening",
+      "Emre Kavak",
+      "Christian Wachinger",
+      "George H. Chen"
+    ],
+    "url": "https://arxiv.org/abs/2611.24837",
+    "abstract": "Despite the proliferation of survival analysis methods, current benchmarks often operate under narrow conditions: they heavily rely on the concordance index (C-index) for evaluation and model selection, and frequently either exclude deep learning (DL) methods or underrepresent challenging dataset regimes. To address these limitations, we conduct a large-scale, neutral benchmark comparing 10 classical, tree-based, and DL methods across 49 diverse datasets. Crucially, we treat the model selection criterion (optimizing for C-index, Integrated Brier Score (IBS), or Mean Absolute Error (MAE-PO)) as an independent experimental variable. Using Bayesian mixed-effects modeling, we demonstrate that evaluation design heavily dictates conclusions. For complex DL and tree-based architectures, selecting hyperparameters to optimize for IBS instead of C-index yields substantial improvements in probabilistic accuracy and calibration at a negligible cost to discriminative ranking. Furthermore, method performance (C-index, IBS, MAE-PO, and X-CAL) is fundamentally governed by dataset characteristics. While DL models scale exceptionally well with larger sample sizes, they suffer notable performance drops in high-dimensional feature spaces. Additionally, we expose a structural vulnerability where heavy censoring artificially inflates absolute calibration metrics, creating overly conservative tests. Ultimately, our findings challenge the utility of global single-number performance summaries and advocate for survival analysis results that transparently report the evaluation setup. Our code is available at: https://github.com/sdening/surv-bench-study"
+  },
+  {
+    "id": "arxiv:2611.24812",
+    "source": "arXiv",
+    "date": "2026-11-18",
+    "title": "A Homogeneous Benchmark of Exoplanet Mass-Radius Relations",
+    "authors": [
+      "Ailar Alizadehsabegh",
+      "Soroush Sarabi",
+      "Atila Poro"
+    ],
+    "url": "https://arxiv.org/abs/2611.24812",
+    "abstract": "The mass-radius ($M$-$R$) relation is fundamental to inferring the bulk composition and internal structure of exoplanets. However, published relations remain difficult to compare directly because studies adopt different planetary samples, fitting procedures, and evaluation metrics. We construct a homogeneous, quality-controlled benchmark of 963 exoplanets with dynamically measured masses and transit radii from the NASA Exoplanet Archive. We compare empirical power laws, probabilistic models, and machine-learning (ML) regressors using point accuracy, interval coverage, and probabilistic calibration. On the full test set, a multi-feature random forest has the lowest root-mean-square error, 0.329~dex in $\\log_{10} M$ versus 0.368~dex for a fitted two-parameter power law ($p = 0.007$ unadjusted; $p = 0.059$ after Holm correction across 13 comparisons). Radius-only ML models perform comparably to the single power law. In three ranges of the measured radius, several methods improve on the power law below 1.6 $R_\\oplus$, but none does between 1.6 and 4 $R_\\oplus$. Including stellar and orbital covariates significantly improves predictions only for low-mass planets ($M < 4.4\\,M_\\oplus$), although this result is sensitive to missing covariate data and weakens when the training and test sets are separated by host star. Within their calibrated radius domains, the published empirical and probabilistic relations remain highly competitive. Finally, a first-order variance decomposition shows that formal measurement uncertainties account for only $\\sim$3\\% of the residual variance (0.067 of 0.401~dex), and the remaining $\\sim$0.396~dex arises from compositional diversity, selection effects, and model approximation error."
+  },
+  {
+    "id": "arxiv:2611.24803",
+    "source": "arXiv",
+    "date": "2026-11-18",
+    "title": "Cross-Dataset Inference of Central-Satellite Classification and Host Halo Masses from Galaxy neighbours with Machine Learning",
+    "authors": [
+      "Alice Chen",
+      "Camille Avestruz",
+      "Niayesh Afshordi",
+      "Yen-Ting Lin"
+    ],
+    "url": "https://arxiv.org/abs/2611.24803",
+    "abstract": "The classification of galaxies as centrals or satellites gives insight into the galaxy-halo connection. This, together with halo mass estimates, can be used to connect observed galaxy populations to underlying dark matter structure. To (1) classify galaxies as centrals or satellites and (2) estimate the host halo mass for centrals, we train XGBoost models on IllustrisTNG (TNG100) galaxies, using the distances (3D or projected (2+1)D redshift space) and $M_*$ of their ten nearest neighbours. We then test the model on EAGLE to measure its robustness after applying a simple domain-alignment step that corrects for a relative shift in the $M_*$ distribution between TNG100 and EAGLE. We further augment the training data by combining feature sets from neighbour samples with varying lower $M_*$ thresholds. On the TNG100 test set, the central/satellite classifier reaches purity and completeness $=0.97$ (0.95) in 3D (projected redshift) space at the threshold where purity=completeness, and the halo-mass regressor achieves $r^2$=0.98 (0.93) when evaluated on true centrals and $r^2=0.93$ (0.93) when evaluated on inferred centrals. Applied to EAGLE after alignment, the classifier achieves purity/completeness $=0.95$ (0.95), while halo-mass inference yields $r^2=0.91$ ($0.87$) for true centrals and $r^2=0.83$ (0.77) for inferred centrals; training-data augmentation most improves the halo-mass estimation task. Satellites misclassified as centrals underpredict the true masses of host halos, especially if they are closer to a lower mass halo's central than its own host's central and/or has a significantly lower $M_*$ than its own central. These results show that survey-accessible information such as projected separations and stellar masses - combined with simulation-trained models and domain alignment - can enable reliable central identification and host halo mass estimation to an $r^2\\geq 0.85$."
+  },
+  {
+    "id": "arxiv:2611.24800",
+    "source": "arXiv",
+    "date": "2026-11-18",
+    "title": "Planner-Controller Interaction for Ackermann Navigation: A Matched Simulation and Hardware Benchmark",
+    "authors": [
+      "Moaiz Saeed",
+      "Marah Saleh",
+      "Mounis Shawgi",
+      "Mohamed Al Musleh"
+    ],
+    "url": "https://arxiv.org/abs/2611.24800",
+    "abstract": "Global planners and path-tracking controllers are often evaluated independently, although their interaction determines how a vehicle follows a planned path. Whether simulation accurately predicts the performance of specific planner-controller combinations on Ackermann-steered hardware remains uncertain. This study evaluated three geometric controllers (Regulated Pure Pursuit, Stanley, and Vector Pursuit) paired with two global planners (Hybrid A* and NavFn) on a 1/10-scale Quanser QCar and in a matched Gazebo simulation. Both environments used shared custom planning and control algorithms, matched route geometry and goals, ground-truth pose references, and a common evaluation pipeline. Five runs per configuration and environment yielded 60 benchmark runs. Controller rankings for tracking accuracy and command smoothness transferred consistently between environments, with Spearman correlations of 0.77-0.94. However, planner-dependent effects showed substantially weaker agreement. In simulation, planner selection changed the root-mean-square (RMS) angular acceleration of the commanded velocities by no more than 0.030 rad/s^2, whereas Hybrid A* increased it by 0.141-0.843 rad/s^2 on hardware, depending on the controller. These differences coincided with planner-dependent achieved speeds that the simulation's idealised longitudinal response did not reproduce. Mean controller computation times remained below 0.5 ms on the Jetson TX2. The findings demonstrate that agreement in controller rankings does not guarantee accurate prediction of planner-dependent performance for specific controller pairings on hardware, highlighting the importance of physical validation."
+  },
+  {
+    "id": "arxiv:2611.24731",
+    "source": "arXiv",
+    "date": "2026-11-18",
+    "title": "HandWorldBench: A Unified Benchmark for Hand-Centric World Models",
+    "authors": [
+      "Zhaolu Wang",
+      "Jiacheng Xu",
+      "Lihong Wang",
+      "Shuqing Wang",
+      "Jianjie Fang",
+      "Ziyou Wang",
+      "Xvyuan Liu",
+      "Rongze Tang",
+      "Yiding Ma",
+      "Xin Zhang",
+      "Jiawei Chen",
+      "Wei Wu",
+      "Chen Gao",
+      "Yong Li",
+      "Zhibo Chen"
+    ],
+    "url": "https://arxiv.org/abs/2611.24731",
+    "abstract": "Recent advances in world models are opening new possibilities for fine-grained embodied tasks, with hand-object interaction offering a particularly demanding setting. Modeling these interactions involves capturing how hand actions change objects and how the resulting states persist over time. Yet systematic evaluation tailored to these hand-centric capabilities remains underdeveloped. To address this gap, we introduce HandWorldBench, a unified benchmark that systematically evaluates hand-centric world models across human hands, simulated dexterous hands, and real dexterous hands along six dimensions: visual quality, hand fidelity, appearance consistency, instruction following, physical consistency, and temporal coherence. To construct the benchmark, we develop a data curation pipeline that extracts hand-object interaction clips and screens them for quality, yielding 20,500 high-quality egocentric clips from over 600 hours of footage. We then manually select 500 clips covering seven task families for evaluation. Benchmarking eleven models under a unified protocol reveals that stronger hand-pose control does not consistently translate into coherent object-state evolution and persistence or robust cross-embodiment performance, with several specialized hand-control models underperforming general-purpose text/image-to-video generators on dexterous-hand tasks."
+  },
+  {
+    "id": "arxiv:2611.24672",
+    "source": "arXiv",
+    "date": "2026-11-18",
+    "title": "Predicting Species Splits: A Challenging Fine-Grained Benchmark for Category Discovery",
+    "authors": [
+      "Christian Lange",
+      "Joakim Bruslund Haurum",
+      "Bingchen Zhao",
+      "Oisin Mac Aodha"
+    ],
+    "url": "https://arxiv.org/abs/2611.24672",
+    "abstract": "Widely used category discovery benchmarks have become increasingly saturated and often fail to reflect real-world discovery settings, making long-term evaluation of new methods difficult. We introduce PS-SPLIT, a large-scale fine-grained benchmark for category discovery, motivated by taxonomic splitting: the real-world process by which what was once considered a single species is found to comprise multiple distinct ones. PS-SPLIT contains 79K globally distributed, high-quality, community-collected bird images spanning 771 species, derived from 257 recent real expert-verified taxonomic splits, with associated geographic metadata and full taxonomic hierarchy. The visual differences between categories arising from real taxonomic splits can be very subtle, often requiring significant human expertise to tell apart, making PS-SPLIT a challenging benchmark which we hope will assist in advancing fine-grained category discovery research. Based on taxonomic splitting, we introduce the task of discovery by category splitting, where the goal is to determine which known categories should be subdivided into new finer-grained subcategories. We adapt four generalized category discovery methods to this setting, evaluate existing methods, and show that there is substantial room for future progress."
+  },
+  {
+    "id": "arxiv:2611.24664",
+    "source": "arXiv",
+    "date": "2026-11-18",
+    "title": "Rapid Equation of State Inference from Multiprobe Datasets",
+    "authors": [
+      "Tamal RoyChowdhury",
+      "Anarya Ray",
+      "Jolien Creighton",
+      "Shaon Ghosh"
+    ],
+    "url": "https://arxiv.org/abs/2611.24664",
+    "abstract": "Fully constraining the neutron star equation of state (EoS) requires combining observations from various channels that probe different density regimes. We perform a joint multimessenger inference of the equation of state using gravitational-wave observations from binary neutron star mergers, NICER mass-radius measurements of X-ray pulsars, and radio timing measurements of massive pulsars. We constrain the parametrized equation of state and perform Bayesian model selection among a set of candidate equations of state. The joint analysis produces a radius of $R_{1.4} = 11.93^{+1.02}_{-0.83} \\, \\rm km$ for a canonical $1.4 \\, M_\\odot$ neutron star, and a maximum non-rotating neutron star mass of $M_{\\rm max} = 2.31^{+0.23}_{-0.23} \\, M_\\odot$ with $90\\%$ credible intervals. Gravitational-wave and NICER observations constrain the equation of state at low to intermediate densities, while massive pulsar observations constrain it at high densities by requiring the equation of state to support the neutron star masses. We find no simple correlation between the stiffness of an EoS and Bayesian evidence because the observations probe the pressure at different density regimes. By combining constraints on the equation of state with Bayesian model selection using multimessenger data, our analysis connects macroscopic neutron star measurements to microscopic properties of candidate nuclear matter models."
+  },
+  {
+    "id": "arxiv:2611.24624",
+    "source": "arXiv",
+    "date": "2026-11-18",
+    "title": "Instanton tunnelling as a verifiable benchmark for digital quantum simulation: circuit structure, classical simulability and hardware reproducibility",
+    "authors": [
+      "Gerhard Hellstern",
+      "Marc Maussner"
+    ],
+    "url": "https://arxiv.org/abs/2611.24624",
+    "abstract": "We use instanton-mediated tunnelling in the quartic double well as a benchmark for digital quantum simulation that is checkable against an exact answer at every step. The instanton enters through the classical analysis; the hardware tests the dynamics of the lattice model. A unary (single-excitation) encoding maps N lattice sites to N qubits, with the single-excitation dynamics as a reference that remains classically cheap at any N. For a second-order Trotter circuit with adjacent, equal-angle XX/YY pairs on each bond, we prove that the Schmidt rank across any cut is at most four at every gate boundary and at most two after each pair, independently of N. Matrix-product-state simulations of this gate list reproduce the exact splitting up to N = 48. For this bond-wise formula the admissible Trotter step shrinks roughly as N^-2, so one tunnelling period costs about N^3.3 two-qubit gates; a kinetic/potential splitting keeps the step near 0.065 up to N=128, so this scaling belongs to splitting the kinetic term bond by bond. At a coarser, separately bounded step we measure the full transfer at N=8 on two superconducting processors, recovering the lattice splitting to a few percent and its dependence on the barrier height, which at this resolution is set by the lattice rather than by the instanton. Over 9 repetitions, runs taken minutes apart agree to shot noise, while runs hours to weeks apart differ by up to 6.1%, also on a fixed set of qubits; with sessions as the sampling unit, the processors differ in the damping, while a difference in the splitting is not established. Normalising by the measured single-excitation population extends the usable depth about 4-fold but does not improve the splitting. A Gaussian start state, which needs no diagonalisation, reproduces the splitting of the eigenvector-based start to within 1.6 percentage points."
+  },
+  {
+    "id": "arxiv:2611.24499",
+    "source": "arXiv",
+    "date": "2026-11-18",
+    "title": "Single-Controller Teleoperation and Multimodal Dataset Generation for a Mobile Manipulator",
+    "authors": [
+      "Fardien Azizi",
+      "Sitor Sla",
+      "Christiaan Peppelman",
+      "Dion van Santen",
+      "Andrei-Carlo Papuc",
+      "Khaled Mustafa",
+      "Diego Martinez-Baselga",
+      "Javier Alonso-Mora"
+    ],
+    "url": "https://arxiv.org/abs/2611.24499",
+    "abstract": "Robot learning systems require synchronized, high-quality demonstrations that combine visual, proprioceptive, and action data. However, collecting such datasets with mobile manipulators is often slowed down by fragmented teleoperation interfaces and manual post-processing workflows. This paper presents an integrated framework for teleoperated multimodal data collection on a Clearpath Dingo-O mobile base equipped with a Kinova Gen3 Lite manipulator and an Intel RealSense RGB-D camera. The framework combines single-controller operation of the base, arm, and recording process with an automated ROS-based pipeline for data capture, image-quality filtering, temporal synchronization, visualization, and export to machine-learning-ready Zarr datasets. We validate the system on a pick-and-place mobile-manipulation task in which the robot transports a bottle between two surfaces. The results show that the unified controller supports complete task execution and recording without external commands, while the data pipeline produces synchronized datasets for short demonstrations and identifies corrupted visual frames. The proposed framework provides a practical basis for producing structured demonstrations for robot-learning research."
+  },
+  {
+    "id": "arxiv:2611.24406",
+    "source": "arXiv",
+    "date": "2026-11-18",
+    "title": "CaDO: Formal Verification-Guided Multi-Agent Framework for Causal Dataset Repair and Generation",
+    "authors": [
+      "Songli Yu",
+      "Qi Luo"
+    ],
+    "url": "https://arxiv.org/abs/2611.24406",
+    "abstract": "High-quality causal reasoning datasets are essential for developing models with reliable causal understanding, particularly in specialized domains. However, existing datasets frequently suffer from incorrect annotations and structural imbalances, which can lead to biased predictions and limited generalization. To address this issue, we propose CaDO (Causal-Engine-Guided Multi-Agent Data Optimization), a multi-agent framework for automated diagnosis and repair of causal reasoning datasets. Our framework consists of three key stages: formal causal reasoning, multi-level diagnosis, and automated data repair and generation. First, a Formalizer Agent translates natural language questions into formal causal queries to minimize semantic deviations and make retrieval and verification more explicit and tractable. Second, a dual-level diagnosis mechanism employs independent Critic Agents to identify sample-level errors while analyzing query-type coverage and label distributions to detect dataset-level structural imbalances. Finally, the framework employs reusable repair operators grounded in formal causal semantics to correct erroneous samples, while Explorer and Expander Agent collaboratively produce diverse and semantically consistent new samples. Experimental results show that CaDO significantly outperforms the strongest of five data cleaning baselines in 16 out of 18 experimental settings, improving downstream model accuracy by up to 9.1%. Moreover, at least 95% of the samples flagged by CaDO are defective, and on CLadder, CaDO incorrectly modifies 92.2% fewer correct labels than an LLM-based judge, demonstrating its effectiveness and reliability. Our code and data are publicly available at https://github.com/thisissyu/cado."
+  },
+  {
+    "id": "arxiv:2611.24331",
+    "source": "arXiv",
+    "date": "2026-11-18",
+    "title": "OpenGNS: An Open Dataset of the Gradient Noise Scale across Vision, Language, and Diffusion Models",
+    "authors": [
+      "Marcel Aach",
+      "Jiangtao Wang",
+      "Stefan Kesselheim",
+      "Andreas Lintermann"
+    ],
+    "url": "https://arxiv.org/abs/2611.24331",
+    "abstract": "The Gradient Noise Scale (GNS) metric measures the signal-to-noise ratio of gradients in stochastic gradient descent and, as shown by McCandlish et al. (2018), can be used to approximate the Critical Batch Size (CBS) during neural network training. Despite its appearance in technical reports of frontier models, no open dataset of GNS measurements across modern architectures exists, limiting systematic study of the metric. We close this gap by releasing OpenGNS, a dataset of more than 400 GNS measurement trajectories spanning three domains: image classification with ResNets, autoregressive language modeling with Generative Pre-trained Transformers (GPTs), and image synthesis with Diffusion Transformers (DiTs), covering models from 11M to 1B parameters trained under Maximal Update Parameterization (muP) with dense batch-size and learning-rate sweeps. Building on this dataset, we study how the GNS depends on hyperparameters, scale, and training progress, and how it relates to the CBS. We find that the GNS behaves as a consistent \"temperature of training\", remaining stable across model sizes under muP at equivalent loss, and our results suggest task-dependent biases in its relation to the CBS: a tendency to overestimate the CBS for classification and to underestimate it for generative tasks, consistent in direction across common CBS definitions. The dataset is available at https://huggingface.co/datasets/olympique-marcel/OpenGNS"
+  },
+  {
+    "id": "arxiv:2611.24327",
+    "source": "arXiv",
+    "date": "2026-11-18",
+    "title": "Pixel2Perspective: A Benchmark for Multi-Modal and Multi-View Generalization in Vision-Language Models",
+    "authors": [
+      "Aditya Gandhamal",
+      "Aniruddh Sikdar",
+      "Arya Kishor",
+      "Suresh Sundaram"
+    ],
+    "url": "https://arxiv.org/abs/2611.24327",
+    "abstract": "Embodied AI systems, such as drones and autonomous vehicles, improve navigation by enhancing perception in environments containing unseen objects. While Visual Language Models (VLMs) offer strong image understanding, their real-world application is underexplored. For effective deployment, open-vocabulary semantic segmentation (OVSS) models, leveraging models like CLIP to assign pixel-level labels from text, must be robust to outdoor conditions, adverse weather, and varying viewpoints. Despite their potential, these models encounter significant challenges in cross-domain generalization, hindering their practical use in embodied AI applications. In this work, we present Pixel2Perspective, a benchmark for multi-angle object localization and open-vocabulary segmentation across both aerial and ground perspectives. This benchmark supports thorough evaluation across different viewpoints and sensor modalities. We assess foundational models like CLIP and advanced OVSS models using a curated dataset that spans varied outdoor conditions, sim-to-real scenarios, and multiple sensors, including infrared, to support the development of robust and generalizable perception systems. We also present a novel framework, Multi-Source RGB-IR Uncertainty Quantification (MSRIQ), which jointly models aleatoric and epistemic uncertainties across RGB and infrared imagery. This approach supports robust evaluation of open-vocabulary segmentation models across diverse environmental conditions. Our work sets a robustness-driven benchmark, providing key insights and laying the foundation for future research in open-world embodied AI perception. The benchmark and project page are available at https://aniruddhsikdar1.github.io/publications/pixel2perspective/"
+  },
+  {
+    "id": "arxiv:2611.24290",
+    "source": "arXiv",
+    "date": "2026-11-18",
+    "title": "Beyond Corpus-Driven Imitation: Evolving Musical Mindsets in the Agentic Orchestra via Quantum Reinforcement Learning",
+    "authors": [
+      "Eduardo Reck Miranda",
+      "Moein Fahmideh Vatandoost"
+    ],
+    "url": "https://arxiv.org/abs/2611.24290",
+    "abstract": "This paper presents a framework for computer-aided music composition and performance based on quantum reinforcement learning and multi-agent interaction. We introduce the agentic orchestra, where musical agents evolve distinct mindsets through trial-and-error engagement with a musical environment, rather than through training on large datasets. The agents are implemented as parameterised quantum circuits. They evolve distinct compositional behaviours, referred to as mindsets. This enables the exploration of musical decision spaces using quantum superposition and entanglement within a hybrid quantum-classical loop. We present two complementary agent architectures: atomistic agents, which process pitch and rhythm independently, and holistic agents, which handle pitch and duration as unified note events. Mindsets are shaped through musically grounded reward functions, which can be combined and weighted to develop different mindsets across agents. The resulting system positions quantum computing agents less as autonomous composers and more as adaptive musical partners, each developing its own musical personality through interaction rather than imitation. Demonstrations show how agents generalise their learned behaviour to previously unseen material, operating in interactive and offline batch modes using MIDI-encoded music. While quantum computers are still in development, experiments conducted on IBM quantum hardware confirmed that musically meaningful learning is achievable with existing quantum computers. For composers and performers, the agentic orchestra opens new possibilities for emergent, process-oriented musical creativity, offering a scalable foundation for quantum computer-aided music composition as quantum computing technology continues to advance."
+  },
+  {
+    "id": "arxiv:2611.24285",
+    "source": "arXiv",
+    "date": "2026-11-18",
+    "title": "LipSpell: A Language-Independent Phonetic Scoring Framework for Spelling Correction Combining Distinctive-Feature Edit Distance, Keyboard Geometry, and Corpus Frequency",
+    "authors": [
+      "Leonardo Araujo"
+    ],
+    "url": "https://arxiv.org/abs/2611.24285",
+    "abstract": "Automatic spelling correction must handle both keyboard typographical slips and cognitive or phonetic misspellings where writers approximate a word's pronunciation. Conventional spell checkers rely either on orthographic edit distance and keyboard proximity--which struggle when phonetic errors diverge by multiple characters--or on English-centric phonetic hashes such as Soundex and Metaphone. We present LipSpell, a unified, language-independent phonetic scoring engine paired with swappable language-specific G2P frontends, keyboard maps, and lexicons integrating: (1) a precomputed |P|x|P| phone-distance matrix from universal IPA distinctive features, (2) physical keyboard geometry, and (3) corpus unigram frequency priors, accelerated by a two-stage symmetric-delete and seven-class phonetic-code index. Across six English benchmarks (including 1,000 L2 errors from TOEFL-Spell), LipSpell outperforms Norvig and Hunspell on every dataset and beats Aspell on Norvig1 (78.52% vs. 75.56%), Holbrook (32.00% vs. 26.67%), and TOEFL-Spell (77.30% vs. 72.80%). Evaluated across six languages spanning five branches (Germanic, Romance, Slavic, Semitic, Turkic), three families (Indo-European, Afro-Asiatic, Turkic), and three scripts, LipSpell achieves strong fixed-weight transfer on Brazilian Portuguese (73.00% Top-1 on n=500 Wikipedia without NFD tolerance and 75.80% with NFD vs. 66.40% Norvig, 64.20% Hunspell, 64.00% Aspell) and Russian Cyrillic (85.67% vs. 78.50% Norvig). On 50/50 clean non-word splits with lexicon cleaning and weak-character indels, tuning yields strong gains over Norvig in Portuguese (86.97% vs. 76.75%), Turkish (81.67% vs. 79.05%), Hebrew Abjad (74.59% vs. 62.30%), and French (74.53% vs. 67.92%), while fixed weights remain optimal for English (80.37%) and Russian (85.67%)."
+  },
+  {
+    "id": "arxiv:2611.24116",
+    "source": "arXiv",
+    "date": "2026-11-18",
+    "title": "EVF-Bench: A Comprehensive Benchmark for E-commerce Visual Effects in Video Generation",
+    "authors": [
+      "Run Ling",
+      "Ke Cao",
+      "Runze He",
+      "Jie Gao",
+      "Ao Ma",
+      "Wei Feng",
+      "Zhanjie Zhang",
+      "Hao Wang",
+      "Jinghe Hu",
+      "Guibing Guo"
+    ],
+    "url": "https://arxiv.org/abs/2611.24116",
+    "abstract": "E-commerce visual effects (EVF) are dynamic, product-centered visual presentations in e-commerce videos, often accompanied by promotional text. They play an important role in attracting viewer attention and conveying product information. However, general measures of visual quality and text relevance alone do not establish whether generated videos preserve product appearance, maintain readable text, and produce coherent, contextually appropriate effects. To address this issue, we introduce EVF-Bench, a dedicated benchmark spanning six evaluation dimensions: visual quality and text relevance as general dimensions, and motion, product consistency, text stability, and creative rationality as EVF-specific dimensions. To complement the benchmark and support task-aligned research and model adaptation, we further construct EVF-32K, a dataset of over 32000 curated image-text-video triples tailored to e-commerce scenarios. Using this suite, we systematically evaluate representative video generation models and their domain-adapted variants. The results reveal complementary strengths, with no evaluated configuration leading all six dimensions. Together, EVF-Bench and EVF-32K provide a task-oriented evaluation framework and a supporting data resource for e-commerce video generation."
+  },
+  {
+    "id": "arxiv:2611.24098",
+    "source": "arXiv",
+    "date": "2026-11-18",
+    "title": "RoughCut-Bench: A Benchmark for Automatic Video Rough-Cut with Large Vision-Language Models",
+    "authors": [
+      "Ruisi Zhao",
+      "You Li",
+      "Sihan Chen",
+      "Aosong Cheng",
+      "Chixiang Ma",
+      "Sen Pei",
+      "Zhen Yang",
+      "Hehe Fan",
+      "Dongliang He",
+      "Yi Yang"
+    ],
+    "url": "https://arxiv.org/abs/2611.24098",
+    "abstract": "Video rough-cut is a core stage in media production workflows, organizing raw media materials into an initial video cut. Despite recent advances in large vision-language models (LVLMs) for video-related tasks, automatic rough-cut remains underexplored, without a comprehensive benchmark for evaluation or mature workflows for producing executable cut plans. To address the evaluation gap, we introduce RoughCut-Bench, which covers two practical settings: (1) a visually driven setting over video cases, covering highlight detection and selection, source-video ordering, and adherence to user requirements when provided; and (2) a speech-driven setting over automatic speech recognition (ASR) transcripts, covering filler removal, expression deduplication, and low-value content trimming. Across these settings, the benchmark contains 101 visually driven cases, including 831 raw videos with 1,476 highlight annotations. It also includes 84 speech-driven cases, each consisting of an ASR transcript with annotated cleanup spans. The evaluation compares cut plans with these annotations in both settings and additionally uses a human-aligned agentic evaluator to assess rendered-cut quality in the visual setting. To apply LVLMs to automatic rough-cut, we further propose agentic workflows that guide them to produce structured cut plans from input materials. Experiments show that current LVLMs remain limited in producing expert-aligned cut plans. Our benchmark, code, and prompts are released at https://whalesong-zrs.github.io/RoughCut-Bench-Project-Page."
+  },
+  {
+    "id": "arxiv:2611.24042",
+    "source": "arXiv",
+    "date": "2026-11-18",
+    "title": "CURVTON-205K: A Mask-Free Difficulty-Stratified Synthetic Dataset for Robust and Scalable Virtual Try-On",
+    "authors": [
+      "Dipan Bartaula",
+      "Anuj Shrestha",
+      "Ankit Belbase",
+      "Anish Bishwakarma",
+      "Saroj Poudel",
+      "Samip Ghimire",
+      "Shashank Bhatta",
+      "Eric Arazo",
+      "Binod Bhattarai"
+    ],
+    "url": "https://arxiv.org/abs/2611.24042",
+    "abstract": "Recent advances in 2D virtual try-on (VTON) have largely focused on architectural innovation, yet robust performance in diverse real-world conditions remains challenging. We argue that failure modes in VTON, such as inaccurate occlusion handling, unconstrained poses, and poor coverage of under-represented garments and appearance factors, are tightly coupled to dataset design choices and long-tail data regimes. We present a scalable data generation pipeline that coordinates specialized editing and generation models with vision-language model (VLM) guidance to synthesize triplets without requiring parsing masks or dense-pose annotations. Using this pipeline, we create CURVTON-205K, a curated synthetic dataset of 205K triplets: source person, target garment, and corresponding try-on image. CURVTON-205K is explicitly designed to broaden coverage across garments, person appearance, poses, occlusions, and visual conditions. Additionally, CURVTON-205K is organized into three difficulty tiers, enabling controlled evaluation under varying levels of difficulty and supporting difficulty-aware experimentation. We analyze the dataset diversity and demonstrate its potential to improve try-on fidelity across four VTON architectures and its cross-dataset generalization."
+  },
+  {
+    "id": "arxiv:2611.24023",
+    "source": "arXiv",
+    "date": "2026-11-18",
+    "title": "STAR++: A Physical-Aware Benchmark and Framework for Astronomical Super-Resolution across Multiple Filters",
+    "authors": [
+      "Guohang Zhuang",
+      "Jiaze Li",
+      "Kuo-cheng Wu",
+      "Hao Du",
+      "Jinyang Huang",
+      "Xiang Zhang",
+      "Wanli Ouyang",
+      "Yan Lu"
+    ],
+    "url": "https://arxiv.org/abs/2611.24023",
+    "abstract": "Astronomical super-resolution (ASR) aims to reconstruct high-resolution star fields from low-resolution telescope observations across multiple filters for astrophysical analysis. However, developing a physics-aware ASR framework faces two challenges: 1) Data view: no large-scale benchmark supports field-level ASR, especially on unseen filters. 2) Method view: Existing ASR methods often fail to preserve stellar flux across spatial resolutions. Moreover, ASR requires reconstructing high-frequency components, including accurate star locations and profiles, making it more ill-posed than natural-image SR. To tackle these problems, we introduce STAR++, a large-scale benchmark comprising approximately 1.7 million flux-consistent image pairs across 36 filters, derived from Hubble Space Telescope (HST) observations. STAR++ uses a flux-preserving data generation pipeline to ensure photometric consistency across resolutions and provides the Flux Error (FE) metric to evaluate ASR models from a physical perspective. To address method-level challenges, we propose a Flux-Invariant Super-Resolution Plus (FISR++) model that generalizes to unseen filters while accurately reconstructing flux-consistent high-resolution images. Beyond the flux-preserving modules, FISR++ introduces two novel components. Specifically, a Filter-Aware Adapter (FAA) incorporates filter metadata to adapt image representations to varying spectral and optical conditions. In addition, a Spatial Ambiguity Disentangle Loss (SADL) models spatial ambiguity as pixel-shift uncertainty, mitigating the smoothing of learned conditional mean reconstructions caused by this ambiguity. Extensive experiments demonstrate that FISR++ consistently outperforms existing ASR methods in reconstruction quality and flux accuracy, while generalizing to unseen filters, highlighting its effectiveness for photometrically faithful ASR."
+  },
+  {
+    "id": "arxiv:2611.23891",
+    "source": "arXiv",
+    "date": "2026-11-18",
+    "title": "SixthView: A Benchmark for Hidden-View Reconstruction and 3D Assembly Reasoning",
+    "authors": [
+      "Pooya Khosravi",
+      "Jen-Feng Chang",
+      "Fnu Pramono"
+    ],
+    "url": "https://arxiv.org/abs/2611.23891",
+    "abstract": "Inferring the unseen side of a 3D assembly requires reasoning about part placement and occlusion. Different assemblies can match the observed views while producing different hidden views, leaving the target ambiguous. We introduce SixthView, a benchmark in which models predict a sixth orthographic view from five observed views and information about the component shapes. The benchmark contains 602 synthetic polycube assemblies with 2--10 parts and requires a dense grid of part labels for the missing view, allowing both exact-view and cell-level evaluation. For each item, we exhaustively verify that all legal assemblies consistent with the exact component geometry and observed label grids yield the same target view. With these inputs, the task tests symbolic assembly and coordinate reasoning. The image-only variants additionally require shape recovery from rendered views, where occlusion can make different 3D shapes look identical. We evaluate three vision-language models under four input conditions. Across 552 items with complete evaluations, exact-grid accuracy with images plus exact text ranges from 33.2% to 85.4%. Adding exact text to separate images improves accuracy by 19.7--63.0 percentage points, whereas adding images to exact text changes it by only $-0.5$ to $+2.1$ points. Separate image panels outperform a merged sheet by 6.7--11.1 points. The results show that performance depends strongly on access to exact symbolic information, with little further improvement from images once the geometry is specified. GitHub: https://github.com/facebookresearch/sixthview_benchmark"
+  },
+  {
+    "id": "arxiv:2611.23779",
+    "source": "arXiv",
+    "date": "2026-11-18",
+    "title": "TabBioMed: A Large-Scale Benchmark for Biomedical Tabular Learning",
+    "authors": [
+      "Pau Mateo-Bernadó",
+      "Saivenkata Nagavyjayanthi Polapragada",
+      "David Bonet",
+      "Pol Arbiol Rakuljic",
+      "Laia Mogas Pladevall",
+      "Marçal Comajoan Cara",
+      "Jesus Gonzalez-Ferrer",
+      "Jordi Abante",
+      "Daniel Mas Montserrat",
+      "David Haussler",
+      "Alexander G. Ioannidis"
+    ],
+    "url": "https://arxiv.org/abs/2611.23779",
+    "abstract": "Recent advances in machine learning have accelerated biomedical prediction, but evaluation on structured biomedical data remains fragmented, especially for datasets with high dimensionality, large sample size, missingness, and class imbalance. We introduce TabBioMed, a large-scale benchmark of 94 curated public biomedical tabular datasets spanning electronic health records, drug discovery, genomics, transcriptomics, proteomics, metabolomics, single-cell omics, and systems biology. TabBioMed unifies these datasets through a standardized, dataset-aware preprocessing and evaluation framework, enabling reproducible comparison across classification, regression, and multi-target tasks. We benchmark 23 models across classical baselines, gradient-boosted trees, neural tabular architectures, and tabular foundation models. Foundation models deliver the strongest family-level predictive performance. However, their gains are regime-dependent: tree-based models and tuned multilayer perceptrons remain highly competitive, often dominating under inference-time or training-cost constraints. Overall, TabBioMed shows that biomedical tabular learning is strongly context-dependent, with optimal model choice depending on data regime, task type, and computational budget. We release TabBioMed with curated datasets and splits, preprocessing code, baselines, and results, providing a reproducible benchmark for practical model selection and future methods development in biomedical machine learning, available at https://github.com/AI-sandbox/TabBioMed."
+  },
+  {
+    "id": "arxiv:2611.23664",
+    "source": "arXiv",
+    "date": "2026-11-18",
+    "title": "CratesBump: A Version-Bump Dataset for the Rust Ecosystem",
+    "authors": [
+      "Muhammad Hassnain"
+    ],
+    "url": "https://arxiv.org/abs/2611.23664",
+    "abstract": "We release CratesBump, the first public dataset for predicting version bumps in the Rust ecosystem, together with semver-extract, the tool that builds it. CratesBump is built from every crate on crates.io with at least two releases before 14 September 2026 (about 220,000 crates), giving over two million consecutive release pairs. Each pair has 41 features (code changes from AST diffs, dependency changes, complexity, release cadence, GitHub commit and issue activity), its source repository where listed, and two labels: the literal reading of MAJOR.MINOR.PATCH, and Cargo's rule, under which a 0.y bump is a breaking change. semver-extract regenerates the dataset from public crates.io data and the GitHub API. To illustrate its use we (i) benchmark bump predictors on held-out repositories, finding the task learnable but far from solved, with lower scores on later releases; (ii) measure which feature groups carry the signal; (iii) check, against declared dependency ranges, how often Cargo's rule shields dependents from pre-1.0 breaking releases; and (iv) audit a sample of releases with cargo-semver-checks, finding minor and patch releases that break the public API despite their version number. Dataset and tool are released under open licenses."
+  },
+  {
+    "id": "arxiv:2611.23555",
+    "source": "arXiv",
+    "date": "2026-11-17",
+    "title": "MetaphIR: Corpus-Scale Applicability Analysis for LLVM Peephole Optimizations",
+    "authors": [
+      "Hongxu Xu",
+      "Xintong Zhou",
+      "Chunhao Liao",
+      "Chengnian Sun"
+    ],
+    "url": "https://arxiv.org/abs/2611.23555",
+    "abstract": "Peephole optimizations replace short source instruction sequences with more efficient equivalents, typically guarded by preconditions such as requiring a constant operand to be a power of two. Since every new rewrite adds maintenance burden and compile-time cost, compiler developers need to know how often real-world programs both match the source pattern and satisfy its preconditions before committing to an implementation. Existing workflows fall short: structural search over an intermediate representation (IR) corpus of 4.8 million functions ignores preconditions and therefore overcounts, whereas implementing the rewrite and recompiling the corpus yields exact counts only after paying the engineering cost, with each run of the corpus's on-demand recompilation pipeline taking a median of 47 minutes. This delay is especially limiting when generalizing a rewrite, as developers often iterate over multiple variants to trade off coverage against complexity. We introduce MetaphIR, a system pairing a domain-specific language for expressing LLVM peephole optimizations with an indexed search engine over large IR corpora. Using a syntax modeled on LLVM's C++ matchers, MetaphIR patterns augment LLVM IR with holes and Boolean preconditions over matched values. To answer queries at interactive speed, MetaphIR builds compact per-function summaries ahead of time and uses abstract interpretation over those summaries to soundly filter out functions that cannot satisfy a query's constraints. Across twenty recent peephole optimizations from LLVM's InstCombine pass, MetaphIR recovers the exact set of functions where each rewrite applies in isolation, achieving 100% precision and recall. Queries complete in a median of 1.27 seconds---a 22x speedup over a full corpus scan---enabling developers to quickly gauge an optimization's reach and generality prior to implementation."
+  },
+  {
+    "id": "arxiv:2611.23454",
+    "source": "arXiv",
+    "date": "2026-11-17",
+    "title": "LusoClin: A Synthetic Clinical Note Dataset for Medical Information Retrieval in European Portuguese",
+    "authors": [
+      "Carla Teixeira Lopes",
+      "Daniel Félix"
+    ],
+    "url": "https://arxiv.org/abs/2611.23454",
+    "abstract": "Access to large-scale clinical text collections is crucial for advancing medical information retrieval research, including clinical note search, patient cohort identification, and domain-adapted retrieval models. However, real clinical notes are rarely available due to privacy regulations, which particularly limits progress for low-resource languages such as European Portuguese. We present LusoClin, a publicly released dataset of synthetic clinical notes in European Portuguese, created to support privacy-preserving research on clinical text retrieval. LusoClin was generated by pre-processing real clinical data, fine-tuning the open-source Llama 3.2 (3B) instruction-tuned model using Quantized Low-Rank Adaptation, and applying prompt-based clinical note generation. To facilitate semantic indexing and clinical search, the notes are automatically annotated with clinical entities using a BERT-based model. We evaluate LusoClin in terms of utility, fidelity, diversity, and privacy using automatic metrics and human evaluation. Results indicate that the dataset captures clinically relevant language patterns and can support downstream IR applications such as clinical document retrieval and domain-specific model adaptation, although annotators can often distinguish synthetic from real notes and some medical inconsistencies persist."
+  },
+  {
+    "id": "arxiv:2611.23410",
+    "source": "arXiv",
+    "date": "2026-11-17",
+    "title": "RFBench: A Simulator-Grounded Multimodal Benchmark for Passive RF Layout Design and Understanding",
+    "authors": [
+      "Jiarui Cui",
+      "Boxun Yan"
+    ],
+    "url": "https://arxiv.org/abs/2611.23410",
+    "abstract": "While multimodal language models can interpret diagrams and generate structured outputs, their capacity to connect passive radio-frequency (RF) design intent, layout geometry, and electromagnetic behavior remains largely untested. To address this gap, we introduce RFBench, a simulator-grounded dataset and benchmark for passive RF layout design and understanding. The dataset contains 10,000 two-port planar layouts simulated using ADS Momentum, with each layout represented by editable geometric primitives, a raster image, a 16x16 occupancy grid, complex S-parameters at 201 frequency points, a structural category, and an RF response label. Building on these aligned representations, we define seven tasks spanning specification-conditioned layout generation, representation translation, response prediction, simulator-based validation, design diagnosis and improvement, structural understanding, and response classification. Extensive baselines across seven multimodal language models reveal systematic weaknesses in generating structurally valid layouts and predicting electromagnetically faithful responses. We show that RF-specific fine-tuning increases T1a structural validity from 0.0% to 83.2% and the T3 primitive-input within-2-dB rate from 17.7% to 62.8%, demonstrating the value of domain adaptation while leaving considerable room for further progress. RFBench establishes a common testbed for evaluating multimodal RF capabilities and guiding the development of models that connect design intent and layout representations with physical behavior."
+  },
+  {
+    "id": "arxiv:2611.23347",
+    "source": "arXiv",
+    "date": "2026-11-17",
+    "title": "SurgCBVR: A Multi-Domain Benchmark for Content-Based Surgical Video-to-Video Retrieval",
+    "authors": [
+      "Mohammad Eslami",
+      "Mousa Moradi",
+      "Negin Ghamsarian",
+      "Nazlee Zebardast",
+      "Jennifer L Lindsey",
+      "Sophia Y. Wang",
+      "Lucia Sobrin",
+      "Rishi P Singh",
+      "Tobias Elze"
+    ],
+    "url": "https://arxiv.org/abs/2611.23347",
+    "abstract": "Hospitals record thousands of hours of surgical video annually, yet these archives remain difficult to search by content. Surgeons cannot readily retrieve similar operations, complications, or workflow events. Existing surgical computer vision primarily produces labels rather than retrieving relevant videos. We introduce SurgCBVR, the first benchmark for content-based video-to-video retrieval in surgery. It integrates eight public datasets across four domains-ophthalmic, laparoscopic, robotic-assisted, and colonoscopy-covering six procedure types, 679 cases, and 76,489 clips (106 hours). SurgCBVR comprises two tiers: Scene, retrieving the same operative state across cases and sites, and Workflow, retrieving and localizing phase transitions and deviations. Scene includes 74,765 clips spanning 40 classes, three temporal granularities, and three playback speeds; Workflow contains 1,724 transition clips. Fixed clip lengths and frame counts, together with phase-classifier oracle and duration-only baselines, help assess label and timing shortcuts. We evaluate six generic and surgical foundation models, two video retrieval methods, and contrastive heads trained on SurgCBVR, using within-dataset, cross-dataset, and pooled-gallery retrieval restricted to the same procedure type. Frozen representations barely outperform a timing-only baseline, transition retrieval approaches chance, and trained heads lose up to half their accuracy across datasets. These findings expose substantial limitations in current video representations and establish SurgCBVR as a benchmark for advancing surgery-aware retrieval."
+  },
+  {
     "id": "arxiv:2611.23078",
     "source": "arXiv",
     "date": "2026-11-17",
