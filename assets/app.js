@@ -5,12 +5,21 @@
   const count = $('result-count');
   const search = $('search');
   const source = $('source');
+  const resultsTitle = $('results-title');
+  const pagination = $('search-pagination');
   const numberFormat = new Intl.NumberFormat('zh-CN');
+  const pageSize = 30;
+  const dayRequests = new Map();
   let dateCounts = new Map();
   let dates = [];
   let currentDate = '';
-  let currentPapers = [];
+  let currentPapers = null;
+  let dailyLoadFailed = false;
   let requestNumber = 0;
+  let archivePapers = null;
+  let loadingArchive = false;
+  let archiveLoadFailed = false;
+  let searchPage = 1;
   let view = 'day';
   let scopeYear = 0;
   let scopeMonth = 0;
@@ -123,7 +132,47 @@
     grid.replaceChildren(...nodes);
   }
 
-  function paperCard(paper, index) {
+  async function fetchPapers(path) {
+    const response = await fetch(path);
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    const papers = await response.json();
+    if (!Array.isArray(papers)) throw new Error('Invalid data');
+    return papers;
+  }
+
+  function loadDay(day) {
+    if (!dayRequests.has(day)) {
+      const request = fetchPapers(`data/days/${day}.json`).catch((error) => {
+        dayRequests.delete(day);
+        throw error;
+      });
+      dayRequests.set(day, request);
+    }
+    return dayRequests.get(day);
+  }
+
+  function normalizeSearchText(text) {
+    return text.normalize('NFC').toLowerCase();
+  }
+
+  async function loadArchive() {
+    loadingArchive = true;
+    try {
+      const papers = await fetchPapers('data/search.json');
+      archivePapers = papers.map((paper) => ({
+        ...paper,
+        searchText: normalizeSearchText(`${paper.title} ${(paper.authors || []).join(' ')}`),
+      }));
+    } catch (error) {
+      archiveLoadFailed = true;
+      console.error('Unable to load search index:', error);
+    } finally {
+      loadingArchive = false;
+    }
+    if (search.value.trim()) renderPapers();
+  }
+
+  function paperCard(paper, index, fromSearch) {
     const article = element('article', 'paper');
     const ordinal = element('div', 'paper-number', String(index + 1).padStart(2, '0'));
     ordinal.setAttribute('aria-hidden', 'true');
@@ -147,27 +196,83 @@
     }
     const authors = element('p', 'authors', (paper.authors || []).join(', ') || '作者信息未提供');
     const details = element('details');
-    details.append(element('summary', '', '查看摘要'), element('p', 'abstract', paper.abstract || '来源未提供摘要。'));
+    const emptyAbstract = '来源未提供摘要。';
+    const abstract = element('p', 'abstract', fromSearch ? '' : (paper.abstract || emptyAbstract));
+    details.append(element('summary', '', '查看摘要'), abstract);
+    if (fromSearch) {
+      let loading = false;
+      async function showAbstract() {
+        if (!details.open || loading) return;
+        loading = true;
+        abstract.textContent = '正在加载摘要…';
+        try {
+          const dailyPapers = await loadDay(paper.date);
+          const record = dailyPapers.find((item) => item.id === paper.id);
+          if (!record) throw new Error('Paper missing from daily data');
+          abstract.textContent = record.abstract || emptyAbstract;
+          details.removeEventListener('toggle', showAbstract);
+        } catch (error) {
+          abstract.textContent = '摘要加载失败，请收起后重新展开。';
+          console.error('Unable to load abstract:', error);
+        } finally {
+          loading = false;
+        }
+      }
+      details.addEventListener('toggle', showAbstract);
+    }
     content.append(meta, heading, authors, details);
     article.append(ordinal, content);
     return article;
   }
 
   function renderPapers() {
-    const term = search.value.trim().toLocaleLowerCase();
+    if (!currentDate) return;
+    const term = normalizeSearchText(search.value.trim());
+    const fromSearch = Boolean(term);
+    resultsTitle.textContent = fromSearch ? '全部历史检索' : dateLabel(currentDate);
+    $('result-scope').textContent = fromSearch ? 'SEARCH RESULTS' : 'SELECTED DATE';
+    pagination.hidden = true;
+
+    const papers = fromSearch ? archivePapers : currentPapers;
+    if (!papers) {
+      count.textContent = '—';
+      if (fromSearch) {
+        if (archiveLoadFailed) {
+          setMessage('历史索引加载失败，请重新输入关键词后重试。', true);
+        } else {
+          setMessage('正在加载历史索引…');
+          if (!loadingArchive) loadArchive();
+        }
+      } else if (dailyLoadFailed) {
+        setMessage('当日数据加载失败，请刷新页面后重试。', true);
+      } else {
+        setMessage('正在加载当日论文…');
+      }
+      return;
+    }
+
     const selectedSource = source.value;
-    const matches = currentPapers.filter((paper) =>
+    const matches = papers.filter((paper) =>
       (selectedSource === 'all' || paper.source === selectedSource) &&
-      (!term || `${paper.title} ${(paper.authors || []).join(' ')}`.toLocaleLowerCase().includes(term))
+      (!fromSearch || paper.searchText.includes(term))
     );
     count.textContent = numberFormat.format(matches.length);
-    if (!currentPapers.length) {
-      setMessage('这一天暂无收录论文。试试选择其他日期。');
-    } else if (!matches.length) {
-      setMessage('没有符合筛选条件的论文。试试其他关键词或来源。');
-    } else {
-      results.replaceChildren(...matches.map(paperCard));
+    if (!matches.length) {
+      if (fromSearch) setMessage('历史归档中没有符合条件的论文。试试其他关键词或来源。');
+      else if (!papers.length) setMessage('这一天暂无收录论文。试试选择其他日期。');
+      else setMessage('这一天没有所选来源的论文。');
+      return;
     }
+
+    const pageCount = fromSearch ? Math.ceil(matches.length / pageSize) : 1;
+    const first = fromSearch ? (searchPage - 1) * pageSize : 0;
+    const visible = fromSearch ? matches.slice(first, first + pageSize) : matches;
+    results.replaceChildren(...visible.map((paper, index) => paperCard(paper, first + index, fromSearch)));
+    if (pageCount === 1) return;
+    $('search-page').textContent = `第 ${numberFormat.format(searchPage)} / ${numberFormat.format(pageCount)} 页`;
+    $('search-prev').disabled = searchPage === 1;
+    $('search-next').disabled = searchPage === pageCount;
+    pagination.hidden = false;
   }
 
   async function selectDate(day, updateUrl = true) {
@@ -176,34 +281,28 @@
     scopeYear = Number(day.slice(0, 4));
     scopeMonth = Number(day.slice(5, 7));
     renderHeatmap();
-    $('selected-date').textContent = dateLabel(day);
-    currentPapers = [];
     if (updateUrl) {
+      search.value = '';
       const url = new URL(window.location.href);
       url.searchParams.set('date', day);
       window.history.pushState({}, '', url);
     }
     const thisRequest = ++requestNumber;
-    if (!dateCounts.has(day)) {
-      renderPapers();
-      return;
-    }
-    count.textContent = '—';
-    setMessage('正在加载当日论文…');
+    const hasPapers = dateCounts.has(day);
+    dailyLoadFailed = false;
+    currentPapers = hasPapers ? null : [];
+    renderPapers();
+    if (!hasPapers) return;
     try {
-      const response = await fetch(`data/days/${day}.json`);
-      if (!response.ok) throw new Error(`HTTP ${response.status}`);
-      const papers = await response.json();
-      if (!Array.isArray(papers)) throw new Error('Invalid data');
+      const papers = await loadDay(day);
       if (thisRequest !== requestNumber) return;
       currentPapers = papers;
-      renderPapers();
     } catch (error) {
       if (thisRequest !== requestNumber) return;
-      count.textContent = '—';
-      setMessage('当日数据加载失败，请刷新页面后重试。', true);
+      dailyLoadFailed = true;
       console.error('Unable to load daily data:', error);
     }
+    if (!search.value.trim()) renderPapers();
   }
 
   async function init() {
@@ -217,7 +316,7 @@
       dateCounts = new Map(index.days.map((day) => [day.date, day.count]));
       $('total-count').textContent = numberFormat.format(index.total);
       if (!dates.length) {
-        $('selected-date').textContent = '暂无归档';
+        resultsTitle.textContent = '暂无归档';
         count.textContent = '0';
         setMessage('尚无论文数据。运行采集脚本后即可浏览。');
         return;
@@ -226,7 +325,7 @@
       const requested = new URL(window.location.href).searchParams.get('date');
       await selectDate(requested && validDate(requested) && requested <= today ? requested : dates[0], false);
     } catch (error) {
-      $('selected-date').textContent = '加载失败';
+      resultsTitle.textContent = '加载失败';
       setMessage('日期索引加载失败，请确认通过 HTTP 服务访问并刷新页面。', true);
       console.error('Unable to load date index:', error);
     }
@@ -235,11 +334,26 @@
   for (const granularity of ['year', 'month', 'day']) {
     $('view-' + granularity).addEventListener('click', () => { view = granularity; renderHeatmap(); });
   }
-  search.addEventListener('input', renderPapers);
-  source.addEventListener('change', renderPapers);
+  search.addEventListener('input', () => {
+    searchPage = 1;
+    archiveLoadFailed = false;
+    renderPapers();
+  });
+  source.addEventListener('change', () => {
+    searchPage = 1;
+    renderPapers();
+  });
+  function changeSearchPage(offset) {
+    searchPage += offset;
+    renderPapers();
+    resultsTitle.focus();
+  }
+  $('search-prev').addEventListener('click', () => changeSearchPage(-1));
+  $('search-next').addEventListener('click', () => changeSearchPage(1));
   window.addEventListener('popstate', () => {
     const requested = new URL(window.location.href).searchParams.get('date');
     const today = new Date().toISOString().slice(0, 10);
+    search.value = '';
     if (dates.length) selectDate(requested && validDate(requested) && requested <= today ? requested : dates[0], false);
   });
   init();

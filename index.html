@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f5f4ef">
-  <meta name="description" content="按日期浏览 arXiv 和 Preprints.org 的数据集相关预印本。">
+  <meta name="description" content="按日期浏览和检索 arXiv 与 Preprints.org 的数据集相关预印本。">
   <title>DailyDataset — 数据集论文日历</title>
   <link rel="stylesheet" href="assets/style.css">
   <script defer src="assets/app.js"></script>
@@ -46,10 +46,13 @@
         <div class="heatmap-footer"><span>颜色表示当前视图内论文数量</span><div class="heatmap-legend" aria-label="颜色由浅到深表示论文数量由少到多"><span>少</span><i class="level-0"></i><i class="level-1"></i><i class="level-2"></i><i class="level-3"></i><i class="level-4"></i><span>多</span></div></div>
       </section>
       <div class="controls filter-bar">
-        <div class="filters"><label class="search-field"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="搜索当日标题或作者" aria-label="搜索当日标题或作者"></label><label class="source-field"><span class="sr-only">论文来源</span><select id="source"><option value="all">全部来源</option><option value="arXiv">arXiv</option><option value="Preprints.org">Preprints.org</option></select></label></div>
+        <div class="filters"><label class="search-field"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="搜索历史论文标题或作者" aria-label="搜索历史论文标题或作者"></label><label class="source-field"><span class="sr-only">论文来源</span><select id="source"><option value="all">全部来源</option><option value="arXiv">arXiv</option><option value="Preprints.org">Preprints.org</option></select></label></div>
       </div>
-      <div class="results-heading"><div><span class="result-kicker">SELECTED DATE</span><h3 id="selected-date">正在加载…</h3></div><div class="result-count"><strong id="result-count">—</strong> 篇论文 <span>/ PAPERS</span></div></div>
+      <div class="results-heading"><div><span id="result-scope" class="result-kicker">SELECTED DATE</span><h3 id="results-title" tabindex="-1">正在加载…</h3></div><div class="result-count"><strong id="result-count">—</strong> 篇论文 <span>/ PAPERS</span></div></div>
       <div class="results" id="results" aria-live="polite"><div class="message">正在读取日期索引…</div></div>
+      <nav id="search-pagination" class="search-pagination" aria-label="搜索结果分页" hidden>
+        <button id="search-prev" type="button">上一页</button><span id="search-page"></span><button id="search-next" type="button">下一页</button>
+      </nav>
       <div class="archive-note"><span>✳</span><p>论文按首次发布日期归档。标题关键词用于筛选，可能存在遗漏或误收；摘要及元数据由各来源提供。</p></div>
     </section>
   </main>

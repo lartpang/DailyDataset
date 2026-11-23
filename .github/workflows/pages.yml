@@ -28,10 +28,11 @@ jobs:
       - uses: actions/checkout@v4
       - name: Prepare static files
         run: |
+          python3 daily_dataset.py --render-only
           mkdir -p _site/data
           cp index.html _site/
           cp -R assets _site/
-          cp data/index.json _site/data/
+          cp data/index.json data/search.json _site/data/
           cp -R data/days _site/data/
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3

@@ -232,7 +232,7 @@ def merge(existing, incoming):
 
 
 def generate_site_data(papers, index_path=SITE_INDEX, days_dir=DAYS):
-    """Generate a small date index and one JSON file per publication day."""
+    """Generate daily records and the date and search indexes."""
     grouped = {}
     for paper in papers:
         # Validate dates before using them in filenames.
@@ -247,10 +247,21 @@ def generate_site_data(papers, index_path=SITE_INDEX, days_dir=DAYS):
     for path in days_dir.glob('????-??-??.json'):
         if path.stem not in grouped:
             path.unlink()
+    publication_days = sorted(grouped, reverse=True)
     index = {
         'total': len(papers),
-        'days': [{'date': day, 'count': len(grouped[day])} for day in sorted(grouped, reverse=True)],
+        'days': [{'date': day, 'count': len(grouped[day])} for day in publication_days],
     }
+    search_records = [
+        {
+            'id': paper['id'], 'date': day, 'source': paper['source'],
+            'title': paper['title'], 'authors': paper.get('authors') or [], 'url': paper.get('url', ''),
+        }
+        for day in publication_days
+        for paper in grouped[day]
+    ]
+    index_path.with_name('search.json').write_text(
+        json.dumps(search_records, ensure_ascii=False, separators=(',', ':')) + '\n', encoding='utf-8')
     index_path.write_text(json.dumps(index, ensure_ascii=False, separators=(',', ':')) + '\n', encoding='utf-8')
 
 
