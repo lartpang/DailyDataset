@@ -1,5 +1,843 @@
 [
   {
+    "id": "preprints:10.20944/preprints202611.2440",
+    "source": "Preprints.org",
+    "date": "2026-11-24",
+    "title": "An Indoor UWB–IMU Dataset with Static and Robot-Based Dynamic Ranging Measurements and Reference Positions",
+    "authors": [
+      "Wajdi Touiti",
+      "Antonio Valente",
+      "Vítor Filipe"
+    ],
+    "url": "https://doi.org/10.20944/preprints202611.2440.v1",
+    "abstract": "This Data Descriptor presents an indoor dataset of ultra-wideband (UWB) ranging and inertial measurement unit (IMU) observations from a furnished laboratory. Three tags ranged against five anchors, all with DW1000 transceivers, using broadcast single-sided two-way ranging (SS-TWR) on UWB channel 5 at 110 kb/s; two tags also recorded acceleration and angular rate. Version 1.0 contains 18 static recordings at 54 positions and 19 dynamic recordings. Static records contain 175,023 received ranges at reference distances of 1.2–11.6 m, each with tag-side and anchor-side radio diagnostics, raw timestamps, separated clock-correction terms, laser-surveyed reference positions and an operator-assigned line-of-sight (LOS) or non-line-of-sight (NLOS) label. The median signed error (reference minus estimate) was 0.34 m for LOS and 0.24 m for NLOS links, and within-link spread increased with the anchor reply interval. Dynamic records contain 24,598 received ranges and combine robot-mounted UWB/IMU, encoder telemetry, hardware pulse synchronization and two-mast endpoint surveys. Raw streams, normalized tables, quality-control reports and derived references are provided separately. Validation examined record integrity, stream continuity, IMU stability, survey consistency, temporal association and ranging error. Dynamic intermediate positions are model-dependent references, not independently measured ground truth. The dataset supports ranging-error mitigation and UWB-IMU localization research.",
+    "version": 1
+  },
+  {
+    "id": "preprints:10.20944/preprints202611.2316",
+    "source": "Preprints.org",
+    "date": "2026-11-23",
+    "title": "Large Language Models for Concept and Relation Extraction in Ontology Construction: A Benchmark on Chinese Domain-Specific Text",
+    "authors": [
+      "Cheng Zhong",
+      "Zhen Peng",
+      "Yongwei Hu",
+      "Qian Zhang",
+      "Yanhui Wang"
+    ],
+    "url": "https://doi.org/10.20944/preprints202611.2316.v1",
+    "abstract": "Domain ontology construction from unstructured text is a core knowledge-engineering task, and large language models (LLMs) offer a practical route to automating concept and relation extraction. Evidence on how reliably LLMs extract hierarchical and semantic relations under different prompting strategies remains limited for resource-poor, rapidly evolving domains. This study presents a gold-standard benchmark for LLM-based concept and relation extraction and a scripted pipeline that assembles a logically consistent Web Ontology Language (OWL) ontology. Using 19 Chinese university artificial intelligence (AI) course syllabi as a case study, we built a benchmark of 131 concepts and 75 relations of four types through two-author double-blind screening with adjudication (Cohen's κ = 0.707) and an independent blinded audit by two external reviewers (item-level agreement 42/50 and 43/50). Three Chinese LLMs were evaluated under one-shot and decomposed prompting across 114 configurations. On 14 held-out documents, macro concept F1 was 0.42–0.48 (0.51–0.60 on the development set), with a stable Core > Common > Peripheral gradient. Relation extraction was markedly weaker, constrained by concept-granularity mismatch and, among matched predictions, dominated by is-a/prerequisite type confusion. The assembled ontology passes HermiT satisfiability checking and supports downstream knowledge-graph diagnosis. The benchmark, prompts, ontology, and scripts are publicly released.",
+    "version": 1
+  },
+  {
+    "id": "preprints:10.20944/preprints202611.2237",
+    "source": "Preprints.org",
+    "date": "2026-11-23",
+    "title": "MOZAIC: An Audio-Video Deepfake Benchmark for Telling <em>What</em> Is Fake",
+    "authors": [
+      "Shaina Raza",
+      "Mohamed Hafez",
+      "Ahmed Y. Radwan",
+      "Khalid Elgazzar",
+      "Kathryn Hume"
+    ],
+    "url": "https://doi.org/10.20944/preprints202611.2237.v1",
+    "abstract": "Audio-video (AV) deepfakes can fake the face, the voice, or both. Most benchmarks only ask whether a clip is real or fake, so they cannot show whether a detector relies on the picture, the voice, or encoding traces. We present MOZAIC, a paired benchmark with a 4-way label in which every source clip is released in all four combinations of real or fake video and real or fake audio so each modality contribution can be measured directly. Fakes cover inner-face swapping, whole-frame video diffusion and voice conversion. MOZAIC has 137,745 clips from 15,014 source pairs and four tasks: T1 AV authenticity, T2 manipulation type, T3 identity verification and T4 explanation. We evaluate 12 AV multimodal LLMs (MLLMs), train four detectors and fine-tune MLLMs with LoRA. Overall, the best MLLM reaches only 35.6% on the four-way T1 and catches far more video-only fakes than voice-only fakes (43.6% vs 7.5%). Trained detectors reach 98.4% on T1, and LoRA fine-tuning raises explanation scores (OmniVinci 4.17 to 7.40, Qwen2.5-Omni 4.42 to 6.98), but the best T1 detector falls to 78.3% when the face-swap generator is held out of training, so generalization and explanation remain open. We release the dataset, the compact MOZAIC-SMALL split, the code and the prompts.",
+    "version": 1
+  },
+  {
+    "id": "arxiv:2611.31225",
+    "source": "arXiv",
+    "date": "2026-11-23",
+    "title": "Self-Supervised Dataset Distillation via Mutual Information Maximization",
+    "authors": [
+      "Mohammad Hossein Moslemi",
+      "Mahdi Beitollahi",
+      "Zhimin Mei",
+      "Jiale Cai",
+      "Bissan Ghaddar",
+      "Boyu Wang"
+    ],
+    "url": "https://arxiv.org/abs/2611.31225",
+    "abstract": "Dataset distillation (DD) aims to compress a large dataset into a small synthetic one that remains effective for training neural networks. Despite its success in supervised learning, DD remains underexplored in self-supervised learning (SSL), where distilled data must preserve the information needed to learn representations that remain consistent across augmentations. To bridge this gap, we introduce Mutual Information Prototype Alignment (MIPA), an efficient SSL dataset distillation approach that optimizes synthetic images to preserve augmentation-invariant information. Specifically, MIPA treats synthetic images as learnable prototypes and uses a frozen encoder to assign real samples to them based on feature similarity. A synthetic dataset that preserves such augmentation invariance should yield stable prototype assignments across multiple augmented views of the same real image. MIPA encourages this by maximizing mutual information between cross-view assignments while avoiding trivial solutions in which all real samples are assigned to only a few synthetic prototypes. Evaluations on image classification benchmarks show that synthetic data generated by MIPA yield higher-quality representations than existing distillation approaches while reducing time and storage demands during distillation."
+  },
+  {
+    "id": "arxiv:2611.31155",
+    "source": "arXiv",
+    "date": "2026-11-23",
+    "title": "So Many Ways to Multiply $3\\times3$ Matrices: A Large Dataset of Rank-23 Schemes",
+    "authors": [
+      "Andrew Igorevich Perminov"
+    ],
+    "url": "https://arxiv.org/abs/2611.31155",
+    "abstract": "A publicly available dataset of 62029 rank-23 schemes for $3\\times3$ matrix multiplication is presented. Every scheme in it has its own rank pattern, an invariant formed by the ranks of the factor matrices of a scheme, so all schemes are pairwise inequivalent. The schemes were obtained by a numerical method combining gradient descent with alternating least squares and by flip graph search, and have ternary, integer or rational coefficients. Rank 23 is the best known for this format and is optimal for schemes with integer coefficients, but the number of essentially different schemes of this rank was poorly understood: the existing collections of Heule et al. and Mårtensson et al. contain many schemes that share only a small number of rank patterns (17376 schemes with 387 patterns and 15316 schemes with 568 patterns respectively). The dataset shows that the number of different rank patterns is much larger than previously known."
+  },
+  {
+    "id": "arxiv:2611.31068",
+    "source": "arXiv",
+    "date": "2026-11-23",
+    "title": "UMAMI: A Multimodal Benchmark Dataset for Evidence-Grounded Dietary Decisions",
+    "authors": [
+      "Safal Thapaliya",
+      "Jiatan Huang",
+      "Debapriya Chatterjee",
+      "Yanfang Ye",
+      "Chuxu Zhang"
+    ],
+    "url": "https://arxiv.org/abs/2611.31068",
+    "abstract": "Dietary decisions require identifying a food's nutrient content and considering individual dietary needs, but recognizing food from an image alone does not provide this information. Visually similar foods can have different nutrient profiles, so selecting the wrong food record can lead to incorrect decisions even when nutrient rules are applied correctly. Furthermore, satisfying nutrient constraints does not necessarily establish a food's relevance to a person's intake. Evaluating these challenges together requires connecting food images, nutrient records, and individual intake histories. To support this evaluation, we introduce UMAMI (Unified Multimodal Assessment of Meals and Intake), a multimodal dataset and benchmark linking independently collected food images with nutrient profiles and respondent health and intake records. Using this dataset, we construct three diagnostic tasks covering visual nutrient question answering, personalized food recommendation, and condition-aware food substitution. Paired instances and input controls examine how visual identity and respondent context affect decisions. Our experiments identify errors in both food-record selection and nutrient-rule application, while showing that higher rule compliance does not necessarily improve alignment with subsequent recorded intake. These findings highlight the need to evaluate how multimodal systems select and use structured evidence for dietary decisions. The dataset, code, and dashboard are available at https://umami-benchmark.github.io."
+  },
+  {
+    "id": "arxiv:2611.30976",
+    "source": "arXiv",
+    "date": "2026-11-23",
+    "title": "Prediction-Powered Regression via Calibration: Beyond the Supervised Minimax Benchmark",
+    "authors": [
+      "Jin Su",
+      "Yong Zhou",
+      "Jian Huang"
+    ],
+    "url": "https://arxiv.org/abs/2611.30976",
+    "abstract": "We study nonparametric regression with limited labeled data and abundant observations carrying potentially inaccurate pseudo-labels. Our proposed method, weighted prediction-powered regression via calibration (wPPRC), first calibrates pseudo-labels using labeled data, then fits a predictor by weighted regression using observed and calibrated responses. Over Hölder classes, we derive nonasymptotic excess-risk bounds for clipped ReLU estimators and establish a minimax lower bound for the corresponding regression problem. Under suitable conditions, the upper and lower bounds match up to logarithmic factors. Moreover, wPPRC can achieve a worst-case risk of smaller order than the minimax risks under four baseline observation structures on the same joint distribution class, demonstrating the value of additional pseudo-labels. We also construct a validation-selected (VS) estimator using an independent labeled validation sample to choose the weight. The VS estimator satisfies an expected-risk oracle inequality and preserves the improvement over the baseline minimax risks with the same total labeled-data budget. Simulations and an application to predicting homeless counts illustrate the gains of the proposed estimators."
+  },
+  {
+    "id": "arxiv:2611.30925",
+    "source": "arXiv",
+    "date": "2026-11-23",
+    "title": "PRIMEAPE: A Multilingual Benchmark for Fine-Grained Meta-Evaluation of Judge Models",
+    "authors": [
+      "Vladislav Mikhailov",
+      "Sarfraz Ahmad",
+      "Momina Ahsan",
+      "Zoia Butenko",
+      "Vladimir Dobrovolskii",
+      "Preslav Nakov",
+      "Erik Velldal",
+      "Lilja Øvrelid",
+      "Ekaterina Artemova"
+    ],
+    "url": "https://arxiv.org/abs/2611.30925",
+    "abstract": "Large language models increasingly serve as judges of other models, shaping benchmark rankings and model development. Yet, a judge whose rationale consistently supports its verdict may still disagree with human preferences. To study this, we introduce PRIMEAPE, a multilingual benchmark for evaluating judge verdicts and rationales. PRIMEAPE provides 2,205 response pairs covering 243 instructions in English, French, Spanish, Urdu, Hindi, Norwegian Bokmål, and Yoruba, with 11k human annotations of preferences and rationales across relevance, naturalness, truthfulness, safety, and overall quality. Our evaluation of twelve open- and closed-weight judges reveals that aggregate performance conceals differences across languages and criteria, while requesting rationales does not consistently improve agreement with human preferences. Judges also favor the first position, longer responses, and responses from related models, with effects that vary across criteria and languages. Crucially, judges can justify verdicts that disagree with human preferences while maintaining consistency between their verdicts and rationales. These findings show that consistency with a judge's own verdict does not establish alignment with human judgment. PRIMEAPE enables assessment of both, providing a foundation for more reliable multilingual judges. We release our benchmark and all annotation materials under the CC BY-NC 4.0 license at github.com/Toloka/primeape."
+  },
+  {
+    "id": "arxiv:2611.30888",
+    "source": "arXiv",
+    "date": "2026-11-23",
+    "title": "A High-Resolution UAV Benchmark Dataset and Baseline Evaluation for Teak Crown Segmentation in Western Ghats Tropical Forests",
+    "authors": [
+      "Anand S Sahadevan",
+      "Sunita Arya",
+      "Anup Kumar Das",
+      "Bimal Kumar Bhattacharya",
+      "S Manthira Moorthi"
+    ],
+    "url": "https://arxiv.org/abs/2611.30888",
+    "abstract": "Accurate teak-tree segmentation from high-resolution drone imagery is critical for sustainable plantation management, yet lacks dedicated benchmarks. We introduce TeakTreeNet, a comprehensive dataset and evaluation protocol for binary teak-tree segmentation at native 2cm resolution. Four state-of-the-art architectures: U-Net, PSPNet, DeepLabV3, and SegFormer were rigorously benchmarked across scratch and ImageNet-pretrained settings with three-seed reproducibility. SegFormer establishes new SOTA performance with F1 0.938 +/- 0.002 (Teak), IoU 0.968 +/- 0.001 (Teak), and Accuracy 0.986 +/- 0.001, outperforming all pretrained CNNs. Domain-adaptive training suffices, as the scratch SegFormer outperforms ImageNet pretrained baselines, avoiding large-scale pretraining overhead. Comprehensive analysis reveals Transformer's superior boundary delineation for dense plantation scenarios. TeakTreeNet provides researchers with 6391 expertly annotated drone patches (224x224) and establishes reproducible evaluation protocols, enabling direct comparison of future methods. Our benchmark demonstrates SegFormer's optimal balance of accuracy, efficiency, and deployability for operational forestry monitoring of teak plantations for India's western tropical forests."
+  },
+  {
+    "id": "arxiv:2611.30815",
+    "source": "arXiv",
+    "date": "2026-11-23",
+    "title": "Which $\\Diamond \\mathcal{P}$ Algorithm is Suitable for You? An Empirical Benchmark on Real Network Traces",
+    "authors": [
+      "Yenan Wang",
+      "Jens Kollberg",
+      "Elad Michael Schiller",
+      "Carla Fabiana Chiasserini"
+    ],
+    "url": "https://arxiv.org/abs/2611.30815",
+    "abstract": "Unreliable failure detectors (UFDs) are a fundamental abstraction for dependability and fault tolerance in distributed systems, supporting core distributed algorithms, such as consensus. Yet selecting a suitable detector remains difficult because existing implementations are evaluated under different environments, workloads, parameterizations, and quality-of-service (QoS) requirements. We address this problem by systematizing 14 $\\Diamond \\mathcal{P}$ and closely related $\\Diamond \\mathcal{P}$-style UFDs, implementing 13 of them, and providing a reusable benchmark for their empirical comparison. Our methodology evaluates detectors through common QoS metrics, such as detection time, mistake rate, and query accuracy, and combines same-input replay of network traces with live deployment for detectors whose active probing or cooperative behavior requires online execution. We then formalize failure-detector selection as a constrained algorithm-selection challenge, mapping operational requirements to suitable detector candidates. We instantiate this methodology under controlled variations of communication rate, host load, and crash regime. Applying the selection process shows that no detector is uniformly preferable across the evaluated settings. At relaxed detection-time budgets, 2W [Tomsic et al., IPDPS 2015] is the most frequently selected detector, appearing in 12 of 16 scenario-metric combinations for $T_D \\le 500$ ms, whereas stricter budgets yield substantially more scenario- and metric-dependent selections. The benchmark and selection methodology provide a reusable basis for practical detector selection and for establishing stronger analytical baselines for future failure-detection approaches, including learning-based detectors."
+  },
+  {
+    "id": "arxiv:2611.30603",
+    "source": "arXiv",
+    "date": "2026-11-23",
+    "title": "Towards an Armenian Epigraphic Corpus",
+    "authors": [
+      "Chahan Vidal-Gor{è}ne",
+      "Arpine Avetisyan",
+      "Edita Matevosyan",
+      "Seda Kirakosyan",
+      "Victoria Khurshudyan",
+      "Pollet Samvelian"
+    ],
+    "url": "https://arxiv.org/abs/2611.30603",
+    "abstract": "The Divan hay vimagrut'yan (1960-2017), the printed corpus of Armenian inscriptions, comprises nearly 7,600 records; a growing number of the inscriptions they describe, damaged or destroyed in recent decades, survive only in its pages. Armenian epigraphy nevertheless lacks a digital resource of the kind available for Greek, Latin or Georgian. This paper presents the Corpus Inscriptionum Armenicarum Electronicum, which turns the ten volumes of the Divan into an open digital corpus. Layout detection, OCR and a vision-language model produce a first structured reading of each record, which specialists then check on a proofreading platform. First corrections show that letters are read reliably and that residual errors concentrate in the editorial signs. The corpus is designed as a lasting platform for documenting Armenian inscriptions and as a source of silver data in Classical and Middle Armenian for language models and computational linguistics."
+  },
+  {
+    "id": "arxiv:2611.30600",
+    "source": "arXiv",
+    "date": "2026-11-23",
+    "title": "JaxNaviSim: A GPU-Accelerated, Data-Driven Simulator and Learning Benchmark for Maritime Navigation",
+    "authors": [
+      "Quang Anh Pham",
+      "Janaka Chathuranga Brahmanage",
+      "Hue Tse Leong",
+      "Akshat Kumar",
+      "Tien Anh Mai",
+      "Siu Loon Hoe",
+      "Venky Shankararaman"
+    ],
+    "url": "https://arxiv.org/abs/2611.30600",
+    "abstract": "Coordinating vessels through the shared waterways of busy ports grows more challenging as vessel traffic increases. Port authorities need realistic simulations to assess how arrival schedules, anchorage assignments, and routes affect vessel throughput and navigation safety. Existing AIS-based trajectory models predict a vessel's track from its past trajectory in an open-loop fashion. They do not simulate step-by-step responses to other ships or test whether a vessel collides or reaches its goal. To address this problem, we introduce JaxNaviSim, a data-driven simulator and learning benchmark coupling Automatic Identification System (AIS) data with fast, controllable traffic simulation, in which learned models steer vessels through recorded traffic. First, we release a dataset of ~141 million AIS records from over 30K vessels across eight high-density regions of the Singapore Strait, among the world's busiest waterways, with ~6.7 million vessel-hours. Unlike several existing AIS datasets which mostly cover open seas, ours captures close-quarters vessel traffic in the narrow strait. Second, we define a navigation task for each recorded vessel trajectory. A model steers that vessel every 10 s from its recorded state to its anchoring point or region exit, while surrounding ships follow their recorded tracks or are steered by the model. We implement a JAX simulator that runs these tasks in large batches on a GPU. We also incorporate multiple vessel dynamics models and sea surface currents. Finally, we benchmark imitation learning (IL), offline and online RL, and include Predictive Action Refinement (PAR) as a safety baseline that cuts collision rates to 1-3%. The comparison shows that low tracking error does not ensure arrival, and learned policies can reach most destinations yet collide in 20-45% of episodes."
+  },
+  {
+    "id": "arxiv:2611.30558",
+    "source": "arXiv",
+    "date": "2026-11-23",
+    "title": "JONES-19: A Cultural Image Dataset Based on The Grammar of Ornament",
+    "authors": [
+      "Linh Pham",
+      "Stuart Shieber",
+      "David Alvarez-Melis",
+      "Alexandros Haridis"
+    ],
+    "url": "https://arxiv.org/abs/2611.30558",
+    "abstract": "We introduce JONES-19, a high-quality image dataset documenting 1,901 ornament designs belonging to nineteen human cultures. The images and their annotations are based on an open access archive of The Grammar of Ornament (London, 1856), by Owen Jones. The dataset poses numerous challenges as a benchmark for computer vision classification tasks and for research at the intersection of machine learning and art and design: a small sample size, image samples of human-designed artifacts rather than common objects in-context or natural scenes, imbalanced class distribution, and image distinctions based on fine details involving line patterns, reliefs, and colors. As a design-inspired dataset, JONES-19 can serve as a benchmark for various research fields, such as visual recognition, data-efficient learning, art-historical research, architectural style analysis, and cultural heritage. This paper describes the curation of the JONES-19 dataset and reports a baseline classification benchmark that evaluates the suitability of the dataset for training classifiers and exposes insights into inter-class relationships--particularly cultural similarities--by examining patterns in misclassification errors. The dataset and its accompanying documentation are available at: https://huggingface.co/datasets/harvardseas-cultural-ornaments/JONES-19."
+  },
+  {
+    "id": "arxiv:2611.30555",
+    "source": "arXiv",
+    "date": "2026-11-23",
+    "title": "RoboInF: A Benchmark for Instruction Fidelity in Robotic Manipulation",
+    "authors": [
+      "Jiawei Guo",
+      "Yu Huang",
+      "Dijiang Dong",
+      "Yue Liu",
+      "Peiran Ren",
+      "Wei Shen"
+    ],
+    "url": "https://arxiv.org/abs/2611.30555",
+    "abstract": "Precise language control requires embodied models to follow instructions governing both task outcomes and execution. Although recent methods train policies to follow increasingly detailed commands, existing benchmarks often assess instruction following alongside perception, planning, and generalization to unfamiliar scenes. Higher task success therefore offers limited evidence of closer adherence to instructions. We introduce RoboInF, a benchmark measuring how reliably manipulation policies adapt their behavior to changes in an instruction. For each of eight tasks, six to twelve expert-validated instruction branches vary the requested goal, procedure, or manipulation detail while holding the initial scene and robot state fixed. Task-specific checkers verify the terminal goal and use recorded trajectories, contacts, and event sequences to assess compliance throughout execution. The accompanying RoboInF-4K dataset pairs 4,242 expert demonstrations with simulator-derived annotations of motion and contact. We evaluate leading manipulation policies ($π_{0.5}$ and OpenWAM) and inference-only agents (GPT-6 Astra and Qwen3.8-Flash). All four models exhibit a gap between task completion and faithful execution, indicating substantial room for fine-grained instruction following."
+  },
+  {
+    "id": "arxiv:2611.30541",
+    "source": "arXiv",
+    "date": "2026-11-23",
+    "title": "SVUBench: A Comprehensive Benchmark for Proactive Streaming Video Understanding",
+    "authors": [
+      "Yuxuan Liang",
+      "Bohan Zhang",
+      "Haiyang Yu",
+      "Bocheng Hu",
+      "Ke Niu",
+      "Xu Li",
+      "Zhengtao Yao",
+      "Yan Wen",
+      "Haotian Chen",
+      "Xiaolei Chen",
+      "Jiacong Wang",
+      "Zhe Liu",
+      "Jingqun Tang",
+      "Benlei Cui",
+      "Fan Shi",
+      "Xiangyang Xue"
+    ],
+    "url": "https://arxiv.org/abs/2611.30541",
+    "abstract": "Proactive streaming video understanding requires models to interpret unfolding events, respond timely, and retrieve relevant historical evidence. To systematically evaluate these capabilities, we introduce SVUBench, a comprehensive proactive streaming video benchmark comprising 12,131 questions and 62,881 answer points across ten proactive tasks spanning Perception, Understanding, and Reasoning. Constructed through model-assisted annotation and human verification, SVUBench introduces two complementary interaction modes. Basic evaluates sustained proactive responses from video onset, while Trajectory requires historical recovery and continuous response updates following task activation during streaming. A Duration-Scaled Challenge further evaluates these capabilities across four video duration tiers. We develop the Proactive Response Score (PRS) with task-adaptive answer windows to jointly assess answer correctness, response timeliness, historical consistency, and content quality. Extensive experiments and analysis reveal the strengths and limitations of existing models, highlighting directions for advancing proactive streaming video understanding."
+  },
+  {
+    "id": "arxiv:2611.30488",
+    "source": "arXiv",
+    "date": "2026-11-23",
+    "title": "Do learned image captioning metrics generalize? Auditing duplicated samples in human-judgment benchmarks",
+    "authors": [
+      "Xiaochen Zhang",
+      "Jin Li",
+      "Chunlong Xia",
+      "Longjiang Guo"
+    ],
+    "url": "https://arxiv.org/abs/2611.30488",
+    "abstract": "Learned image captioning metrics are trained and tested on human judgments, so their reported correlation is a claim about generalization. We audit this claim for the three most recent collections of such judgments, Polaris, Nebula, and Spica, matching images at the pixel level. First, test samples reappear in training sets: the Spica training set contains about two-thirds of the Polaris test set, with identical human ratings. Second, controlled retraining shows that duplicates can inflate a metric: for Pearl, the gain is confined to the duplicated samples and grows with every epoch; for DENEB, it stays below one point. The gain depends on the learner and on how often a training set repeats a sample. Third, Kendall's $τ$ over all samples is the sum of two terms, detecting captions with the lowest human score and ranking the others; the first supplies most of the reported correlation and is nearly saturated. The recent test sets cannot order Polos, DENEB and Pearl consistently, and a ridge regression on frozen features matches or exceeds all three. Fourth, we propose a protocol that ranks a learned metric only with a model trained without test samples, reports both terms, and compares metrics by paired tests. Under it, zero-shot vision--language judges rank first on the three recent test sets, and a fine-tuned judge ranks first on the three earlier benchmarks. The same analysis applies to any evaluator learned from human judgments; filter lists and code are released at https://github.com/morninghut/ic-dataset-audit ."
+  },
+  {
+    "id": "arxiv:2611.30444",
+    "source": "arXiv",
+    "date": "2026-11-23",
+    "title": "A Cross-Domain Simulator and Benchmark for Uncertainty Quantification in Global 21-cm Inference",
+    "authors": [
+      "Jacob Tutt",
+      "Harry Bevins",
+      "James Alvey",
+      "Dominic Anstey",
+      "John Cumner",
+      "Eloy de Lera Acedo",
+      "Anastasia Fialkov"
+    ],
+    "url": "https://arxiv.org/abs/2611.30444",
+    "abstract": "End-to-end uncertainty propagation in scientific inference often requires repeated evaluation of coupled simulators spanning multiple physical domains, often at prohibitive computational cost. Global 21-cm cosmology is an extreme example: a millikelvin cosmological signal must be separated from radio foregrounds and instrumental effects four orders of magnitude larger, making inference acutely sensitive to model misspecification. Reliable recovery is therefore contingent on an exceptionally accurate model that jointly propagates uncertainty through the complete observational chain. We present a differentiable, GPU-accelerated hybrid forward model combining neural emulation of the cosmological signal, a physics-informed multi-resolution parameterisation of the galactic foregrounds, and a linear surrogate model of the antenna. This unifies simulators spanning astrophysics and computational electromagnetics while reducing evaluation time by a factor of $7.2\\times10^{7}$. Using GPU-accelerated Nested Slice Sampling, we benchmark the framework across 100 unseen signal realisations and find that 94 injected profiles lie entirely within their corresponding 95% credible bands. Together, the simulator and reference Nested Slice Sampling results provide a demanding benchmark of posterior calibration, mode coverage, and evidence accuracy across next-generation stochastic samplers, simulation-based inference, and variational inference frameworks."
+  },
+  {
+    "id": "arxiv:2611.30419",
+    "source": "arXiv",
+    "date": "2026-11-23",
+    "title": "TamperCert: A Benchmark for Detecting Text Tampering in Degree Certificates",
+    "authors": [
+      "ChiFung Kwan",
+      "Kangzhong Wang",
+      "Youqian Zhang",
+      "Weijie Chen",
+      "Jiaqi Gao",
+      "Yongjian Wu",
+      "Eugene Yujun Fu",
+      "Qingqing Ye",
+      "Haibo Hu"
+    ],
+    "url": "https://arxiv.org/abs/2611.30419",
+    "abstract": "Degree certificates play a critical role in high-stakes decisions such as university admission, immigration, and hiring. The issuing institution vouches for the holder, so a forged certificate may let its bearer pass these checks. Degree certificate forgery is increasingly prevalent. Yet, many assume that it is easy to spot. Reported cases show otherwise: in 2024, the business school of the University of Hong Kong found that about 30 master's students had enrolled with forged academic credentials. Few studies have looked at how to detect forged degree certificates, partly because public benchmarks are scarce. We present TamperCert, a benchmark built from 400 real degree certificates issued by 38 universities. Each certificate was subjected to 11 publicly available tampering methods to alter the holder's name and further processed with four additional post-processing techniques, resulting in over 20,000 forged images. We evaluate 13 detectors, a commercial multimodal large language model (MLLM), and detectors trained on TamperCert.Our findings reveal that no detector is reliable for every tampering method. Consequently, a determined forger may still evade detection. Moreover, the commercial MLLM misses most forgeries made by general-purpose generative models, and post-processing, such as resizing an image or photographing it with a camera, severely degrades detection."
+  },
+  {
+    "id": "arxiv:2611.30369",
+    "source": "arXiv",
+    "date": "2026-11-23",
+    "title": "Mind the Gaps: State-Guided Supervision Allocation for Object Detection Dataset Distillation",
+    "authors": [
+      "Jiehui Xie",
+      "Zhengxun Jin",
+      "Jiahao Zhang",
+      "Yuxuan Luan",
+      "Dongshen Han",
+      "Caiyan Qin",
+      "Sung-Ho Bae",
+      "Chaoning Zhang"
+    ],
+    "url": "https://arxiv.org/abs/2611.30369",
+    "abstract": "Recent advances in dataset distillation have enabled large-scale training datasets to be compressed into compact synthetic sets. However, dataset distillation for object detection remains challenging, as it requires preserving diverse classification and localization signals under limited image budgets. Existing approaches often emphasize individual-image informativeness without explicitly accounting for supervision accumulated across the distilled dataset, potentially leading to redundant supervision and uneven class-scale coverage. To address this limitation, we propose State-Guided Supervision Allocation (SGSA), a framework that formulates object detection dataset distillation as a dataset-level progressive supervision allocation problem. SGSA establishes class-scale supervision quotas and maintains a global state that tracks detector predictions accumulated from previously selected synthetic images. The remaining gaps between the target quotas and accumulated supervision guide adaptive object sampling, detector-guided canvas refinement, and marginal-gain-based candidate selection, encouraging complementary supervision across images. On MS COCO, SGSA outperforms a matched OD3 baseline by 3.73-4.06 mAP points across three image budgets (0.25%-1.0%). On PASCAL VOC, SGSA outperforms the strongest evaluated baseline by 4.53-6.90 mAP50 points across three image budgets. These results demonstrate the effectiveness of dataset-level supervision allocation guided by accumulated detector feedback under limited image budgets."
+  },
+  {
+    "id": "arxiv:2611.30339",
+    "source": "arXiv",
+    "date": "2026-11-23",
+    "title": "AirVT-15k: A Query-Diverse UAV Video-Text Dataset and Query-Adaptive Evidence Alignment Network for Retrieval",
+    "authors": [
+      "Xi Chen",
+      "Xu Chen",
+      "Xiangyang Jia",
+      "Ting Gan",
+      "Xu Zhang",
+      "Shuquan Wei"
+    ],
+    "url": "https://arxiv.org/abs/2611.30339",
+    "abstract": "Unmanned aerial vehicle video-text retrieval (UAV-TVR) requires matching language to both scene context and subtle object changes. A harbor-layout query relies on global scene context, whereas a departing-vessel query requires local functional cues and motion states. Existing benchmarks provide diverse aerial descriptions but give limited attention to distinct evidence needs within the same video. We introduce AirVT-15k, a benchmark of 15,504 UAV videos and 155,040 captions, with ten complementary bilingual captions per video describing scenes, object states, and temporal changes. We also propose AirFocus-CST, which selects query-relevant frames and patches, encodes temporal feature differences, and combines coarse-to-fine interaction (CFI) with optimal-transport alignment (OTA). Average mean recall reaches 63.67% on AirVT-15k and 24.41% on CapERA, improving over the strongest baselines by 2.96 and 1.91 percentage points, respectively. The dataset and code are available at https://chenxi000233.github.io/AirVT-15k-site/."
+  },
+  {
+    "id": "arxiv:2611.30288",
+    "source": "arXiv",
+    "date": "2026-11-23",
+    "title": "Face Is Not All You Need: MIME Benchmark for Incomplete Multimodal Emotion Recognition",
+    "authors": [
+      "Yuxin Jia",
+      "Xing Lan",
+      "Wensong Wang",
+      "Jian Xue",
+      "Feiliang Ren",
+      "Ke Lu"
+    ],
+    "url": "https://arxiv.org/abs/2611.30288",
+    "abstract": "Multimodal Emotion Recognition (MER) is a fundamental task in multimedia understanding, where state-of-the-art methods have achieved prominent success relying on the assumption of complete, well-aligned multimodal inputs. However, real-world unconstrained scenarios often suffer from unpredictable modality degradation and information loss, leading to catastrophic performance collapse of existing MER models that heavily depend on facial cues as the core inference anchor. However, few systematic works evaluate model robustness under diverse, fine-grained incomplete settings, as prior works are limited to coarse-grained full-modality removal and neglect interpretable analysis of emotional reasoning. To bridge this gap, we formally define the Incomplete Multimodal Emotion Recognition (IMER) task, which benchmarks model generalization and robustness under multi-grained modality and emotional information loss. We further construct MIME, a dedicated IMER benchmark with 2,000 video segments covering realistic fine-grained facial-detail degradation, severe facial degradation, and extreme full-modality loss, surpassing the limited coarse-grained settings of prior works. We also propose the Chain of Emotion (CoE) analysis paradigm with tailored metrics to dissect the fine-grained emotional cue perception and reasoning process of Multimodal Large Language Models (MLLMs). Extensive experiments on seven mainstream MLLMs reveal that body language and scene context act as critical compensatory mechanisms under facial degradation, while a pronounced gap exists between models' basic visual perception ability and high-level cognitive reasoning. Our work provides a focused evaluation platform and actionable insights for advancing robust multimodal emotion recognition. Our dataset and code are public at https://yuxinokk.github.io/MIME."
+  },
+  {
+    "id": "arxiv:2611.30252",
+    "source": "arXiv",
+    "date": "2026-11-23",
+    "title": "StutterStigma-TR: A Novel Turkish Dataset and Target-Aware BERT Framework for Stuttering-Related Stigma Detection",
+    "authors": [
+      "Muhsin Dölek",
+      "Arezoo Sadeghzadeh"
+    ],
+    "url": "https://arxiv.org/abs/2611.30252",
+    "abstract": "Computational research on disability-related ableist harm remains limited, and condition specific resources for stuttering-related stigma are particularly scarce. This study introduces StutterStigma-TR, a Turkish dataset of 6,019 public X/Twitter posts annotated as Stigmatizing, Non-stigmatizing/contextual, or Supportive using a speech and language therapy-informed protocol with independent lived-experience evaluation. We also propose StutterStigma-BERT, a BERTurk-based target-aware framework that combines explicit target marking, target-span representation, target-conditioned context, character-level and handcrafted orthographic information, and gated discourse cues. The framework is evaluated in complementary three-class and binary settings using controlled three-seed ablation analyses and final 20-seed robustness evaluations. Under the common training protocol, Gated Discourse-OrthoTarget trained with cross-entropy is selected as the final configuration for both tasks based on internal-validation Macro-F1. Across 20 random seeds, the final three-class model achieves a mean Macro-F1 of 73.54%, while the final binary model achieves 85.17% using validation-selected decision thresholds. Task adapted harmful-language comparators are additionally evaluated under the common training protocol, and the proposed model obtains the highest mean Macro-F1 among them. For the primary three-class task, matched backbone analyses show higher internal validation Macro-F1 with BERTurk than with TurkishBERTweet or Turkish Mamba, while substantial train-validation separation persists across all three backbones. Separate direct-transfer and zero-shot experiments examine performance without StutterStigma-TR supervision. Across the task-adapted, direct-transfer, and zero-shot comparisons, the condition-specific supervised systems retain the strongest aggregate performance."
+  },
+  {
+    "id": "arxiv:2611.30236",
+    "source": "arXiv",
+    "date": "2026-11-23",
+    "title": "AIGI-26: A Benchmark for AI-Generated Image Detection Across Diverse Modern Generators",
+    "authors": [
+      "Qishuai Ding",
+      "Yifeng Wang",
+      "Shichuang Xie",
+      "Yanli Ren",
+      "Guorui Feng"
+    ],
+    "url": "https://arxiv.org/abs/2611.30236",
+    "abstract": "Existing AI-generated image (AIGI) detection benchmarks predominantly rely on earlier synthesis systems with limited content diversity and conspicuous artifacts, failing to fully reflect the detection challenges posed by high-fidelity images from contemporary models. We introduce AIGI-26, a benchmark of 253,200 images covering 26 recent open- and closed-source generators. Its novel, diverse, and heterogeneous sources provide a basis for systematically evaluating detection methods on modern generated imagery. Additionally, to capture subtle statistical discrepancies across complementary forensic views, we propose the multi-aspect forensic detection network (MAFDNet). Its fixed forensic operators expose complementary texture, local prediction, resampling, and chromatic responses, summarized by a hierarchical encoder using multiscale means and standard deviations. In parallel, a spectral branch captures Fourier log-magnitude and neighboring-frequency phase variation across radial bands and directional axes. Fusing these descriptors combines local inconsistencies with global spectral organization for authenticity detection. Trained on 12,660 AIGI-26 images, MAFDNet achieves 88.5% accuracy and 94.9% average precision on the 240,540-image test set, with only 1.04M parameters and 1.39 GFLOPs per $256\\times256$ input. MAFDNet also demonstrates effective cross-dataset generalization on DailyBench and Treasure-37."
+  },
+  {
+    "id": "arxiv:2611.30161",
+    "source": "arXiv",
+    "date": "2026-11-23",
+    "title": "OpenViVE: New Benchmark and Dual-Stream Co-Attention Framework for Vietnamese Visual Entailment",
+    "authors": [
+      "Bao Quoc Trinh",
+      "Tin Van Huynh",
+      "Kiet Van Nguyen",
+      "Ngan Luu-Thuy Nguyen"
+    ],
+    "url": "https://arxiv.org/abs/2611.30161",
+    "abstract": "Visual Entailment (VE) determines whether a textual hypothesis is entailed, contradicted, or unverifiable from an image. However, existing VE benchmarks are largely English-centric and do not capture Vietnamese-specific linguistic distinctions or culturally grounded visual contexts. To address this gap, we introduce OpenViVE, the first large-scale native Vietnamese VE benchmark, containing 62,268 balanced image-hypothesis pairs from 10,378 culturally grounded images. OpenViVE is constructed using an Artifact-Aware Hybrid LLM-Human Pipeline that combines constrained generation, human validation, and PMI-guided refinement. The pipeline substantially reduces hypothesis-only shortcuts, with Contradiction accuracy dropping from 96% to 66% after artifact refinement. We further evaluate a dual-stream PhoBERT-ConvNeXt framework with bidirectional co-attention to align visual evidence with Vietnamese hypotheses. The framework achieves 84.84% accuracy and 84.90% macro-F1 on the test set, while PhoBERT consistently outperforms multilingual XLM-R variants. These results highlight the importance of language-specific encoding and explicit cross-modal interaction for Vietnamese VE."
+  },
+  {
+    "id": "arxiv:2611.30114",
+    "source": "arXiv",
+    "date": "2026-11-23",
+    "title": "Thermal-Guided Low-Light UAV Image Enhancement: A Reliability-Aware Guidance Network and a Unified Benchmark",
+    "authors": [
+      "Zhicheng Zhao",
+      "Yu Wang",
+      "Jiangong Xu",
+      "Lixiang Xu",
+      "Chenglong Li",
+      "Jin Tang"
+    ],
+    "url": "https://arxiv.org/abs/2611.30114",
+    "abstract": "Thermal-guided low-light image enhancement (LLIE) is promising for nighttime unmanned aerial vehicle (UAV) perception because thermal imagery remains informative under severe visible degradation. However, the degraded visible image serves as both the alignment reference and the enhancement target, making thermal guidance uncertain in its spatial correspondence and local utility under low illumination, sensor differences, and UAV motion. Misaligned or unsuitable thermal cues may introduce artifacts, while spatially varying degradation requires region-specific restoration rather than uniform enhancement. To address these challenges, we propose a Reliability-Aware Multi-Strategy Guidance Network (RMGNet) for thermal-guided UAV LLIE under weak optical-thermal alignment. Its Reliability-Aware Guidance Calibration Module (RAGCM) performs coarse-to-fine displacement estimation and jointly evaluates the reliability of aligned thermal guidance and the usability of degraded visible evidence. Based on calibrated guidance, degradation, and reliability cues, the Multi-Strategy Enhancement Routing Module (MSERM) generates candidates for detail preservation, highlight-protected relighting, and thermal compensation, then spatially routes their contributions. We further construct the UAV weakly aligned Optical-Thermal dataset (UWOT), the largest UAV-oriented benchmark to date for weakly aligned optical-thermal low-light enhancement, containing 5,000 triplets. Extensive experiments show that RMGNet outperforms representative single-modal and multimodal state-of-the-art methods in enhancement quality while retaining competitive computational efficiency and greater robustness to practical cross-modal misalignment. The dataset and code will be publicly available at https://github.com/mmic-lcl/Datasets-and-benchmark-code."
+  },
+  {
+    "id": "arxiv:2611.30071",
+    "source": "arXiv",
+    "date": "2026-11-23",
+    "title": "SalivaryHSI-Seg: A New Challenging Benchmark for Ex Vivo Salivary Gland Hyperspectral Tissue Segmentation",
+    "authors": [
+      "Xiaoqi Guo",
+      "Xianran Wang",
+      "Xinquan Yang",
+      "Qinyi Lu",
+      "Fangqian Zhang",
+      "Jiangyi Chen",
+      "Ming Li",
+      "Wen Ma",
+      "Linlin Shen"
+    ],
+    "url": "https://arxiv.org/abs/2611.30071",
+    "abstract": "Salivary gland tumors are common lesions in oral and maxillofacial practice, and accurate identification of tumor regions and surrounding salivary gland tissues is important for tissue assessment, pathological sampling, and clinical decision support. Hyperspectral imaging (HSI) records continuous spectral responses together with spatial imaging information, providing a promising way to capture fine-grained tissue-discriminative information. Nevertheless, the development of salivary gland HSI tissue segmentation remains limited due to the lack of standardized benchmarks with pixel-level annotations and unified evaluation protocols. To address this issue, we introduce SalivaryHSI-Seg, a hyperspectral tissue segmentation benchmark for ex vivo salivary gland specimens, containing 119 HSI samples from 31 patients with multi-class pixel-level annotations. We establish a patient-level five-fold cross-validation protocol and evaluate different input representations, model architectures, and challenging subsets with small tumor and complex boundary. Based on this benchmark, we further propose HyBSD, a hyperspectral boundary-guided spectral-difference network for full-HSI salivary gland tissue segmentation. HyBSD exploits boundary-guided spectral-difference cues to improve tissue delineation in ambiguous transition regions. Extensive experiments show that full-HSI input provides more discriminative information than sampled spectrums, and that HyBSD achieves 74.97% mDice and 87.76% Tumor Dice, with further advantages on the challenging subsets. Dataset and code will be released."
+  },
+  {
+    "id": "arxiv:2611.30061",
+    "source": "arXiv",
+    "date": "2026-11-23",
+    "title": "EVD-Bench: A Comprehensive Benchmark for EEG-to-Image Decoding",
+    "authors": [
+      "Kieren Yu",
+      "Qian Zhang",
+      "Ziyang Liu",
+      "Chang Huang",
+      "Jintai Chen",
+      "Kaishun Wu"
+    ],
+    "url": "https://arxiv.org/abs/2611.30061",
+    "abstract": "EEG-to-image decoding recovers visual information from non-invasive brain recordings, providing a window into human perception. However, comparisons across systems are confounded by a variable that is rarely reported as such: which participants' data the system was allowed to use. The same Top-1 score on a 200-way gallery may come from a per-participant system, a pooled model over all participants, or a model that never saw the test participant---cases that differ by more than most architectural changes between the methods being compared. We present \\bench, a benchmark on THINGS-EEG2 that standardizes the gallery and EEG input, matches training budgets across systems within each regime, and compares three participant-access regimes: within-subject, joint-subject, and strict leave-one-subject-out, with unlabeled target calibration reported separately. All three settings evaluate concept-level zero-shot retrieval: the 200 test concepts are disjoint from the 1,654 concepts used for EEG--image fitting and validation. We compare retrieval across access regimes and use zero-EEG and matched-wrong EEG controls to assess dependence on correct EEG--stimulus pairing. We vary trial averaging, gallery size and difficulty, and training data coverage, and compare target adaptation and visual feature targets. We also assess sensitivity to EEG window length and channel count, robustness to input perturbations, and confidence calibration. These results establish participant-access regime as a necessary reporting dimension alongside gallery, repetition, and visual target."
+  },
+  {
+    "id": "arxiv:2611.30052",
+    "source": "arXiv",
+    "date": "2026-11-23",
+    "title": "ESGPT: A Data-Centric ESG Language Model with Unified Instruction and Benchmark Resources",
+    "authors": [
+      "Jaeyoung Lee",
+      "Misuk Kim"
+    ],
+    "url": "https://arxiv.org/abs/2611.30052",
+    "abstract": "ESG analysis requires complex language understanding across diverse sources, including corporate reports, news, and disclosures, for tasks such as ESG relevance detection, action interpretation, impact analysis, and question answering. However, existing ESG datasets are fragmented by task and source, with heterogeneous formats and annotation schemes, limiting their use for training general-purpose ESG LLMs and unified evaluation. In this work, we construct ESG-Instruct, a 30,000-instance ESG instruction dataset built from public ESG resources, and ESGU-Bench, an ESG understanding benchmark covering six representative ESG tasks. Based on these resources, we further develop ESGPT, an 8B ESG-specialized LLM, and evaluate it against diverse open-source and API-based LLMs. Experimental results show that general-purpose LLMs exhibit substantial performance variation across ESG tasks, while ESGPT, despite its relatively small scale, achieves the best performance on multiple ESG tasks. This work provides unified data and benchmark resources for training and evaluating ESG-specialized LLMs."
+  },
+  {
+    "id": "arxiv:2611.30017",
+    "source": "arXiv",
+    "date": "2026-11-23",
+    "title": "OWE-Bench: A long-horizon benchmark for measuring real-world engineering",
+    "authors": [
+      "Jacob Cole",
+      "Martin Dimakis",
+      "Victor Barres",
+      "Bertie Vidgen",
+      "Edward Hu",
+      "Jason Wei"
+    ],
+    "url": "https://arxiv.org/abs/2611.30017",
+    "abstract": "We present OWE-Bench (OpenWorldEngineer-Bench), a benchmark of 26 long-horizon engineering tasks written by domain experts in software engineering, physical engineering, machine learning, and scientific computing. Tasks range from optimizing kernels and designing an aircraft, to identifying the faults responsible for an earthquake. Each task requires significant domain knowledge and engineering work, with models averaging hundreds of millions of tokens per task. Solutions are scored on practical measures such as speed, cost and accuracy, both on provided cases the agent could test against and on hidden cases that an engineer would expect from the task description. The best-performing frontier model so far, Claude Fable 5.2, scores 54.6% and averages 211 million tokens per task. We highlight two findings. First, when models are given more time, they use more test-time compute and achieve higher scores. Models also scale differently with test-time compute: GPT-6 Astra achieves higher scores at shorter time limits and at equal token use, while Claude Fable 5.2 uses more tokens at longer limits to achieve the highest overall score. Second, each model scores lower on hidden cases than on the provided cases, by an average of 18 points, which we call the deployment gap. Models also fail to predict the deployment gap, overestimating their performance on hidden test cases by an average of 21 points. We hope that OWE-Bench grounds progress toward agents whose engineering solutions perform as well in deployment as they do in testing."
+  },
+  {
+    "id": "arxiv:2611.29955",
+    "source": "arXiv",
+    "date": "2026-11-23",
+    "title": "When Should We Trust Medical Image Models? Evaluating Confidence Reliability under Cross-Dataset Shift",
+    "authors": [
+      "Haoran Zhang",
+      "Sarah Lam",
+      "Yuting Lin",
+      "Nuo Chen",
+      "Mingyang Li"
+    ],
+    "url": "https://arxiv.org/abs/2611.29955",
+    "abstract": "Deep learning models for chest X-ray analysis often achieve strong performance on benchmark datasets, but their reliability under cross-dataset deployment remains unclear. In clinical practice, models trained in one hospital system may be applied to data from another, where distributional and labeling differences can affect both prediction accuracy and model confidence. We conduct a controlled empirical study of model confidence under cross-dataset transfer. We train ResNet-50 and DenseNet-121 on CheXpert and evaluate them on MIMIC-CXR across five experimental settings, focusing on Pneumothorax and Pleural Effusion. We measure predictive performance using AUC and confidence reliability using Expected Calibration Error (ECE), Brier score, and average confidence on incorrect predictions, all reported with 95% bootstrap confidence intervals. We further evaluate post-hoc temperature scaling fit on the source validation set and use Grad-CAM to examine the mechanism behind cross-domain performance differences. Cross-domain AUC drops 7-13 percentage points, and the best in-domain model is not the best cross-domain model. Source-domain temperature scaling produces marginal ECE changes but systematically increases confidence on incorrect predictions across all four model-pathology combinations. Grad-CAM reveals that DenseNet relies on a concentrated spatial prior that fails to transfer, while ResNet's more distributed attention generalizes better. These findings argue for cross-site validation and safety-specific calibration metrics in medical AI evaluation."
+  },
+  {
+    "id": "arxiv:2611.29877",
+    "source": "arXiv",
+    "date": "2026-11-23",
+    "title": "Towards Agentic Video Corpus Moment Retrieval",
+    "authors": [
+      "Chenwei Xu",
+      "Shang Wu",
+      "Zhenyu Pan",
+      "Jianshu Zhang",
+      "Pranav Maneriker",
+      "Lie Lu",
+      "Fan Du",
+      "Manling Li",
+      "Han Liu"
+    ],
+    "url": "https://arxiv.org/abs/2611.29877",
+    "abstract": "Video corpus moment retrieval (VCMR) requires finding the video and time interval that match a text query in a corpus of videos. We present RELAY, a training-free framework for VCMR that shares memory across queries. RELAY processes a batch of queries in three stages: search with a query bank, ranking with video notes, and localization with video prompt caching. In the search stage, an embedding model scores each video by its best-matching frame. The query bank penalizes videos that score highly for many other queries in the batch. In the ranking stage, a vision-language model (VLM) writes notes on each candidate video's scenes, people, objects, and actions once. Then, a large language model (LLM) reranks the candidates from these notes. In the localization stage, a VLM predicts the time interval of the moment in the top-ranked video. When multiple queries select the same video, prompt caching lets the VLM reuse its frames. On the three VERIFIED benchmarks, RELAY outperforms the trained baselines in video retrieval R@1 without training. Without any labeled moment, its predicted intervals are shorter than the annotated ones. In VCMR, it achieves similar performance to VideoSearch-R1 on one benchmark and trails it at IoU 0.5 on the other two. Human annotators also mark shorter moments than the original annotations of the benchmarks. A single margin, calibrated on a few labeled queries, widens the predicted interval to the annotation convention of the benchmarks. With it, RELAY outperforms the trained baselines in VCMR at IoU 0.5."
+  },
+  {
+    "id": "arxiv:2611.29834",
+    "source": "arXiv",
+    "date": "2026-11-22",
+    "title": "Data-Quality-Aware Fundus Classification with Anatomy-Guided Glaucoma Assessment and Cross-Dataset Evaluation",
+    "authors": [
+      "Imdadul Haque Sourav",
+      "Marjana Jannat Miti",
+      "Md. Jehadul Islam Mony"
+    ],
+    "url": "https://arxiv.org/abs/2611.29834",
+    "abstract": "Background: Deep learning fundus classifiers often perform well internally, but duplicated images, inconsistent labels, acquisition differences and poor threshold transfer can undermine their reliability. We assess nine-class classifiers beyond internal accuracy, using a data audit, frozen-model external evaluation and an anatomy-guided specialist. Methods: Nine-class experts (ConvNeXt-Small, EfficientNetV2-Small, DenseNet169) were trained with three seeds. Auditing 5,318 images for exact duplicates and cross-label conflicts removed 464 conflict groups (942 images) and six same-label copies, leaving 4,370 images. An anatomy-guided glaucoma specialist read disc-centred crops with vessel and disc/cup segmentation maps, plus cup-to-disc features. Frozen models were evaluated on RFMiD and JSIEC, and a prespecified comparison on REFUGE was replicated on ORIGA, G1020 and PAPILA. Results: ConvNeXt-Small reached an internal accuracy of 0.910, macro-F1 of 0.917 and AUC of 0.982; disc and cup Dice scores were 0.966 and 0.915. Across seeds, the fixed anatomy-guided mix left internal accuracy unchanged relative to equal soft voting (-0.001) but raised mean external closed-set accuracy by 4.9 percentage points on RFMiD (positive in two of three seeds) and 2.3 on JSIEC. On REFUGE (800 photographs) it improved balanced accuracy by 7.4 percentage points (95% CI 5.1 to 9.5), and by 2.1 on ORIGA, with positive gains on G1020 and PAPILA. Thresholds transferred poorly (REFUGE sensitivity 0.950, specificity 0.411). Conclusions: Retinal classifiers should be judged by data-quality auditing, anatomy-informed modelling and multi-cohort evaluation. Anatomy-guided fusion improved transfer at no internal cost, but gains varied by cohort and thresholds did not transfer, so internal metrics alone do not establish reliable performance."
+  },
+  {
+    "id": "arxiv:2611.29775",
+    "source": "arXiv",
+    "date": "2026-11-22",
+    "title": "ComplexIF: A Challenging Multi-Turn, Multi-Constraint Instruction-Following Benchmark",
+    "authors": [
+      "Zhichao Xu",
+      "Bingsen Chen",
+      "Yawei Wang",
+      "Tao Li",
+      "Haoyu Wang",
+      "Dan Roth",
+      "Vivek Srikumar"
+    ],
+    "url": "https://arxiv.org/abs/2611.29775",
+    "abstract": "As frontier LLMs saturate existing instruction-following benchmarks, measuring further progress requires harder tests that remain faithful to real use. In practice, users often combine several constraints, add them at different turns of a conversation, and expect all of them to hold in the assistant's response. We introduce ComplexIF, a challenging benchmark for this setting, together with the automatic pipeline that generates it. The pipeline expands seed requests into multi-turn conversations, weaves constraints into their turns, and keeps only tasks that a strong model can solve, so difficulty can be raised by adding constraints or turns while every task stays solvable. ComplexIF's two splits test complementary sides of instruction following: a verifiable split of format constraints, checked by programs, and a rubric split of semantic instructions, such as a tone or an audience, checked with an LLM judge. Across 14 proprietary and open-weight models, even the strongest satisfies every constraint on fewer than half of the verifiable tasks, and no model leads on both splits."
+  },
+  {
+    "id": "arxiv:2611.29744",
+    "source": "arXiv",
+    "date": "2026-11-22",
+    "title": "Who Sent It or How It Moved? Sender Shortcuts in Cryptocurrency Anti-Money-Laundering Benchmarks, Audited on Elliptic2 and Elliptic++",
+    "authors": [
+      "Mohammad Nasir Uddin"
+    ],
+    "url": "https://arxiv.org/abs/2611.29744",
+    "abstract": "Two public benchmarks dominate graph-based anti-money-laundering (AML) research on Bitcoin: the transaction-level Elliptic dataset, extended as Elliptic++, and the subgraph-level Elliptic2. In both, a label is assigned according to the entity that sends the funds. We ask whether models trained on these benchmarks learn how laundering moves or merely who sent the money, and we propose a diagnostic protocol to tell the two apart: a sender lookup baseline, a novelty baseline, a sender-disjoint split with a leakage check, and a decomposition of performance into sender, receiver and intrinsic signal. On Elliptic2 the task largely reduces to classifying the sender. Under the standard random split, a no-learning lookup of sender history reaches a PR-AUC of 0.954, against 0.975 for gradient boosting on 456 features; our reimplementation of RevClassify reproduces its reported 0.97 and falls to 0.126 without sender information. When senders are held out, performance drops to 0.746, and the subgraph's own structure, transactions and receivers fall from 0.619 to 0.186. On Elliptic++ the same protocol finds the shortcut negligible: sender history reaches only 0.340 against 0.986 for the full model (3.5 against 10.1 times the test prevalence), adding it to the full model raises PR-AUC by less than 0.004 in every seed, and the transaction's own features keep 0.883 when sending addresses are held out. We trace the difference to the unit of sender identity: Elliptic2 senders are entity clusters that recur across many labeled subgraphs, whereas Elliptic++ senders are individual addresses, and fewer than half of test transactions have a sending address seen in training. A shared sender-based label rule thus produces a severe shortcut in one benchmark and a negligible one in the other, so the diagnostic must be run on each benchmark."
+  },
+  {
+    "id": "arxiv:2611.29722",
+    "source": "arXiv",
+    "date": "2026-11-22",
+    "title": "ReqSeek: Transformer-Based Automatic Requirements Identification for Building Large Requirements Datasets",
+    "authors": [
+      "Mohammad Kasra Habib",
+      "Umm-e-Habiba",
+      "Daniel Graziotin",
+      "Stefan Wagner"
+    ],
+    "url": "https://arxiv.org/abs/2611.29722",
+    "abstract": "Large, diverse, and high-quality datasets are significant for advancing AI in requirements engineering, yet automated identification of requirements from Software Requirement Specifications (SRS) remains a challenge. Automatic Requirements Identification (ARI) methods demonstrate limited generalization to unseen documents across heterogeneous SRSs. This work presents ReqSeek, a transformer-based, domain-agnostic ARI model for recognizing ISO 29148-style requirements in SRS documents, supporting dataset construction. We curated the Automatic Requirements Identification Dataset (ARID), comprising 2,396 training instances from 23 heterogeneous SRSs, and fine-tuned four transformer architectures. RoBERTa was selected as the base model for ReqSeek and achieved 95% precision, recall, F1, and F0.89 on the held-out evaluation set. Exploratory human-model benchmarking showed performance comparable to humans while requiring substantially less prediction time than manual annotation. Post-hoc evaluation on out-of-domain (OoD) SRSs provided evidence of requirement identification beyond ARID. Robustness analysis demonstrated ReqSeek's insensitivity to minor linguistic variations while maintaining sensitivity to major ISO 29148-style violations. We applied ReqSeek to construct the Software Requirements Dataset (SwaRD), identifying 10,201 ISO 29148-style requirements from 231 industrial SRSs. SwaRD aligns with textual and semantic properties of human-curated datasets while exceeding them in scale and domain diversity. Our results suggest that transformer-based ARI can provide precise and generalizable requirements identification."
+  },
+  {
+    "id": "arxiv:2611.29693",
+    "source": "arXiv",
+    "date": "2026-11-22",
+    "title": "HandiVid: A High-Quality Dataset for Hand-Driven Interactive Video Generation",
+    "authors": [
+      "Chaoyang Zhang",
+      "Shaohao Rui",
+      "Xiaofeng Mao",
+      "Yuanxun Xu",
+      "Haoyuan Xia",
+      "Xiaohong Liu",
+      "Qinghe Du",
+      "Weijie Ma"
+    ],
+    "url": "https://arxiv.org/abs/2611.29693",
+    "abstract": "Hand-driven egocentric interactive video generation aims to generate dynamic scenes with realistic interaction responses conditioned on hand movements and camera motion. However, existing egocentric video datasets struggle to provide scene diversity, meaningful hand-object interactions, and reliable motion annotations simultaneously. To address these limitations, we introduce HandiVid, a high-quality dataset comprising 200K curated and annotated egocentric interaction video clips for hand-driven interactive video generation. We develop a unified data processing pipeline that integrates public datasets, online videos and synthetic videos. Through video quality assessment, hand detection filtering, and multi-stage interaction validation using vision-language models (VLMs), we select high-quality video clips with meaningful hand-object interactions. Since 3D hand reconstruction relies on initial hand detections, we integrate SAM 3 into the hand detection pipeline to reduce missed detections and improve the completeness of 3D hand annotations. Each video clip is provided with high-quality hand renderings, camera trajectories, and interaction descriptions. Comprehensive dataset analysis and downstream video generation experiments demonstrate the effectiveness of HandiVid in terms of data diversity, annotation quality, and controllable video generation."
+  },
+  {
+    "id": "arxiv:2611.29635",
+    "source": "arXiv",
+    "date": "2026-11-22",
+    "title": "Diversity in Unity, Theory in Practice: Hierarchical Multitask Benchmarks for Chinese Minority Languages",
+    "authors": [
+      "Yijie Li",
+      "Xi Cao",
+      "Yuan Sun",
+      "Quulgan Minggad",
+      "Abdulla Ablikim",
+      "JiaQingCaiWang"
+    ],
+    "url": "https://arxiv.org/abs/2611.29635",
+    "abstract": "Despite the rapid advancement of LLMs, their performance on linguistically and culturally diverse minority languages within a unified national context remains underexplored. We present CMiLBench, a collection of hierarchical multitask benchmarks designed to translate theoretical notions of \"diversity in unity\" into practical evaluation for three representative Chinese minority languages: Tibetan, Mongolian, and Uyghur. CMiLBench comprises 24,663 instances across 5 difficulty levels and 17 tasks spanning foundational ability, cultural specificity, and safety alignment. We adopt existing dataset adaptation, minority knowledge construction, and high-resource benchmark translation to construct CMiLBench. We assess 14 state-of-the-art commercial and open-source LLMs with a hybrid framework that integrates automatic metrics and LLM-as-a-Judge scoring. The comparative experimental results reveal the gap between theoretical capability and practical utility. CMiLBench serves as a foundational and scalable evaluation resource to bridge the digital language divide and promote the informatization and intelligentization of low-resource Chinese minority languages."
+  },
+  {
+    "id": "arxiv:2611.29558",
+    "source": "arXiv",
+    "date": "2026-11-22",
+    "title": "Action Windows Are Inherently Temporal: A Benchmark for Time-Sensitive Robotic Manipulation",
+    "authors": [
+      "Haoxiang Zhan",
+      "Haoqin Hong",
+      "Congcong Zhu",
+      "Jingrun Chen"
+    ],
+    "url": "https://arxiv.org/abs/2611.29558",
+    "abstract": "Vision-language model (VLM) agents have surpassed learned-policy baselines on existing robotic manipulation benchmarks. However, these agents still struggle with time-sensitive everyday tasks that existing benchmarks for VLM agents cover only partially. In these tasks, evolving physical processes create finite windows for successful intervention. These action windows are inherently temporal and impose a shared time budget on decision making and physical execution. Coordinating intervention within this budget requires agents to determine when the window opens. We introduce AWAIT, a simulation benchmark that evaluates task completion within action windows while accounting for decision and execution time. Our evaluation reveals difficulties in recognizing window onset and shows that successive decisions and movements can exhaust an action window even when each decision takes less than the window duration. Project page: https://eyja42.github.io/await-site/."
+  },
+  {
+    "id": "arxiv:2611.29471",
+    "source": "arXiv",
+    "date": "2026-11-22",
+    "title": "On extracting Science information from a large data set of RXTE X-ray binary spectra using KDE technique",
+    "authors": [
+      "Ranjeev Misra",
+      "Akash Garg",
+      "Aman Kumar",
+      "Ajit Kembhavi"
+    ],
+    "url": "https://arxiv.org/abs/2611.29471",
+    "abstract": "Machine Learning/Neural Networks have been successively and extensively used in Astronomy (and other subjects) for class identification of objects based on large data sets. However, it remains difficult to extract other science information, such as what the characteristics of the class are that allow for definite identification, and whether there are objects in the sample that are unique and hence of possible science interest. An alternate approach based on rank ordering of variables and Kernel Density Estimation (KDE) may be used for class identification and to infer such science information. We test the method on a previously analyzed data set of RXTE spectra of low-mass X-ray binaries and find that black hole and neutron star systems can be distinguished at an accuracy level of ~93%, which is comparable to deep learning techniques. The soft state spectra of black hole systems are distinct from neutron star ones. For the whole sample, observations of the pulsar 4U 1907+097 (which was inadvertently introduced into the data set) were clearly found to be unique. The previously reported hyper-soft states of GRO J1655-40 and XTE J1550-564 are found to be unique among black hole spectra. For the rest of the neutron stars, the method identifies some unreported spectra of EXO 1745-248 as unique because they seem to be relativistic reflection-dominated spectra. We discuss the potential and scalability of this method."
+  },
+  {
+    "id": "arxiv:2611.29467",
+    "source": "arXiv",
+    "date": "2026-11-22",
+    "title": "Beyond Accuracy: A Diagnostic Benchmark for Hypothesis-Driven Experiment Planning in LLM Agents",
+    "authors": [
+      "Ryo Kuroki",
+      "Amin Mansouri",
+      "Philippe Schwaller"
+    ],
+    "url": "https://arxiv.org/abs/2611.29467",
+    "abstract": "Evaluating large language model (LLM) agents on scientific tasks typically reduces to final-task accuracy, which obscures where reasoning succeeds or breaks down. We introduce a benchmark and diagnostic evaluation framework for hypothesis-driven adaptive experimental planning in closed-world system identification, instantiated in kinetic mechanism identification. The framework goes beyond final accuracy in two ways. First, we evaluate exploration behavior by quantifying the extent to which agents exhibit space-filling or corner-seeking patterns in the experimental design space. Second, we decompose the reasoning process into four interpretable steps: belief update, hypothesis discrimination, discriminative experiment design, and predictive reasoning under interventions, each scored separately on reasoning traces. Across ten LLM agents, we find that stronger agents outperform both adaptive (Bayesian optimization) and non-adaptive (Latin hypercube) baselines and exhibit exploration patterns inconsistent with naive heuristics. Decomposing reasoning reveals that the stronger agents score consistently well across all four steps, whereas weaker agents often succeed at belief update and hypothesis discrimination but are less reliable at translating them into actionable designs and sharp contrastive predictions. Independent expert annotations support predictive reasoning under our stated validation criteria, while evidence for discriminative experiment design is positive but less consistent. The results suggest a gap between recognizing plausible hypotheses and translating them into contrastive predictions, with more tentative evidence for a corresponding experiment-design bottleneck. The benchmark website is available at https://schwallergroup.github.io/beyond-accuracy/."
+  },
+  {
+    "id": "arxiv:2611.29367",
+    "source": "arXiv",
+    "date": "2026-11-22",
+    "title": "BenchMint: From Real-World Tasks to Executable Benchmarks",
+    "authors": [
+      "Zining Huang",
+      "Zuo Wang",
+      "Mengyao Zhang",
+      "Yilan Piao",
+      "Zhe Wang",
+      "Shuohan Wang",
+      "Ruiying Wang",
+      "Huicong Yi",
+      "Qianyu Yang",
+      "Zilong Pan",
+      "Wenlong Wu",
+      "Jiajun Shi",
+      "Shen Yan",
+      "Xingyu Pan",
+      "Houxuan Chen",
+      "Yuan Xu",
+      "Jinzhao Li"
+    ],
+    "url": "https://arxiv.org/abs/2611.29367",
+    "abstract": "Large language models (LLMs) need evaluations of everyday reasoning and tool use, such as planning itineraries under user constraints and grounding numerical answers in evidence. We introduce BenchMint, an automated benchmark-construction workflow, and Daily-Life, its collection of 100 selected tasks across 11 real-world domains. BenchMint jointly constructs tasks and scoring criteria from the same source documents. Language-model judges assess possible answers against these criteria using tool traces and private evidence. We report 26 model/harness configurations, including GPT, Claude and Gemini families; 17 have complete domain profiles. These are descriptive configuration results, not a controlled model ranking. In one selected travel task, we corrected the reference total from 320 to 380 minutes while keeping both answers unchanged. The incorrect answer's arithmetic verdict switched from pass to fail; the correct answer's switched from fail to pass. With one ballot per cell, this exposes a reference error without establishing repeatability or collection-wide validity. Incomplete construction comparisons establish no general advantage of joint authoring or feedback-guided revision."
+  },
+  {
+    "id": "arxiv:2611.29356",
+    "source": "arXiv",
+    "date": "2026-11-22",
+    "title": "Automatic Construction of Persian E-Commerce Dialogue Datasets for Conversational Product Search",
+    "authors": [
+      "Fariba Nafar",
+      "Hassan Naderi"
+    ],
+    "url": "https://arxiv.org/abs/2611.29356",
+    "abstract": "Conversational product search lets users find products through a multi-turn dialogue instead of a single keyword query, but Persian lacks the large conversational datasets needed to train and evaluate such systems; existing Persian e-commerce dialogue resources cover few categories and small catalogs. We present a framework that builds such a dataset automatically from a real e-commerce catalog and release the resulting dataset. The framework crawls 12,926 products in seven categories of the Digikala marketplace, groups them into 170 semantically coherent clusters, and selects the question the assistant asks at every turn with the Regularized Partition Balance (RPB) score. The RPB score accounts for feature coverage, the probability that the user can answer and the number of values, and generalizes entropy-based question selection. An LLM then verbalizes each question plan into a natural Persian dialogue. In a simulation on the full catalog, the RPB score needs 0.11 fewer turns than the strongest entropy baseline when the difficulty of answering differs between features, and is practically equivalent to it when it does not. Using only a free LLM API, we generated 1,000 requirement-driven dialogues covering all 170 clusters, with turn-level feature annotations; automatic checks and an LLM judge confirm their consistency with the catalog, while their realism is lower than that of the first, GPT-4o-generated version. Code and data are publicly available."
+  },
+  {
+    "id": "arxiv:2611.29309",
+    "source": "arXiv",
+    "date": "2026-11-22",
+    "title": "Counting Symbols on Technical Drawings: A Benchmark and Verified Rewards for MLLMs",
+    "authors": [
+      "Junxian Li",
+      "Ruixuan Yang",
+      "Zhenhua Xu"
+    ],
+    "url": "https://arxiv.org/abs/2611.29309",
+    "abstract": "Today's MLLMs can count objects in natural images. However, when asking them how many bolt holes appear in a mechanical drawing or how many nitrogen atoms are in a chemical structure, they often struggle. Counting in technical drawings remains challenging, as objects can be small, densely packed, or even implied by drawing conventions. To study this problem, we introduce CountDrawBench, a benchmark including floor plans, electrical schematics, mechanical drawings, and molecular structures, with 1,574 counting questions and instance-level annotations where available. Besides evaluation, we introduce Code-Verified RL, a reinforcement learning framework that teaches MLLMs to count with executable feedback. Our method combines three complementary rewards: a count reward that checks the final answer, an instance-matching reward that verifies object locations, and a zoom-based reward that checks counting consistency across local image regions. All three are integrated into a unified GRPO objective. Extensive experiments reveal that even leading MLLMs struggle on CountDrawBench, with the best evaluated model achieving only 59.3% accuracy. Our method improves Qwen3.5-9B from 49.3% to 54.3% accuracy, outperforming all evaluated open-source baselines. These results establish CountDrawBench as a challenging testbed for technical drawing understanding and demonstrate the value of code-verified rewards in these tasks. Code and data will be released upon acceptance."
+  },
+  {
+    "id": "arxiv:2611.29010",
+    "source": "arXiv",
+    "date": "2026-11-21",
+    "title": "Parallel Two-Photon Lithography: From Optical Nonlinearities to Energy Limits, Dose Control and Throughput Benchmarks",
+    "authors": [
+      "Michalis Stavrou",
+      "Panagiotis A. Loukakos",
+      "David Gray",
+      "Maria Farsari"
+    ],
+    "url": "https://arxiv.org/abs/2611.29010",
+    "abstract": "Two-photon lithography (TPL) prints three-dimensional polymer architectures with sub-diffraction features, but writing them voxel by voxel limits its throughput. This review examines how parallelization overcomes this limit with fixed multi-focus arrays, reconfigurable holography using spatial light modulators and digital micromirror devices, hybrid metalens arrays, shaped beams, temporally focused projection and two-step absorption. An energy-deposition framework built on measured nonlinear absorption coefficients shows how the absorption order and coefficients of a resist determine its voxel size, energy per voxel and attainable voxel rate. Applied to parallel writing, the framework quantifies the costs of non-uniform foci, coherent crosstalk between foci, side-lobe losses in shaped beams and weaker axial confinement in projection. Published systems reach peak rates above $10^{8}$ voxels s$^{-1}$ with scanned focus arrays and up to $1.7\\times10^{9}$ voxels s$^{-1}$ with grayscale projection under a fine-voxel definition, and parallel features as small as 20-55 nm. As rates rise, however, dose uniformity, proximity effects, heat, stitching and data bandwidth increasingly limit fidelity. A minimum reporting standard that includes the energy per voxel and sustained part-level rates is therefore proposed, together with priorities for the field: shared benchmark parts, predictive dose control and resists designed for parallel writing."
+  },
+  {
+    "id": "arxiv:2611.29009",
+    "source": "arXiv",
+    "date": "2026-11-21",
+    "title": "Mind the Trap As LLMs Guess the Data Model: Grain-Aware Guards Against Fan-out in Text-to-SQL and Its Benchmarks",
+    "authors": [
+      "Ahmed M. Mahran"
+    ],
+    "url": "https://arxiv.org/abs/2611.29009",
+    "abstract": "Text-to-SQL systems built on large language models (LLMs) often aggregate over one-to-many and many-to-many joins, a classic trap: when the joined rows repeat an entity, a SUM or COUNT counts it more than once, yet the query runs and returns a plausible number. We characterize these fan-out errors by one condition on the relation an aggregate reads, which depends on two facts a schema does not show: each measure's grain, and how many rows a join on each key repeats. An audit that tests the condition on the data finds distorted gold answers for 4.2% of the dev questions of BIRD, a widely used benchmark, and BIRD's later, independent revision changed 44% of the answers the audit flags as definite fan-out, against 16% of unflagged ones. We release BIRD-FanOut, 486 BIRD questions with reviewed gold, and GrainTraps, synthetic questions that set this trap and related ones. Across eight LLM agents, functional dependencies (FDs) computed from the data help no more than per-column statistics on GrainTraps, but grain-aware FDs, which also state each measure's grain and the repetition per key, cut fan-out errors on BIRD from 18.4% of runs to about 13%, also on held-out questions and without LLM judges. Accuracy rises less, because most remaining errors are not fan-out and BIRD's hints often prescribe the over-count. Text-to-SQL models should be given the grain of the data, and benchmark gold should be audited on the data. Code, data and benchmarks are available at https://github.com/ahmed-mahran/misqal"
+  },
+  {
+    "id": "arxiv:2611.28930",
+    "source": "arXiv",
+    "date": "2026-11-21",
+    "title": "CANDOR: A Multilingual Provenance-Documented Corpus for Dysarthric Speech Research",
+    "authors": [
+      "Bernard Muller",
+      "LaVonne Roberts",
+      "Leo Kaiya",
+      "Antonio Ortiz Barrañón"
+    ],
+    "url": "https://arxiv.org/abs/2611.28930",
+    "abstract": "CANDOR assembles 61 corpora across 17 languages and five aetiological classes plus a mixed/other group. Its register counts 2,057 speakers classified as dysarthric and 19,538 healthy controls. The collection contains 4,469.7 hours of audio, including 1,178.8 hours in the dysarthric subset. Counts use speech-impairment labels where available and diagnosis labels otherwise. The collection includes 732 dysarthric speakers across 14 non-English languages; 194 speakers use six languages unsupported by Qwen3-ASR, the model underlying its non-English baselines. We document composition, chain of custody, licences and transfer terms, while distinguishing corpus-level provenance from participant-level consent records, which we hold for few constituents. Among 31 dysarthric-bearing corpora, open licences cover 29.0% of corpora, 10.5% of speakers and 8.2% of hours. Excluding the English Speech Accessibility Project raises the open hour share to 31.2%, showing its dependence on this collection's composition. CANDOR cannot be redistributed as a single audio resource; we specify public, restricted and conditional artefacts. Severity labels available in 15 corpora do not provide a validated cross-corpus mapping. Within the non-English ASR baselines, only Mandarin yields a real-speech estimate meeting our evaluation criteria. It differs sharply from the synthesis result and remains imprecise; an English challenge result uses a different model and protocol. CANDOR provides a documented basis for research on under-represented languages while making constraints on evaluation, comparability and sharing explicit."
+  },
+  {
+    "id": "arxiv:2611.28867",
+    "source": "arXiv",
+    "date": "2026-11-21",
+    "title": "LIBERO-MOR: A Multimodal Robustness Benchmark Across the Vision-Language-Action Pipeline",
+    "authors": [
+      "Qihang Chen",
+      "Tengjie Li",
+      "Hongwei Lu",
+      "Jason Wu",
+      "Chyna Qu",
+      "Shikui Tu",
+      "Lei Xu"
+    ],
+    "url": "https://arxiv.org/abs/2611.28867",
+    "abstract": "Vision-language-action (VLA) models have achieved strong performance on robot manipulation benchmarks. Translating this progress into reliable deployment calls for systematic evaluation of how policies respond to variations throughout the robot interaction loop. We introduce LIBERO-MOR, a multimodal robustness benchmark across the vision-language-action pipeline. Built on standard LIBERO, it covers five deployment-facing domains: vision, language, proprioception, action execution, and environment. The benchmark comprises 22 deployment-inspired perturbations, each evaluated at three severity levels across 40 tasks under a paired clean-perturbed protocol, enabling controlled and reproducible comparisons. We evaluate seven representative VLA models spanning diverse action-generation mechanisms. Our experiments reveal substantial robustness gaps behind high clean-task success, together with shared vulnerabilities and distinct model-specific failure patterns across domains. Severity analysis further distinguishes progressive degradation, collapse at stronger interventions, and failures triggered at the mildest tested level. By connecting aggregate performance to pipeline domains, individual perturbations, and intervention strength, LIBERO-MOR provides a systematic framework for diagnosing VLA robustness and guiding the development of more reliable robot policies."
+  },
+  {
+    "id": "arxiv:2611.28844",
+    "source": "arXiv",
+    "date": "2026-11-21",
+    "title": "AgriManager: A Framework and Benchmark for LLM-RL Generalization in Agricultural Management",
+    "authors": [
+      "Chi Gui",
+      "Junwen Zheng",
+      "Ritwik Nigam",
+      "Qianlan Yang",
+      "Meagan Lang",
+      "Vardhan Dongre",
+      "Jeremiah Barr",
+      "Yu-Xiong Wang",
+      "Vikram S. Adve"
+    ],
+    "url": "https://arxiv.org/abs/2611.28844",
+    "abstract": "Agricultural management is heterogeneous along two axes. The first is distributional shift within a fixed task interface: weather, crops, and prices vary across years and locations while sensors, actions, and objective stay fixed. The second is structural shift across interfaces: different farms expose different observed variables, available actions, and management objectives. We formalize the second axis as schema shift: variation in the policy-facing schema $Σ= (Σ_O, Σ_A, Σ_R)$ between training and deployment. We test whether LLM-RL generalizes across both axes with AgriManager, to our knowledge the first framework that trains LLM policies with RL across multiple process-based crop simulators, unifying DSSAT, WOFOST, and Cycles. We design a three-tier generalization ladder: Tier 1 within-schema distributional shift, Tier 2 single-axis schema shift along $Σ_O / Σ_A / Σ_R$, Tier 3 compositional schema shift across simulators, all scored on a frozen held-out test suite with three training seeds per method. Within fixed schemas, Qwen3-4B trained by RL with explicit reasoning exceeds neural-network PPO trained with the same interaction budget; without reasoning, training stalls near no-action where the reward penalizes input use. Under single-axis schema shift, $Σ_O$ transfer needs decision-critical state, $Σ_A$ results are consistent with joint action-menu coverage, and with reasoning a policy trained on yield alone transfers to unseen objectives. Under compositional schema shift, single-source training mostly hurts zero-shot transfer across simulators, and a unified policy trained only on other combinations of the same components recovers about 86% of the gain of a specialist trained on the target combination on DSSAT and stays below the specialists on the WOFOST and Cycles profit targets. Project page: https://agrimanager-framework.github.io"
+  },
+  {
+    "id": "arxiv:2611.28800",
+    "source": "arXiv",
+    "date": "2026-11-21",
+    "title": "HighwayVerse: A Chain-of-Inspection Benchmark for Highway Infrastructure Anomaly Understanding",
+    "authors": [
+      "Junyi Yang",
+      "Zheng Si",
+      "Yilin Zhai",
+      "Pengpeng Ouyang",
+      "Hongxi Wang",
+      "Kangze Li",
+      "Mo Chen",
+      "Sicong Zhang",
+      "Hua Wang",
+      "Dongyuan Wu",
+      "Dong Chen",
+      "Mingliang Xu"
+    ],
+    "url": "https://arxiv.org/abs/2611.28800",
+    "abstract": "Practical highway infrastructure inspection entails progressive diagnostic reasoning from visual perception to maintenance decisions, yet existing benchmarks remain confined to isolated tasks, leaving Multimodal Large Language Models (MLLMs) insufficiently evaluated across sequential inspection stages. Meanwhile, current datasets focus primarily on highway pavement defects, falling short of real-world inspection across diverse infrastructure components such as highway pavements, guardrails, glare screens, and drainage systems. To address these gaps, we formulate the Highway Infrastructure Inspection Progression Chain (HIIP-Chain), spanning Anomaly Detection, Anomaly Recognition, Condition Analysis, and Maintenance Resolution, and introduce HighwayVerse. HighwayVerse comprises 14,143 real-world Ground and Unmanned Aerial Vehicle (UAV) inspection records spanning 100 and 17 anomaly categories, respectively, with 84,858 expert-reviewed question-answer pairs. We evaluate 12 open-source and closed-source MLLMs using the chained metric Final, which credits a correct maintenance decision only when all preceding diagnostic stages are completed correctly. Results show that although models achieve relatively high accuracy when initially judging whether an anomaly is present, their markedly lower Final scores expose struggles across downstream recognition, analysis, and decision-making. This discrepancy indicates that current MLLMs do not fully comprehend specific highway anomaly patterns beyond superficial initial judgments. Furthermore, we propose LaneRAG, a training-free retrieval-augmented framework that provides hierarchical reference guidance achieving consistent performance improvements across diverse MLLMs. Our dataset, evaluation benchmark, and source code will be publicly released."
+  },
+  {
+    "id": "arxiv:2611.28713",
+    "source": "arXiv",
+    "date": "2026-11-21",
+    "title": "Legal Is Not Good: A Pre-Registered Benchmark of Low-Cost Language and Decision Models on a New Strategy Game",
+    "authors": [
+      "Federico Lucca"
+    ],
+    "url": "https://arxiv.org/abs/2611.28713",
+    "abstract": "Measure Before You Train argued that an agent's decisions should be measured against ground truth, under a protocol fixed in advance, before anyone trains or replaces the model behind them. We carry the method to a second, very different domain, a turn-based strategy game, and ask a deliberately modest question: how well do low-cost agents play under a pre-registered protocol? hexfolk is a minimal two-player 4X game written for this purpose, so no model has seen its rules or positions. A deterministic engine, one agent interface, a referee that never corrects an illegal or late move, and per-decision logs make every game replayable; questions and expected answers were committed before the games, on held-out seeds with mirrored seats and 95% Wilson intervals. Two small open language models (8B and 3B) lose every game to a few-line rule player. Answering in free text they are invalid on 98% of their decisions; constrained to legal moves they never play an invalid one, yet they lose to the uniformly random player (the 8B model wins 10.0 [4.3, 21.4]% of games), refuting our expectation that they would beat it; the result survives a control that shuffles the order of the options. Two native decision models never play an invalid move and both beat random; one loses all 50 games to the rule player, the other is not distinguishable from it in 50 games and beats a one-step search. The paid agents make tens to over a hundred model calls per game; against the same opponents a free 60 ms-per-move search, which makes none, outplays every paid model by the full range of the scale. Two 7-8B models served locally behave the same way. No frontier model is included."
+  },
+  {
+    "id": "arxiv:2611.28617",
+    "source": "arXiv",
+    "date": "2026-11-21",
+    "title": "VeriLadder: A Multi-Agent Specification Refinement System for Tool-Verified Verilog Datasets",
+    "authors": [
+      "Saeid Rajabi",
+      "Chengmo Yang",
+      "Satwik Patnaik"
+    ],
+    "url": "https://arxiv.org/abs/2611.28617",
+    "abstract": "Training data is a bottleneck in AI, especially for large language models (LLMs) that write Verilog, because register-transfer-level (RTL) code is rarely published and existing datasets mostly check code for syntax, not instruction correctness. This paper presents VeriLadder, a five-level Verilog dataset, and the multi-agent framework that builds it, in which LLM agents write and revise specifications, and EDA tools (a synthesizer and a formal equivalence checker) decide what is accepted. Its levels follow an engineer's checks. Level 1 labels designs from two large Verilog corpora, namely RTLCoder and PyraNet, with synthesis results, failure causes, critical warnings and post-synthesis metrics. 28% of RTLCoder designs fail synthesis and are kept as negatives. Level 2 grades each instruction on four specification qualities, and low grades predict failed rebuilds. Level 3 rewrites each instruction into a refined specification and accepts it only if an LLM from another model family, reading only that specification, writes a circuit formally equivalent to the original. This raises the share of rebuildable designs from 26.1% to 78.2%, keeping every failed specification with its counterexample. Levels 4 and 5 add verified paraphrases and one-fact variants, hard negatives that differ only in one behavior from the verified design. VeriLadder labels the synthesizability of 716,627 designs and, from RTLCoder, provides 11,247 refined specifications, 32,393 paraphrases and 8,397 one-fact variants. Fine-tuning Qwen2.5-Coder-7B-Instruct on VeriLadder raises functional pass@1 from 31.7% to 50.0% on VerilogEval v2 and from 35.0% to 45.2% on RTLLM v2. The dataset and fine-tuned models are publicly available."
+  },
+  {
+    "id": "arxiv:2611.28610",
+    "source": "arXiv",
+    "date": "2026-11-21",
+    "title": "Agent Money Benchmark: Can AI Agents Be Trusted to Spend Money?",
+    "authors": [
+      "Zhe Chen",
+      "Emma Hsieh",
+      "Vicky Fu"
+    ],
+    "url": "https://arxiv.org/abs/2611.28610",
+    "abstract": "Giving an AI agent a wallet lets it buy data and services on a client's behalf. Trust then depends on how it spends money and what that spending achieves. We introduce Agent Money Benchmark (AMB) to test whether agents spend a client's money well, starting with purchases of information for financial decisions. We link seller quotes and payments to final answers, evaluating 12 models on 80 payment tasks with simulated sellers and 76 research questions using live data. Purchases settled in USDC on Solana mainnet via x402, a protocol for paying per web request. Three of the 12 models passed 79 of 80 payment tasks without payment or budget errors. Nine fell for a seller's trap at least once; repeat charges and above-list quotes accounted for 79% of scam events. We estimate waste from data and inference costs, counting failed payment tasks in full and research answers in proportion to missed points. With spending split equally between tracks, estimated waste ranged from \\$21.0 per \\$100 for Claude Fable 5.2 to \\$70.8 for GPT-6 Luna."
+  },
+  {
+    "id": "arxiv:2611.28542",
+    "source": "arXiv",
+    "date": "2026-11-21",
+    "title": "BIRD-Persona: A Persona-Aware Benchmark for SQL and pandas Analytics Code Generation",
+    "authors": [
+      "Davin Hill",
+      "Pawan Chorasiya",
+      "Bhawani S. Leelar",
+      "Oren Avram",
+      "Robert E. Tillman",
+      "Tamer Soliman"
+    ],
+    "url": "https://arxiv.org/abs/2611.28542",
+    "abstract": "Production text-to-code systems use large language models to turn natural-language analytics requests into executable SQL and pandas code. Existing benchmarks cover both tasks but do not isolate when performance diverges between them. We introduce BIRD-Persona, a persona-stratified extension of BIRD-Python that adds novice and expert rewrites to tasks with matched SQL and pandas ground truth, along with schema variants and task-structure annotations. Across 1,534 tasks, nine models, and 245,592 evaluations, SQL outperforms pandas for eight of nine systems. The gap varies by condition: expert, schema-explicit prompts improve both paradigms but help SQL more; schema representations have mixed, model-dependent effects; and selected-column burden widens the gap while subqueries do not. By making user phrasing a controlled benchmark dimension, BIRD-Persona supports persona-aware and paradigm-aware evaluation of natural-language analytics systems. The dataset is available at https://huggingface.co/datasets/optum-cognition-lab/BIRD-Persona."
+  },
+  {
+    "id": "arxiv:2611.28477",
+    "source": "arXiv",
+    "date": "2026-11-21",
+    "title": "ESM-Bench: A Benchmark for Evaluating Whether AI Agents Understand Earth System Model Physics and Code",
+    "authors": [
+      "Koutian Wu",
+      "Yuxuan Cao",
+      "Gengchen Mai",
+      "Zeping Liu"
+    ],
+    "url": "https://arxiv.org/abs/2611.28477",
+    "abstract": "AI coding agents that modify Earth System Model (ESM) code must preserve both software interfaces and the physical assumptions encoded in them. We introduce ESM-Bench, a benchmark of 60 developer-commit tasks from 6 repositories: Noah-MP, CLM5, SUMMA, ParFlow, MOM6, and VIC. The v5 corpus contains 17 physics-based bug fixes, 16 process-representation modifications, 13 parameterization-scheme selections, and 14 parameter-optimization tasks. Each task includes a scientific objective, parent-commit source files, a reference diff, and three stored prompt variants. An artifact audit confirms that all 60 reference diffs apply to their supplied starting files. We define an eight-item patch-review rubric and audit five archived patch fixtures against the implemented local checkers. None of the five fixture diffs applies to its supplied starting files, yet three text-pattern checkers return a pass. A ParFlow expression replay disagrees with the reference slopes, and a MOM6 pattern check detects an omitted update. Inspection also identifies a retained VIC reference assignment that overwrites the intended vegetation-specific albedo. These findings expose limits of reference patches and local proxies as correctness evidence. The release provides a reproducible corpus and diagnostic tools; complete expert validation, comparative agent performance, and full-model execution remain unmeasured on v5."
+  },
+  {
     "id": "preprints:10.20944/preprints202611.2205",
     "source": "Preprints.org",
     "date": "2026-11-20",
@@ -41,6 +879,46 @@
     "url": "https://doi.org/10.20944/preprints202611.2135.v1",
     "abstract": "An aircraft's previous leg tells us a lot about its next one. We examine whether knowing how late a plane arrived on its previous leg helps predict if its next flight lands 15 or more minutes behind schedule, using 2024 On-Time Performance records from the U.S. Bureau of Transportation Statistics (BTS). With DuckDB and pandas we chain each aircraft's consecutive legs by tail number and build two rotation features: the previous leg's arrival delay (Previous_ArrDelay) and the ground turnaround time (Turnaround_Time). Of 3,000,000 loaded records covering January to mid-June 2024, 2,473,437 form valid rotations, and 16.87% of them are delayed. The split is chronological: the earliest 80% (1,978,749 rotations) is used for training and the latest 20% (494,688 rotations, 21.27% delayed) for testing. We compare Logistic Regression, a Decision Tree, a Random Forest, Multinomial Naive Bayes, PCA-based Logistic Regression and Linear SVM, and an embedding-based neural network. Among the models that actually detect delays, the class-balanced Random Forest scores highest on F1 (50.93%) and accuracy (76.74%), the neural network follows closely (F1 50.68%), and a depth-12 Decision Tree has the best practical recall among the stronger models (62.23%). Accuracy alone is misleading here, since on-time flights make up 78.7% of the test set: Naive Bayes reaches 78.72% accuracy while catching just 0.34% of delayed flights. We also report an unsupervised clustering of the rotation features and discuss the limits of a feature set that leaves out weather and air-traffic information.",
     "version": 1
+  },
+  {
+    "id": "arxiv:2611.28263",
+    "source": "arXiv",
+    "date": "2026-11-20",
+    "title": "A Nepali-Accented English Evaluation Dataset for Automatic Speech Recognition",
+    "authors": [
+      "Santosh Dahal",
+      "Kiran Chandra Dahal"
+    ],
+    "url": "https://arxiv.org/abs/2611.28263",
+    "abstract": "Automatic speech recognition (ASR) systems perform strongly on native-English benchmarks, yet their accuracy degrades sharply when the input speech comes from under represented non-native accents. Nepali-accented English is particularly under-served: existing resources either focus on native Nepali speech, cover broader multi-accent settings without dedicated Nepali evaluation, or provide only limited Nepali-accent coverage. This paper presents a Nepali-accented English evaluation dataset designed to support robust ASR benchmarking under accent mismatch. The corpus was collected through a web-based platform that did not collect directly identifying metadata and contains recordings from 57 speakers. Each session follows a fixed 22-prompt protocol consisting of 11 phonetic prompts, 10 domain prompts, and 1 spontaneous prompt, providing complementary coverage of pronunciation, topical vocabulary, and natural speaking style. In addition to transcribed speech, the dataset includes participant metadata for coarse exploratory subgroup analysis and speaker-level manual recording-quality labels. Manual quality assessment shows that 50.9% of sessions are clean and 42.1% contain only mild noise. As a descriptive reference, open-source ASR baselines are substantially worse on this corpus than the corresponding LibriSpeech test-clean values reported in official model cards, reaching 38.15-55.00% WER on the collected set versus reported 2-4% WER on LibriSpeech test-clean. These baseline results position the corpus as a practical held-out resource for evaluating accent robustness and out-of-distribution generalization on Nepali-accented English."
+  },
+  {
+    "id": "arxiv:2611.28185",
+    "source": "arXiv",
+    "date": "2026-11-20",
+    "title": "SAMA: Training-Free Consensus Ridge Tracking for Camera-Based Heart Rate on Five Public Datasets",
+    "authors": [
+      "Sudhakar Mishra"
+    ],
+    "url": "https://arxiv.org/abs/2611.28185",
+    "abstract": "Remote photoplethysmography (rPPG) is usually benchmarked by one heart rate per video, a figure that hides the short windows in which a tele-consultation would actually read the pulse. We present SAMA, a training-free estimator that (i) forms a quality-weighted consensus of POS and CHROM chrominance spectra, (ii) discounts frequencies occupied by pulse-free references derived from the same frames (frame motion, skin-mask geometry and background brightness), (iii) follows the heart rate through time with a Viterbi ridge under a random-walk prior, and (iv) returns a track-filtered, amplitude-normalised waveform with a per-window confidence. No parameter is learned and no dataset-specific tuning is used. On 218 recordings from 111 participants in five public datasets (UBFC-rPPG, PURE, SUMS, M3PD and a two-participant subset of MMPD), all processed with the same fixed face box and scored with a re-implementation of the rPPG-Toolbox protocol, SAMA has the lowest mean absolute error (MAE) averaged over datasets at every protocol level: 4.40 against 5.13,bpm for POS per video, 4.80 against 5.43 on 30,s windows and 5.05 against 6.59 on 10,s windows. Pooled over participants, the bootstrap interval of its paired difference from POS excludes zero on 30,s and 10,s windows (Wilcoxon p=0.11 and 0.004) but not per video, and it does not beat POS on SUMS per video or on the MMPD subset. Withholding the 20\\% least confident windows lowers the pooled 10,s error from 4.06 to 2.33,bpm. We also show that the per-video protocol has a floor of 1.2--1.6,bpm on datasets where heart rate drifts, and that skin tone cannot be recovered from uncalibrated video, which motivates the instrumented, skin-tone-stratified collection we propose for the Indian population. The method does not surpass the best published neural networks on UBFC-rPPG; we report where it stands against them without re-running them."
+  },
+  {
+    "id": "arxiv:2611.28164",
+    "source": "arXiv",
+    "date": "2026-11-20",
+    "title": "The UNIFESP Chest CT Fatty Liver Dataset",
+    "authors": [
+      "Augusto Sarquis Serpa",
+      "Mariana Ramos Scolari",
+      "Eduardo Moreno Judice de Mattos Farina",
+      "Eduardo Caminha Nunes",
+      "Felipe Matsuoka",
+      "Felipe Campos Kitamura",
+      "Nitamar Abdala"
+    ],
+    "url": "https://arxiv.org/abs/2611.28164",
+    "abstract": "Hepatic steatosis is common, usually asymptomatic, and frequently visible on CT examinations performed for other reasons, including chest CT, in which the upper abdomen is partly included. We describe the UNIFESP Chest CT Fatty Liver Dataset, a public collection of 285 unenhanced CT studies (344 series, 99,883 images) from 264 patients examined at a single academic center in Brazil: 152 patients with chest CT and 112 patients with abdominal CT. Each patient has a binary label for the presence of hepatic steatosis, assigned by a radiology resident who compared the attenuation of three regions of interest in the liver with one in the spleen. Images are provided in de-identified DICOM format. The dataset was used in the UNIFESP Chest CT Fatty Liver Competition, hosted on Kaggle in 2022, with 226 patients for training and 38 patients with chest CT for testing. In a technical validation, the criterion of liver attenuation lower than spleen attenuation, measured automatically, agreed with the labels in 206 of the 226 training patients (91%). The dataset is available at https://www.kaggle.com/competitions/unifesp-fatty-liver."
   },
   {
     "id": "arxiv:2611.27978",
@@ -190,7 +1068,7 @@
       "Nicola Landro"
     ],
     "url": "https://arxiv.org/abs/2611.27585",
-    "abstract": "Patient-level splitting is the standard safeguard against subject leakage in medical imaging evaluation, but it cannot remove a confounder that every fold inherits: an acquisition variable aligned with the diagnosis across the whole cohort. We present a five-question audit of a candidate confounder: how well it predicts the diagnosis, whether it can be decoded from the images, whether diagnostic scores depend on it, whether the image adds predictive value beyond it and how much discrimination survives once it is controlled. We apply it to DMR-IR, the public dataset on which most machine-learning results in breast thermography rest. On 236 patients under a strict patient-disjoint protocol, the acquisition date alone predicts malignancy at AUROC 0.980, above the best of nine imaging arms (0.949), because benign and malignant patients were recruited in different years. The acquisition year is decodable from the pixels among patients who share a diagnosis, largely through a global thermal offset outside the breast, yet only one arm, the one pooling every frame of a visit, demonstrably carries it into its diagnostic score. No arm improves on the date on paired folds, and once the date is controlled, discrimination either collapses or survives only on comparisons the benchmark cannot attribute. The dataset contains only eight cross-label same-date pairs, from ten patients, which limits reliable evaluation within recorded acquisition-date groups. A second, independently acquired cohort, whose dominant channel is patient age, returns the same audit outcome from a different confounder. Mitigation may suppress such a confounder, but without cross-label acquisition support no evaluation on the benchmark can certify that what remains is pathology."
+    "abstract": "Patient-level splitting is the standard safeguard against subject leakage in medical imaging evaluation, but it cannot remove a confounder that every fold inherits: an acquisition variable aligned with the diagnosis across the whole cohort. We present a five-question audit of a candidate confounder: how well it predicts the diagnosis, whether it can be decoded from the images, whether diagnostic scores depend on it, whether the image adds predictive value beyond it and how much discrimination survives once it is controlled. We apply it to DMR-IR, the public dataset on which most machine-learning results in breast thermography rest. On 236 patients under a strict patient-disjoint protocol, the acquisition date alone predicts malignancy at AUROC 0.980, above every imaging arm we evaluated (best 0.949), because benign and malignant patients were recruited in different years. The acquisition year is decodable from the pixels among patients who share a diagnosis, largely through a global thermal offset outside the breast, yet only one arm, the one pooling every frame of a visit, demonstrably carries it into its diagnostic score. No arm improves on the date on paired folds, and once the date is controlled, discrimination either collapses or survives only on comparisons the benchmark cannot attribute. The dataset contains only eight cross-label same-date pairs, from ten patients, which limits reliable evaluation within recorded acquisition-date groups. A second, independently acquired cohort, whose dominant channel is patient age, reproduces every finding except legibility, from a confounder that is clinically legitimate. Mitigation may suppress such a confounder, but without cross-label acquisition support no evaluation on the benchmark can certify that what remains is pathology."
   },
   {
     "id": "arxiv:2611.27536",
@@ -662,6 +1540,17 @@
     "url": "https://doi.org/10.20944/preprints202611.1948.v1",
     "abstract": "This data descriptor presents a manufacturing sound dataset collected during actual production on industrial shop floors. It comprises 57 continuous recordings totaling 28.91 hours, with 6,598 annotated target-operation events from 17 machines at nine companies. Seven manufacturing processes are represented: hydroforming, injection molding, pipe bending, plasma cutting, seam welding, stamping, and tube cutting. Structure-transmitted machine sound was captured using Internal Sound Sensors (ISSs), each comprising a USB microphone coupled to a stethoscope whose bell was attached to the machine. The dataset provides continuous WAV recordings, manually reviewed operation annotations, and metadata describing the machines, sensor installations, and recording sessions. Retaining continuous recordings preserves both target-operation sounds and the surrounding production context, allowing users to analyze complete recordings or extract individual events. The recordings capture variation in acoustic patterns and operation durations across machines, production settings, and processes. This combination of industrial diversity and temporal annotations supports research on operation detection, temporal segmentation, and recurring acoustic patterns. It also provides a resource for self-supervised representation learning, transfer learning, and evaluation under limited labeled-data conditions. The dataset is publicly available through Harvard Dataverse.",
     "version": 1
+  },
+  {
+    "id": "arxiv:2611.28140",
+    "source": "arXiv",
+    "date": "2026-11-19",
+    "title": "Regge-eikonal description of high-energy proton-proton elastic scattering: a single-channel Gaussian benchmark confronted with TOTEM data at $\\sqrt{s}=13$ TeV",
+    "authors": [
+      "Ji Li"
+    ],
+    "url": "https://arxiv.org/abs/2611.28140",
+    "abstract": "A single-Pomeron Regge Born amplitude with a Gaussian dependence on the momentum transfer is eikonalized in impact-parameter space, and the resulting single-channel, purely absorptive amplitude is evaluated in closed form. The total, elastic and inelastic cross sections and the forward slope are expressed through the entire exponential integral Ein(a) and a related series $I_1(a)$, and the closed forms are verified against direct numerical integration and against the weak-coupling Born limit. Two parameter choices are confronted with the TOTEM measurements at $\\sqrt{s}=13$ TeV. With the Donnachie-Landshoff trajectory and a normalization fixed at 7 TeV, the model gives $σ_{tot}=139.2$ mb against the measured $110.6\\pm3.4$ mb and places the first diffractive zero at $|t|=0.244$ GeV$^2$ against the measured dip at 0.47 GeV$^2$. Calibration of the two parameters to the measured $σ_{tot}$ and $σ_{el}/σ_{tot}$ describes the differential cross section to within five per cent for $|t|\\lesssim0.1$ GeV$^2$, but places the zero at 0.315 GeV$^2$ and overestimates the cross section at the measured dip by more than an order of magnitude. A single Gaussian opacity therefore cannot simultaneously accommodate the integrated cross sections and the position of the diffractive dip. Restoring the signature phase gives $ρ=0.098$, in agreement with the TOTEM and ATLAS measurements, and fills the zero without moving it; a two-component opacity reduces the excess at the dip from a factor of 15 to a factor of 2 without reproducing the dip-bump structure and the large-$|t|$ tail simultaneously; a two-channel Good-Walker eikonal on a Gaussian profile moves the minimum further away from the measured dip."
   },
   {
     "id": "arxiv:2611.26900",
@@ -1218,6 +2107,18 @@
     "version": 1
   },
   {
+    "id": "arxiv:2611.28129",
+    "source": "arXiv",
+    "date": "2026-11-18",
+    "title": "Urban State Representation for Autonomous Mobility: A Survey of Multimodal Perception, Architectures, Datasets, and Benchmarks",
+    "authors": [
+      "Binay Kumar Singh",
+      "Niels Da Vitoria Lobo"
+    ],
+    "url": "https://arxiv.org/abs/2611.28129",
+    "abstract": "Cities are sensed by many platforms at once: on-board cameras, LiDAR and radar on autonomous vehicles, roadside units at intersections, drones and satellites overhead, and the GNSS traces of millions of trips. Yet most learned representations are built for one platform, one city, and one task. We survey this fragmented landscape through a single lens, the Urban State Representation (USR): a georeferenced, layered, time-varying, uncertainty-aware state that any sensing platform can write to and any downstream task can read from. We (i) formalize USR and five desiderata for it, and relate it to bird's-eye-view (BEV) features, occupancy, vectorized maps, neural fields and 3D Gaussians, scene graphs, road-network graphs, language tokens, and world-model latents; (ii) organize sensing platforms, cross-view (ground-aerial) matching, fusion operators, 3D geometric foundation models, end-to-end and vision-language-action models, and generative world models and data engines in one taxonomy that spans sensors to decisions; (iii) compile 26 urban datasets and simulators across ego, cooperative (V2X), aerial, trajectory, and language settings, with a metric glossary, a cross-benchmark results snapshot, a trend analysis, and a platform-coverage gap analysis; and (iv) review applications and propose, as an outlook, USR-5, a five-test protocol with explicit references and one aggregate score for measuring whether a state is shared, together with a research agenda of six open problems covering cross-city and cross-sensor transfer, uncertainty, efficiency, sim-to-real evaluation, and governance. This survey is an entry point for computer vision, autonomous driving, transportation, and urban computing researchers; the paper list, datasets, and USR-5 code are at https://github.com/binayksingh/Awesome-Urban-State-Representation."
+  },
+  {
     "id": "arxiv:2611.25252",
     "source": "arXiv",
     "date": "2026-11-18",
@@ -1448,7 +2349,7 @@
       "Shaon Ghosh"
     ],
     "url": "https://arxiv.org/abs/2611.24664",
-    "abstract": "Fully constraining the neutron star equation of state (EoS) requires combining observations from various channels that probe different density regimes. We perform a joint multimessenger inference of the equation of state using gravitational-wave observations from binary neutron star mergers, NICER mass-radius measurements of X-ray pulsars, and radio timing measurements of massive pulsars. We constrain the parametrized equation of state and perform Bayesian model selection among a set of candidate equations of state. The joint analysis produces a radius of $R_{1.4} = 11.93^{+1.02}_{-0.83} \\, \\rm km$ for a canonical $1.4 \\, M_\\odot$ neutron star, and a maximum non-rotating neutron star mass of $M_{\\rm max} = 2.31^{+0.23}_{-0.23} \\, M_\\odot$ with $90\\%$ credible intervals. Gravitational-wave and NICER observations constrain the equation of state at low to intermediate densities, while massive pulsar observations constrain it at high densities by requiring the equation of state to support the neutron star masses. We find no simple correlation between the stiffness of an EoS and Bayesian evidence because the observations probe the pressure at different density regimes. By combining constraints on the equation of state with Bayesian model selection using multimessenger data, our analysis connects macroscopic neutron star measurements to microscopic properties of candidate nuclear matter models."
+    "abstract": "Fully constraining the neutron star equation of state requires combining observations from various channels that probe different density regimes. We perform a joint multiprobe inference of the equation of state using gravitational-wave observations from binary neutron star mergers, NICER mass-radius measurements of X-ray pulsars, and radio timing mass measurements of massive pulsars. We constrain the parametrized equation of state and perform Bayesian model selection among a set of candidate equations of state. The joint analysis yields a radius of $R_{1.4} = 11.93^{+1.02}_{-0.83} \\, \\rm km$ for a canonical $1.4 \\, M_\\odot$ neutron star, and a maximum non-rotating neutron star mass of $M_{\\rm max} = 2.31^{+0.23}_{-0.23} \\, M_\\odot$ with $90\\%$ credible intervals. Gravitational-wave and NICER observations constrain the equation of state at low to intermediate densities, while massive pulsar observations constrain it at high densities by requiring the equation of state to support the observed neutron star masses. We find no simple correlation between the stiffness of an equation of state and Bayesian evidence across different observational probes."
   },
   {
     "id": "arxiv:2611.24624",
@@ -1677,6 +2578,17 @@
     "url": "https://doi.org/10.20944/preprints202611.1691.v1",
     "abstract": "Automated inference of Big Five personality traits from handwriting is often reported at 78–99% accuracy, far above the validity that psychological studies of graphology have found. We test whether writer identity, rather than personality, can account for this gap. We collected a fixed-text Arabic handwriting corpus of 133 writers who copied the same passage and completed the BFI-10, and evaluated trait prediction with writer-separated repeated nested cross-validation, in-fold feature selection, permutation tests and Benjamini–Hochberg correction. No trait was predictable after correction: balanced accuracies ranged from 0.441 to 0.609 with all 43 features and from 0.458 to 0.624 with the 32 segmentation-independent features (all q≥0.15). The same segmentation-independent features, applied post hoc to a within-page writer verification task, reached a balanced accuracy of 0.852 (AUC 0.924, permutation p≤0.001), and 0.809 when restricted to shape descriptors that are robust to pen width and image scale. Handwriting descriptors that carry a strong writer signal carried no measurable Big Five signal in the same sample. The personality criterion was weak (two-item scales with Spearman–Brown reliabilities of −0.25 to 0.19), so the nulls bound detectable effects rather than prove their absence. We release the corpus, features and code.",
     "version": 1
+  },
+  {
+    "id": "arxiv:2611.28099",
+    "source": "arXiv",
+    "date": "2026-11-17",
+    "title": "VidRouteBench: A Benchmark for Budgeted Video-Generation Routing",
+    "authors": [
+      "Dayu Wang"
+    ],
+    "url": "https://arxiv.org/abs/2611.28099",
+    "abstract": "Text-to-video generators differ by two orders of magnitude in price, and a cheap configuration of a strong model is often good enough for a prompt. Routing prompts across such arms (model x sampling configuration) should buy quality at fixed budget, but no dataset supports studying it: public video-preference sets contain only closed models, one configuration each. We release VidRouteBench: 16 arms from 7 open families spanning 121x in measured cost ($0.0025-$0.298 per clip), 27,110 clips (1,421 A800-hours) over 1,625 grouped prompts, a quality score frozen after calibration against human preferences (68.7% CV accuracy vs 66.2% for the best single scorer), per-clip scores on 9 identifiable quality dimensions, repeated seeds, an encrypted test split, and a sealed newest family for cold start. The evaluator compares a router against the best prompt-agnostic mixture of arms, not the best single arm. Per-prompt specialisation here is real and predictable (oracle gap 0.642, 47% reproducible across seeds, prompt-arm interaction F=4.47 at p=1.6e-63), unlike LLM-routing arms, where the same pipeline finds none. We then propose OPMU (one probe, many utilities): label a new arm on K probe prompts, predict its 9 dimensions once, and serve any scenario utility by scalarising afterwards. Over 215 utility directions OPMU Pareto-dominates the prompt-agnostic baseline for 94% of directions versus 90% for per-scenario routers, with no per-scenario retraining. Three baselines fail instructively: bag-of-words features lose almost all routing gain in the low-data regime (0.009 vs 0.168); crediting a new arm with its probe average is harmful (-3.32 recovery) although it is the strong baseline on RewardBench-style arms (0.786); Chebyshev scalarisation does not help, our cost-utility front being convex."
   },
   {
     "id": "arxiv:2611.23555",
@@ -2030,7 +2942,7 @@
     "id": "arxiv:2611.21823",
     "source": "arXiv",
     "date": "2026-11-16",
-    "title": "TUSI: A Citation-Grounded Graph-Based Benchmark",
+    "title": "TUSI: A Citation-Grounded Graph-Based Benchmark for Retrieval-Augmented Generation in Persian Legal Question Answering",
     "authors": [
       "Marzieh Karimi",
       "Mehran Safayani",
@@ -3280,11 +4192,11 @@
       "Peter Sharpe",
       "Carmelo Gonzales",
       "Corey Adams",
-      "Mehdi Ataei",
+      "Mohammadmehdi Ataei",
       "Sanjay Choudhry"
     ],
     "url": "https://arxiv.org/abs/2611.17152",
-    "abstract": "Neural surrogates for computational fluid dynamics (CFD) are trained and ranked on datasets that each vary one design family in one flow domain. Such datasets cannot test the least that an aerodynamic foundation model must do: predict CFD-quality incompressible flow in seconds for new shapes in new enclosures. On DrivAerML, larger models and longer training barely lower Transolver's error; doubling the training cases cuts it by about 12% up to 400 cases, exhausting the dataset. We introduce AeroZoo, a benchmark and training corpus of 3,815 time-mean solutions to the unsteady Reynolds-averaged Navier--Stokes (RANS) equations with a transition model, across seven geometry families, eight enclosure configurations and Reynolds numbers from $10^3$ to $10^8$. Each sample poses a well-posed PDE problem in the form a solver receives it: the boundary meshes grouped by condition type, the prescribed values and the fluid properties. The 2,816 samples with a stable time mean form the canonical benchmark: two tasks, engineering metrics and 22 frozen splits, disjoint in geometry, that hold out geometry families, enclosures, boundary-condition layouts and Reynolds ranges. On the random split, boundary-condition tokens cut GeoTransolver's median velocity error from 76.9% to 8.4% of the inlet speed in single-seed runs (uniform inlet flow: 11.0%). ISLA, a transformer for boundary-driven PDEs, reaches 5.3% over four seeds, about 4 times the change from a finer mesh. On the same test samples, a held-out geometry family barely changes ISLA's error relative to uniform flow, and a held-out enclosure or boundary-condition layout raises it 2.4 to 9.2 times. The data and the scoring code will be released."
+    "abstract": "Neural surrogates for computational fluid dynamics (CFD) are trained and ranked on single-family, fixed-domain datasets that cannot test the minimum bar for an aerodynamic foundation model: predicting CFD-quality incompressible flow in seconds for new shapes in new enclosures. On DrivAerML, larger models and longer training barely lower Transolver's error; doubling training cases cuts it by about 12% up to 400 cases, exhausting the dataset. We introduce AeroZoo, a benchmark and training corpus of 3,815 time-mean unsteady Reynolds-averaged Navier-Stokes (URANS) solutions with a transition model across seven geometry families, eight enclosures, and Reynolds numbers from $10^3$ to $10^8$. Each sample poses a well-posed PDE problem as a solver receives it: boundary meshes grouped by condition type, prescribed values, and fluid properties. The 2,816 time-mean-stable samples form the canonical benchmark: two tasks, mean engineering metrics with an overall flow score $S_{\\mathrm{flow}}$ (1.000 for uniform inlet flow), and 22 frozen geometry-disjoint splits holding out shapes, enclosures, boundary-condition layouts, and Reynolds ranges. On the random split, boundary-condition tokens cut GeoTransolver's mean velocity error from 89.8% to 15.2% of inlet speed (uniform flow: 44.0%; $S_{\\mathrm{flow}} = 0.290$). ISLA, a boundary-driven transformer, reaches 8.2% ($S_{\\mathrm{flow}} = 0.153$; 0.123 with boundary targets), about 6 times mesh-refinement sensitivity. On shared test samples, holding out a geometry family barely changes ISLA's mean velocity error, whereas holding out enclosures or boundary-condition layouts raises it 3.8 to 8.4 times. The dataset is public; the scoring code will be released."
   },
   {
     "id": "arxiv:2611.17093",
@@ -4017,7 +4929,6 @@
     "title": "AcrossPlace: Do Vision--Language Models Recognize Places Beyond Their Source Views? A Comprehensive Benchmark",
     "authors": [
       "Zhenyu Li",
-      "Tianyi Shang",
       "Shuhan Dong",
       "Ruotong Xu",
       "Qingyu Zhu"
