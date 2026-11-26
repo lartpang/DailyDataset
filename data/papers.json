@@ -1,5 +1,469 @@
 [
   {
+    "id": "preprints:10.20944/preprints202611.2550",
+    "source": "Preprints.org",
+    "date": "2026-11-25",
+    "title": "Machine Learning and Deep Learning for Depression Detection from Behavioral Signals: A Survey of Modalities, Datasets, and Evaluation Practices",
+    "authors": [
+      "Victor Triohin",
+      "Monica Leba",
+      "Andreea Ionica"
+    ],
+    "url": "https://doi.org/10.20944/preprints202611.2550.v1",
+    "abstract": "Machine learning (ML) and deep learning (DL) methods for detecting depression, classifying diagnostic status, and estimating symptom severity from behavioral signals have expanded rapidly, yet the resulting evidence base is difficult to compare because studies differ in input modality, dataset provenance, label definition, task formulation, evaluation design, and metric reporting. This survey systematically maps the field along these computational dimensions. Following a PRISMA 2020-aligned workflow, we searched Web of Science, Scopus, and IEEE Xplore (21 November 2025), screened 7,369 records, and included 195 studies that train and evaluate ML/DL models on audio/speech, text/language, and/or video/vision inputs, yielding 329 study-by-dataset entries and 1,039 extracted metric entries. We organize the literature with a six-dimensional taxonomy covering input modality, representation strategy, architecture family, fusion strategy, task and label formulation, and evaluation protocol, and we quantify the prevalence of each category under a strict explicit-only extraction protocol. The corpus is recent (71.3% of studies from 2022–2025), predominantly single-modality (72.0% of entries), and text-centered (41.6%); pretrained representations dominate (42.2%), and transformers, convolutional networks, and recurrent networks form the leading architecture tier. Binary depression-status classification outweighs continuous severity estimation, labels are grounded mainly in PHQ- and BDI-based instruments rather than formal diagnoses, and the DAIC/AVEC family accounts for 24.9% of dataset entries. After harmonizing class-specific and variant metric names, reporting concentrates on F1, accuracy, precision, and recall. However, 71.4% of entries lack explicit model–metric–context binding and 76.9% lack a clearly extractable primary metric. We conclude that the literature supports structural synthesis but not leaderboard-style claims of model superiority, and we distill open challenges and a minimum reporting checklist for future primary studies.",
+    "version": 1
+  },
+  {
+    "id": "preprints:10.20944/preprints202611.2534",
+    "source": "Preprints.org",
+    "date": "2026-11-25",
+    "title": "Acquisition Context is a Missing Baseline in ECG Prognosis Benchmarks: A Pre-Specified Audit of a Multimodal Emergency-Department Benchmark",
+    "authors": [
+      "Anay Sinhal"
+    ],
+    "url": "https://doi.org/10.20944/preprints202611.2534.v1",
+    "abstract": "Objective. Electrocardiograms are not recorded at random: a clinician decides to order one. ECG prognosis benchmarks report a demographics baseline but not what the circumstances of recording predict alone. We asked how much of a published waveform arm's discrimination a model with no waveform recovers from acquisition context, and whether holding it fixed removes that arm's advantage. Approach. We audited a credentialed emergency-department benchmark of 129,057 ECGs from 71,098 patients, reproducing its published cohort and split, with a held-out fold of 6,439 ECGs from 3,644 patients. Nine nested arms and four numeric targets were declared in advance, acquisition context being nine features fixed at or before recording. Intervals are patient-clustered bootstraps; contrasts are paired and Holm-corrected. Main results. None of the four registered predictions was met at the endpoint it named. At the longest mortality horizon, acquisition context does not beat age and sex (-0.0216 [-0.0523, +0.0098]); it recovers 0.6803 [0.6149, 0.7476] of the waveform arm's above-chance discrimination against a registered 0.70; matching on four coarsened acquisition-context variables leaves that arm 0.9313 [0.6631, 1.1583] of its advantage against a registered 0.50; and a trend across four unscored horizons is -0.8000 [-1.0000, +0.2000]. At 24-hour ICU admission, an unregistered exploratory endpoint, the same nine features recover 0.9366 of that discrimination, of which triage acuity alone accounts for 0.8141. Significance. Acquisition context is a missing baseline in these benchmarks. It does not explain the waveform arm, and at short horizons it mostly reads triage acuity. Report it as routinely as demographics.",
+    "version": 1
+  },
+  {
+    "id": "arxiv:2611.34930",
+    "source": "arXiv",
+    "date": "2026-11-25",
+    "title": "A gene informed benchmark for BioScoring of pathology foundation models",
+    "authors": [
+      "Paul Vilars",
+      "Vincent Quoc-Huy Trinh",
+      "Maria Vakalopoulou",
+      "Dimitris Samaras",
+      "Stergios Christodoulidis",
+      "Mahdi S. Hosseini"
+    ],
+    "url": "https://arxiv.org/abs/2611.34930",
+    "abstract": "Pathology foundation models are usually compared by their performance on downstream tasks such as classification and retrieval. While such benchmarks measure how useful a model is, they provide no insight into the biology it represents. We introduce BioScore, a benchmark that quantifies how well an image encoder captures cell identities, with spatial transcriptomics of the same tissue as the reference. A sparse autoencoder splits the encoder's patch embeddings into sparse features, which we cluster into a fixed number of groups. BioScore then measures, for each of 52 cell identities defined by marker genes, how specifically one group follows the identity's expression over the tissue. Because the autoencoder training is fully unsupervised, a match shows that the model represents the cell identity from the image alone. We score 8 pathology foundation models and 3 natural-image models. Every pathology model scores above every natural-image model (0.299--0.371 \\vs 0.214--0.232), and paired tests separate three tiers among the pathology models. Unlike a supervised probe, BioScore needs no labels, builds its reference from the data and scores even from few sections, yet it ranks the encoders as a probe does. Its per-identity breakdown indicates which cell identities each encoder captures or misses."
+  },
+  {
+    "id": "arxiv:2611.34925",
+    "source": "arXiv",
+    "date": "2026-11-25",
+    "title": "One Ocean, Many Tasks: A Data-Grounded Simulation Suite and Benchmark for Marine Robotics",
+    "authors": [
+      "Shuaijun Liu",
+      "Qifu Wen",
+      "Xingwei Chen",
+      "Xinwen Hu",
+      "Feiyang You",
+      "Sijia Chen",
+      "Ningxin Su"
+    ],
+    "url": "https://arxiv.org/abs/2611.34925",
+    "abstract": "Simulation is essential for marine robotics, yet existing platforms often trade off between visually realistic worlds, high-throughput experimentation, and ocean-condition realism grounded in real data. We present OneOcean, a data-grounded simulation suite and benchmark built around a unified spatiotemporal ocean-environment product that harmonizes bathymetry with data-driven currents and tides, with optional pollution fields for cleanup-related evaluation. On top of this environment representation, OneOcean defines a task ladder spanning navigation and station-keeping under currents, waypoint and route following, depth-profile tracking, area scanning, pipeline inspection, and multi-agent coordination, including formation transit, fish protection and patrol (herding), and surface pollution localization, containment, and cleanup. The suite supports multi-agent settings with 2-10 vehicles. Our simulator supports three to six Degrees of Freedom (DoF) and produces standardized metrics and reproducible run manifests, enabling consistent aggregation across tasks, difficulties, and scaling settings. Experiments across dataset variants and scenes systematically stress planning and control under data-grounded disturbances and reveal trade-offs among heuristic baselines, Behavior Cloning (BC), and a Large Language Model (LLM)-based planner."
+  },
+  {
+    "id": "arxiv:2611.34862",
+    "source": "arXiv",
+    "date": "2026-11-25",
+    "title": "BOP-Refer: Benchmark for Monocular 3D and 2D Object Grounding",
+    "authors": [
+      "Tomas Hodan",
+      "Vineet Bhat",
+      "Martin Sundermeyer",
+      "Jonathan Tremblay",
+      "Yash Patel",
+      "Médéric Fourmy",
+      "Stephen Tyree",
+      "Junwen Huang",
+      "Varun Burde",
+      "Martin Cífka",
+      "Eric Brachmann",
+      "Vincent Lepetit",
+      "Stan Birchfield",
+      "Jiri Matas",
+      "Carsten Rother"
+    ],
+    "url": "https://arxiv.org/abs/2611.34862",
+    "abstract": "We introduce BOP-Refer, the first benchmark for monocular 3D and 2D grounding of everyday and industrial objects sourced from 9 diverse BOP datasets. We pair images from these datasets with VLM-generated and human-verified referring expressions, and derive accurate ground-truth 3D and 2D bounding boxes of the referred objects from their 3D models and 6DoF pose annotations. Our systematic evaluation of 17 frontier VLMs across the major proprietary and open-weight families (Gemini, GPT, Claude, Qwen, Gemma) shows that the best model, Gemini 4 Carbon, reaches 72.6% AP_IoU2D in 2D but only 12.4% AP_IoU3D in 3D, despite the more lenient IoU thresholds in 3D. The predicted 3D boxes are usually centered on the target objects in the image but often off in depth by more than the object's size, suggesting that metric scale estimation, which needs reliable object size priors, is currently by far the main source of error."
+  },
+  {
+    "id": "arxiv:2611.34852",
+    "source": "arXiv",
+    "date": "2026-11-25",
+    "title": "DRBench Pro: A Knowledge-Centric Benchmark for Professional Deep Research Agents",
+    "authors": [
+      "Han Huang",
+      "Yuchen Yan",
+      "Xingyu Wu",
+      "Yijun Li",
+      "Chao Deng",
+      "Jie Liu",
+      "Jin Ma",
+      "Yongliang Shen"
+    ],
+    "url": "https://arxiv.org/abs/2611.34852",
+    "abstract": "Deep research agents gather information from multiple sources and synthesize it into reports on complex, open-ended questions. Existing benchmarks assess report quality along several dimensions, but lack a dedicated knowledge-centric evaluation of which research directions a report covers and how deeply it explores them. We introduce DRBench Pro, a benchmark that makes structured knowledge coverage the primary evaluation target. Our automated pipeline builds local knowledge trees from Wikipedia and uses sampled subgraphs to generate research queries and evidence-grounded rubrics. Each rubric corresponds to a relation in the tree, preserving the structure of the knowledge being evaluated. Agents receive only the research query. This structure allows us to measure breadth across major research directions and depth along related knowledge chains, with their geometric mean giving overall coverage. The benchmark includes 144 cases across 24 domains and 44,102 rubrics. Evaluating 16 deep research agents reveals different strengths in breadth and depth, with the best-performing agent reaching 57.04% overall coverage. Rubric judgments agree closely with human annotations, and agent rankings remain stable across the tested metric configurations."
+  },
+  {
+    "id": "arxiv:2611.34823",
+    "source": "arXiv",
+    "date": "2026-11-25",
+    "title": "The Linguistic Knowledge Benchmark: Do Language Models Know the Foundations of Early-Grade Literacy?",
+    "authors": [
+      "Maxime Lelièvre",
+      "Alasdair Mackintosh",
+      "Dominic Andrews",
+      "Tobias Murray",
+      "Moritz Boos",
+      "Oliver G. B. Garrod"
+    ],
+    "url": "https://arxiv.org/abs/2611.34823",
+    "abstract": "Many languages of instruction in low- and middle-income countries (LMICs) are poorly represented in the data used to train language models. Before these models can support early-grade literacy in such languages, we need to know whether they hold the linguistic knowledge of each language that literacy teaching relies on. To test this, we present the Linguistic Knowledge Benchmark and the reproducible, largely automated pipeline that turns curriculum documents, teacher guides and pupil books into a vetted question set organised on a fixed grid of nine linguistic domains and seven grade levels. The pipeline combines LLM-driven source survey, feature consolidation, item generation and quality control with an item-selection step inspired by item response theory and a final expert review. We instantiate it for Kiswahili (Kenya; 135 items) and English (United Kingdom; 137 items) and evaluate 121 and 119 models respectively. Frontier models exceed 90% accuracy in both languages, but accuracy falls steeply for smaller and cheaper models, and more so in Kiswahili. The two best models under 10 billion parameters reach 91.7% and 73.0% in English but only 51.9% and 40.7% in Kiswahili, and the mean accuracy of models deployable on mobile and tablet hardware is 47% in English against 24% in Kiswahili. The models most practical for low-resource classrooms are therefore the least capable in the languages they would serve. We release a 20-item sample per language, all pipeline prompts, open-source code, and a public leaderboard. This is the first rung of a three-level evaluation ladder for measuring and generating decodable text to support foundational literacy."
+  },
+  {
+    "id": "arxiv:2611.34724",
+    "source": "arXiv",
+    "date": "2026-11-25",
+    "title": "LiDAR Intensity Reconstruction with Limited Real Data: An Architecture Benchmark under Fixed-Epoch Training",
+    "authors": [
+      "Christopher M. Coovrey",
+      "Aniruddha Bora"
+    ],
+    "url": "https://arxiv.org/abs/2611.34724",
+    "abstract": "Physics-derived simulation can supplement scarce real-world LiDAR intensity measurements, but its effectiveness depends on the learning architecture and the amount of real training data available. We benchmark nine neural architectures for LiDAR intensity reconstruction from depth, semantic labels, incidence angle, and material reflectance, using real SemanticKITTI and synthetic VoxelScape range-image data. All models follow a fixed 20-epoch protocol; this controls the number of training passes, not the computational cost across architectures. We report mean absolute error (MAE), mean squared error (MSE), peak signal-to-noise ratio (PSNR), structural similarity (SSIM), inference timing, and spectral-energy agreement. We also evaluate four selected architectures with fixed-size training mixtures containing 0\\%, 1\\%, 5\\%, 10\\%, 20\\%, 50\\%, or 100\\% real frames. With real-only training, UNet-V2 achieves the best reported reconstruction metrics (MAE 0.234, MSE 0.140, PSNR 8.64 dB, and SSIM 0.647), followed by a denoising diffusion model (DDPM). In several mixtures containing 1--10\\% real data, DDPM achieves lower error and higher image-quality metrics than the evaluated deterministic alternatives, whereas UNet-V2 leads with 100\\% real data. Spectral analysis additionally reveals architecture-dependent discrepancies across frequency bands. These findings characterize reconstruction trade-offs under the stated data mixtures and fixed-epoch protocol, without establishing compute-matched superiority or isolating the diffusion objective from backbone differences."
+  },
+  {
+    "id": "arxiv:2611.34683",
+    "source": "arXiv",
+    "date": "2026-11-25",
+    "title": "Experimental Quantum Hardware Benchmarks of Flat Non-Clifford Hypergraph States, Antipodal Obstructions, and Nonlocal Games on IBM Heron r2",
+    "authors": [
+      "Filipe Martins Vono",
+      "Valéria Gonzaga Santos",
+      "André Oliveira Naufel de Toledo"
+    ],
+    "url": "https://arxiv.org/abs/2611.34683",
+    "abstract": "Real-hardware demonstrations of quantum contextuality have reached high precision on superconducting processors, exemplified by Google Quantum AI's Mermin-Peres magic square and stabilizer games on Willow (Science, 2026). Extending such benchmarks beyond the Clifford regime requires non-Clifford hypergraph states |ψ_f> = 2^{-n/2} \\sum_x (-1)^{f(x)} |x> governed by discrete algebraic invariants. Building on our Lean 4-verified framework of Modular Walsh Rigidity and Antipodal Obstructions, we present an experimental study on two 156-qubit IBM Heron r2 processors (ibm_fez, ibm_kingston) across 3 to 50 qubits and 11 auditable jobs (2.13 RUs total). First, we verify antipodal obstructions and mod-17 Walsh rigidity for degree-3/4 states (n=6,8,10), observing 5.4x-11.6x X-basis flatness separation between bent states, obstructed controls, and a degree-4 mod-3 fooler (W = +-1 mod 3), plus n=7 nonlinearity extraction (54.83 vs. 56.00). Second, barrier-protected Loschmidt echoes confirm non-Clifford coherence up to genuinely entangled 16-qubit degree-4 states (1,488x above random on ibm_fez; 17,296x on ibm_kingston for 2x8q, a 2.87x cross-chip gain) and locate a Heavy-Hex depth-513 coherence cliff. Third, calibration-aware layout raises the raw Mermin-Peres win rate on ibm_fez to 96.85 +- 0.09% raw (+87.4 sigma above 88.89% classical; 1.45 pp below Willow's 98.30% raw), while a tensored SPAM diagnostic reaches 98.35%. Uniformly random even-weight GHZ parity games beat the classical bound up to n=30 (89.44% [+79.4 sigma] at 6q to 59.46 +- 0.54% [+17.4 sigma] at 30q). Finally, 3-qubit CCZ rotated Mermin-3 (83.95 +- 0.29%, +31.2 sigma) and Hardy/Guhne-Cabello (77.15 +- 0.33%, +6.5 sigma) games strictly violate the exhaustive 75.00% LHV ceiling, and degree-3/4 antipodal parity witnesses achieve up to +45.87 pp (n=12) and +35.79 pp joint advantage on connected 16-qubit degree-4 states."
+  },
+  {
+    "id": "arxiv:2611.34649",
+    "source": "arXiv",
+    "date": "2026-11-25",
+    "title": "Atunda: Building an Afrogenic Dance Movement Dataset for AI-Driven Classification",
+    "authors": [
+      "Diego Carrascosa",
+      "Tristan Pank",
+      "Qudus Onikeku",
+      "Mas'ud Onikeku",
+      "Jeremy A Frusco",
+      "Osubi Craig",
+      "Angelos Barmpoutis"
+    ],
+    "url": "https://arxiv.org/abs/2611.34649",
+    "abstract": "This paper introduces Atunda, the first systematically collected video dataset of Afrogenic dance moves, designed for training and evaluating deep learning models for movement classification. The first phase of the dataset includes nearly 400 videos covering 13 distinct dance moves from African and African Diaspora performative culture, making it the first AI-ready resource of its kind. Using this dataset, we train and evaluate various configurations of temporal convolutional neural networks, achieving a classification accuracy exceeding 95%. The baseline results provide a benchmark for future studies in movement classification, especially in the understudied area of Afrogenic performative culture and tradition. This work lays the foundation for developing in the future digital metrics of similarity, automated attribution systems, and tools that preserve and promote the cultural heritage of Afrogenic dances."
+  },
+  {
+    "id": "arxiv:2611.34627",
+    "source": "arXiv",
+    "date": "2026-11-25",
+    "title": "DecisionReplay: A Corpus and Offline Simulator for Ensembling Decision Models",
+    "authors": [
+      "Dean Ariel",
+      "Seffi Cohen"
+    ],
+    "url": "https://arxiv.org/abs/2611.34627",
+    "abstract": "Comparing ensembles, routers and cascades requires the output of every model on every item, and its cost. Stored collections built for routing keep no per-option probabilities. We provide a dataset on which ensemble methods, routers and cascades are simulated quickly, without new model calls. DecisionReplay holds the probability vectors of 17 commercial decision models, endpoints that return a probability for every answer option, on 35 benchmarks, with the token counts, billed cost and measured latency of every call, all released. A deterministic simulator replays any policy that selects, combines or cascades them. One well-chosen model per benchmark is hard to beat: pooling all models loses 2.7 accuracy points to it, and stacking gains 1.0 points at 3.4 times its cost. The models are wrong together: two that are both wrong choose the same wrong option in 72% of cases. The best router matches that model at 64% of its cost, and certified early exit cuts the cost of a stacked ensemble by 43% without changing an answer. DecisionReplay makes it cheap and fast to test whether a new method changes these results."
+  },
+  {
+    "id": "arxiv:2611.34538",
+    "source": "arXiv",
+    "date": "2026-11-25",
+    "title": "Dynamic Task Update Benchmark (DTU-Bench): Evaluating Runtime Task Adaptation in Robotic Manipulation",
+    "authors": [
+      "Yanran Jiang",
+      "Cécile Paris",
+      "Dana Kulić",
+      "Leimin Tian"
+    ],
+    "url": "https://arxiv.org/abs/2611.34538",
+    "abstract": "Vision-language-action (VLA) policies perform well on fixed-instruction robotic manipulation benchmarks, but their ability to adapt to instruction changes during execution remains understudied. We introduce the Dynamic Task Update Benchmark (DTU-Bench), evaluating 40 task revisions across seven update types and three execution stages using LIBERO, a simulated robotic manipulation benchmark. We compare performance when a new instruction is given before execution starts versus during execution, and examine whether the new task instructions are followed. Across 13 representative VLA configurations, average task success is 95.8% on the original object-manipulation tasks, compared with only 1.6% when the instruction changes which object to manipulate during execution. Controlled diagnostics show that policies often complete the original task before the updated one, and that their responses depend on the robot's physical state. We further test whether a simple scripted controller that releases the grasped object and moves the arm back helps robots respond to instruction changes. This improves success from 2% to 38% for π0.5 and from 8% to 48% for DM0.5, but can cause unwanted object motion. These findings reveal limitations that fixed-instruction benchmarks and task-success metrics alone can overlook in evaluating robotic manipulation. Project page: https://dtu-bench.github.io/"
+  },
+  {
+    "id": "arxiv:2611.34475",
+    "source": "arXiv",
+    "date": "2026-11-25",
+    "title": "Conditional multiparameter thermometry with neutrino oscillations: MSW energy diversity and a plasma-noise benchmark",
+    "authors": [
+      "Jilali Loulijat",
+      "Abdallah Slaoui",
+      "El Hassan Saidi",
+      "Mohamed Gouighri",
+      "Berihu Teklu"
+    ],
+    "url": "https://arxiv.org/abs/2611.34475",
+    "abstract": "We address temperature-parameter inference in a restricted two-flavor neutrino dephasing model with fixed mean electron densities. When two zone temperatures enter the propagated state via a single accumulated dephasing exponent, the single-energy quantum Fisher information matrix has rank at most 1. Independent, energy-resolved samples restore regular local identifiability when their thermal-sensitivity vectors are noncollinear. Matter-dependent mixing provides distinct weights in an illustrative two-zone model. A separate two-probe benchmark shows how complementary Bell sectors can distinguish temperature from spatial noise correlations. An electron-only Debye-cell estimate gives a conditional longitudinal quantum signal-to-noise ratio of approximately $3.1\\times10^{-13}$ at 10 MeV for a uniform central-density medium over one solar radius. This estimate is not a microscopic upper bound or a detector sensitivity forecast. Complete phase averaging removes temperature information carried solely by longitudinal coherence damping; to retain solar sensitivity, a separate calculation of population, refractive, or production effects is required. The results distinguish conditional state identifiability from operational temperature inference."
+  },
+  {
+    "id": "arxiv:2611.34400",
+    "source": "arXiv",
+    "date": "2026-11-25",
+    "title": "EvoLink-Bench: A Benchmark for Evaluating Self-Evolving Agents in Long-Horizon Interdependent Task Streams",
+    "authors": [
+      "Wei Chen",
+      "Xiaodong Lu",
+      "Weihao Shen",
+      "Gongxun Li",
+      "Xingyu Guo",
+      "Qihang Sun",
+      "Fuwei Zhang",
+      "Zhao Zhang",
+      "Yikun Ban",
+      "Shuang Li",
+      "Deqing Wang",
+      "Fuzhen Zhuang"
+    ],
+    "url": "https://arxiv.org/abs/2611.34400",
+    "abstract": "Large language model (LLM) agents are evolving from passive chatbots into autonomous systems that operate continuously in dynamic environments. Such agents need not only solve current tasks but also learn from past interactions to improve future performance. However, existing streaming benchmarks often rely on short task sequences or largely independent tasks, providing limited evidence of whether agents can effectively reuse experience when later tasks depend on earlier outcomes. To address this gap, we introduce \\textbf{EvoLink-Bench}, a benchmark for evaluating self-evolving agents in long-horizon, interdependent task streams. It covers daily office work, multi-turn dialogue, and AutoResearch-style workflows, with persistent workspaces and dependencies across tasks. The benchmark includes two complementary levels: \\textbf{L1}, which evaluates the acquisition and revision of language-expressible knowledge, and \\textbf{L2}, which assesses the development of task-level capabilities through execution and feedback. Its evaluation further distinguishes within-task recovery, persistent-state updates, and experience reuse in later tasks. We evaluate five agent frameworks across three backbone configurations under three persistence conditions, covering 19,635 scored task slots from selected evaluation cohorts. Results show that no framework consistently performs best across both levels, retries recover only a limited proportion of failed tasks, and persistent-state updates do not necessarily improve subsequent performance. Furthermore, the effects of evolution differ between knowledge- and capability-level tasks, suggesting that these two forms of evolution require different learning mechanisms. Performance gains also vary across domains and task streams, with improvements on some tasks not necessarily extending to others."
+  },
+  {
+    "id": "arxiv:2611.34359",
+    "source": "arXiv",
+    "date": "2026-11-25",
+    "title": "RAWPrism: A Three-Task Dataset and a Unified Model for RAW-Domain Image Fusion",
+    "authors": [
+      "Tianyi Hu",
+      "Yangdong Li",
+      "Shuyan Liu",
+      "Zihan Cao",
+      "Jingze Liang",
+      "Shaojie Wu",
+      "Chenyang Feng",
+      "Jincheng Di",
+      "Weijie Xiao",
+      "Liangjian Deng"
+    ],
+    "url": "https://arxiv.org/abs/2611.34359",
+    "abstract": "Research on multi-exposure fusion (MEF), multi-focus fusion (MFF), and infrared-visible image fusion (IVIF) has largely focused on rendered RGB images, while unified fusion across these tasks in the RAW domain before image signal processing (ISP) remains relatively underexplored. To support research in this setting, we introduce the RAWPrism dataset, covering all three tasks, and the RAWPrism model, a lightweight unified multi-task fusion network. The RAWPrism dataset comprises 422 usable MEF scenes and 150 registered MFF pairs from our RAW captures, together with 1,500 FMB-derived IVIF samples, in which the visible RAW inputs are reconstructed by ReRAW and their RGB counterparts rendered by CycleISP. Scene-level partitions and task-specific rendering and scoring protocols connect these resources to method development and evaluation. To our knowledge, the RAWPrism model is the first to unify MEF, MFF, and IVIF directly in the RAW domain. It combines a CFA-aware representation, task-conditioned source gating, and a shared backbone to support all three tasks with one 3.58M-parameter checkpoint. Together, the dataset and model support the study of shared fusion mechanisms across exposure, focus, and spectral complementarity."
+  },
+  {
+    "id": "arxiv:2611.34328",
+    "source": "arXiv",
+    "date": "2026-11-25",
+    "title": "LUDIUS: A Benchmark for Embodied Social Intelligence in Everyday Human-Robot Interactions",
+    "authors": [
+      "Chaewon Kim",
+      "Sangheon Lee",
+      "Seyeon Choi",
+      "Kangwook Lee",
+      "Yea Seul Kim"
+    ],
+    "url": "https://arxiv.org/abs/2611.34328",
+    "abstract": "Social intelligence in a robot requires interpreting a situation from the perspectives of the people involved and using that understanding to decide when and how to act. We introduce LUDIUS, a benchmark for evaluating how vision-language models exercise this judgment through a robot's verbal responses and actions, organized around 15 social intelligence skills drawn from social psychology, sociology, and cognitive science. LUDIUS comprises six editions, each a collection of episodes spanning one simulated week. Three editions each cover all 15 skills in a different household. The other three focus on interactions involving multiple people, safety, and context-specific norms, respectively. We evaluate frontier models and a smaller model finetuned on social-interaction data we generated, using a common evaluation harness. The harness supplies each model with the robot's camera views and residents' reactions, retrieves relevant interaction history, and converts the model's tool calls into robot verbal responses and actions. Models tend to perform worse when they must reason about what a resident saw or heard earlier, reconcile competing interests, or fulfill a request within safety constraints and household rules. Beyond the home setting, LUDIUS's design pipeline offers a way to construct social intelligence benchmarks by translating social intelligence skills into context-specific judgments and observable robot behavior."
+  },
+  {
+    "id": "arxiv:2611.34240",
+    "source": "arXiv",
+    "date": "2026-11-25",
+    "title": "Analemma $\\infty$: A Temporal Benchmark for Geospatial Foundation Models",
+    "authors": [
+      "Alex López-Cifuentes",
+      "Laura Martínez-Ferrer",
+      "Juan Ignacio Bravo Pérez-Villar"
+    ],
+    "url": "https://arxiv.org/abs/2611.34240",
+    "abstract": "Satellite time series capture how land surfaces change over time. Pixel-wise temporal foundation models read a year of satellite observations per pixel, yet public benchmarks lack a temporal axis or subsample it to a few dates. We introduce Analemma, a temporal benchmark of six datasets that carry every 10 and 20 m Sentinel-2 band and a time series spanning a growing season, completed where their releases omit geometry, dates, or cloud masks. One frozen-encoder protocol evaluates all models across label ratios and three seeds, with two baselines without pretraining. The TESSERA model ranks first overall. A from-scratch model on monthly composites outranks every foundation model except OlmoEarth v1.3-Base, suggesting that temporal input explains most of the performance. Three evaluation choices left unstated by the source publications each shift TESSERA v1 by 7.6 to 18.6 mIoU, against top-two gaps of 0.6 to 2.8. Data, harness and leaderboard will be publicly released soon."
+  },
+  {
+    "id": "arxiv:2611.34098",
+    "source": "arXiv",
+    "date": "2026-11-25",
+    "title": "Whose Side Are You On? A Framework and Benchmark for Assessing LLM Political Stances through Politicians Social Media Posts",
+    "authors": [
+      "Mohamed Osman",
+      "Mucahid Kutlu",
+      "Tamer Elsayed",
+      "Saban Kardas"
+    ],
+    "url": "https://arxiv.org/abs/2611.34098",
+    "abstract": "Large language models (LLMs) increasingly participate in political discussions, making it important to understand which positions they support or oppose. We propose a framework for assessing LLMs' political stances through simulated social media interactions. The framework uses politicians' posts and multiple prompting methods to identify consistently expressed stances. Using this framework, we construct WorldPOLL, comprising 4,600 political posts from X/Twitter collected from approximately 200 politicians representing ruling and opposition blocs across 23 countries. Our quantitative analysis shows how support and opposition vary across models, countries, and political directions, while our qualitative analysis identifies the political views and policies models support or oppose. Together, these analyses reveal shared positions across models and differences across national contexts. We also examine whether models express consistent stances across prompting methods, investigate the reasons for disagreement, and assess the effects of model size and instruction tuning in stance inconsistency. WorldPOLL offers a practical way to measure LLM political tendencies, identify the views behind them, and assess their consistency in real-world political discussions."
+  },
+  {
+    "id": "arxiv:2611.34008",
+    "source": "arXiv",
+    "date": "2026-11-25",
+    "title": "DosePET: An Open-Source Dataset with 2100 Radiation Dose Maps for PET/CT",
+    "authors": [
+      "Eleftherios Tzanis",
+      "Antonios Tzortzakakis",
+      "Michail E. Klontzas"
+    ],
+    "url": "https://arxiv.org/abs/2611.34008",
+    "abstract": "Large collections of three-dimensional radiation dose maps linked to patient anatomy are needed to develop artificial intelligence (AI) models for personalized internal dosimetry in nuclear medicine, but access to such data remains limited. Here we present DosePET, an open-source dataset of 2,100 patient-specific absorbed-dose maps generated by Monte Carlo simulation of publicly available PET/CT examinations: 1,503 [18F]FDG examinations from ENHANCE.PET and 369 [18F]PSMA-1007 and 228 [68Ga]Ga-PSMA-11 examinations from PSMA-PET-CT-Lesions, acquired at five institutions with seven scanner models. For each examination, the CT was resampled to the native PET grid to build a voxelized patient phantom, the quantitative PET image defined the radionuclide source, and radiation transport was simulated with GATE version 9.4. Organ and tissue masks were generated from the CT with TotalSegmentator. Each study folder contains a NIfTI dose map integrated from scan time to infinity, 117 binary organ/tissue masks, a report of regional dosimetric quantities, including mean absorbed doses, dose conversion factors and scan-time dose rates, and simulation metadata. The total processing time was 1,542.4 hours. Python tools support selective downloading and conversion to scan-time dose-rate or dose-per-decay maps, and an agent skill guides pairing with the source PET/CT images. DosePET is publicly available at https://huggingface.co/datasets/eltzanis/DosePET."
+  },
+  {
+    "id": "arxiv:2611.33974",
+    "source": "arXiv",
+    "date": "2026-11-25",
+    "title": "Auto-Features: An LLM-Assisted Corpus for Contextual Recognition of Standard and Optional Car Features",
+    "authors": [
+      "Filippos Ventirozos",
+      "Ioanna Nteka",
+      "Tania Nandy",
+      "Peter A. Appleby",
+      "Matthew Shardlow"
+    ],
+    "url": "https://arxiv.org/abs/2611.33974",
+    "abstract": "We present Auto-Features, a corpus for detecting a car's standard and optional features in advertisement text, given the feature catalogue of that exact vehicle. Sellers name the same feature in many ways. We therefore cast the task as feature-conditioned, or contextual, named entity recognition: extract the span that expresses one given catalogue feature. An entity-linking view follows from the same output. The corpus has a human-gold layer (430 adverts) from screened annotators and an LLM-silver layer (925 adverts) auto-annotated by a search-grounded LLM. We also contribute the way it was built. Every LLM output is validated, and each kind of failure has its own remedy. Malformed output is patched. Hallucinated content triggers a fresh attempt by a stronger model. Links to features outside the candidate list are dropped and counted (3 in 10,928 records). The LLM annotates alone only after its agreement with human annotators on link verification is comparable to human-human agreement. On advert-disjoint splits, a LoRA-tuned 4B LLM reaches 63.9% span F1 and 76.1% on the entity-linking view. A fine-tuned encoder reaches 59.0% and 74.1%. The margin is widest on catalogue features never seen in training (54.5% vs. 49.0%)."
+  },
+  {
+    "id": "arxiv:2611.33940",
+    "source": "arXiv",
+    "date": "2026-11-25",
+    "title": "TAT-Det: A Dataset for Testicular Appendage Torsion Detection and Segmentation in Ultrasound Images",
+    "authors": [
+      "Ying Jiang",
+      "Juntao Jiang",
+      "Linxuan Fan",
+      "Lingling Li",
+      "Yaqi Wang",
+      "Xiuzhen Yang",
+      "Yong Liu",
+      "Jiangning Zhang",
+      "Jingjing Ye"
+    ],
+    "url": "https://arxiv.org/abs/2611.33940",
+    "abstract": "Background: Testicular appendage torsion (TAT) is the leading cause of acute scrotal pain in prepubertal children. Yet, its diagnosis remains challenging due to nonspecific clinical manifestations and the absence of standardized datasets for pediatric acute scrotal emergencies. Results: We present TAT-Det, an expert-annotated ultrasound dataset specifically designed for TAT. TAT-Det comprises 2,600 ultrasound images from 1,203 patients collected at the Children's Hospital, Zhejiang University School of Medicine. Each TAT-positive image is accompanied by lesion-level bounding boxes for detection and pixel-level segmentation masks for fine-grained delineation. Annotations were produced through a multi-stage workflow involving independent annotation by board-certified pediatric sonographers, consensus review, and refinement. Baseline benchmarks for object detection and semantic segmentation using representative deep learning models are further provided, with YOLO11m achieving the best detection performance and RWKV-UNet the best segmentation performance. Conclusions: TAT-Det addresses the lack of publicly available resources for pediatric emergency ultrasound and establishes a foundation for developing and evaluating artificial intelligence methods for automated TAT analysis."
+  },
+  {
+    "id": "arxiv:2611.33824",
+    "source": "arXiv",
+    "date": "2026-11-25",
+    "title": "Revisiting Monocular In-Hand Object Scanning: Dataset, Pose Estimation, and Surface Reconstruction",
+    "authors": [
+      "Di Wu",
+      "Jeeeun Kim",
+      "Shu Kong"
+    ],
+    "url": "https://arxiv.org/abs/2611.33824",
+    "abstract": "In-Hand Object Scanning (IHOS) from monocular video captured by a commodity smartphone holds immense potential to democratize 3D digitization for non-expert users, facilitating applications in digital archiving, augmented reality, and custom fabrication. Yet, IHOS remains largely understudied due to a lack of realistic datasets and systematic benchmarks. To bridge this gap, we introduce ToysRUs, a high-quality dataset featuring diverse figurines captured by 4K Ultra High-Definition (UHD) monocular videos. Studying IHOS from first principles, we examine structure-from-motion (SfM) for camera pose estimation, which is key to IHOS. We identify two key challenges: small baselines between consecutive frames, and sparse feature matches across large-view, long-range frames, further exacerbated by dynamic hand occlusions. Guided by these insights, we propose performing SfM on video sub-sequences sampled at sufficient angular intervals, and iteratively stitches the corresponding sub-trajectories into a unified global trajectory. Furthermore, for high-fidelity surface reconstruction, we introduce occlusion-aware 2D Gaussian Splatting, which incorporates opacity rendering and omits the opacity loss on hand regions. Quantitative and qualitative evaluations demonstrate that our framework significantly outperforms existing approaches, including neural implicit representations and 3D foundation models, in both geometric accuracy and photometric fidelity."
+  },
+  {
+    "id": "arxiv:2611.33769",
+    "source": "arXiv",
+    "date": "2026-11-25",
+    "title": "FailPoint-X: A Policy-Matched, Failure-Anchored Benchmark for Offline VLA Post-Training from Human Takeovers",
+    "authors": [
+      "Zirui Li",
+      "Yujie Yan",
+      "Jingxuan Qian",
+      "Yangang Ren",
+      "Haizhou Yin",
+      "Haoran Xu",
+      "Chen Lv"
+    ],
+    "url": "https://arxiv.org/abs/2611.33769",
+    "abstract": "Human takeovers offer corrective supervision for vision-language-action (VLA) policies, but their contribution to offline post-training must be separated from that of continued optimization. We introduce FailPoint-X, a benchmark for offline VLA post-training with human takeovers. To represent uncertainty in failure onset, an annotator marks an interval for each failure, and training takeovers start at seeded frames sampled within it. From one fixed $π_{0.5}$ checkpoint, which also initializes post-training, we assemble 629 natural failures across 10 LIBERO-X task families at up to five difficulty levels. All 2,823 takeover attempts are logged; 2,400 are accepted recoveries, of which 2,320 are used for post-training. Evaluation restarts every method from the fixed midpoints of 384 held-out failure intervals. Under matched actor-update counts, we compare behavior cloning of recoveries, value-based offline learning on recoveries and failed rollouts, and continued training on existing demonstrations. Within 1,200 steps on the 240 L1-L3 held-out failures, cloning improves recovery by 29.4 percentage points (pp) over the demonstration-only control; the value-based learner does not establish a further gain (1.5 pp). In exploratory evaluation from L1-L5 nominal starts at the same horizon, cloning loses 30.0 pp of success relative to the base policy; mixing in demonstrations reduces the loss to 16.5 pp, a reduction that shrinks under a stricter, pre-specified horizon. Restorable failure states and a shared evaluator let all methods be compared from identical starts."
+  },
+  {
+    "id": "arxiv:2611.33757",
+    "source": "arXiv",
+    "date": "2026-11-25",
+    "title": "TransHarness: From Benchmark Overfitting to Transferable Harness Evolution",
+    "authors": [
+      "Tianze Xia",
+      "Zimo Wang",
+      "Heng Tong",
+      "Zhaoxiang Liu",
+      "Shiguo Lian",
+      "Fan Huang",
+      "Wenyu Liu",
+      "Yunchao Wei",
+      "Xinggang Wang"
+    ],
+    "url": "https://arxiv.org/abs/2611.33757",
+    "abstract": "Harness evolution offers a path to improving coding agents without updating model weights. However, existing methods can overfit their evolution benchmarks, producing gains that fail to carry over to new tasks. To address this challenge, we introduce Transferable Harness Evolution (TransHarness), which evolves harness intervention policies from same-task success-failure contrasts. These policies couple execution-context triggers with diagnostic guidance, enabling task-dependent checks and corrections beyond the source executions. Cross-task replay and independent semantic selection retain policies that intervene selectively and ground corrections in current-task evidence rather than source-specific solutions. We further curate an independent evolution set for cross-distribution transfer and conduct a cross-benchmark evaluation covering multiple strong models and a range of lightweight and mature harnesses. Experiments show that, with only 300 source trajectories from outside the test distribution, TransHarness further improves strong agents across distinct target benchmarks, demonstrating transferable harness evolution beyond benchmark overfitting. Specifically, TransHarness achieves state-of-the-art scores of 76.4% on DeepSWE v1.1 and 95.5% on Terminal-Bench 2.1, surpassing the strongest baseline model, GPT-6 Astra, by 2.4 and 5.6 percentage points, respectively."
+  },
+  {
+    "id": "arxiv:2611.33732",
+    "source": "arXiv",
+    "date": "2026-11-25",
+    "title": "CovNovBench: A Benchmark for Evaluating Time Series Foundation Models under Covariate Novelty",
+    "authors": [
+      "Wenhao Pan",
+      "Ravi Kiran Selvam",
+      "Michael W. Mahoney",
+      "Mayank Jauhari",
+      "Mengfei Cao",
+      "Dmitry Efimov",
+      "Boris N. Oreshkin"
+    ],
+    "url": "https://arxiv.org/abs/2611.33732",
+    "abstract": "Covariate-aware time-series foundation models (TSFMs) condition their forecasts on additional input variables, called covariates, that are supplied over the future horizon. This capability makes them appealing for interventional forecasting, in which a target is predicted under a planned action such as a new product pricing policy or a new patient treatment schedule. We refer to covariates that encode such actions as treatment covariates. Current covariate-aware TSFMs, however, are trained on observed patterns, and their behavior is unclear when future treatment covariates fall outside the range seen in the history. Examples include a numerical treatment that leaves its historical range and a categorical treatment that takes a previously unseen policy. We call this practically common setting covariate novelty, and note that it is not systematically represented in existing benchmarks. We introduce an operational definition of covariate novelty and use it to construct CovNovBench, a benchmark of 88,476 evaluation series generated or filtered from four simulator-based and real-world datasets. The benchmark spans categorical and numerical treatment covariates as well as stable and trending targets. We evaluate six covariate-aware TSFMs zero-shot using point and directional accuracy metrics. No model is consistently reliable in our benchmark: point error almost always increases under covariate novelty, directional performance changes non-uniformly, and the best observed model varies across datasets and metrics. CovNovBench provides a systematic testbed for developing TSFMs that forecast more reliably under covariate novelty."
+  },
+  {
+    "id": "arxiv:2611.33725",
+    "source": "arXiv",
+    "date": "2026-11-25",
+    "title": "VTK-Bench: A Diagnostic Benchmark for Distinguishing Language Priors and Text Modal Bias in Visual Language Models",
+    "authors": [
+      "Yao Lu",
+      "Yuhang Zheng",
+      "Yaxin Gao",
+      "Zhe Tang",
+      "Zhaowei Zhu",
+      "Jiaheng Wei",
+      "Yunhao Wang",
+      "Shanqing Yu",
+      "Qi Xuan"
+    ],
+    "url": "https://arxiv.org/abs/2611.33725",
+    "abstract": "Visual language models (VLMs) have demonstrated exceptional capabilities across various multimodal tasks, but they remain susceptible to hallucinations, undermining their reliability. Existing hallucination benchmarks primarily focus on identifying hallucinations and describing their manifestations, often neglecting their underlying causes. Specifically, multimodal hallucinations can stem from two distinct failure modes: text modality bias (TMB), reflecting an over-reliance on misleading text input; and language prior (LP), reflecting a reliance on previously learned knowledge. To differentiate these failure modes, we propose VTK-Bench, a benchmark that explicitly separates three information sources: visual information (V), textual information (T), and prior knowledge (K). By establishing mutually exclusive answers corresponding to V, T, and K, VTK-Bench enables fine-grained attribution analysis of model responses. Furthermore, we introduce discrete attribution and soft attribution metrics to characterize information source preferences. Extensive experiments on 11 representative open-source VLMs show that LP is more prevalent than TMB in most evaluated models. Notably, TMB decreases substantially with model scaling, whereas LP exhibits relatively limited improvement and remains the dominant failure mode. These findings highlight the importance of different information source preferences for a deeper understanding of multimodal hallucinations."
+  },
+  {
+    "id": "arxiv:2611.33673",
+    "source": "arXiv",
+    "date": "2026-11-25",
+    "title": "MOVR-SAR: A Multi-resolution SAR Registration Dataset under Orbit-crossing and View-variant Imaging Differences",
+    "authors": [
+      "Yuchi Pu",
+      "Bosong Qi",
+      "Pengcheng Shi",
+      "Jiayuan Li"
+    ],
+    "url": "https://arxiv.org/abs/2611.33673",
+    "abstract": "Synthetic aperture radar (SAR) image registration under varying acquisition geometries is challenging because orbit direction, look side, and incidence angle affect backscatter, terrain-induced distortion, and feature visibility. However, large-scale geometry-aware benchmarks remain scarce. This paper presents MOVR-SAR, a multi-resolution dataset of 450,845 registered and quality-screened tile pairs derived from 2774 scene pairs from Capella, Umbra, Sentinel-1, and NISAR. It covers X, C, and L bands, ground sampling distances of 0.25-20 m, and diverse regions and land-cover types. A unified framework defines four imaging-geometry pair categories from orbit direction and look side, plus viewing-angle-separation labels for Capella and Umbra, enabling stratified evaluation under same- and opposite-direction illumination. Systematic evaluation of representative matching methods shows that official and cross-modal pretrained weights perform poorly on high-resolution X-band imagery. Fine-tuning on MOVR-SAR improves accuracy and reduces disparities across platforms, imaging-geometry pair categories, and viewing-angle separations. For example, fine-tuning increases FlexGlue AUC@5 from 3.06% to 89.79% on Capella and from 1.79% to 89.03% on Umbra, reaching 93.41% and 94.77% on Sentinel-1 and NISAR, respectively. Fine-tuning substantially reduces the official-weight same-orbit, same-look-side advantage and reverses the three-method average category ranking on Capella, suggesting that this bias reflects training-data coverage rather than an invariant limitation of cross-geometry matching. Land-cover effects remain platform- and method-dependent. MOVR-SAR provides a training resource and geometry-aware benchmark for robust SAR-SAR registration. The dataset and model weights will be released at https://github.com/fdhzhz5870/MOVR-SAR."
+  },
+  {
+    "id": "arxiv:2611.33643",
+    "source": "arXiv",
+    "date": "2026-11-25",
+    "title": "CariesBench: A Hierarchical Multi-view Benchmark for Dental Caries Screening and Diagnostic Reasoning from 3D Intraoral Scans",
+    "authors": [
+      "Xuefen Liu",
+      "Yanxiong",
+      "Xinquan Yang",
+      "Fangqian Zhang",
+      "Qinyi Lu",
+      "Yuning Zhang",
+      "Xianxu Hou",
+      "Shinan Zhang",
+      "Wen Ma",
+      "Linlin Shen"
+    ],
+    "url": "https://arxiv.org/abs/2611.33643",
+    "abstract": "Dental caries assessment is a structured clinical process requiring lesion localization, identification of the affected tooth and surface, and severity grading rather than simple image-level recognition. 3D intraoral scans (IOS) preserve detailed dental geometry and surface morphology and support standardized rendering from complementary viewpoints, enabling fine-grained visual assessment while introducing a distinct need for anatomically grounded multi-view reasoning. Despite recent advances in multimodal large language models (MLLMs) and dental vision-language benchmarks, existing evaluations do not jointly assess hierarchical arch-to-tooth-to-surface reasoning, cross-view evidence integration, and surface-level caries assessment. To address this gap, we introduce CariesBench, a hierarchical benchmark constructed from 5,932 3D IOS, comprising 85,455 standardized multi-view renderings and 133,994 clinically grounded visual question answering instances with expert quality control. CariesBench comprises three complementary task families: Arch-level Clinical Screening (ACS), Tooth-level Diagnostic Reasoning (TDR), and Structured Clinical Decision-Making (SCD). Using the CariesBench training set, we further fine-tune Qwen3-VL-8B-Instruct to obtain IntraoralGPT. Extensive evaluation of 24 representative baseline MLLMs reveals a substantial benchmark-level performance disparity between arch-level screening and tooth-level diagnostic reasoning, with higher accuracy on ACS than on TDR. CariesBench-specific supervision substantially improves the Qwen3-VL-8B-Instruct baseline, increasing the 19-task macro-average clinical accuracy from 52.7% to 69.5% and TDR Overall from 34.4% to 44.7%."
+  },
+  {
+    "id": "arxiv:2611.33594",
+    "source": "arXiv",
+    "date": "2026-11-25",
+    "title": "Aligned Machine: A Benchmark for Evaluating Multimodal Embedding Similarity via Human Comparative Judgements",
+    "authors": [
+      "Jiechen Li",
+      "Hannah Groos",
+      "Brinnae Bent"
+    ],
+    "url": "https://arxiv.org/abs/2611.33594",
+    "abstract": "Embedding models increasingly inform how people search, recommend, and retrieve information, yet we lack credible ways to test whether these similarity judgments reflect how humans understand meaning. Existing benchmarks typically rely on static, expert-labeled pairs with coarse Likert-style annotations, limiting scalability and making it difficult to obtain consistent, high-confidence annotations. We introduce Aligned Machine, an interactive, public-facing platform that transforms broad participation into a continuously growing Human-Aligned Similarity Benchmark (HASB) for evaluating semantic alignment in embedding-based systems. Participants complete a cognitively-natural, forced-choice task, comparing two pairs of items (text or images) and selecting which pair is more similar. This comparative design is accessible to non-experts, yields clean preference data, and supports robust aggregation. We report results from an initial deployment with 115 participants contributing 2,875 total labeled pairs and 872 unique pairs. Using HASB, we evaluated 12 widely used embedding models and found only partial alignment between embedding similarity and human judgments. Text-only models consistently achieve higher overall agreement than multimodal models, while multimodal performance varies systematically by task type: alignment is strongest for image-image comparisons, weaker for image-text comparisons, and lowest for text-text comparisons. Aligned Machine is designed to evolve over time as participation grows, supporting longitudinal analysis, domain-specific studies, bias detection, and measurement of concept drift across model versions. By combining accessible public participation with rigorous comparative evaluation, HASB provides a scalable and accountable framework for auditing semantic alignment in embedding models."
+  },
+  {
     "id": "preprints:10.20944/preprints202611.2440",
     "source": "Preprints.org",
     "date": "2026-11-24",
@@ -12,6 +476,79 @@
     "url": "https://doi.org/10.20944/preprints202611.2440.v1",
     "abstract": "This Data Descriptor presents an indoor dataset of ultra-wideband (UWB) ranging and inertial measurement unit (IMU) observations from a furnished laboratory. Three tags ranged against five anchors, all with DW1000 transceivers, using broadcast single-sided two-way ranging (SS-TWR) on UWB channel 5 at 110 kb/s; two tags also recorded acceleration and angular rate. Version 1.0 contains 18 static recordings at 54 positions and 19 dynamic recordings. Static records contain 175,023 received ranges at reference distances of 1.2–11.6 m, each with tag-side and anchor-side radio diagnostics, raw timestamps, separated clock-correction terms, laser-surveyed reference positions and an operator-assigned line-of-sight (LOS) or non-line-of-sight (NLOS) label. The median signed error (reference minus estimate) was 0.34 m for LOS and 0.24 m for NLOS links, and within-link spread increased with the anchor reply interval. Dynamic records contain 24,598 received ranges and combine robot-mounted UWB/IMU, encoder telemetry, hardware pulse synchronization and two-mast endpoint surveys. Raw streams, normalized tables, quality-control reports and derived references are provided separately. Validation examined record integrity, stream continuity, IMU stability, survey consistency, temporal association and ranging error. Dynamic intermediate positions are model-dependent references, not independently measured ground truth. The dataset supports ranging-error mitigation and UWB-IMU localization research.",
     "version": 1
+  },
+  {
+    "id": "arxiv:2611.33510",
+    "source": "arXiv",
+    "date": "2026-11-24",
+    "title": "LogToPersona: New Benchmark and Efficient Persona Prediction through Semantic Log Filtering",
+    "authors": [
+      "Ahmed Alajrami",
+      "Ondrej Bohdal",
+      "Seokwoo Song",
+      "Taegeon Um",
+      "Peyman Hosseini",
+      "Savas Ozkan",
+      "Mete Ozay",
+      "Taha Ceritli"
+    ],
+    "url": "https://arxiv.org/abs/2611.33510",
+    "abstract": "Detailed knowledge of a user's persona is valuable for personalizing generative AI models and agents, yet such details are difficult to obtain and change over time. We address the task of inferring persona attributes from a single day of mobile activity logs. No suitable publicly available benchmark exists for this task, so we introduce a synthetic benchmark of 1,600 persona-log pairs. We target on-device inference so that raw logs never leave the phone, which makes memory rather than speed the limiting constraint: a day of activity yields roughly 30K tokens, whose key-value cache alone exceeds the INT4 weights of a 4B-parameter model. We therefore propose a log filtering method that retains only behaviorally distinct entries. Filtering reduces the memory footprint by up to 39% across nine models from four families and more than halves prefill time, while maintaining or improving prediction quality. For Qwen3-4B it removes 2.5GB, bringing the model from well beyond a realistic per-process budget to a manageable one. Within our benchmark, these results indicate that preserving diverse behavioral events matters more for persona prediction than retaining every semantically similar log entry."
+  },
+  {
+    "id": "arxiv:2611.33507",
+    "source": "arXiv",
+    "date": "2026-11-24",
+    "title": "Separating Environment and Sensor Shift from Acquisition Protocol in Physical Vision Benchmarks",
+    "authors": [
+      "Yuyang Yuan",
+      "Jason Wu",
+      "Mohammadali Khodabandehlou",
+      "Jianpeng Yao",
+      "Hang Qiu",
+      "Mani Srivastava"
+    ],
+    "url": "https://arxiv.org/abs/2611.33507",
+    "abstract": "In real-world deployments, vision systems must operate under varying environmental conditions, such as illumination changes. Recent work has explored adaptive sensing strategies that select camera parameters according to the current environment and downstream task to improve task performance. Reliable physical benchmarks are therefore essential for evaluating such strategies. We study ImageNet-ES-Diverse, a physical benchmark that evaluates the adaptive exposure control strategy Lens by recapturing printed ImageNet images under varying illumination conditions. We construct four controlled acquisition pipelines that vary printed-image scale and camera zoom, and conduct a pilot study with directly captured physical objects. We find that the acquisition choices substantially change benchmark difficulty on all downstream baselines. Moreover, the average classification-accuracy advantage of Lens over auto exposure observed on the original benchmark does not persist in either our collected pipelines or real-object pilot study. Oracle exposure selection nevertheless retains substantial gains, indicating remaining potential for sensor control. These findings highlight acquisition protocol as an important factor in physical benchmark evaluation and motivate explicit protocol reporting and evaluation across multiple acquisition setups when assessing adaptive-sensing benefits."
+  },
+  {
+    "id": "arxiv:2611.33424",
+    "source": "arXiv",
+    "date": "2026-11-24",
+    "title": "Yet Another Concept Drift Benchmark? A Principled Framework for Evaluating Drift Detectors",
+    "authors": [
+      "Lorenzo Iovine",
+      "Giacomo Ziffer",
+      "Emanuele Della Valle"
+    ],
+    "url": "https://arxiv.org/abs/2611.33424",
+    "abstract": "Concept drift detection is a fundamental component of data stream learning, yet its empirical evaluation remains based on loosely defined protocols, ambiguous alarm semantics, and inconsistent metrics. We propose a principled benchmark grounded in an explicit formulation of drift observability and alarm semantics. Our framework introduces finite detection windows and repeated alarms, enabling a clear separation between detection accuracy, timeliness, and stability, and employs a reproducible observer to provide a controlled and interpretable performance signal. Building on this formulation, we define normalized evaluation metrics and a composite score addressing limitations of existing measures. We validate the framework through a large-scale stress-testing evaluation of 10 detectors across 9 learner configurations and 16 datasets."
+  },
+  {
+    "id": "arxiv:2611.33335",
+    "source": "arXiv",
+    "date": "2026-11-24",
+    "title": "FlowersBench: A FluidFlower-Inspired Dataset for Benchmarking Carbon Storage Surrogates Across Geological Structures",
+    "authors": [
+      "Farah Rabie",
+      "Hannah Menke",
+      "Florian Doster",
+      "Amy Gough",
+      "Ahmed H. Elsheikh"
+    ],
+    "url": "https://arxiv.org/abs/2611.33335",
+    "abstract": "Machine learning surrogates are emerging as a computationally efficient tool for uncertainty quantification in geological carbon storage (GCS). Geological structure constitutes a major source of uncertainty; however, existing benchmark simulation datasets predominantly vary petrophysical and operational parameters within a fixed geological setting. Generalisation to unseen geological structures therefore remains largely unexplored. We introduce FlowersBench, a benchmark dataset of 5,000 two-dimensional, reservoir-scale CO$_2$ storage simulations across 244 structural geometries. The geometries are sampled from an in-house structural generator inspired by the FluidFlower experiments and Case B of the 11th Society of Petroleum Engineers Comparative Solution Project (SPE11B). Each simulation is run with Open Porous Media (OPM) Flow over a 50-year injection period and a 500-year post-injection monitoring period. Test geometries are withheld from training to assess generalisation to unseen structural geometries. Two additional subsets support evaluation under structural shift. The first extends the parameter ranges of the structural generator beyond those used for training, and the second introduces an unseen topology of multiple parallel faults. A baseline U-Net surrogate is trained to predict CO$_2$ gas saturation. In representative test cases, the surrogate recovers the main migration pathways, including lateral spreading beneath low-permeability layers and upward flow along fault damage zones, with errors concentrated near the plume boundary. Under both structural shifts, prediction error exceeds that on the held-out geometries, and the increase in relative error is greater for the unseen fault topology. FlowersBench is publicly available and provides a common basis for evaluating GCS surrogates across geological structures."
+  },
+  {
+    "id": "arxiv:2611.33247",
+    "source": "arXiv",
+    "date": "2026-11-24",
+    "title": "Line-Level Singer Diarization in Multi-Member Pop Songs: A Benchmark, Lead-Vocal Isolation, and Song-Level Decoding",
+    "authors": [
+      "Allen Ng"
+    ],
+    "url": "https://arxiv.org/abs/2611.33247",
+    "abstract": "Fans of multi-member pop groups annotate songs line by line with the member who sings each line, but speech diarization does not transfer to this setting: a commercial diarizer finds one or two speakers in songs by groups of four to eight. We study line-level singer diarization: given a song and its lyric-line timings, group the lines by singer with no prior knowledge of the group. We release ColorCoded-SD, a benchmark of 43 K-pop songs (1,740 lines, 3-8 singers per song) built from crowd annotations verified by independent annotators, together with alignment and scoring tools, and we derive line labels for the IdolSongsJp corpus from its per-singer solo renditions for evaluation on unseen singers. Combining lead-vocal isolation with a karaoke separator, singing-adapted speaker embeddings, and two training-free song-level decoders (a sticky Viterbi pass over line order and unsupervised linking of a group's songs) improves B-cubed F1 over the standard pipeline (vocal separation, speaker embeddings, per-song clustering) by +0.058 on ColorCoded-SD (p=0.001) and by +0.066 on IdolSongsJp (p=0.003). Isolating the lead is the largest single factor wherever the separator leaves a lead voice (+0.04 to +0.06 on the same lines), and with the singers' dry studio takes two different encoders become indistinguishable; the remaining errors concentrate on short lines that carry too little audio for a voiceprint. We also report negative results (more or cleaner training data, weight editing, a song-context model, and target-singer extraction) that bound where further gains can come from."
   },
   {
     "id": "arxiv:2611.33137",
@@ -3483,6 +4020,18 @@
     "version": 1
   },
   {
+    "id": "arxiv:2611.33196",
+    "source": "arXiv",
+    "date": "2026-11-16",
+    "title": "PhoneWatchUI: A Dataset of Smartphone and Smartwatch Images from App Stores",
+    "authors": [
+      "Jialiang Wei",
+      "Walid Maalej"
+    ],
+    "url": "https://arxiv.org/abs/2611.33196",
+    "abstract": "Smartwatch apps are unique as they must condense functionality into a tiny screen of a few square centimeters. Yet, public GUI datasets are almost exclusively phone- or web-centric. We present PhoneWatchUI: 966.2k publisher-curated gallery image records from 72k store-specific app IDs on the US Apple App Store and Google Play, collected during October 2026. The Apple App Store part covers 37.6k apps with explicit Apple Watch platform metadata: 143.8k watch and 212.2k phone images labeled by their source galleries. The Google Play part covers 34.3k keyword-selected apps and 610.2k gallery images, provisionally labeled as watch, phone, or others by aspect ratio. Image records link to app metadata (title, description, category, ratings, developer, price) and retain source URLs, device-label provenance, and dimensions where available. We describe the dataset composition, image properties, and limitations. PhoneWatchUI enables research on cross-device GUI adaptation, wearable GUI retrieval and generation, as well as app-store analysis that links textual claims to visual evidence. Dataset is available at: https://huggingface.co/datasets/Jl-wei/PhoneWatchUI"
+  },
+  {
     "id": "arxiv:2611.22009",
     "source": "arXiv",
     "date": "2026-11-16",
@@ -5334,6 +5883,17 @@
     "abstract": "Rip currents are a serious and often under-addressed threat to beach safety and the leading cause of coastal drownings worldwide. They are difficult to detect due to their amorphous structure, similarity to the background, and large variability in viewpoints and environments. Despite their dangers and growing interest in automated detection, existing research remains fragmented across datasets, metrics, models, and approaches, leading to an incomplete understanding of model performance. We introduce RipBench, a unified benchmark that enables controlled evaluation of rip current detection spanning multiple tasks, including classification, axis-aligned and oriented object detection, and instance, semantic, and panoptic segmentation, on the same data with standardized splits. This allows direct comparison of model performance on all levels of visual abstraction. Across $304$ videos ($303{,}491$ frames, $51{,}011$ of them annotated for all six tasks) collected from diverse coastlines, our results expose a clear performance gap between coarse recognition and precise spatial understanding: frame-level classification reaches $F_2 = 0.93$, while the best detector and the best instance segmenter reach $0.72$ and $0.66$, with model rankings that change from task to task. Video-level confidence intervals, a blind inter-annotator study of the spatial labels, stratified analyses by viewpoint and visual signature, and video views with temporal baselines (single-seed, short-schedule reference runs) accompany the benchmark. All tasks are supported with carefully curated annotations and evaluated using standard metrics, with a focus on the $F_2$ score to emphasize recall in this safety-critical setting. RipBench, along with multiple baselines per task, is publicly available at https://RipBench.ai to support progress in real-world, multi-task vision for beach safety."
   },
   {
+    "id": "arxiv:2611.15533",
+    "source": "arXiv",
+    "date": "2026-11-11",
+    "title": "Whether untrained networks beat trained ones at V1 depends on a normalisation convention: evidence from two fMRI datasets",
+    "authors": [
+      "Nils Leutenegger"
+    ],
+    "url": "https://arxiv.org/abs/2611.15533",
+    "abstract": "Untrained convolutional networks have been reported to rival or beat trained networks as models of primary visual cortex (V1), and we had reported such an advantage in THINGS fMRI. Under a pre-specified ridge readout, the trained network was ahead at every pooling grid in THINGS and in NSD (8 of 8 subjects), also when voxel responses were centred within runs. Representational similarity analysis (RSA) in THINGS depended on analysis choices (28 analyses: intervals above 0 in 5, below 0 in 9, including 0 in 14); in NSD with its standard normalisation, none of 28 analyses favoured the untrained network. The untrained advantage appears when a response profile common to all trials is left in the voxel patterns and model units are not centred, under correlation distance: removing the session-mean profile in THINGS reduced it from +0.030 to +0.005; with raw betas it reached +0.100 in THINGS, appeared in the THINGS test images, and appeared in NSD (+0.116, 8 of 8 subjects, a pre-specified prediction), where it was confined to this one of 28 analyses. With the profile left in, both representational dissimilarity matrices are dominated by per-image response amplitude, which in V1 tracks contrast energy, and the untrained network's matrix is more amplitude-dominated; the amplitude itself is matched equally by both networks; removing the amplitude structure from both matrices removes the advantage in NSD (+0.116 to -0.009, 8 of 8 subjects). A luminance-and-contrast baseline outperformed every network under ridge in both datasets (point estimates); the networks reached 10-15% of the NSD noise-ceiling lower bound. 24 of 88 pre-specified predictions were not met. We recommend centring or normalising voxel responses within session, reporting the sensitivity of RSA rankings to this choice and to model-unit centring, and replicating on a second dataset."
+  },
+  {
     "id": "arxiv:2611.15522",
     "source": "arXiv",
     "date": "2026-11-11",
@@ -5617,7 +6177,7 @@
       "Guang Lin"
     ],
     "url": "https://arxiv.org/abs/2611.14949",
-    "abstract": "Identifying and solving partial differential equations (PDEs) from sampled solution data often requires substantial expert effort in equation discovery, coefficient estimation, and numerical solver configuration, especially under noise and distribution shifts. Can large language model (LLM) agents automate this workflow accurately and efficiently? To investigate this question, we introduce \\bench{}, a benchmark of 1,001 cases spanning 42 equation templates, including both classical and fractional PDEs. It provides three evaluation settings: Full evaluates performance on noise-free solution data; Noisy tests robustness to Gaussian noise with an RMS equal to 50\\% of the clean-signal RMS; and Hard-OOD tests challenging out-of-distribution generalization to unseen equation templates and shifted coefficient ranges. We further introduce RSI-PDE, a recursively self-improving agent harness that shortlists candidate equations by residual loss, uses relative $L^2$ feedback to refine coefficients and numerical solvers, and applies a validation gate to policy and memory updates. We compare RSI-PDE with single-run baselines and native agent harnesses (Claude Code or Codex) across four frontier models. Across the three settings, RSI-PDE improves the pass rate averaged across the four models by 106.5--181.9\\% relative to single-run baselines and by 3.0--19.6\\% relative to native harnesses, while reducing total recorded model calls by 46.9\\% across the 12 model--setting pairs. These results highlight the potential of validated recursive self-improvement in LLM agents to advance scientific computing."
+    "abstract": "Identifying and solving partial differential equations (PDEs) from sampled solution data often requires substantial expert effort in equation discovery, coefficient estimation, and numerical solver configuration, especially under noise and distribution shifts. Can large language model (LLM) agents automate this workflow accurately and efficiently? To investigate this question, we introduce RSI-PDEbench, a benchmark of 1,001 cases spanning 42 equation templates, including both classical and fractional PDEs. It provides three evaluation settings: Full evaluates performance on noise-free solution data; Noisy tests robustness to Gaussian noise with an RMS equal to 50\\% of the clean-signal RMS; and Hard-OOD tests challenging out-of-distribution generalization to unseen equation templates and shifted coefficient ranges. We further introduce RSI-PDE, a recursively self-improving agent harness that shortlists candidate equations by residual loss, uses relative $L^2$ feedback to refine coefficients and numerical solvers, and applies a validation gate to policy and memory updates. We compare RSI-PDE with single-run baselines and native agent harnesses (Claude Code or Codex) across four frontier models. Across the three settings, RSI-PDE improves the pass rate averaged across the four models by 106.5--181.9\\% relative to single-run baselines and by 3.0--19.6\\% relative to native harnesses, while reducing total recorded model calls by 46.9\\% across the 12 model--setting pairs. These results highlight the potential of validated recursive self-improvement in LLM agents to advance scientific computing."
   },
   {
     "id": "arxiv:2611.14881",
