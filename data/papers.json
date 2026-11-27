@@ -1,5 +1,45 @@
 [
   {
+    "id": "preprints:10.20944/preprints202611.2897",
+    "source": "Preprints.org",
+    "date": "2026-11-27",
+    "title": "Does Debate Help Factuality? A Controlled Re-Aggregation Study on a 1,200-Item Chinese Benchmark",
+    "authors": [
+      "Lei Yang",
+      "Shipei Du",
+      "Yungui Chen",
+      "Yanwen Chen",
+      "Lingjie Ji"
+    ],
+    "url": "https://doi.org/10.20944/preprints202611.2897.v1",
+    "abstract": "Multi-agent debate and adversarial self-correction are frequently reported to improve or degrade factual accuracy, yet these pipelines end with an aggregation step whose contribution is rarely isolated. We show that this final step can dominate the reported effect. Holding adversarial transcripts fixed, we re-aggregate them on a 1,200-item Chinese factuality benchmark across three model families. On all 1,200 items, replacing the consensus-list aggregator with a minimal answer-first instruction raises accuracy from 58.8% to 76.7% (Δ = +17.9; up to +29.9 for one model). On a stratified 400-item subset, five aggregation strategies span 59.6%–86.2% (Δ = 26.5). The best strategy discards the debate transcript entirely and answers the question directly (86.2%), which is statistically indistinguishable from zero-shot answering (86.2–87.5%); every aggregator that consumes the adversarial transcript is worse (59.6%–77.6%). Pooled over models, the theory-prescribed consensus-list aggregator is the worst: it emits commentary rather than answers, and both automatic judging and human annotation become less reliable on its outputs (inter-annotator κ = 0.482; judge–human three-way agreement 56.7% and 55.0% for the two annotators). In our controlled setting, the aggregation stage alone can move accuracy by more than the effects attributed to debate in comparable studies; we therefore recommend that aggregation choices be reported and ablated before any claim about debate-based factuality is made.",
+    "version": 1
+  },
+  {
+    "id": "preprints:10.20944/preprints202611.2880",
+    "source": "Preprints.org",
+    "date": "2026-11-27",
+    "title": "STAR-Clarify: A Role-Ambiguity Benchmark and a Clarification Skill for Language Models",
+    "authors": [
+      "Jean-Jacques Dubray"
+    ],
+    "url": "https://doi.org/10.20944/preprints202611.2880.v1",
+    "abstract": "A reasoning prompt can state a number without stating what the number is: \"the lift carries 34 people\" gives a capacity or a head count. We call this the role of a value: what the value stands for in the world the prompt describes. We introduce STAR-Clarify, a benchmark of 396 prompts generated from declared worlds. The expected behavior of each prompt (answer, ask, or report an impossibility) is set by its construction, and the answer under each reading is computed. About half of the prompts are clear, so that asking about everything is penalized. We also describe a short skill, built on the categories Things, States, Actions and Relationships (STAR), that asks a model to declare the world of a prompt before reasoning. On the ambiguous prompts, Claude Opus 5.5 resolves 20% silently and Qwen3-30B-A3B 65%. With the skill these shares fall to 0% and 13%. A control prompt that only tells the model to state its reading, without STAR, removes most of the silent resolutions on one-step prompts (24% remain). The skill keeps its advantage where the role of a value is open, including on verbs it never names. Inside a planning problem it removes an error on clear wording, in which the model plans with a stated capacity as if it were an amount (23 of 30 prompts without the skill, 0 with it). Asked to judge the wording, the smaller model calls 80% of the prompts it resolved silently unclear: it notices most of these problems and does not report them when it solves.",
+    "version": 1
+  },
+  {
+    "id": "preprints:10.20944/preprints202611.2852",
+    "source": "Preprints.org",
+    "date": "2026-11-26",
+    "title": "Measuring What Matters: Capture-Aware Evaluation Validity in Machine-Learning Intrusion and Breach Detection, Necessary Conditions Derived from Seven Benchmark Audits",
+    "authors": [
+      "Haider Saddam Qasim"
+    ],
+    "url": "https://doi.org/10.20944/preprints202611.2852.v1",
+    "abstract": "Machine-learning intrusion and breach detectors are often reported at near-ceiling accuracy, yet a score supports a deployment decision only if its evaluation measures the intended generalisation. We integrate seven companion audits, covering eleven public collections from nine source captures in four data modalities, and derive the conditions an evaluation must meet for its score to be interpretable. Four domains recurred: protocol (does the split test the stated target?), acquisition (are labels separable from capture conditions?), operational (does performance hold at a stated false-alarm budget and prevalence?) and label (do labels reflect the mechanism or the annotator?). In a structural causal model, acquisition–label aliasing makes deployment performance non-identifiable, and only annihilating aggregators respect this non-compensatory structure. No collection passed all four domains; protocol effects depended on task rather than model; and precursor-stage attacks, the early-warning target for ransomware, were detected at about half the rate of impact-stage attacks at 1% false-alarm rate. We provide a 28-item audit instrument with a seven-item minimum viable audit and falsification criteria. The framework is derived, not yet validated.",
+    "version": 1
+  },
+  {
     "id": "preprints:10.20944/preprints202611.2550",
     "source": "Preprints.org",
     "date": "2026-11-25",
